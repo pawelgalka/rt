@@ -1,0 +1,42 @@
+package surveillance_system
+public
+	
+	-- DEVICES --
+	
+	device camera
+	end camera;
+	
+	device door_sensor
+	end door_sensor;
+	
+	device motion_sensor
+	end motion_sensor;
+	
+	-- PROCESSORS --
+
+	processor cpu
+	properties   
+   		Scheduling_Protocol=>(Posix_1003_Highest_Priority_First_Protocol);
+	end cpu;
+
+	-- PROCESSES --
+	
+	process surveillance_process
+	end surveillance_process;
+	
+	process implementation surveillance_process.impl
+	end surveillance_process.impl;
+		
+	-- SYSTEM --
+	
+	system surveillance	
+	end surveillance;
+
+	system implementation surveillance.impl
+		subcomponents
+		process1 : process surveillance_process.impl;
+	    cpu1     : processor cpu;
+	properties
+	    Actual_Processor_Binding => (reference(cpu1)) applies to process1;
+	end surveillance.impl;
+end surveillance_system;
