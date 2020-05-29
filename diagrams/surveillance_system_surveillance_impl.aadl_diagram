@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="841c34ed-e5ed-4044-a495-0324d7b48bc6" manual="true">
+    <element uuid="c04fbb03-66c9-4a88-8d33-c0e48fac75f8" manual="true">
+      <element uuid="9290c2c1-e1fb-49a8-987d-8bef1f72910c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>image_capture</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>camera1</seg>
+      </bo>
+      <position x="258.0" y="38.0"/>
+      <size width="330.0" height="60.0"/>
+    </element>
+    <element uuid="8bf2c79b-a468-427c-ac3f-f67810fe5ae2" manual="true">
+      <element uuid="4d1754e1-31b3-4445-9e67-785b3a49444d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>image_capture</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>camera2</seg>
+      </bo>
+      <position x="12.0" y="118.0"/>
+      <size width="330.0" height="60.0"/>
+    </element>
+    <element uuid="4042c7b7-38e1-4467-a53c-270aead031e3" manual="true">
+      <element uuid="c7e84f66-67f6-41ee-8553-9ee04b821e16" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>image_capture</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>camera3</seg>
+      </bo>
+      <position x="362.0" y="118.0"/>
+      <size width="330.0" height="60.0"/>
+    </element>
+    <element uuid="c5b0a205-5c84-46a3-a0c1-242fb6e9c706" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>cpu1</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="90.0" height="35.0"/>
+    </element>
+    <element uuid="7aa574fd-b80f-4e5f-90db-3e0de44b816e" manual="true">
+      <element uuid="f9cb73e8-a9bc-4fee-95aa-d30407c56d7d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>door_open_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>door_sensor1</seg>
+      </bo>
+      <position x="12.0" y="598.0"/>
+      <size width="439.0" height="60.0"/>
+    </element>
+    <element uuid="017b2eae-5b05-45fe-98cf-c77df293f47a" manual="true">
+      <element uuid="b95e24f4-2cb6-4c7f-b36e-b7958ef834a4" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>door_open_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>door_sensor2</seg>
+      </bo>
+      <position x="12.0" y="438.0"/>
+      <size width="439.0" height="60.0"/>
+    </element>
+    <element uuid="97f0901b-7206-44f6-b59c-3d4683a01806" manual="true">
+      <element uuid="37b81f82-7106-41ea-9abe-5301c0cece42" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>door_open_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>door_sensor3</seg>
+      </bo>
+      <position x="12.0" y="518.0"/>
+      <size width="439.0" height="60.0"/>
+    </element>
+    <element uuid="a8764e91-a889-4064-b927-2c897406a34a" manual="true">
+      <element uuid="15ae5d4f-56e4-4101-86ad-0ece4187b702" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>motion_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>motion_sensor1</seg>
+      </bo>
+      <position x="12.0" y="198.0"/>
+      <size width="402.0" height="60.0"/>
+    </element>
+    <element uuid="5886352f-1068-4b59-b959-495ac0319018" manual="true">
+      <element uuid="ef1fdb25-60f8-4903-9d89-c9e6e0e5dc53" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>motion_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>motion_sensor2</seg>
+      </bo>
+      <position x="12.0" y="358.0"/>
+      <size width="402.0" height="60.0"/>
+    </element>
+    <element uuid="1abbab06-5d6f-471e-93e9-1deeaed2d3ea" manual="true">
+      <element uuid="01633b43-a21a-4d90-b2a2-83c4f1322c40" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>motion_detected</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>motion_sensor3</seg>
+      </bo>
+      <position x="12.0" y="278.0"/>
+      <size width="402.0" height="60.0"/>
+    </element>
+    <element uuid="9402733d-39ca-4b35-b0b2-43d8bcd1efdd" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>process1</seg>
+      </bo>
+      <position x="122.0" y="38.0"/>
+      <size width="116.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>surveillance.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="704.0" height="670.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>surveillance_system::surveillance.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

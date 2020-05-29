@@ -1,0 +1,11 @@
+package event_handlers
+public
+	
+	subprogram video_captor_handler
+		-- fill in second stage with C code implementation -> pack 2 arrays into struct with C timespec of timestamp --
+	end video_captor_handler;
+	
+	subprogram video_sender_handler
+		-- execute simple C code printing data is being sent --
+	end video_sender_handler;
+end event_handlers;

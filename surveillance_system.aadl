@@ -1,16 +1,80 @@
 package surveillance_system
 public
+	with data_types, event_handlers;
+	
 	
 	-- DEVICES --
-	
+	 -- TODO: move devices to another package for code cleanup --
+	 
 	device camera
+		features
+			image_capture: out data port data_types::camera_image;
 	end camera;
 	
 	device door_sensor
+		features
+			door_open_detected: out event port;
+		properties
+    		Compute_Execution_Time => 1ms..2ms;
+   	 		Deadline => 1ms;
+    		Period => 1ms;
 	end door_sensor;
 	
 	device motion_sensor
+		features
+			motion_detected: out event port;
+		properties
+    		Compute_Execution_Time => 1ms..2ms;
+   	 		Deadline => 1ms;
+    		Period => 1ms;
 	end motion_sensor;
+	
+	device rfid_reader
+		features
+			authorized_access: out event port;
+		
+	end rfid_reader;
+	
+	
+	-- THREADS --
+	
+	thread video_captor
+		features
+			camera1_capture : in data port data_types::camera_image;
+			camera2_capture : in data port data_types::camera_image;
+			output_converted : out data port data_types::captor_data;
+	end video_captor;
+	
+	thread implementation video_captor.impl
+		calls default: {
+  			handler : subprogram event_handlers::video_captor_handler;
+		};
+		-- add features to pass data to handler
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 13;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
+	end video_captor.impl;
+	
+	
+	thread video_sender
+		features
+			message : in data port data_types::captor_data;
+	end video_sender;
+	
+	thread implementation video_sender.impl
+		calls default: {
+			sender : subprogram event_handlers::video_sender_handler;
+		};
+		-- add features to pass data to handler
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 13;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
+	end video_sender.impl;
+	
 	
 	-- PROCESSORS --
 
@@ -18,6 +82,7 @@ public
 	properties   
    		Scheduling_Protocol=>(Posix_1003_Highest_Priority_First_Protocol);
 	end cpu;
+
 
 	-- PROCESSES --
 	
@@ -27,6 +92,7 @@ public
 	process implementation surveillance_process.impl
 	end surveillance_process.impl;
 		
+		
 	-- SYSTEM --
 	
 	system surveillance	
@@ -34,8 +100,17 @@ public
 
 	system implementation surveillance.impl
 		subcomponents
-		process1 : process surveillance_process.impl;
-	    cpu1     : processor cpu;
+			camera1 : device camera;
+			camera2 : device camera;
+			camera3 : device camera;
+			door_sensor1 : device door_sensor;
+			door_sensor2 : device door_sensor;
+			door_sensor3 : device door_sensor;
+			motion_sensor1 : device motion_sensor;
+			motion_sensor2 : device motion_sensor;
+			motion_sensor3 : device motion_sensor;
+			process1 : process surveillance_process.impl;
+	    	cpu1     : processor cpu;
 	properties
 	    Actual_Processor_Binding => (reference(cpu1)) applies to process1;
 	end surveillance.impl;
