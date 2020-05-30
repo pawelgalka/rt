@@ -9,11 +9,15 @@ public
 	device camera
 		features
 			image_capture: out data port data_types::camera_image;
+			start_recording: in event port;
+			mem_bus : requires bus access vme;
 	end camera;
 	
 	device door_sensor
 		features
 			door_open_detected: out event port;
+			disable : in event port;
+			mem_bus : requires bus access vme;
 		properties
     		Compute_Execution_Time => 1ms..2ms;
    	 		Deadline => 1ms;
@@ -23,6 +27,8 @@ public
 	device motion_sensor
 		features
 			motion_detected: out event port;
+			disable : in event port;
+			mem_bus : requires bus access vme;
 		properties
     		Compute_Execution_Time => 1ms..2ms;
    	 		Deadline => 1ms;
@@ -32,7 +38,7 @@ public
 	device rfid_reader
 		features
 			authorized_access: out event port;
-		
+			mem_bus : requires bus access vme;		
 	end rfid_reader;
 	
 	
@@ -42,6 +48,7 @@ public
 		features
 			camera1_capture : in data port data_types::camera_image;
 			camera2_capture : in data port data_types::camera_image;
+			camera3_capture : in data port data_types::camera_image;			
 			output_converted : out data port data_types::captor_data;
 	end video_captor;
 	
@@ -75,43 +82,198 @@ public
   			Period => 1500ms;
 	end video_sender.impl;
 	
+	thread alarm_activator
+		features
+			state_access : requires data access data_types::state {Access_Right => Read_Only;};
+			detected : out event port;
+	end alarm_activator;
+	
+	thread implementation alarm_activator.impl
+		calls default: {
+			activator : subprogram event_handlers::alarm_activator;
+		};
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 100;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
+	end alarm_activator.impl;
+	
+	thread detector
+		features 
+			state_access : requires data access data_types::state {Access_Right => Write_Only;};
+			motion : in event port;
+			door : in event port;
+	end detector;
+
+	thread implementation detector.impl
+		calls default: {
+			detector_handler : subprogram event_handlers::detection_handler;
+		};
+	end detector.impl;
+	
+	thread rfid_thread
+		features 
+			rfid_read : in event port;
+			door : out event port;
+			motion : out event port;
+			state : requires data access data_types::state {Access_Right => Read_Only;};
+	end rfid_thread;
+	
+	thread implementation rfid_thread.impl
+	end rfid_thread.impl;
 	
 	-- PROCESSORS --
 
 	processor cpu
-	properties   
-   		Scheduling_Protocol=>(Posix_1003_Highest_Priority_First_Protocol);
+		features
+			vme : requires bus access VME;
+		properties   
+   			Scheduling_Protocol=>(Posix_1003_Highest_Priority_First_Protocol);
 	end cpu;
 
 
 	-- PROCESSES --
 	
 	process surveillance_process
+		features
+			rfid_read : in event port;
+			disable_door : out event port;
+			disable_motion : out event port;
+			motion_detect1 : in event port;
+			motion_detect2 : in event port;
+			motion_detect3 : in event port;
+			door_detect1 : in event port;
+			door_detect2 : in event port;
+			door_detect3 : in event port;
+			start_recording : out event port;
 	end surveillance_process;
 	
 	process implementation surveillance_process.impl
+		subcomponents
+			current_state: data data_types::state { Concurrency_Control_Protocol => Semaphore;};
+			alarm : thread alarm_activator.impl;
+			detector1 : thread detector.impl;
+			detector2 : thread detector.impl;
+			detector3 : thread detector.impl;	
+			rfid_reader : thread rfid_thread.impl;		
+		connections
+			da1 : data access current_state -> alarm.state_access;
+			da2 : data access detector1.state_access -> current_state;
+			da3 : data access detector2.state_access -> current_state;
+			da4 : data access detector3.state_access -> current_state;
+			da5 : data access current_state <-> rfid_reader.state;
+			m1 : port motion_detect1 -> detector1.motion;
+			m2 : port motion_detect2 -> detector2.motion;
+			m3 : port motion_detect3 -> detector3.motion;
+			d1 : port door_detect1 -> detector1.door;
+			d2 : port door_detect2 -> detector2.door;
+			d3 : port door_detect3 -> detector3.door;			
+			recording : port alarm.detected -> start_recording;
+			rfid : port rfid_read -> rfid_reader.rfid_read;
+			motion : port rfid_reader.motion -> disable_motion;
+			door : port rfid_reader.door -> disable_door;
 	end surveillance_process.impl;
 		
-		
+	process video
+		features
+			cam1_in : in data port data_types::camera_image;
+			cam2_in : in data port data_types::camera_image;
+			cam3_in : in data port data_types::camera_image;
+	end video;
+	
+	process implementation video.impl
+		subcomponents
+			video_captor_t : thread video_captor.impl;
+			video_sender_t : thread video_sender.impl;
+			
+		connections
+			cn1 : port cam1_in -> video_captor_t.camera1_capture;
+			cn2 : port cam2_in -> video_captor_t.camera2_capture;
+			cn3 : port cam3_in -> video_captor_t.camera3_capture;
+			cn4 : port video_captor_t.output_converted -> video_sender_t.message;
+	end video.impl;
+	
+	
 	-- SYSTEM --
+	
+	bus VME
+	end VME;
+	
+	memory RAM
+		features
+			vme : requires bus access VME;
+	end RAM;
+	
+	system hardware
+	end hardware;
+	
+	system implementation hardware.impl
+		subcomponents
+			cpu_surveillance : processor cpu;
+  			cpu_video : processor cpu;
+		properties
+			Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
+	end hardware.impl;
+	
 	
 	system surveillance	
 	end surveillance;
 
 	system implementation surveillance.impl
 		subcomponents
+			hardware : system hardware.impl;
 			camera1 : device camera;
 			camera2 : device camera;
 			camera3 : device camera;
+			rfid_reader : device rfid_reader;
 			door_sensor1 : device door_sensor;
 			door_sensor2 : device door_sensor;
 			door_sensor3 : device door_sensor;
 			motion_sensor1 : device motion_sensor;
 			motion_sensor2 : device motion_sensor;
 			motion_sensor3 : device motion_sensor;
-			process1 : process surveillance_process.impl;
-	    	cpu1     : processor cpu;
-	properties
-	    Actual_Processor_Binding => (reference(cpu1)) applies to process1;
+			main : process surveillance_process.impl;
+			video : process video.impl;
+	    	ram : memory RAM;
+	    	bus_access : bus VME;
+		connections
+			bus2 : bus access bus_access -> ram.vme;
+			bus3 : bus access bus_access -> camera1.mem_bus;
+			bus4 : bus access bus_access -> camera2.mem_bus;
+			bus5 : bus access bus_access -> camera3.mem_bus;
+			bus6 : bus access bus_access -> rfid_reader.mem_bus;
+			bus7 : bus access bus_access -> door_sensor1.mem_bus;
+			bus8 : bus access bus_access -> door_sensor2.mem_bus;
+			bus9 : bus access bus_access -> door_sensor3.mem_bus;
+			bus10 : bus access bus_access -> motion_sensor1.mem_bus;
+			bus11 : bus access bus_access -> motion_sensor2.mem_bus;
+			bus12 : bus access bus_access -> motion_sensor3.mem_bus;
+			cn1 : port rfid_reader.authorized_access -> main.rfid_read;
+			cn2 : port main.disable_door -> door_sensor1.disable;
+			cn3 : port main.disable_door -> door_sensor2.disable;
+			cn4 : port main.disable_door -> door_sensor3.disable;
+			cn5 : port main.start_recording -> camera1.start_recording; 
+			cn6 : port main.start_recording -> camera2.start_recording; 
+			cn7 : port main.start_recording -> camera3.start_recording; 
+			cn8 : port main.disable_motion-> motion_sensor1.disable;
+			cn9 : port main.disable_motion -> motion_sensor2.disable;
+			cn10 : port main.disable_motion -> motion_sensor3.disable;
+			cam1 : port camera1.image_capture -> video.cam1_in;
+			cam2 : port camera2.image_capture -> video.cam2_in;
+			cam3 : port camera3.image_capture -> video.cam3_in;
+			motion1 : port motion_sensor1.motion_detected -> main.motion_detect1;
+			motion2 : port motion_sensor2.motion_detected -> main.motion_detect2;
+			motion3 : port motion_sensor3.motion_detected -> main.motion_detect3;
+			door1 : port door_sensor1.door_open_detected -> main.door_detect1;
+			door2 : port door_sensor2.door_open_detected -> main.door_detect2;
+			door3 : port door_sensor3.door_open_detected -> main.door_detect3;
+		properties
+			Actual_Memory_Binding => (reference (ram)) applies to main;
+			Actual_Memory_Binding => (reference (ram)) applies to video;
+	    	Actual_Processor_Binding => (reference(hardware.cpu_surveillance)) applies to main;
+	    	Actual_Processor_Binding => (reference(hardware.cpu_video)) applies to video;
 	end surveillance.impl;
+	
+
 end surveillance_system;

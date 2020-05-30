@@ -13,4 +13,10 @@ public
 			-- send video as struct containing arrays and capture timestamp --
 			Data_Model::Data_Representation => struct;
 	end captor_data;
+	
+	data state
+		properties
+			Data_Model::Data_Representation => integer;
+	end state;
+	
 end data_types;
