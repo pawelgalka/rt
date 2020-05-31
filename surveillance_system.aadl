@@ -11,6 +11,9 @@ public
 			image_capture: out data port data_types::camera_image;
 			start_recording: in event port;
 			mem_bus : requires bus access vme;
+		properties
+			Compute_Execution_Time => 100000ms .. 100000ms;
+			Deadline => 120000ms;
 	end camera;
 	
 	device door_sensor
@@ -19,9 +22,10 @@ public
 			disable : in event port;
 			mem_bus : requires bus access vme;
 		properties
-    		Compute_Execution_Time => 1ms..2ms;
-   	 		Deadline => 1ms;
-    		Period => 1ms;
+			Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 100ms..120ms;
+   	 		Deadline => 200ms;
+    		Period => 200ms;
 	end door_sensor;
 	
 	device motion_sensor
@@ -30,15 +34,20 @@ public
 			disable : in event port;
 			mem_bus : requires bus access vme;
 		properties
-    		Compute_Execution_Time => 1ms..2ms;
-   	 		Deadline => 1ms;
-    		Period => 1ms;
+			Dispatch_Protocol => Periodic;
+			Compute_Execution_Time => 100ms..120ms;
+   	 		Deadline => 200ms;
+    		Period => 200ms;
 	end motion_sensor;
 	
 	device rfid_reader
 		features
 			authorized_access: out event port;
-			mem_bus : requires bus access vme;		
+			mem_bus : requires bus access vme;
+		properties
+			Compute_Execution_Time => 1000ms .. 3000ms;
+			Deadline => 4000ms;	
+			Period => 10000ms;	
 	end rfid_reader;
 	
 	
@@ -58,10 +67,11 @@ public
 		};
 		-- add features to pass data to handler
 		properties
-  			Dispatch_Protocol => Periodic;
-  			Priority => 13;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+			Dispatch_Protocol => Aperiodic;
+		  	Priority => 13;
+  			Compute_Execution_Time => 1500ms..1600ms;
+  			Period => 3000ms;
+  			Deadline => 3000ms;
 	end video_captor.impl;
 	
 	
@@ -76,10 +86,11 @@ public
 		};
 		-- add features to pass data to handler
 		properties
-  			Dispatch_Protocol => Periodic;
-  			Priority => 13;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+			Dispatch_Protocol => Aperiodic;
+		  	Priority => 10;
+  			Compute_Execution_Time => 100ms..200ms;
+  			Deadline => 2000ms;
+  			Period => 2000ms;
 	end video_sender.impl;
 	
 	thread alarm_activator
@@ -110,6 +121,11 @@ public
 		calls default: {
 			detector_handler : subprogram event_handlers::detection_handler;
 		};
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 90;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
 	end detector.impl;
 	
 	thread rfid_thread
@@ -121,6 +137,11 @@ public
 	end rfid_thread;
 	
 	thread implementation rfid_thread.impl
+			properties
+  			Dispatch_Protocol => Aperiodic;
+  			Priority => 80;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
 	end rfid_thread.impl;
 	
 	-- PROCESSORS --
