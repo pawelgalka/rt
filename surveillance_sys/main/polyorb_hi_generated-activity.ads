@@ -289,7 +289,7 @@ package PolyORB_HI_Generated.Activity is
        (1500),
       Task_Deadline => Ada.Real_Time.Milliseconds
        (1500),
-      Task_Priority => 90,
+      Task_Priority => 89,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector2_Job);
 
@@ -379,7 +379,7 @@ package PolyORB_HI_Generated.Activity is
        (1500),
       Task_Deadline => Ada.Real_Time.Milliseconds
        (1500),
-      Task_Priority => 90,
+      Task_Priority => 88,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector3_Job);
 

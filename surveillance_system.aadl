@@ -155,7 +155,7 @@ public
 			c1 : port detector_handler.Data_Source -> test;
 		properties
   			Dispatch_Protocol => Periodic;
-  			Priority => 90;
+  			Priority => 89;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end detector.impl1;
@@ -169,7 +169,7 @@ public
 			c1 : port detector_handler.Data_Source -> test;
 		properties
   			Dispatch_Protocol => Periodic;
-  			Priority => 90;
+  			Priority => 88;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end detector.impl2;

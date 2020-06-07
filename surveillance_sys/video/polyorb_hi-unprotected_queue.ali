@@ -30,7 +30,7 @@ U polyorb_hi.unprotected_queue%b  polyorb_hi-unprotected_queue.adb  87e11ef2 NE 
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
 
-U polyorb_hi.unprotected_queue%s  polyorb_hi-unprotected_queue.ads  2e4c127d BN EE NE OO PK GE
+U polyorb_hi.unprotected_queue%s  polyorb_hi-unprotected_queue.ads  5b634d71 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.unchecked_conversion%s
@@ -54,7 +54,7 @@ D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotected_queue%s
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607195513 aa46bc48 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607203642 df69e344 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -136,7 +136,7 @@ X 11 polyorb_hi-unprotected_queue.ads
 . 148r26 201r27 219r29 228r31 246r27 549r26 581r24 655r11 794r11 936r33
 47A9 Integer_Array(integer)<43E9> 80r27 89r29 102r19
 50A9 Port_Kind_Array(9|37E9)<43E9> 70r27
-53A9 Port_Image_Array(14|172A11)<43E9> 77r28
+53A9 Port_Image_Array(14|177A11)<43E9> 77r28
 57A9 Overflow_Protocol_Array(9|48E9)<43E9> 98r35
 61+9 Thread_Interface_Type 61d32 123r12 136r37 138r50 12|244r35 547r35
 61*32 Port{43E9} 12|246m62 246r62 549m61 549r61
@@ -304,12 +304,12 @@ X 12 polyorb_hi-unprotected_queue.adb
 X 13 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 11|36r6 54r5 66r24 115r8 13|38e25
 X 14 polyorb_hi_generated-deployment.ads
-10K30*Deployment 11|36w27 54r26 66r45 115r29 14|202e36
+10K30*Deployment 11|36w27 54r26 66r45 115r29 14|209e36
 60E8*Entity_Type 11|66r56 126r17 14|62e28
 102A11*UT_Deployment_Video_Entity_Image_Component{string}<integer>
 106A8*UT_Deployment_Video_Entity_Image_Array(102A11)<60E8>
 110a3*Entity_Image{106A8} 12|995r14
-172A11*Port_Sized_String{string}<integer> 11|54r37
+177A11*Port_Sized_String{string}<integer> 11|54r37
 X 15 system.ads
 37K9*System 11|34w6 15|156e11
 X 25 s-stausa.ads

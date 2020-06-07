@@ -23,20 +23,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  98e491df NE OO PR PK
+U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  edcbced3 NE OO PR PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607195513 aa46bc48 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607203642 df69e344 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
 X 1 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 2|10r9 174r12 202r5
+34K9*PolyORB_HI_Generated 38e25 2|10r9 179r12 209r5
 X 2 polyorb_hi_generated-deployment.ads
-10K30*Deployment 1|34k9 2|174r33 202l26 202e36
+10K30*Deployment 1|34k9 2|179r33 209l26 209e36
 16E8*Node_Type 17e13 21r7 27r7 37r4 37r20 37r39 55r22 83r9
 17n5*video_K{16E8} 22r5 52r7 56r4 88r8 90r8
 29i3*Max_Node_Image_Size{integer} 40r23
@@ -46,9 +46,10 @@ X 2 polyorb_hi_generated-deployment.ads
 46A8*UT_Deployment_Video_Node_Image_Array(42A11)<16E8> 50r25 51r4
 50a3*Node_Image{46A8}
 55e3*My_Node{16E8}
-60E8*Entity_Type 62e28 66r7 74r7 79r4 79r22 79r43 152r9
-61n5*video_video_captor_t_K{60E8} 67r5 87r7 112r7 157r8 159r8 161r8 163r8
-62n5*video_video_sender_t_K{60E8} 69r5 89r7 114r7 165r8
+60E8*Entity_Type 62e28 66r7 74r7 79r4 79r22 79r43 155r9
+61n5*video_video_captor_t_K{60E8} 67r5 87r7 112r7 160r8 162r8 164r8 166r8
+. 168r8
+62n5*video_video_sender_t_K{60E8} 69r5 89r7 114r7 170r8
 78E11*UT_Deployment_Video_Entity_Type_Range{60E8} 82r11 107r11
 81A8*UT_Deployment_Video_Entity_Table_Array(16E8)<60E8> 85r27 86r4
 85a3*Entity_Table{81A8}
@@ -57,18 +58,19 @@ X 2 polyorb_hi_generated-deployment.ads
 102A11*UT_Deployment_Video_Entity_Image_Component{string}<integer> 108r9
 106A8*UT_Deployment_Video_Entity_Image_Array(102A11)<60E8> 110r27 111r4
 110a3*Entity_Image{106A8}
-120E8*Port_Type 125e36 129r7 143r7 148r4 148r20 148r39
-121n5*video_video_captor_t_camera1_capture_K{120E8} 130r5 156r7 184r7
-122n5*video_video_captor_t_camera2_capture_K{120E8} 132r5 158r7 186r7
-123n5*video_video_captor_t_camera3_capture_K{120E8} 134r5 160r7 188r7
-124n5*video_video_captor_t_output_converted_K{120E8} 136r5 162r7 190r7
-125n5*video_video_sender_t_message_K{120E8} 138r5 164r7 192r7
-147E11*UT_Deployment_Video_Port_Type_Range{120E8} 151r11 179r11
-150A8*UT_Deployment_Video_Port_Table_Array(60E8)<120E8> 154r25 155r4
-154a3*Port_Table{150A8}
-167i3*Max_Port_Image_Size{integer} 174r44
-172A11*Port_Sized_String{string}<integer> 180r9
-178A8*UT_Deployment_Video_Port_Image_Array(172A11)<120E8> 182r25 183r4
-182a3*Port_Image{178A8}
-197i3*Max_Payload_Size{integer}
+120E8*Port_Type 126e36 130r7 146r7 151r4 151r20 151r39
+121n5*video_video_captor_t_camera1_capture_K{120E8} 131r5 159r7 189r7
+122n5*video_video_captor_t_camera2_capture_K{120E8} 133r5 161r7 191r7
+123n5*video_video_captor_t_camera3_capture_K{120E8} 135r5 163r7 193r7
+124n5*video_video_captor_t_start_K{120E8} 137r5 165r7 195r7
+125n5*video_video_captor_t_output_converted_K{120E8} 139r5 167r7 197r7
+126n5*video_video_sender_t_message_K{120E8} 141r5 169r7 199r7
+150E11*UT_Deployment_Video_Port_Type_Range{120E8} 154r11 184r11
+153A8*UT_Deployment_Video_Port_Table_Array(60E8)<120E8> 157r25 158r4
+157a3*Port_Table{153A8}
+172i3*Max_Port_Image_Size{integer} 179r44
+177A11*Port_Sized_String{string}<integer> 185r9
+183A8*UT_Deployment_Video_Port_Image_Array(177A11)<120E8> 187r25 188r4
+187a3*Port_Image{183A8}
+204i3*Max_Payload_Size{integer}
 

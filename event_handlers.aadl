@@ -13,9 +13,9 @@ public
 			det1 : in parameter data_types::camera_image;
 			det2 : in parameter data_types::camera_image;
 			det3 : in parameter data_types::camera_image;
-		properties
-			Source_Language => (Ada95);
-			Source_Name => "surveillance.captor";
+--		properties
+--			Source_Language => (Ada95);
+--			Source_Name => "surveillance.captor";
 	end video_captor_handler;
 	
 	subprogram video_sender_handler

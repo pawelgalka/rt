@@ -6,16 +6,23 @@
 pragma Style_Checks
  ("NM32766");
 
-with surveillance;
 
 package body PolyORB_HI_Generated.Subprograms is
+
+  -----------------------------------------
+  -- event_handlers_video_captor_handler -- 
+  -----------------------------------------
 
   procedure event_handlers_video_captor_handler
    (det1 : PolyORB_HI_Generated.Types.camera_image;
     det2 : PolyORB_HI_Generated.Types.camera_image;
     det3 : PolyORB_HI_Generated.Types.camera_image;
     Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status)
-   renames surveillance.captor;
+  is
+    Nyi : exception;
+  begin
+    raise Nyi;
+  end event_handlers_video_captor_handler;
 
   ---------------
   -- Put_Value -- 
