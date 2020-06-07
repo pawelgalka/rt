@@ -1,0 +1,75 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RR NO_IO
+RR NO_RECURSION
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U surveillance%b	surveillance.adb	b01a2cc5 NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U surveillance%s	surveillance.ads	c0cbbd1b EE NE OO PK
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
+W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
+
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200607163446 7896fcad polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
+D surveillance.ads	20200607163718 9e528aad surveillance%s
+D surveillance.adb	20200607163758 90cce940 surveillance%b
+D system.ads		20170510173650 4635ec04 system%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 9|1r6 5r8
+X 2 polyorb_hi-output.ads
+38K20*Output 82e22 9|1w17 5r19
+63U14*Put_Line 9|15s10 18s10
+X 4 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 8|1r6 2r6 3r6 6r8 7r8 9r40 9|2r6 8r35
+X 5 polyorb_hi_generated-deployment.ads
+10K30*Deployment 272e36 8|1w27 6r29
+X 6 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 65e37 8|3w27 9r61 9|2w27 8r56
+34R8*event_handlers_rfid_handler_Status 63e15 8|9r73 9|8r68
+X 7 polyorb_hi_generated-types.ads
+10K30*Types 28e31 8|2w27 7r29
+20I8*Integer_Type<integer> 9|6r10 16r22
+X 8 surveillance.ads
+4K9*Surveillance 11l5 11e17 9|3b14 22l5 22t17
+9U19*Rfid 9=24 9|8b14 20l5 20t9
+9r24 Status{6|34R8} 9|8b19
+X 9 surveillance.adb
+6i3 Seed{7|20I8} 12m7 12r15 14r10 16r42
+

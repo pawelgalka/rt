@@ -1,0 +1,5 @@
+surveillance.adb:2:06: warning: redundant with clause in body
+surveillance.adb:8:19: warning: formal parameter "Status" is not referenced
+surveillance.ads:1:26: warning: no entities of "PolyORB_HI_Generated.Deployment" are referenced
+surveillance.ads:2:26: warning: no entities of "PolyORB_HI_Generated.Types" are referenced in spec
+surveillance.ads:2:26: warning: with clause might be moved to body
