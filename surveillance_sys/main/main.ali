@@ -23,7 +23,7 @@ RR NO_UNCHECKED_DEALLOCATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 
-U main%b		main.adb		d2272cb7 NE OO SU IL
+U main%b		main.adb		6d8ff856 NE OO SU IL
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
@@ -37,15 +37,15 @@ D a-reatim.ads		20160420090448 a87e2da7 ada.real_time%s
 D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D interfac.ads		20160502101001 5ab55268 interfaces%s
 D i-c.ads		20110801143639 5421119b interfaces.c%s
-D main.adb		20200607153357 5884d54b main%b
+D main.adb		20200607163446 5884d54b main%b
 D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-errors.ads	20170204221544 6deb16d4 polyorb_hi.errors%s
 D polyorb_hi-periodic_task.ads  20170204221544 99ad09d9 polyorb_hi.periodic_task%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-activity.ads  20200607153357 27b94016 polyorb_hi_generated.activity%s
-D polyorb_hi_generated-deployment.ads  20200607153357 74c7aeec polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-types.ads  20200607153357 8fea49e4 polyorb_hi_generated.types%s
+D polyorb_hi_generated-activity.ads  20200607163446 981194f7 polyorb_hi_generated.activity%s
+D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -79,7 +79,7 @@ X 11 polyorb_hi-suspenders.ads
 X 12 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 7|9r6 10r23 12|38e25
 X 13 polyorb_hi_generated-activity.ads
-16K30*Activity 7|9w27 10r44 11r44 13|311e34
+16K30*Activity 7|9w27 10r44 11r44 13|317e34
 X 16 system.ads
 37K9*System 7|12w6 21r5 16|156e11
 108I12*Any_Priority{integer}

@@ -22,42 +22,81 @@ RR NO_RECURSION
 RV NO_STANDARD_STORAGE_POOLS
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  99cab7bc NE OO PK IL
+U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  a98a84bf NE OO PK IL
 W ada.exceptions%s	a-except.adb		a-except.ali
+W interfaces%s		interfac.ads		interfac.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W surveillance%s	surveillance.adb	surveillance.ali
 W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  eebb5680 EE NE OO PK IL
+U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  f26b0293 EE NE OO PK IL
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
 
 D ada.ads		20170106103348 76789da1 ada%s
 D a-except.ads		20151016123252 291912d5 ada.exceptions%s
 D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-subprograms.ads  20200607153059 dc197b17 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-subprograms.adb  20200607153059 45d3ccab polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200607163446 7896fcad polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200607163446 4f4ef2bf polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
+D surveillance.ads	20200607163718 9e528aad surveillance%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
 D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
 D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
-X 4 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 5|10r9 18r5 6|10r14 42r5
-X 5 polyorb_hi_generated-subprograms.ads
-10K30*Subprograms 4|34k9 5|18l26 18e37 6|10b35 42l26 42t37
-12U13*event_handlers_alarm_activator 6|16b13 20l7 20t37
-14U13*event_handlers_detection_handler 6|26b13 30l7 30t39
-16U13*event_handlers_rfid_handler 6|36b13 40l7 40t34
-X 6 polyorb_hi_generated-subprograms.adb
-17X5 Nyi 19r11
-27X5 Nyi 29r11
-37X5 Nyi 39r11
+X 5 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 7|9r6 11r9 26r30 56r21 62r26 65r5 8|11r14
+. 34r21 112r5
+X 7 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 5|34k9 7|56r42 59E8 65l26 65e37 8|11b35 34r42 112l26 112t37
+13U13*event_handlers_alarm_activator 8|17b13 21l7 21t37
+15U13*event_handlers_detection_handler 8|27b13 31l7 31t39
+17E8*event_handlers_rfid_handler_Port_Type 18e17 21r12 21r53 43r12 48r12
+. 52r12 8|62r12 80r12 96r12
+18n5*Data_Source{17E8} 25r14 8|47r12 67r12 68r25 101r12
+20R8*event_handlers_rfid_handler_Interface 21d5 32e15 39r21 44r11 8|43r21
+. 63r11
+21e5*Port{17E8} 24r12 8|46r24 68m17
+26i11*Data_Source_DATA{9|20I8} 8|51r24 69m9
+34R8*event_handlers_rfid_handler_Status 38r21 42r14 47r21 51r14 56r54 59c8
+. 63e15 8|34r54 42r21 61r14 79r21 95r14
+37U13*Put_Value 38=5 39>5 8|41b13 54l7 54t16
+38r5 Status{34R8} 8|42b5 48m9 50m9
+39r5 Spg_Interface{20R8} 8|43b5 46r10 51r10
+41V12*Get_Value{20R8} 42>5 43>5 8|60b12 72l7 72t16
+42r5 Status{34R8} 8|61b5 69r29
+43e5 Port{17E8} 8|62b5 66r10
+46U13*Next_Value 47=5 48>5 8|78b13 88l7 88t17
+47r5 Status{34R8} 8|79b5 83r7
+48e5 Port{17E8} 8|80b5 84r7
+50V12*Get_Count{integer} 51>5 52>5 8|94b12 110l7 110t16
+51r5 Status{34R8} 8|95b5 102r12
+52e5 Port{17E8} 8|96b5 100r10
+55U13*event_handlers_rfid_handler 56=5 8|33b13
+56r5 Status{34R8} 8|34b5
+61b7*Data_Source{boolean} 8|48m16 102r19
+62i7*Data_Source_DATA{9|20I8} 8|50m16 69r36
+X 8 polyorb_hi_generated-subprograms.adb
+18X5 Nyi 20r11
+28X5 Nyi 30r11
+X 9 polyorb_hi_generated-types.ads
+10K30*Types 7|9w27 26r51 62r47 9|28e31
+20I8*Integer_Type<integer> 7|26r57 62r53
+X 10 surveillance.ads
+4K9*Surveillance 8|9w6 35r12 10|11e17
+9U19*Rfid 8|35r25
 

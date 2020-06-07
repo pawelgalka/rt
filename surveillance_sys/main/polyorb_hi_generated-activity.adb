@@ -50,38 +50,55 @@ package body PolyORB_HI_Generated.Activity is
 
   surveillance_system_alarm_Port_Kinds : constant surveillance_system_alarm_activator_impl_Port_Kind_Array :=
    (detected =>
-     PolyORB_HI.Port_Kinds.Out_Event_Port);
+     PolyORB_HI.Port_Kinds.Out_Event_Port,
+    test =>
+     PolyORB_HI.Port_Kinds.In_Event_Data_Port);
 
   surveillance_system_alarm_Port_Images : constant surveillance_system_alarm_activator_impl_Port_Image_Array :=
    (detected =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_alarm_detected_K));
+       (PolyORB_HI_Generated.Deployment.main_alarm_detected_K),
+    test =>
+     PolyORB_HI_Generated.Deployment.Port_Image
+       (PolyORB_HI_Generated.Deployment.main_alarm_test_K));
 
   surveillance_system_alarm_FIFO_Sizes : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
-     -1);
+     -1,
+    test =>
+     16);
 
   surveillance_system_alarm_Offsets : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
-     0);
+     0,
+    test =>
+     1);
 
   surveillance_system_alarm_Overflow_Protocols : constant surveillance_system_alarm_activator_impl_Overflow_Protocol_Array :=
    (detected =>
+     PolyORB_HI.Port_Kinds.Dropoldest,
+    test =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_alarm_Urgencies : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
+     0,
+    test =>
      0);
 
   surveillance_system_alarm_Total_FIFO_Size : constant Standard.Integer :=
-   0;
+   16;
 
   surveillance_system_alarm_N_Destinations : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
+     0,
+    test =>
      0);
 
   alarm_Destinations : constant surveillance_system_alarm_activator_impl_Address_Array :=
    (detected =>
+     System.null_Address,
+    test =>
      System.null_Address);
 
   package surveillance_system_alarm_Interrogators is
@@ -115,10 +132,27 @@ package body PolyORB_HI_Generated.Activity is
   -----------------------------------
 
   function surveillance_system_alarm_Job return PolyORB_HI.Errors.Error_Kind is
+    test_V : PolyORB_HI_Generated.Types.Integer_Type;
     Error_Ü : constant PolyORB_HI.Errors.Error_Kind :=
      PolyORB_HI.Errors.Error_None;
     use type PolyORB_HI.Errors.Error_Kind;
   begin
+    --  Get the IN port values
+    if (surveillance_system_alarm_Interrogators.Get_Count
+     (test)
+      /= -1)
+    then
+      test_V :=
+       surveillance_system_alarm_Interrogators.Get_Value
+         (test).test_DATA;
+    else
+      test_V :=
+       PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
+    end if;
+    --  Dequeue the IN port values
+    surveillance_system_alarm_Interrogators.Next_Value
+     (surveillance_system_alarm_activator_impl_Port_Type'
+       (test));
     --  Call implementation
     PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator;
     --  Return error code
@@ -493,7 +527,9 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      PolyORB_HI.Port_Kinds.Out_Event_Port,
     motion =>
-     PolyORB_HI.Port_Kinds.Out_Event_Port);
+     PolyORB_HI.Port_Kinds.Out_Event_Port,
+    test =>
+     PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
   surveillance_system_rfid_reader_Port_Images : constant surveillance_system_rfid_thread_impl_Port_Image_Array :=
    (rfid_read =>
@@ -504,7 +540,10 @@ package body PolyORB_HI_Generated.Activity is
        (PolyORB_HI_Generated.Deployment.main_rfid_reader_door_K),
     motion =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_rfid_reader_motion_K));
+       (PolyORB_HI_Generated.Deployment.main_rfid_reader_motion_K),
+    test =>
+     PolyORB_HI_Generated.Deployment.Port_Image
+       (PolyORB_HI_Generated.Deployment.main_rfid_reader_test_K));
 
   surveillance_system_rfid_reader_FIFO_Sizes : constant surveillance_system_rfid_thread_impl_Integer_Array :=
    (rfid_read =>
@@ -512,6 +551,8 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      -1,
     motion =>
+     -1,
+    test =>
      -1);
 
   surveillance_system_rfid_reader_Offsets : constant surveillance_system_rfid_thread_impl_Integer_Array :=
@@ -520,6 +561,8 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      0,
     motion =>
+     0,
+    test =>
      0);
 
   surveillance_system_rfid_reader_Overflow_Protocols : constant surveillance_system_rfid_thread_impl_Overflow_Protocol_Array :=
@@ -528,6 +571,8 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      PolyORB_HI.Port_Kinds.Dropoldest,
     motion =>
+     PolyORB_HI.Port_Kinds.Dropoldest,
+    test =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_rfid_reader_Urgencies : constant surveillance_system_rfid_thread_impl_Integer_Array :=
@@ -536,10 +581,21 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      0,
     motion =>
+     0,
+    test =>
      0);
 
   surveillance_system_rfid_reader_Total_FIFO_Size : constant Standard.Integer :=
    16;
+
+  type UT_Activity_Main_rfid_reader_test_Destinations_Array is
+   array (Standard.Positive range <>)
+     of PolyORB_HI_Generated.Deployment.Port_Type;
+
+  rfid_reader_test_Destinations : constant UT_Activity_Main_rfid_reader_test_Destinations_Array :=
+   UT_Activity_Main_rfid_reader_test_Destinations_Array'
+     (1 =>
+       PolyORB_HI_Generated.Deployment.main_alarm_test_K);
 
   surveillance_system_rfid_reader_N_Destinations : constant surveillance_system_rfid_thread_impl_Integer_Array :=
    (rfid_read =>
@@ -547,7 +603,9 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      0,
     motion =>
-     0);
+     0,
+    test =>
+     1);
 
   rfid_reader_Destinations : constant surveillance_system_rfid_thread_impl_Address_Array :=
    (rfid_read =>
@@ -555,7 +613,9 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      System.null_Address,
     motion =>
-     System.null_Address);
+     System.null_Address,
+    test =>
+     rfid_reader_test_Destinations'Address);
 
   package surveillance_system_rfid_reader_Interrogators is
    new PolyORB_HI.Thread_Interrogators
@@ -588,8 +648,8 @@ package body PolyORB_HI_Generated.Activity is
   -----------------------------------------
 
   function surveillance_system_rfid_reader_Job return PolyORB_HI.Errors.Error_Kind is
-    Error_Ü : constant PolyORB_HI.Errors.Error_Kind :=
-     PolyORB_HI.Errors.Error_None;
+    detector_handler_Status : PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Status;
+    Error_Ü : PolyORB_HI.Errors.Error_Kind;
     use type PolyORB_HI.Errors.Error_Kind;
   begin
     --  Get the IN port values
@@ -598,7 +658,32 @@ package body PolyORB_HI_Generated.Activity is
      (surveillance_system_rfid_thread_impl_Port_Type'
        (rfid_read));
     --  Call implementation
-    PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler;
+    PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler
+     (Status => detector_handler_Status);
+    if (PolyORB_HI_Generated.Subprograms.Get_Count
+     (detector_handler_Status,
+      PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Port_Type'
+       (PolyORB_HI_Generated.Subprograms.Data_Source))
+      >= 1)
+    then
+      PolyORB_HI_Generated.Activity.Put_Value
+       (PolyORB_HI_Generated.Deployment.main_rfid_reader_K,
+        PolyORB_HI_Generated.Activity.surveillance_system_rfid_thread_impl_Interface'
+         (Port => test,
+          test_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+           (detector_handler_Status,
+            PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Port_Type'
+             (PolyORB_HI_Generated.Subprograms.Data_Source)).Data_Source_DATA));
+    end if;
+    --  Send the call sequence OUT port values
+    Error_Ü :=
+     surveillance_system_rfid_reader_Interrogators.Send_Output
+       (test);
+    if (Error_Ü
+      /= PolyORB_HI.Errors.Error_None)
+    then
+      return Error_Ü;
+    end if;
     --  Return error code
     return Error_Ü;
   end surveillance_system_rfid_reader_Job;

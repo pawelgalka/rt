@@ -17,4 +17,12 @@ package PolyORB_HI_Generated.Types is
   state_Default_Value : constant state :=
    0;
 
+  type Integer_Type is
+   new Standard.Integer;
+
+  --  integer_type'Object_Size ~= 32 bits
+
+  Integer_Type_Default_Value : constant Integer_Type :=
+   0;
+
 end PolyORB_HI_Generated.Types;

@@ -140,6 +140,7 @@ package PolyORB_HI_Generated.Deployment is
 
   type Port_Type is
    (main_alarm_detected_K,
+    main_alarm_test_K,
     main_detector1_motion_K,
     main_detector1_door_K,
     main_detector2_motion_K,
@@ -148,31 +149,36 @@ package PolyORB_HI_Generated.Deployment is
     main_detector3_door_K,
     main_rfid_reader_rfid_read_K,
     main_rfid_reader_door_K,
-    main_rfid_reader_motion_K);
+    main_rfid_reader_motion_K,
+    main_rfid_reader_test_K);
 
   --  Representation clause to have consistent positions for enumerators
 
   for Port_Type use
    (main_alarm_detected_K =>
      1,
-    main_detector1_motion_K =>
+    main_alarm_test_K =>
      2,
-    main_detector1_door_K =>
+    main_detector1_motion_K =>
      3,
-    main_detector2_motion_K =>
+    main_detector1_door_K =>
      4,
-    main_detector2_door_K =>
+    main_detector2_motion_K =>
      5,
-    main_detector3_motion_K =>
+    main_detector2_door_K =>
      6,
-    main_detector3_door_K =>
+    main_detector3_motion_K =>
      7,
-    main_rfid_reader_rfid_read_K =>
+    main_detector3_door_K =>
      8,
-    main_rfid_reader_door_K =>
+    main_rfid_reader_rfid_read_K =>
      9,
+    main_rfid_reader_door_K =>
+     10,
     main_rfid_reader_motion_K =>
-     10);
+     11,
+    main_rfid_reader_test_K =>
+     12);
 
   --  Size of Port_Type fixed to 16 bits
 
@@ -191,6 +197,8 @@ package PolyORB_HI_Generated.Deployment is
    UT_Deployment_Main_Port_Table_Array'
      (main_alarm_detected_K =>
        main_alarm_K,
+      main_alarm_test_K =>
+       main_alarm_K,
       main_detector1_motion_K =>
        main_detector1_K,
       main_detector1_door_K =>
@@ -208,6 +216,8 @@ package PolyORB_HI_Generated.Deployment is
       main_rfid_reader_door_K =>
        main_rfid_reader_K,
       main_rfid_reader_motion_K =>
+       main_rfid_reader_K,
+      main_rfid_reader_test_K =>
        main_rfid_reader_K);
 
   Max_Port_Image_Size : constant Standard.Integer :=
@@ -229,6 +239,8 @@ package PolyORB_HI_Generated.Deployment is
    UT_Deployment_Main_Port_Image_Array'
      (main_alarm_detected_K =>
        "main_alarm_detected_K       ",
+      main_alarm_test_K =>
+       "main_alarm_test_K           ",
       main_detector1_motion_K =>
        "main_detector1_motion_K     ",
       main_detector1_door_K =>
@@ -246,7 +258,9 @@ package PolyORB_HI_Generated.Deployment is
       main_rfid_reader_door_K =>
        "main_rfid_reader_door_K     ",
       main_rfid_reader_motion_K =>
-       "main_rfid_reader_motion_K   ");
+       "main_rfid_reader_motion_K   ",
+      main_rfid_reader_test_K =>
+       "main_rfid_reader_test_K     ");
 
   --  Maximal message payload size for this node (in bits)
 

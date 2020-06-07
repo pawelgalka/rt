@@ -40,8 +40,8 @@ D ada.ads		20170106103348 76789da1 ada%s
 D a-except.ads		20151016123252 291912d5 ada.exceptions%s
 D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-subprograms.ads  20200607153059 817094c2 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-subprograms.adb  20200607153059 53f134b7 polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-subprograms.ads  20200607162003 817094c2 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200607162003 53f134b7 polyorb_hi_generated.subprograms%b
 D system.ads		20170510173650 4635ec04 system%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
 D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s

@@ -47,7 +47,7 @@ Z polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 Z polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
 Z system%s		system.ads		system.ali
 
-U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  24585a19 BN EE NE OO PK GE
+U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  cecfec47 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -79,7 +79,7 @@ D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotect
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607153059 74c7aeec polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
@@ -159,7 +159,7 @@ X 15 polyorb_hi-thread_interrogators.ads
 . 242r27 251r36 262r33 364r36 374r31 391r32 408r31 425r33 440r51 458r41 502r33
 51A9 Integer_Array(integer)<47E9> 87r27 96r29 109r19 119r24 16|57r7
 54A9 Port_Kind_Array(12|37E9)<47E9> 77r27 16|58r7
-57A9 Port_Image_Array(22|218A11)<47E9> 84r28 16|59r7
+57A9 Port_Image_Array(22|228A11)<47E9> 84r28 16|59r7
 61A9 Address_Array(23|67M9)<47E9> 124r22
 64A9 Overflow_Protocol_Array(12|48E9)<47E9> 105r35 16|60r7
 68+9 Thread_Interface_Type 68d32 130r18 151r44 162r49 193r26 16|61r7 277r30
@@ -297,18 +297,18 @@ X 21 polyorb_hi_generated.ads
 . 325r21 21|38e25
 X 22 polyorb_hi_generated-deployment.ads
 10K30*Deployment 15|40w27 40r64 58r26 73r45 170r34 194r47 16|265r34 325r42
-. 22|258e36
+. 22|272e36
 60E8*Entity_Type 15|73r56 135r17 136r17 170r45 194r58 16|391r50 392r25 488r26
 . 22|65e24
 117A11*UT_Deployment_Main_Entity_Image_Component{string}<integer>
 121A8*UT_Deployment_Main_Entity_Image_Array(117A11)<60E8>
 125a3*Entity_Image{121A8} 16|327r21 400r24
-141E8*Port_Type 16|265r45 22|151e31
-186A8*UT_Deployment_Main_Port_Table_Array(60E8)<141E8>
-190a3*Port_Table{186A8} 16|327r35 329r44
-218A11*Port_Sized_String{string}<integer> 15|58r37
-224A8*UT_Deployment_Main_Port_Image_Array(218A11)<141E8>
-228a3*Port_Image{224A8} 16|325r53
+141E8*Port_Type 16|265r45 22|153e29
+192A8*UT_Deployment_Main_Port_Table_Array(60E8)<141E8>
+196a3*Port_Table{192A8} 16|327r35 329r44
+228A11*Port_Sized_String{string}<integer> 15|58r37
+234A8*UT_Deployment_Main_Port_Image_Array(228A11)<141E8>
+238a3*Port_Image{234A8} 16|325r53
 X 23 system.ads
 37K9*System 15|38w6 61r47 16|85r24 269r12 23|156e11
 67M9*Address 15|61r54 16|269r19

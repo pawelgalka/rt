@@ -32,7 +32,7 @@ U polyorb_hi.utils%b	polyorb_hi-utils.adb	72aaafa3 NE OO PK
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
 
-U polyorb_hi.utils%s	polyorb_hi-utils.ads	eada4f7d NE OO PR PK
+U polyorb_hi.utils%s	polyorb_hi-utils.ads	cb47aab9 NE OO PR PK
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s
 W interfaces%s		interfac.ads		interfac.ali
@@ -50,7 +50,7 @@ D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi-utils.adb	20170204221544 388ce90b polyorb_hi.utils%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607153059 7a4ef688 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607162003 5bd3134c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s

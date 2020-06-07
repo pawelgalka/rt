@@ -97,6 +97,8 @@ public
 		features
 			state_access : requires data access data_types::state {Access_Right => Read_Only;};
 			detected : out event port;
+						test : in event data port event_handlers::Integer_Type;
+			
 	end alarm_activator;
 	
 	thread implementation alarm_activator.impl
@@ -134,12 +136,15 @@ public
 			door : out event port;
 			motion : out event port;
 			state : requires data access data_types::state {Access_Right => Read_Only;};
+			test : out event data port event_handlers::Integer_Type;
 	end rfid_thread;
 	
 	thread implementation rfid_thread.impl
 	calls default: {
 			detector_handler : subprogram event_handlers::rfid_handler;
 		};
+		connections
+			c1 : port detector_handler.Data_Source -> test;
 			properties
   			Dispatch_Protocol => Periodic;
   			Priority => 80;
@@ -199,6 +204,7 @@ public
 			rfid : port rfid_read -> rfid_reader.rfid_read;
 			motion : port rfid_reader.motion -> disable_motion;
 			door : port rfid_reader.door -> disable_door;
+			t : port rfid_reader.test -> alarm.test;
 	end surveillance_process.impl;
 		
 	process video

@@ -34,7 +34,7 @@ W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
 W polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali  EA
 
-U polyorb_hi.periodic_task%s  polyorb_hi-periodic_task.ads  97392f80 BN EE NE OO PK GE
+U polyorb_hi.periodic_task%s  polyorb_hi-periodic_task.ads  b6a4ca44 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -57,7 +57,7 @@ D polyorb_hi-periodic_task.adb  20170204221544 94a22a7a polyorb_hi.periodic_task
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607153059 7a4ef688 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607162003 5bd3134c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s

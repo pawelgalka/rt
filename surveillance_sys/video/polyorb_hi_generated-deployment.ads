@@ -128,15 +128,15 @@ package PolyORB_HI_Generated.Deployment is
 
   for Port_Type use
    (video_video_captor_t_camera1_capture_K =>
-     11,
-    video_video_captor_t_camera2_capture_K =>
-     12,
-    video_video_captor_t_camera3_capture_K =>
      13,
-    video_video_captor_t_output_converted_K =>
+    video_video_captor_t_camera2_capture_K =>
      14,
+    video_video_captor_t_camera3_capture_K =>
+     15,
+    video_video_captor_t_output_converted_K =>
+     16,
     video_video_sender_t_message_K =>
-     15);
+     17);
 
   --  Size of Port_Type fixed to 16 bits
 

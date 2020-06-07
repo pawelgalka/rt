@@ -20,7 +20,8 @@ package PolyORB_HI_Generated.Activity is
   --  BEGIN: Entities used by all instances of component alarm_activator.impl
 
   type surveillance_system_alarm_activator_impl_Port_Type is
-   (detected);
+   (detected,
+    test);
 
   type surveillance_system_alarm_activator_impl_Interface 
    (Port : surveillance_system_alarm_activator_impl_Port_Type := surveillance_system_alarm_activator_impl_Port_Type'First)
@@ -29,6 +30,8 @@ package PolyORB_HI_Generated.Activity is
       case Port is
         when detected =>
           null;
+        when test =>
+          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -223,7 +226,8 @@ package PolyORB_HI_Generated.Activity is
   type surveillance_system_rfid_thread_impl_Port_Type is
    (rfid_read,
     door,
-    motion);
+    motion,
+    test);
 
   type surveillance_system_rfid_thread_impl_Interface 
    (Port : surveillance_system_rfid_thread_impl_Port_Type := surveillance_system_rfid_thread_impl_Port_Type'First)
@@ -236,6 +240,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when motion =>
           null;
+        when test =>
+          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;

@@ -23,18 +23,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  bd486473 NE OO PK
+U polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  8afdfe3e NE OO PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-types.ads  20200607153059 8fea49e4 polyorb_hi_generated.types%s
+D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
 D system.ads		20170510173650 4635ec04 system%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
 X 1 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 2|10r9 20r5
+34K9*PolyORB_HI_Generated 38e25 2|10r9 28r5
 X 2 polyorb_hi_generated-types.ads
-10K30*Types 1|34k9 2|20l26 20e31
+10K30*Types 1|34k9 2|28l26 28e31
 12I8*state<integer> 17r34
 17i3*state_Default_Value{12I8}
+20I8*Integer_Type<integer> 25r41
+25i3*Integer_Type_Default_Value{20I8}
 

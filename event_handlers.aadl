@@ -1,6 +1,11 @@
 package event_handlers
 public
-	
+	with Data_Model;
+	data Integer_Type
+properties
+  Data_Model::Data_Representation => integer;
+end Integer_Type;
+
 	subprogram video_captor_handler
 		-- fill in second stage with C code implementation -> pack 2 arrays into struct with C timespec of timestamp --
 	end video_captor_handler;
@@ -16,5 +21,10 @@ public
 	end detection_handler;
 	
 	subprogram rfid_handler
+		features
+			Data_Source : out event data port integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.rfid";
 	end rfid_handler;
 end event_handlers;

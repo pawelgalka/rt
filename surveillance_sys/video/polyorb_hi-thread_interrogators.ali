@@ -47,7 +47,7 @@ Z polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 Z polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
 Z system%s		system.ads		system.ali
 
-U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  2ad1027d BN EE NE OO PK GE
+U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  0b4ce7b9 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -79,7 +79,7 @@ D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotect
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607153059 7a4ef688 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607162003 5bd3134c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s

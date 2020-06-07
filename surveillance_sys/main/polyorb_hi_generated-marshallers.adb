@@ -55,15 +55,37 @@ package body PolyORB_HI_Generated.Marshallers is
     Data : out PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface;
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
-    pragma Unreferenced
-     (Port);
-    pragma Unreferenced
-     (Message);
-    pragma Unreferenced
-     (Data);
+    test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    use PolyORB_HI_Generated.Activity;
   begin
-    null;
+    if (Port
+      = PolyORB_HI_Generated.Activity.test)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test_DATA,
+        Message);
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.test,
+          test_DATA => test_DATA);
+    end if;
   end Unmarshall;
+
+  --  Marshallers for DATA type integer_type
+
+  package Integer_Type_Marshallers is
+   new PolyORB_HI.Marshallers_G
+     (PolyORB_HI_Generated.Types.Integer_Type);
+
+  procedure Marshall
+   (Data : PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+   renames Integer_Type_Marshallers.Marshall;
+
+  procedure Unmarshall
+   (Data : out PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+   renames Integer_Type_Marshallers.Unmarshall;
 
   --  Marshallers for interface type of thread detector.impl
 
@@ -121,12 +143,23 @@ package body PolyORB_HI_Generated.Marshallers is
    (Data : PolyORB_HI_Generated.Activity.surveillance_system_rfid_thread_impl_Interface;
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
-    pragma Unreferenced
-     (Message);
-    pragma Unreferenced
-     (Data);
+    use PolyORB_HI_Generated.Activity;
   begin
-    null;
+    if (Data.Port
+      = PolyORB_HI_Generated.Activity.door)
+    then
+      null;
+    elsif (Data.Port
+      = PolyORB_HI_Generated.Activity.motion)
+    then
+      null;
+    elsif (Data.Port
+      = PolyORB_HI_Generated.Activity.test)
+    then
+      PolyORB_HI_Generated.Marshallers.Marshall
+       (Data.test_DATA,
+        Message);
+    end if;
   end Marshall;
 
   ----------------

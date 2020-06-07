@@ -35,7 +35,7 @@ RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U polyorb_hi_generated.activity%b  polyorb_hi_generated-activity.adb  dfa51b66 OO PK
+U polyorb_hi_generated.activity%b  polyorb_hi_generated-activity.adb  1f6dd371 OO PK
 Z ada%s			ada.ads			ada.ali
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -67,7 +67,7 @@ W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U polyorb_hi_generated.activity%s  polyorb_hi_generated-activity.ads  b20eb823 EE OO PK
+U polyorb_hi_generated.activity%s  polyorb_hi_generated-activity.ads  d08440d1 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -114,13 +114,13 @@ D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotect
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-activity.ads  20200607153357 27b94016 polyorb_hi_generated.activity%s
-D polyorb_hi_generated-activity.adb  20200607153357 79e93161 polyorb_hi_generated.activity%b
-D polyorb_hi_generated-deployment.ads  20200607153357 74c7aeec polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-marshallers.ads  20200607153357 3e012674 polyorb_hi_generated.marshallers%s
-D polyorb_hi_generated-subprograms.ads  20200607153357 dc197b17 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-transport.ads  20200607153357 cc5413ce polyorb_hi_generated.transport%s
-D polyorb_hi_generated-types.ads  20200607153357 8fea49e4 polyorb_hi_generated.types%s
+D polyorb_hi_generated-activity.ads  20200607163446 981194f7 polyorb_hi_generated.activity%s
+D polyorb_hi_generated-activity.adb  20200607163446 37ad786a polyorb_hi_generated.activity%b
+D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-marshallers.ads  20200607163446 abaaf433 polyorb_hi_generated.marshallers%s
+D polyorb_hi_generated-subprograms.ads  20200607163446 7896fcad polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-transport.ads  20200607163446 cc5413ce polyorb_hi_generated.transport%s
+D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
@@ -151,412 +151,443 @@ D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
 X 1 ada.ads
-16K9*Ada 20e8 28|12r6 70r11 80r18 81r7 96r22 98r24 157r11 167r18 168r7 183r22
-. 185r24 198r22 200r24 213r22 215r24 277r11 287r18 288r7 303r22 305r24 29|731r11
-. 771r18 772r7 925r11 965r18 966r7 1119r11 1159r18 1160r7
+16K9*Ada 20e8 28|12r6 73r11 83r18 84r7 99r22 101r24 160r11 170r18 171r7 186r22
+. 188r24 201r22 203r24 216r22 218r24 283r11 293r18 294r7 309r22 311r24 29|816r11
+. 856r18 857r7 1010r11 1050r18 1051r7 1204r11 1244r18 1245r7
 X 4 a-reatim.ads
-39K13*Real_Time 187e18 28|12w10 70r15 80r22 81r11 96r26 98r28 157r15 167r22
-. 168r11 183r26 185r28 198r26 200r28 213r26 215r28 277r15 287r22 288r11 303r26
-. 305r28 29|731r15 771r22 772r11 925r15 965r22 966r11 1119r15 1159r22 1160r11
-51O9*Time<duration> 28|70r25 80r32 157r25 167r32 277r25 287r32 29|731r25
-. 771r32 925r25 965r32 1119r25 1159r32
+39K13*Real_Time 187e18 28|12w10 73r15 83r22 84r11 99r26 101r28 160r15 170r22
+. 171r11 186r26 188r28 201r26 203r28 216r26 218r28 283r15 293r22 294r11 309r26
+. 311r28 29|816r15 856r22 857r11 1010r15 1050r22 1051r11 1204r15 1244r22
+. 1245r11
+51O9*Time<duration> 28|73r25 83r32 160r25 170r32 283r25 293r32 29|816r25
+. 856r32 1010r25 1050r32 1204r25 1244r32
 56O9*Time_Span<duration>
-63V13*Clock{51O9} 28|81s21 168s21 288s21 29|772s21 966s21 1160s21
-121V13*Milliseconds{56O9} 28|96s36 98s38 183s36 185s38 198s36 200s38 213s36
-. 215s38 303s36 305s38
+63V13*Clock{51O9} 28|84s21 171s21 294s21 29|857s21 1051s21 1245s21
+121V13*Milliseconds{56O9} 28|99s36 101s38 186s36 188s38 201s36 203s38 216s36
+. 218s38 309s36 311s38
 X 10 polyorb_hi.ads
-35K9*PolyORB_HI 39e15 28|10r6 13r6 42r11 91r49 94r8 129r11 178r53 181r8 193r53
-. 196r8 208r53 211r8 249r11 298r55 301r8 29|9r6 13r6 28r9 47r9 53r6 70r6
-. 88r8 117r49 118r24 119r6 120r14 136r9 152r9 158r6 160r6 184r6 186r6 210r8
-. 239r53 240r24 241r6 242r14 260r6 262r6 286r6 288r6 312r8 341r53 342r24
-. 343r6 344r14 362r6 364r6 388r6 390r6 414r8 443r53 444r24 445r6 446r14 470r9
-. 486r9 492r6 494r6 496r6 527r6 529r6 531r6 561r8 590r55 591r24 592r6 593r14
-. 613r11 807r11 1001r11
+35K9*PolyORB_HI 39e15 28|10r6 13r6 45r11 94r49 97r8 132r11 181r53 184r8 196r53
+. 199r8 211r53 214r8 255r11 304r55 307r8 29|9r6 13r6 28r9 47r9 53r6 55r6
+. 79r6 81r6 105r8 134r49 136r24 137r6 138r14 170r9 186r9 192r6 194r6 218r6
+. 220r6 244r8 273r53 274r24 275r6 276r14 294r6 296r6 320r6 322r6 346r8 375r53
+. 376r24 377r6 378r14 396r6 398r6 422r6 424r6 448r8 477r53 478r24 479r6 480r14
+. 504r9 520r9 526r6 528r6 530r6 532r6 570r6 572r6 574r6 576r6 621r8 650r55
+. 652r15 653r14 683r10 698r11 892r11 1086r11
 X 11 polyorb_hi-errors.ads
-32K20*Errors 39e22 28|10w17 42r22 91r60 129r22 178r64 193r64 208r64 249r22
-. 298r66 29|117r60 118r35 119r17 120r25 239r64 240r35 241r17 242r25 341r64
-. 342r35 343r17 344r25 443r64 444r35 445r17 446r25 590r66 591r35 592r17 593r25
-. 613r22 807r22 1001r22
-34E9*Error_Kind 37e7 28|42r29 91r67 129r29 178r71 193r71 208r71 249r29 298r73
-. 29|117r67 118r42 120r32 239r71 240r42 242r32 341r71 342r42 344r32 443r71
-. 444r42 446r32 590r73 591r42 593r32 613r29 807r29 1001r29
-35n7*Error_None{34E9} 29|119r24 241r24 343r24 445r24 592r24
+32K20*Errors 39e22 28|10w17 45r22 94r60 132r22 181r64 196r64 211r64 255r22
+. 304r66 29|134r60 136r35 137r17 138r25 273r64 274r35 275r17 276r25 375r64
+. 376r35 377r17 378r25 477r64 478r35 479r17 480r25 650r66 652r26 653r25 683r21
+. 698r22 892r22 1086r22
+34E9*Error_Kind 37e7 28|45r29 94r67 132r29 181r71 196r71 211r71 255r29 304r73
+. 29|134r67 136r42 138r32 273r71 274r42 276r32 375r71 376r42 378r32 477r71
+. 478r42 480r32 650r73 652r33 653r32 698r29 892r29 1086r29
+35n7*Error_None{34E9} 29|137r24 275r24 377r24 479r24 683r28
 X 15 polyorb_hi-periodic_task.ads
-40e4 Entity{30|60E8} 28|95r7 182r7 197r7 212r7 302r7
-47o4 Task_Period{4|56O9} 28|96r7 183r7 198r7 213r7 303r7
-50o4 Task_Deadline{4|56O9} 28|98r7 185r7 200r7 215r7 305r7
-53i4 Task_Priority{35|108I12} 28|100r7 187r7 202r7 217r7 307r7
-56i4 Task_Stack_Size{natural} 28|101r7 188r7 203r7 218r7 308r7
-59V18 Job{11|34E9} 28|102r7 189r7 204r7 219r7 309r7
-70k20*Periodic_Task 80e29 28|13w17 14r34 94r19 181r19 196r19 211r19 301r19
-77V13*Next_Deadline{4|51O9} 29|109r55[28|93] 231r59[28|180] 333r59[28|195]
-. 435r59[28|210] 582r61[28|300]
+40e4 Entity{30|60E8} 28|98r7 185r7 200r7 215r7 308r7
+47o4 Task_Period{4|56O9} 28|99r7 186r7 201r7 216r7 309r7
+50o4 Task_Deadline{4|56O9} 28|101r7 188r7 203r7 218r7 311r7
+53i4 Task_Priority{35|108I12} 28|103r7 190r7 205r7 220r7 313r7
+56i4 Task_Stack_Size{natural} 28|104r7 191r7 206r7 221r7 314r7
+59V18 Job{11|34E9} 28|105r7 192r7 207r7 222r7 315r7
+70k20*Periodic_Task 80e29 28|13w17 14r34 97r19 184r19 199r19 214r19 307r19
+77V13*Next_Deadline{4|51O9} 29|126r55[28|96] 265r59[28|183] 367r59[28|198]
+. 469r59[28|213] 642r61[28|306]
 X 17 polyorb_hi-port_kinds.ads
-35K20*Port_Kinds 66e26 29|9w17 28r20 47r20 53r17 70r17 136r20 152r20 158r17
-. 160r17 184r17 186r17 260r17 262r17 286r17 288r17 362r17 364r17 388r17 390r17
-. 470r20 486r20 492r17 494r17 496r17 527r17 529r17 531r17
-37E9*Port_Kind 46e21 29|28r31 136r31 470r31
-38n7*In_Event_Port{37E9} 29|158r28 160r28 260r28 262r28 362r28 364r28 492r28
-44n7*Out_Event_Port{37E9} 29|53r28 494r28 496r28
-48E9*Overflow_Handling_Protocol 51e13 29|47r31 152r31 486r31
-49n7*DropOldest{48E9} 29|70r28 184r28 186r28 286r28 288r28 388r28 390r28
-. 527r28 529r28 531r28
+35K20*Port_Kinds 66e26 29|9w17 28r20 47r20 53r17 55r17 79r17 81r17 170r20
+. 186r20 192r17 194r17 218r17 220r17 294r17 296r17 320r17 322r17 396r17 398r17
+. 422r17 424r17 504r20 520r20 526r17 528r17 530r17 532r17 570r17 572r17 574r17
+. 576r17
+37E9*Port_Kind 46e21 29|28r31 170r31 504r31
+38n7*In_Event_Port{37E9} 29|192r28 194r28 294r28 296r28 396r28 398r28 526r28
+39n7*In_Event_Data_Port{37E9} 29|55r28
+44n7*Out_Event_Port{37E9} 29|53r28 528r28 530r28
+45n7*Out_Event_Data_Port{37E9} 29|532r28
+48E9*Overflow_Handling_Protocol 51e13 29|47r31 186r31 520r31
+49n7*DropOldest{48E9} 29|79r28 81r28 218r28 220r28 320r28 322r28 422r28 424r28
+. 570r28 572r28 574r28 576r28
 X 21 polyorb_hi-thread_interrogators.ads
-47E9 Port_Type 29|89r7 211r7 313r7 415r7 562r7
-51A9 Integer_Array(integer)<47E9> 29|90r7 212r7 314r7 416r7 563r7
-54A9 Port_Kind_Array(17|37E9)<47E9> 29|91r7 213r7 315r7 417r7 564r7
-57A9 Port_Image_Array(30|218A11)<47E9> 29|92r7 214r7 316r7 418r7 565r7
-61A9 Address_Array(35|67M9)<47E9> 29|93r7 215r7 317r7 419r7 566r7
-64A9 Overflow_Protocol_Array(17|48E9)<47E9> 29|94r7 216r7 318r7 420r7 567r7
-68+9 Thread_Interface_Type 29|95r7 217r7 319r7 421r7 568r7
-73e4 Current_Entity{30|60E8} 29|96r7 218r7 320r7 422r7 569r7
-77*4 Thread_Port_Kinds{54A9} 29|97r7 219r7 321r7 423r7 570r7
-81b4 Has_Event_Ports{boolean} 29|98r7 220r7 322r7 424r7 571r7
-84*4 Thread_Port_Images{57A9} 29|99r7 221r7 323r7 425r7 572r7
-87*4 Thread_Fifo_Sizes{51A9} 29|100r7 222r7 324r7 426r7 573r7
-96*4 Thread_Fifo_Offsets{51A9} 29|101r7 223r7 325r7 427r7 574r7
-105*4 Thread_Overflow_Protocols{64A9} 29|102r7 224r7 326r7 428r7 575r7
-109*4 Urgencies{51A9} 29|103r7 225r7 327r7 429r7 576r7
-113i4 Global_Data_Queue_Size{integer} 29|104r7 226r7 328r7 430r7 577r7
-119*4 N_Destinations{51A9} 29|105r7 227r7 329r7 431r7 578r7
-124*4 Destinations{61A9} 29|106r7 228r7 330r7 432r7 579r7
-129U19 Marshall 29|107r7 229r7 331r7 433r7 580r7
-134V18 Send{11|34E9} 29|108r7 230r7 332r7 434r7 581r7
-141V18 Next_Deadline{4|51O9} 29|109r7 231r7 333r7 435r7 582r7
-145k20*Thread_Interrogators 205e36 29|13w17 14r34 88r19 210r19 312r19 414r19
-. 561r19
-147V13*Send_Output{11|34E9} 29|619s52[87] 813s56[209] 1007s58[560]
-151U14*Put_Value 29|635s45[87] 829s49[209] 1023s51[560]
-156U14*Receive_Input 29|651s45[87] 845s49[209] 1039s51[560]
-162V13*Get_Value{28|25R8} 29|671s52[87] 865s56[209] 1059s58[560]
-168V13*Get_Sender{30|60E8} 29|694s52[87] 888s56[209] 1082s58[560]
-176V13*Get_Count{integer} 29|717s52[87] 911s56[209] 1105s58[560]
-181U14*Next_Value 29|246s49[209] 249s49[209] 348s49[311] 351s49[311] 450s49[413]
-. 453s49[413] 597s51[560] 759s45[87] 953s49[209] 1147s51[560]
-184U14*Wait_For_Incoming_Events 29|796s45[87] 990s49[209] 1184s51[560]
-192U14*Store_Received_Message 29|778s45[87] 972s49[209] 1166s51[560]
-202V13*Get_Time_Stamp{4|51O9} 29|740s52[87] 934s56[209] 1128s58[560]
+47E9 Port_Type 29|106r7 245r7 347r7 449r7 622r7
+51A9 Integer_Array(integer)<47E9> 29|107r7 246r7 348r7 450r7 623r7
+54A9 Port_Kind_Array(17|37E9)<47E9> 29|108r7 247r7 349r7 451r7 624r7
+57A9 Port_Image_Array(30|228A11)<47E9> 29|109r7 248r7 350r7 452r7 625r7
+61A9 Address_Array(35|67M9)<47E9> 29|110r7 249r7 351r7 453r7 626r7
+64A9 Overflow_Protocol_Array(17|48E9)<47E9> 29|111r7 250r7 352r7 454r7 627r7
+68+9 Thread_Interface_Type 29|112r7 251r7 353r7 455r7 628r7
+73e4 Current_Entity{30|60E8} 29|113r7 252r7 354r7 456r7 629r7
+77*4 Thread_Port_Kinds{54A9} 29|114r7 253r7 355r7 457r7 630r7
+81b4 Has_Event_Ports{boolean} 29|115r7 254r7 356r7 458r7 631r7
+84*4 Thread_Port_Images{57A9} 29|116r7 255r7 357r7 459r7 632r7
+87*4 Thread_Fifo_Sizes{51A9} 29|117r7 256r7 358r7 460r7 633r7
+96*4 Thread_Fifo_Offsets{51A9} 29|118r7 257r7 359r7 461r7 634r7
+105*4 Thread_Overflow_Protocols{64A9} 29|119r7 258r7 360r7 462r7 635r7
+109*4 Urgencies{51A9} 29|120r7 259r7 361r7 463r7 636r7
+113i4 Global_Data_Queue_Size{integer} 29|121r7 260r7 362r7 464r7 637r7
+119*4 N_Destinations{51A9} 29|122r7 261r7 363r7 465r7 638r7
+124*4 Destinations{61A9} 29|123r7 262r7 364r7 466r7 639r7
+129U19 Marshall 29|124r7 263r7 365r7 467r7 640r7
+134V18 Send{11|34E9} 29|125r7 264r7 366r7 468r7 641r7
+141V18 Next_Deadline{4|51O9} 29|126r7 265r7 367r7 469r7 642r7
+145k20*Thread_Interrogators 205e36 29|13w17 14r34 105r19 244r19 346r19 448r19
+. 621r19
+147V13*Send_Output{11|34E9} 29|680s52[620] 704s52[104] 898s56[243] 1092s58[620]
+151U14*Put_Value 29|720s45[104] 914s49[243] 1108s51[620]
+156U14*Receive_Input 29|736s45[104] 930s49[243] 1124s51[620]
+162V13*Get_Value{28|26R8} 29|146s48[104] 756s52[104] 950s56[243] 1144s58[620]
+168V13*Get_Sender{30|60E8} 29|779s52[104] 973s56[243] 1167s58[620]
+176V13*Get_Count{integer} 29|141s49[104] 802s52[104] 996s56[243] 1190s58[620]
+181U14*Next_Value 29|153s45[104] 280s49[243] 283s49[243] 382s49[345] 385s49[345]
+. 484s49[447] 487s49[447] 657s51[620] 844s45[104] 1038s49[243] 1232s51[620]
+184U14*Wait_For_Incoming_Events 29|881s45[104] 1075s49[243] 1269s51[620]
+192U14*Store_Received_Message 29|863s45[104] 1057s49[243] 1251s51[620]
+202V13*Get_Time_Stamp{4|51O9} 29|825s52[104] 1019s56[243] 1213s58[620]
 X 27 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 28|9r6 11r6 16r9 18r19 40r14 45r14 49r14
-. 53r14 58r14 60r11 63r14 68r14 73r14 77r14 79r12 84r14 95r17 127r14 132r14
-. 136r14 140r14 145r14 147r11 150r14 155r14 160r14 164r14 166r12 171r14 182r17
-. 197r17 212r17 247r14 252r14 256r14 260r14 265r14 267r11 270r14 275r14 280r14
-. 284r14 286r12 291r14 302r17 311r5 29|11r6 12r6 15r6 17r14 31r23 57r6 58r9
-. 96r25 107r19 108r15 123r5 164r6 165r9 167r6 168r9 218r25 229r19 230r15
-. 253r5 266r6 267r9 269r6 270r9 320r25 331r19 332r15 355r5 368r6 369r9 371r6
-. 372r9 422r25 433r19 434r15 457r5 500r6 501r9 503r6 504r9 506r6 507r9 569r25
-. 580r19 581r15 601r5 611r14 615r9 628r14 631r9 644r14 647r9 660r14 664r9
-. 683r14 685r11 687r9 706r14 710r9 729r14 733r9 752r14 755r9 768r14 770r12
-. 774r9 789r14 792r9 805r14 809r9 822r14 825r9 838r14 841r9 854r14 858r9
-. 877r14 879r11 881r9 900r14 904r9 923r14 927r9 946r14 949r9 962r14 964r12
-. 968r9 983r14 986r9 999r14 1003r9 1016r14 1019r9 1032r14 1035r9 1048r14
-. 1052r9 1071r14 1073r11 1075r9 1094r14 1098r9 1117r14 1121r9 1140r14 1143r9
-. 1156r14 1158r12 1162r9 1177r14 1180r9 1188r5
+34K9*PolyORB_HI_Generated 38e25 28|9r6 11r6 16r9 18r19 34r23 43r14 48r14
+. 52r14 56r14 61r14 63r11 66r14 71r14 76r14 80r14 82r12 87r14 98r17 130r14
+. 135r14 139r14 143r14 148r14 150r11 153r14 158r14 163r14 167r14 169r12 174r14
+. 185r17 200r17 215r17 244r23 253r14 258r14 262r14 266r14 271r14 273r11 276r14
+. 281r14 286r14 290r14 292r12 297r14 308r17 317r5 29|11r6 12r6 15r6 17r14
+. 31r23 59r6 60r9 62r6 63r9 113r25 124r19 125r15 135r14 150r8 157r5 198r6
+. 199r9 201r6 202r9 252r25 263r19 264r15 287r5 300r6 301r9 303r6 304r9 354r25
+. 365r19 366r15 389r5 402r6 403r9 405r6 406r9 456r25 467r19 468r15 491r5
+. 536r6 537r9 539r6 540r9 542r6 543r9 545r6 546r9 593r9 598r8 629r25 640r19
+. 641r15 651r31 661r5 663r9 665r7 666r9 669r7 670r9 671r9 673r24 675r13 676r15
+. 696r14 700r9 713r14 716r9 729r14 732r9 745r14 749r9 768r14 770r11 772r9
+. 791r14 795r9 814r14 818r9 837r14 840r9 853r14 855r12 859r9 874r14 877r9
+. 890r14 894r9 907r14 910r9 923r14 926r9 939r14 943r9 962r14 964r11 966r9
+. 985r14 989r9 1008r14 1012r9 1031r14 1034r9 1047r14 1049r12 1053r9 1068r14
+. 1071r9 1084r14 1088r9 1101r14 1104r9 1117r14 1120r9 1133r14 1137r9 1156r14
+. 1158r11 1160r9 1179r14 1183r9 1202r14 1206r9 1225r14 1228r9 1241r14 1243r12
+. 1247r9 1262r14 1265r9 1273r5
 X 28 polyorb_hi_generated-activity.ads
-16K30*Activity 27|34k9 28|311l26 311e34 29|17b35 1188l26 1188t34
+16K30*Activity 27|34k9 28|317l26 317e34 29|17b35 669r28 671r30 1273l26 1273t34
 18i3*current_state{34|12I8}
-22E8*surveillance_system_alarm_activator_impl_Port_Type 23e14 26r12 26r66
-. 41r12 50r12 54r12 59r12 64r12 69r12 74r12 85r16 29|23r11 27r11 38r11 42r11
-. 46r11 89r20 612r12 645r12 661r12 684r12 707r12 730r12 753r12 790r16
-23n5*detected{22E8} 30r14 29|52r5 56r5 61r5 65r5 69r5 73r5 80r5 84r5
-25R8*surveillance_system_alarm_activator_impl_Interface 26d5 37e15 46r24
-. 55r11 78r24 29|95r32 629r24 662r11 769r24
-26e5*Port{22E8} 29r12
-39V12*Send_Output{11|34E9} 40>5 41>5 29|610b12 621l7 621t18
-40e5 Entity{30|60E8} 29|611b5 617r7
-41e5 Port{22E8} 29|612b5 620r7
-44U13*Put_Value 45>5 46>5 29|627b13 637l7 637t16
-45e5 Entity{30|60E8} 29|628b5 633r7
-46r5 Thread_Interface{25R8} 29|629b5 636r7
-48U13*Receive_Input 49>5 50>5 29|643b13 653l7 653t20
-49e5 Entity{30|60E8} 29|644b5 649r7
-50e5 Port{22E8} 29|645b5 652r7
-52V12*Get_Value{25R8} 53>5 54>5 29|659b12 676l7 676t16
-53e5 Entity{30|60E8} 29|660b5 666r7
-54e5 Port{22E8} 29|661b5 672r7
-57V12*Get_Sender{30|60E8} 58>5 59>5 29|682b12 699l7 699t17
-58e5 Entity{30|60E8} 29|683b5 689r7
-59e5 Port{22E8} 29|684b5 695r7
-62V12*Get_Count{integer} 63>5 64>5 29|705b12 722l7 722t16
-63e5 Entity{30|60E8} 29|706b5 712r7
-64e5 Port{22E8} 29|707b5 718r7
-67V12*Get_Time_Stamp{4|51O9} 68>5 69>5 29|728b12 745l7 745t21
-68e5 Entity{30|60E8} 29|729b5 735r7
-69e5 Port{22E8} 29|730b5 741r7
-72U13*Next_Value 73>5 74>5 29|751b13 761l7 761t17
-73e5 Entity{30|60E8} 29|752b5 757r7
-74e5 Port{22E8} 29|753b5 760r7
-76U13*Store_Received_Message 77>5 78>5 79>5 80>5 29|767b13 782l7 782t29
-77e5 Entity{30|60E8} 29|768b5 776r7
-78r5 Thread_Interface{25R8} 29|769b5 779r7
-79e5 From{30|60E8} 29|770b5 780r7
-80o5 Time_Stamp{4|51O9} 29|771b5 781r7
-83U13*Wait_For_Incoming_Events 84>5 85<5 29|788b13 798l7 798t31
-84e5 Entity{30|60E8} 29|789b5 794r7
-85e5 Port{22E8} 29|790b5 797m7
-91V12*surveillance_system_alarm_Job{11|34E9} 102r14 29|117b12 126l7 126t36
-93K11*surveillance_system_alarm_Task[15|70] 29|109r24
-106E8*surveillance_system_detector_impl_Port_Type 108e10 111r12 111r59 128r12
-. 137r12 141r12 146r12 151r12 156r12 161r12 172r16 29|131r11 135r11 143r11
-. 147r11 151r11 211r20 247r7 250r7 313r20 349r7 352r7 415r20 451r7 454r7
-. 806r12 839r12 855r12 878r12 901r12 924r12 947r12 984r16
-107n5*motion{106E8} 115r14 29|157r5 163r5 171r5 177r5 183r5 189r5 198r5 204r5
-. 248r9 259r5 265r5 273r5 279r5 285r5 291r5 300r5 306r5 350r9 361r5 367r5
-. 375r5 381r5 387r5 393r5 402r5 408r5 452r9
-108n5*door{106E8} 117r14 29|159r5 166r5 173r5 179r5 185r5 191r5 200r5 206r5
-. 251r9 261r5 268r5 275r5 281r5 287r5 293r5 302r5 308r5 353r9 363r5 370r5
-. 377r5 383r5 389r5 395r5 404r5 410r5 455r9
-110R8*surveillance_system_detector_impl_Interface 111d5 124e15 133r24 142r11
-. 165r24 29|217r32 319r32 421r32 823r24 856r11 963r24
-111e5*Port{106E8} 114r12
-126V12*Send_Output{11|34E9} 127>5 128>5 29|804b12 815l7 815t18
-127e5 Entity{30|60E8} 29|805b5 811r7
-128e5 Port{106E8} 29|806b5 814r7
-131U13*Put_Value 132>5 133>5 29|821b13 831l7 831t16
-132e5 Entity{30|60E8} 29|822b5 827r7
-133r5 Thread_Interface{110R8} 29|823b5 830r7
-135U13*Receive_Input 136>5 137>5 29|837b13 847l7 847t20
-136e5 Entity{30|60E8} 29|838b5 843r7
-137e5 Port{106E8} 29|839b5 846r7
-139V12*Get_Value{110R8} 140>5 141>5 29|853b12 870l7 870t16
-140e5 Entity{30|60E8} 29|854b5 860r7
-141e5 Port{106E8} 29|855b5 866r7
-144V12*Get_Sender{30|60E8} 145>5 146>5 29|876b12 893l7 893t17
-145e5 Entity{30|60E8} 29|877b5 883r7
-146e5 Port{106E8} 29|878b5 889r7
-149V12*Get_Count{integer} 150>5 151>5 29|899b12 916l7 916t16
-150e5 Entity{30|60E8} 29|900b5 906r7
-151e5 Port{106E8} 29|901b5 912r7
-154V12*Get_Time_Stamp{4|51O9} 155>5 156>5 29|922b12 939l7 939t21
-155e5 Entity{30|60E8} 29|923b5 929r7
-156e5 Port{106E8} 29|924b5 935r7
-159U13*Next_Value 160>5 161>5 29|945b13 955l7 955t17
-160e5 Entity{30|60E8} 29|946b5 951r7
-161e5 Port{106E8} 29|947b5 954r7
-163U13*Store_Received_Message 164>5 165>5 166>5 167>5 29|961b13 976l7 976t29
-164e5 Entity{30|60E8} 29|962b5 970r7
-165r5 Thread_Interface{110R8} 29|963b5 973r7
-166e5 From{30|60E8} 29|964b5 974r7
-167o5 Time_Stamp{4|51O9} 29|965b5 975r7
-170U13*Wait_For_Incoming_Events 171>5 172<5 29|982b13 992l7 992t31
-171e5 Entity{30|60E8} 29|983b5 988r7
-172e5 Port{106E8} 29|984b5 991m7
-178V12*surveillance_system_detector1_Job{11|34E9} 189r14 29|239b12 256l7
-. 256t40
-180K11*surveillance_system_detector1_Task[15|70] 29|231r24
-193V12*surveillance_system_detector2_Job{11|34E9} 204r14 29|341b12 358l7
-. 358t40
-195K11*surveillance_system_detector2_Task[15|70] 29|333r24
-208V12*surveillance_system_detector3_Job{11|34E9} 219r14 29|443b12 460l7
-. 460t40
-210K11*surveillance_system_detector3_Task[15|70] 29|435r24
-223E8*surveillance_system_rfid_thread_impl_Port_Type 226e12 229r12 229r62
-. 248r12 257r12 261r12 266r12 271r12 276r12 281r12 292r16 29|465r11 469r11
-. 477r11 481r11 485r11 562r20 598r7 1000r12 1033r12 1049r12 1072r12 1095r12
-. 1118r12 1141r12 1178r16
-224n5*rfid_read{223E8} 233r14 29|491r5 499r5 510r5 518r5 526r5 534r5 545r5
-. 553r5 599r9
-225n5*door{223E8} 235r14 29|493r5 502r5 512r5 520r5 528r5 536r5 547r5 555r5
-226n5*motion{223E8} 237r14 29|495r5 505r5 514r5 522r5 530r5 538r5 549r5 557r5
-228R8*surveillance_system_rfid_thread_impl_Interface 229d5 244e15 253r24
-. 262r11 285r24 29|568r32 1017r24 1050r11 1157r24
-229e5*Port{223E8} 232r12
-246V12*Send_Output{11|34E9} 247>5 248>5 29|998b12 1009l7 1009t18
-247e5 Entity{30|60E8} 29|999b5 1005r7
-248e5 Port{223E8} 29|1000b5 1008r7
-251U13*Put_Value 252>5 253>5 29|1015b13 1025l7 1025t16
-252e5 Entity{30|60E8} 29|1016b5 1021r7
-253r5 Thread_Interface{228R8} 29|1017b5 1024r7
-255U13*Receive_Input 256>5 257>5 29|1031b13 1041l7 1041t20
-256e5 Entity{30|60E8} 29|1032b5 1037r7
-257e5 Port{223E8} 29|1033b5 1040r7
-259V12*Get_Value{228R8} 260>5 261>5 29|1047b12 1064l7 1064t16
-260e5 Entity{30|60E8} 29|1048b5 1054r7
-261e5 Port{223E8} 29|1049b5 1060r7
-264V12*Get_Sender{30|60E8} 265>5 266>5 29|1070b12 1087l7 1087t17
-265e5 Entity{30|60E8} 29|1071b5 1077r7
-266e5 Port{223E8} 29|1072b5 1083r7
-269V12*Get_Count{integer} 270>5 271>5 29|1093b12 1110l7 1110t16
-270e5 Entity{30|60E8} 29|1094b5 1100r7
-271e5 Port{223E8} 29|1095b5 1106r7
-274V12*Get_Time_Stamp{4|51O9} 275>5 276>5 29|1116b12 1133l7 1133t21
-275e5 Entity{30|60E8} 29|1117b5 1123r7
-276e5 Port{223E8} 29|1118b5 1129r7
-279U13*Next_Value 280>5 281>5 29|1139b13 1149l7 1149t17
-280e5 Entity{30|60E8} 29|1140b5 1145r7
-281e5 Port{223E8} 29|1141b5 1148r7
-283U13*Store_Received_Message 284>5 285>5 286>5 287>5 29|1155b13 1170l7 1170t29
-284e5 Entity{30|60E8} 29|1156b5 1164r7
-285r5 Thread_Interface{228R8} 29|1157b5 1167r7
-286e5 From{30|60E8} 29|1158b5 1168r7
-287o5 Time_Stamp{4|51O9} 29|1159b5 1169r7
-290U13*Wait_For_Incoming_Events 291>5 292<5 29|1176b13 1186l7 1186t31
-291e5 Entity{30|60E8} 29|1177b5 1182r7
-292e5 Port{223E8} 29|1178b5 1185m7
-298V12*surveillance_system_rfid_reader_Job{11|34E9} 309r14 29|590b12 604l7
-. 604t42
-300K11*surveillance_system_rfid_reader_Task[15|70] 29|582r24
+22E8*surveillance_system_alarm_activator_impl_Port_Type 24e10 27r12 27r66
+. 44r12 53r12 57r12 62r12 67r12 72r12 77r12 88r16 29|23r11 27r11 38r11 42r11
+. 46r11 106r20 154r7 697r12 730r12 746r12 769r12 792r12 815r12 838r12 875r16
+23n5*detected{22E8} 31r14 29|52r5 58r5 66r5 72r5 78r5 84r5 93r5 99r5
+24n5*test{22E8} 33r14 29|54r5 61r5 68r5 74r5 80r5 86r5 95r5 101r5 142r7 147r11
+. 155r9
+26R8*surveillance_system_alarm_activator_impl_Interface 27d5 40e15 49r24
+. 58r11 81r24 29|112r32 714r24 747r11 854r24
+27e5*Port{22E8} 30r12
+34i11*test_DATA{34|20I8} 29|147r17
+42V12*Send_Output{11|34E9} 43>5 44>5 29|695b12 706l7 706t18
+43e5 Entity{30|60E8} 29|696b5 702r7
+44e5 Port{22E8} 29|697b5 705r7
+47U13*Put_Value 48>5 49>5 29|712b13 722l7 722t16
+48e5 Entity{30|60E8} 29|713b5 718r7
+49r5 Thread_Interface{26R8} 29|714b5 721r7
+51U13*Receive_Input 52>5 53>5 29|728b13 738l7 738t20
+52e5 Entity{30|60E8} 29|729b5 734r7
+53e5 Port{22E8} 29|730b5 737r7
+55V12*Get_Value{26R8} 56>5 57>5 29|744b12 761l7 761t16
+56e5 Entity{30|60E8} 29|745b5 751r7
+57e5 Port{22E8} 29|746b5 757r7
+60V12*Get_Sender{30|60E8} 61>5 62>5 29|767b12 784l7 784t17
+61e5 Entity{30|60E8} 29|768b5 774r7
+62e5 Port{22E8} 29|769b5 780r7
+65V12*Get_Count{integer} 66>5 67>5 29|790b12 807l7 807t16
+66e5 Entity{30|60E8} 29|791b5 797r7
+67e5 Port{22E8} 29|792b5 803r7
+70V12*Get_Time_Stamp{4|51O9} 71>5 72>5 29|813b12 830l7 830t21
+71e5 Entity{30|60E8} 29|814b5 820r7
+72e5 Port{22E8} 29|815b5 826r7
+75U13*Next_Value 76>5 77>5 29|836b13 846l7 846t17
+76e5 Entity{30|60E8} 29|837b5 842r7
+77e5 Port{22E8} 29|838b5 845r7
+79U13*Store_Received_Message 80>5 81>5 82>5 83>5 29|852b13 867l7 867t29
+80e5 Entity{30|60E8} 29|853b5 861r7
+81r5 Thread_Interface{26R8} 29|854b5 864r7
+82e5 From{30|60E8} 29|855b5 865r7
+83o5 Time_Stamp{4|51O9} 29|856b5 866r7
+86U13*Wait_For_Incoming_Events 87>5 88<5 29|873b13 883l7 883t31
+87e5 Entity{30|60E8} 29|874b5 879r7
+88e5 Port{22E8} 29|875b5 882m7
+94V12*surveillance_system_alarm_Job{11|34E9} 105r14 29|134b12 160l7 160t36
+96K11*surveillance_system_alarm_Task[15|70] 29|126r24
+109E8*surveillance_system_detector_impl_Port_Type 111e10 114r12 114r59 131r12
+. 140r12 144r12 149r12 154r12 159r12 164r12 175r16 29|165r11 169r11 177r11
+. 181r11 185r11 245r20 281r7 284r7 347r20 383r7 386r7 449r20 485r7 488r7
+. 891r12 924r12 940r12 963r12 986r12 1009r12 1032r12 1069r16
+110n5*motion{109E8} 118r14 29|191r5 197r5 205r5 211r5 217r5 223r5 232r5 238r5
+. 282r9 293r5 299r5 307r5 313r5 319r5 325r5 334r5 340r5 384r9 395r5 401r5
+. 409r5 415r5 421r5 427r5 436r5 442r5 486r9
+111n5*door{109E8} 120r14 29|193r5 200r5 207r5 213r5 219r5 225r5 234r5 240r5
+. 285r9 295r5 302r5 309r5 315r5 321r5 327r5 336r5 342r5 387r9 397r5 404r5
+. 411r5 417r5 423r5 429r5 438r5 444r5 489r9
+113R8*surveillance_system_detector_impl_Interface 114d5 127e15 136r24 145r11
+. 168r24 29|251r32 353r32 455r32 908r24 941r11 1048r24
+114e5*Port{109E8} 117r12
+129V12*Send_Output{11|34E9} 130>5 131>5 29|889b12 900l7 900t18
+130e5 Entity{30|60E8} 29|890b5 896r7
+131e5 Port{109E8} 29|891b5 899r7
+134U13*Put_Value 135>5 136>5 29|906b13 916l7 916t16
+135e5 Entity{30|60E8} 29|907b5 912r7
+136r5 Thread_Interface{113R8} 29|908b5 915r7
+138U13*Receive_Input 139>5 140>5 29|922b13 932l7 932t20
+139e5 Entity{30|60E8} 29|923b5 928r7
+140e5 Port{109E8} 29|924b5 931r7
+142V12*Get_Value{113R8} 143>5 144>5 29|938b12 955l7 955t16
+143e5 Entity{30|60E8} 29|939b5 945r7
+144e5 Port{109E8} 29|940b5 951r7
+147V12*Get_Sender{30|60E8} 148>5 149>5 29|961b12 978l7 978t17
+148e5 Entity{30|60E8} 29|962b5 968r7
+149e5 Port{109E8} 29|963b5 974r7
+152V12*Get_Count{integer} 153>5 154>5 29|984b12 1001l7 1001t16
+153e5 Entity{30|60E8} 29|985b5 991r7
+154e5 Port{109E8} 29|986b5 997r7
+157V12*Get_Time_Stamp{4|51O9} 158>5 159>5 29|1007b12 1024l7 1024t21
+158e5 Entity{30|60E8} 29|1008b5 1014r7
+159e5 Port{109E8} 29|1009b5 1020r7
+162U13*Next_Value 163>5 164>5 29|1030b13 1040l7 1040t17
+163e5 Entity{30|60E8} 29|1031b5 1036r7
+164e5 Port{109E8} 29|1032b5 1039r7
+166U13*Store_Received_Message 167>5 168>5 169>5 170>5 29|1046b13 1061l7 1061t29
+167e5 Entity{30|60E8} 29|1047b5 1055r7
+168r5 Thread_Interface{113R8} 29|1048b5 1058r7
+169e5 From{30|60E8} 29|1049b5 1059r7
+170o5 Time_Stamp{4|51O9} 29|1050b5 1060r7
+173U13*Wait_For_Incoming_Events 174>5 175<5 29|1067b13 1077l7 1077t31
+174e5 Entity{30|60E8} 29|1068b5 1073r7
+175e5 Port{109E8} 29|1069b5 1076m7
+181V12*surveillance_system_detector1_Job{11|34E9} 192r14 29|273b12 290l7
+. 290t40
+183K11*surveillance_system_detector1_Task[15|70] 29|265r24
+196V12*surveillance_system_detector2_Job{11|34E9} 207r14 29|375b12 392l7
+. 392t40
+198K11*surveillance_system_detector2_Task[15|70] 29|367r24
+211V12*surveillance_system_detector3_Job{11|34E9} 222r14 29|477b12 494l7
+. 494t40
+213K11*surveillance_system_detector3_Task[15|70] 29|469r24
+226E8*surveillance_system_rfid_thread_impl_Port_Type 230e10 233r12 233r62
+. 254r12 263r12 267r12 272r12 277r12 282r12 287r12 298r16 29|499r11 503r11
+. 511r11 515r11 519r11 622r20 658r7 1085r12 1118r12 1134r12 1157r12 1180r12
+. 1203r12 1226r12 1263r16
+227n5*rfid_read{226E8} 237r14 29|525r5 535r5 549r5 559r5 569r5 579r5 601r5
+. 611r5 659r9
+228n5*door{226E8} 239r14 29|527r5 538r5 551r5 561r5 571r5 581r5 603r5 613r5
+229n5*motion{226E8} 241r14 29|529r5 541r5 553r5 563r5 573r5 583r5 605r5 615r5
+230n5*test{226E8} 243r14 29|531r5 544r5 555r5 565r5 575r5 585r5 607r5 617r5
+. 672r19 681r9
+232R8*surveillance_system_rfid_thread_impl_Interface 233d5 250e15 259r24
+. 268r11 291r24 29|628r32 671r39 1102r24 1135r11 1242r24
+233e5*Port{226E8} 236r12 29|672m11
+244i11*test_DATA{34|20I8} 29|673m11
+252V12*Send_Output{11|34E9} 253>5 254>5 29|1083b12 1094l7 1094t18
+253e5 Entity{30|60E8} 29|1084b5 1090r7
+254e5 Port{226E8} 29|1085b5 1093r7
+257U13*Put_Value 258>5 259>5 29|669s37 1100b13 1110l7 1110t16
+258e5 Entity{30|60E8} 29|1101b5 1106r7
+259r5 Thread_Interface{232R8} 29|1102b5 1109r7
+261U13*Receive_Input 262>5 263>5 29|1116b13 1126l7 1126t20
+262e5 Entity{30|60E8} 29|1117b5 1122r7
+263e5 Port{226E8} 29|1118b5 1125r7
+265V12*Get_Value{232R8} 266>5 267>5 29|1132b12 1149l7 1149t16
+266e5 Entity{30|60E8} 29|1133b5 1139r7
+267e5 Port{226E8} 29|1134b5 1145r7
+270V12*Get_Sender{30|60E8} 271>5 272>5 29|1155b12 1172l7 1172t17
+271e5 Entity{30|60E8} 29|1156b5 1162r7
+272e5 Port{226E8} 29|1157b5 1168r7
+275V12*Get_Count{integer} 276>5 277>5 29|1178b12 1195l7 1195t16
+276e5 Entity{30|60E8} 29|1179b5 1185r7
+277e5 Port{226E8} 29|1180b5 1191r7
+280V12*Get_Time_Stamp{4|51O9} 281>5 282>5 29|1201b12 1218l7 1218t21
+281e5 Entity{30|60E8} 29|1202b5 1208r7
+282e5 Port{226E8} 29|1203b5 1214r7
+285U13*Next_Value 286>5 287>5 29|1224b13 1234l7 1234t17
+286e5 Entity{30|60E8} 29|1225b5 1230r7
+287e5 Port{226E8} 29|1226b5 1233r7
+289U13*Store_Received_Message 290>5 291>5 292>5 293>5 29|1240b13 1255l7 1255t29
+290e5 Entity{30|60E8} 29|1241b5 1249r7
+291r5 Thread_Interface{232R8} 29|1242b5 1252r7
+292e5 From{30|60E8} 29|1243b5 1253r7
+293o5 Time_Stamp{4|51O9} 29|1244b5 1254r7
+296U13*Wait_For_Incoming_Events 297>5 298<5 29|1261b13 1271l7 1271t31
+297e5 Entity{30|60E8} 29|1262b5 1267r7
+298e5 Port{226E8} 29|1263b5 1270m7
+304V12*surveillance_system_rfid_reader_Job{11|34E9} 315r14 29|650b12 689l7
+. 689t42
+306K11*surveillance_system_rfid_reader_Task[15|70] 29|642r24
 X 29 polyorb_hi_generated-activity.adb
 22A8 surveillance_system_alarm_activator_impl_Integer_Array(integer)<28|22E8>
-. 60r51 64r48 72r50 79r55 90r24
+. 65r51 71r48 83r50 92r55 107r24
 26A8 surveillance_system_alarm_activator_impl_Port_Kind_Array(17|37E9)<28|22E8>
-. 51r51 91r26
-30I11 UT_Activity_Main_1_Max_Port_Image_Size{integer} 35r7 140r7 474r7
+. 51r51 108r26
+30I11 UT_Activity_Main_1_Max_Port_Image_Size{integer} 35r7 174r7 508r7
 33A11 UT_Activity_Main_surveillance_system_alarm_activator_impl_Port_Image_Array_Component{string}<integer>
 . 39r9
 37A8 surveillance_system_alarm_activator_impl_Port_Image_Array(33A11)<28|22E8>
-. 55r52 92r27
+. 57r52 109r27
 41A8 surveillance_system_alarm_activator_impl_Address_Array(35|67M9)<28|22E8>
-. 83r33 93r24
+. 98r33 110r24
 45A8 surveillance_system_alarm_activator_impl_Overflow_Protocol_Array(17|48E9)<28|22E8>
-. 68r59 94r34
-51a3 surveillance_system_alarm_Port_Kinds{26A8} 97r28
-55a3 surveillance_system_alarm_Port_Images{37A8} 99r29
-60a3 surveillance_system_alarm_FIFO_Sizes{22A8} 100r28
-64a3 surveillance_system_alarm_Offsets{22A8} 101r30
-68a3 surveillance_system_alarm_Overflow_Protocols{45A8} 102r36
-72a3 surveillance_system_alarm_Urgencies{22A8} 103r20
-76i3 surveillance_system_alarm_Total_FIFO_Size{integer} 104r33
-79a3 surveillance_system_alarm_N_Destinations{22A8} 105r25
-83a3 alarm_Destinations{41A8} 106r23
-87K11 surveillance_system_alarm_Interrogators[21|145] 619r12 635r5 651r5
-. 671r12 694r12 717r12 740r12 759r5 778r5 796r5
-118e5 Error_Ü{11|34E9} 125r12
-130A8 surveillance_system_detector_impl_Integer_Array(integer)<28|106E8>
-. 170r55 176r52 188r54 197r59 212r24 272r55 278r52 290r54 299r59 314r24 374r55
-. 380r52 392r54 401r59 416r24
-134A8 surveillance_system_detector_impl_Port_Kind_Array(17|37E9)<28|106E8>
-. 156r55 213r26 258r55 315r26 360r55 417r26
-138A11 UT_Activity_Main_surveillance_system_detector_impl_Port_Image_Array_Component{string}<integer>
-. 144r9
-142A8 surveillance_system_detector_impl_Port_Image_Array(138A11)<28|106E8>
-. 162r56 214r27 264r56 316r27 366r56 418r27
-146A8 surveillance_system_detector_impl_Address_Array(35|67M9)<28|106E8>
-. 203r37 215r24 305r37 317r24 407r37 419r24
-150A8 surveillance_system_detector_impl_Overflow_Protocol_Array(17|48E9)<28|106E8>
-. 182r63 216r34 284r63 318r34 386r63 420r34
-156a3 surveillance_system_detector1_Port_Kinds{134A8} 219r28
-162a3 surveillance_system_detector1_Port_Images{142A8} 221r29
-170a3 surveillance_system_detector1_FIFO_Sizes{130A8} 222r28
-176a3 surveillance_system_detector1_Offsets{130A8} 223r30
-182a3 surveillance_system_detector1_Overflow_Protocols{150A8} 224r36
-188a3 surveillance_system_detector1_Urgencies{130A8} 225r20
-194i3 surveillance_system_detector1_Total_FIFO_Size{integer} 226r33
-197a3 surveillance_system_detector1_N_Destinations{130A8} 227r25
-203a3 detector1_Destinations{146A8} 228r23
-209K11 surveillance_system_detector1_Interrogators[21|145] 246r5 249r5 813r12
-. 829r5 845r5 865r12 888r12 911r12 934r12 953r5 972r5 990r5
-240e5 Error_Ü{11|34E9} 255r12
-258a3 surveillance_system_detector2_Port_Kinds{134A8} 321r28
-264a3 surveillance_system_detector2_Port_Images{142A8} 323r29
-272a3 surveillance_system_detector2_FIFO_Sizes{130A8} 324r28
-278a3 surveillance_system_detector2_Offsets{130A8} 325r30
-284a3 surveillance_system_detector2_Overflow_Protocols{150A8} 326r36
-290a3 surveillance_system_detector2_Urgencies{130A8} 327r20
-296i3 surveillance_system_detector2_Total_FIFO_Size{integer} 328r33
-299a3 surveillance_system_detector2_N_Destinations{130A8} 329r25
-305a3 detector2_Destinations{146A8} 330r23
-311K11 surveillance_system_detector2_Interrogators[21|145] 348r5 351r5
-342e5 Error_Ü{11|34E9} 357r12
-360a3 surveillance_system_detector3_Port_Kinds{134A8} 423r28
-366a3 surveillance_system_detector3_Port_Images{142A8} 425r29
-374a3 surveillance_system_detector3_FIFO_Sizes{130A8} 426r28
-380a3 surveillance_system_detector3_Offsets{130A8} 427r30
-386a3 surveillance_system_detector3_Overflow_Protocols{150A8} 428r36
-392a3 surveillance_system_detector3_Urgencies{130A8} 429r20
-398i3 surveillance_system_detector3_Total_FIFO_Size{integer} 430r33
-401a3 surveillance_system_detector3_N_Destinations{130A8} 431r25
-407a3 detector3_Destinations{146A8} 432r23
-413K11 surveillance_system_detector3_Interrogators[21|145] 450r5 453r5
-444e5 Error_Ü{11|34E9} 459r12
-464A8 surveillance_system_rfid_thread_impl_Integer_Array(integer)<28|223E8>
-. 509r57 517r54 533r56 544r61 563r24
-468A8 surveillance_system_rfid_thread_impl_Port_Kind_Array(17|37E9)<28|223E8>
-. 490r57 564r26
-472A11 UT_Activity_Main_surveillance_system_rfid_thread_impl_Port_Image_Array_Component{string}<integer>
-. 478r9
-476A8 surveillance_system_rfid_thread_impl_Port_Image_Array(472A11)<28|223E8>
-. 498r58 565r27
-480A8 surveillance_system_rfid_thread_impl_Address_Array(35|67M9)<28|223E8>
-. 552r39 566r24
-484A8 surveillance_system_rfid_thread_impl_Overflow_Protocol_Array(17|48E9)<28|223E8>
-. 525r65 567r34
-490a3 surveillance_system_rfid_reader_Port_Kinds{468A8} 570r28
-498a3 surveillance_system_rfid_reader_Port_Images{476A8} 572r29
-509a3 surveillance_system_rfid_reader_FIFO_Sizes{464A8} 573r28
-517a3 surveillance_system_rfid_reader_Offsets{464A8} 574r30
-525a3 surveillance_system_rfid_reader_Overflow_Protocols{484A8} 575r36
-533a3 surveillance_system_rfid_reader_Urgencies{464A8} 576r20
-541i3 surveillance_system_rfid_reader_Total_FIFO_Size{integer} 577r33
-544a3 surveillance_system_rfid_reader_N_Destinations{464A8} 578r25
-552a3 rfid_reader_Destinations{480A8} 579r23
-560K11 surveillance_system_rfid_reader_Interrogators[21|145] 597r5 1007r12
-. 1023r5 1039r5 1059r12 1082r12 1105r12 1128r12 1147r5 1166r5 1184r5
-591e5 Error_Ü{11|34E9} 603r12
+. 77r59 111r34
+51a3 surveillance_system_alarm_Port_Kinds{26A8} 114r28
+57a3 surveillance_system_alarm_Port_Images{37A8} 116r29
+65a3 surveillance_system_alarm_FIFO_Sizes{22A8} 117r28
+71a3 surveillance_system_alarm_Offsets{22A8} 118r30
+77a3 surveillance_system_alarm_Overflow_Protocols{45A8} 119r36
+83a3 surveillance_system_alarm_Urgencies{22A8} 120r20
+89i3 surveillance_system_alarm_Total_FIFO_Size{integer} 121r33
+92a3 surveillance_system_alarm_N_Destinations{22A8} 122r25
+98a3 alarm_Destinations{41A8} 123r23
+104K11 surveillance_system_alarm_Interrogators[21|145] 141r9 146r8 153r5
+. 704r12 720r5 736r5 756r12 779r12 802r12 825r12 844r5 863r5 881r5
+135i5 test_V{34|20I8} 145m7 149m7
+136e5 Error_Ü{11|34E9} 159r12
+164A8 surveillance_system_detector_impl_Integer_Array(integer)<28|109E8>
+. 204r55 210r52 222r54 231r59 246r24 306r55 312r52 324r54 333r59 348r24 408r55
+. 414r52 426r54 435r59 450r24
+168A8 surveillance_system_detector_impl_Port_Kind_Array(17|37E9)<28|109E8>
+. 190r55 247r26 292r55 349r26 394r55 451r26
+172A11 UT_Activity_Main_surveillance_system_detector_impl_Port_Image_Array_Component{string}<integer>
+. 178r9
+176A8 surveillance_system_detector_impl_Port_Image_Array(172A11)<28|109E8>
+. 196r56 248r27 298r56 350r27 400r56 452r27
+180A8 surveillance_system_detector_impl_Address_Array(35|67M9)<28|109E8>
+. 237r37 249r24 339r37 351r24 441r37 453r24
+184A8 surveillance_system_detector_impl_Overflow_Protocol_Array(17|48E9)<28|109E8>
+. 216r63 250r34 318r63 352r34 420r63 454r34
+190a3 surveillance_system_detector1_Port_Kinds{168A8} 253r28
+196a3 surveillance_system_detector1_Port_Images{176A8} 255r29
+204a3 surveillance_system_detector1_FIFO_Sizes{164A8} 256r28
+210a3 surveillance_system_detector1_Offsets{164A8} 257r30
+216a3 surveillance_system_detector1_Overflow_Protocols{184A8} 258r36
+222a3 surveillance_system_detector1_Urgencies{164A8} 259r20
+228i3 surveillance_system_detector1_Total_FIFO_Size{integer} 260r33
+231a3 surveillance_system_detector1_N_Destinations{164A8} 261r25
+237a3 detector1_Destinations{180A8} 262r23
+243K11 surveillance_system_detector1_Interrogators[21|145] 280r5 283r5 898r12
+. 914r5 930r5 950r12 973r12 996r12 1019r12 1038r5 1057r5 1075r5
+274e5 Error_Ü{11|34E9} 289r12
+292a3 surveillance_system_detector2_Port_Kinds{168A8} 355r28
+298a3 surveillance_system_detector2_Port_Images{176A8} 357r29
+306a3 surveillance_system_detector2_FIFO_Sizes{164A8} 358r28
+312a3 surveillance_system_detector2_Offsets{164A8} 359r30
+318a3 surveillance_system_detector2_Overflow_Protocols{184A8} 360r36
+324a3 surveillance_system_detector2_Urgencies{164A8} 361r20
+330i3 surveillance_system_detector2_Total_FIFO_Size{integer} 362r33
+333a3 surveillance_system_detector2_N_Destinations{164A8} 363r25
+339a3 detector2_Destinations{180A8} 364r23
+345K11 surveillance_system_detector2_Interrogators[21|145] 382r5 385r5
+376e5 Error_Ü{11|34E9} 391r12
+394a3 surveillance_system_detector3_Port_Kinds{168A8} 457r28
+400a3 surveillance_system_detector3_Port_Images{176A8} 459r29
+408a3 surveillance_system_detector3_FIFO_Sizes{164A8} 460r28
+414a3 surveillance_system_detector3_Offsets{164A8} 461r30
+420a3 surveillance_system_detector3_Overflow_Protocols{184A8} 462r36
+426a3 surveillance_system_detector3_Urgencies{164A8} 463r20
+432i3 surveillance_system_detector3_Total_FIFO_Size{integer} 464r33
+435a3 surveillance_system_detector3_N_Destinations{164A8} 465r25
+441a3 detector3_Destinations{180A8} 466r23
+447K11 surveillance_system_detector3_Interrogators[21|145] 484r5 487r5
+478e5 Error_Ü{11|34E9} 493r12
+498A8 surveillance_system_rfid_thread_impl_Integer_Array(integer)<28|226E8>
+. 548r57 558r54 578r56 600r61 623r24
+502A8 surveillance_system_rfid_thread_impl_Port_Kind_Array(17|37E9)<28|226E8>
+. 524r57 624r26
+506A11 UT_Activity_Main_surveillance_system_rfid_thread_impl_Port_Image_Array_Component{string}<integer>
+. 512r9
+510A8 surveillance_system_rfid_thread_impl_Port_Image_Array(506A11)<28|226E8>
+. 534r58 625r27
+514A8 surveillance_system_rfid_thread_impl_Address_Array(35|67M9)<28|226E8>
+. 610r39 626r24
+518A8 surveillance_system_rfid_thread_impl_Overflow_Protocol_Array(17|48E9)<28|226E8>
+. 568r65 627r34
+524a3 surveillance_system_rfid_reader_Port_Kinds{502A8} 630r28
+534a3 surveillance_system_rfid_reader_Port_Images{510A8} 632r29
+548a3 surveillance_system_rfid_reader_FIFO_Sizes{498A8} 633r28
+558a3 surveillance_system_rfid_reader_Offsets{498A8} 634r30
+568a3 surveillance_system_rfid_reader_Overflow_Protocols{518A8} 635r36
+578a3 surveillance_system_rfid_reader_Urgencies{498A8} 636r20
+588i3 surveillance_system_rfid_reader_Total_FIFO_Size{integer} 637r33
+591A8 UT_Activity_Main_rfid_reader_test_Destinations_Array(30|141E8)<integer>
+. 595r44 596r4
+595a3 rfid_reader_test_Destinations{591A8} 618r6
+600a3 surveillance_system_rfid_reader_N_Destinations{498A8} 638r25
+610a3 rfid_reader_Destinations{514A8} 639r23
+620K11 surveillance_system_rfid_reader_Interrogators[21|145] 657r5 680r6
+. 1092r12 1108r5 1124r5 1144r12 1167r12 1190r12 1213r12 1232r5 1251r5 1269r5
+651r5 detector_handler_Status{32|34R8} 662m17 662r17 664r7 674r13
+652e5 Error_Ü{11|34E9} 679m5 682r9 685r14 688r12
 X 30 polyorb_hi_generated-deployment.ads
-10K30*Deployment 28|11w27 40r35 45r35 49r35 53r35 58r35 60r32 63r35 68r35
-. 73r35 77r35 79r33 84r35 95r38 127r35 132r35 136r35 140r35 145r35 147r32
-. 150r35 155r35 160r35 164r35 166r33 171r35 182r38 197r38 212r38 247r35 252r35
-. 256r35 260r35 265r35 267r32 270r35 275r35 280r35 284r35 286r33 291r35 302r38
-. 29|31r44 57r27 58r30 96r46 164r27 165r30 167r27 168r30 218r46 266r27 267r30
-. 269r27 270r30 320r46 368r27 369r30 371r27 372r30 422r46 500r27 501r30 503r27
-. 504r30 506r27 507r30 569r46 611r35 615r30 628r35 631r30 644r35 647r30 660r35
-. 664r30 683r35 685r32 687r30 706r35 710r30 729r35 733r30 752r35 755r30 768r35
-. 770r33 774r30 789r35 792r30 805r35 809r30 822r35 825r30 838r35 841r30 854r35
-. 858r30 877r35 879r32 881r30 900r35 904r30 923r35 927r30 946r35 949r30 962r35
-. 964r33 968r30 983r35 986r30 999r35 1003r30 1016r35 1019r30 1032r35 1035r30
-. 1048r35 1052r30 1071r35 1073r32 1075r30 1094r35 1098r30 1117r35 1121r30
-. 1140r35 1143r30 1156r35 1158r33 1162r30 1177r35 1180r30 30|258e36
-60E8*Entity_Type 28|40r46 45r46 49r46 53r46 58r46 60r43 63r46 68r46 73r46
-. 77r46 79r44 84r46 127r46 132r46 136r46 140r46 145r46 147r43 150r46 155r46
-. 160r46 164r46 166r44 171r46 247r46 252r46 256r46 260r46 265r46 267r43 270r46
-. 275r46 280r46 284r46 286r44 291r46 29|611r46 628r46 644r46 660r46 683r46
-. 685r43 706r46 729r46 752r46 768r46 770r44 789r46 805r46 822r46 838r46 854r46
-. 877r46 879r43 900r46 923r46 946r46 962r46 964r44 983r46 999r46 1016r46
-. 1032r46 1048r46 1071r46 1073r43 1094r46 1117r46 1140r46 1156r46 1158r44
-. 1177r46 30|65e24
-61n5*main_alarm_K{60E8} 28|95r49 29|96r57
-62n5*main_detector1_K{60E8} 28|182r49 29|218r57
-63n5*main_detector2_K{60E8} 28|197r49 29|320r57
-64n5*main_detector3_K{60E8} 28|212r49 29|422r57
-65n5*main_rfid_reader_K{60E8} 28|302r49 29|569r57
-142n5*main_alarm_detected_K{141E8} 29|58r41
-143n5*main_detector1_motion_K{141E8} 29|165r41
-144n5*main_detector1_door_K{141E8} 29|168r41
-145n5*main_detector2_motion_K{141E8} 29|267r41
-146n5*main_detector2_door_K{141E8} 29|270r41
-147n5*main_detector3_motion_K{141E8} 29|369r41
-148n5*main_detector3_door_K{141E8} 29|372r41
-149n5*main_rfid_reader_rfid_read_K{141E8} 29|501r41
-150n5*main_rfid_reader_door_K{141E8} 29|504r41
-151n5*main_rfid_reader_motion_K{141E8} 29|507r41
-213i3*Max_Port_Image_Size{integer} 29|31r55
-218A11*Port_Sized_String{string}<integer>
-224A8*UT_Deployment_Main_Port_Image_Array(218A11)<141E8>
-228a3*Port_Image{224A8} 29|57r38 164r38 167r38 266r38 269r38 368r38 371r38
-. 500r38 503r38 506r38
+10K30*Deployment 28|11w27 43r35 48r35 52r35 56r35 61r35 63r32 66r35 71r35
+. 76r35 80r35 82r33 87r35 98r38 130r35 135r35 139r35 143r35 148r35 150r32
+. 153r35 158r35 163r35 167r35 169r33 174r35 185r38 200r38 215r38 253r35 258r35
+. 262r35 266r35 271r35 273r32 276r35 281r35 286r35 290r35 292r33 297r35 308r38
+. 29|31r44 59r27 60r30 62r27 63r30 113r46 198r27 199r30 201r27 202r30 252r46
+. 300r27 301r30 303r27 304r30 354r46 402r27 403r30 405r27 406r30 456r46 536r27
+. 537r30 539r27 540r30 542r27 543r30 545r27 546r30 593r30 598r29 629r46 670r30
+. 696r35 700r30 713r35 716r30 729r35 732r30 745r35 749r30 768r35 770r32 772r30
+. 791r35 795r30 814r35 818r30 837r35 840r30 853r35 855r33 859r30 874r35 877r30
+. 890r35 894r30 907r35 910r30 923r35 926r30 939r35 943r30 962r35 964r32 966r30
+. 985r35 989r30 1008r35 1012r30 1031r35 1034r30 1047r35 1049r33 1053r30 1068r35
+. 1071r30 1084r35 1088r30 1101r35 1104r30 1117r35 1120r30 1133r35 1137r30
+. 1156r35 1158r32 1160r30 1179r35 1183r30 1202r35 1206r30 1225r35 1228r30
+. 1241r35 1243r33 1247r30 1262r35 1265r30 30|272e36
+60E8*Entity_Type 28|43r46 48r46 52r46 56r46 61r46 63r43 66r46 71r46 76r46
+. 80r46 82r44 87r46 130r46 135r46 139r46 143r46 148r46 150r43 153r46 158r46
+. 163r46 167r46 169r44 174r46 253r46 258r46 262r46 266r46 271r46 273r43 276r46
+. 281r46 286r46 290r46 292r44 297r46 29|696r46 713r46 729r46 745r46 768r46
+. 770r43 791r46 814r46 837r46 853r46 855r44 874r46 890r46 907r46 923r46 939r46
+. 962r46 964r43 985r46 1008r46 1031r46 1047r46 1049r44 1068r46 1084r46 1101r46
+. 1117r46 1133r46 1156r46 1158r43 1179r46 1202r46 1225r46 1241r46 1243r44
+. 1262r46 30|65e24
+61n5*main_alarm_K{60E8} 28|98r49 29|113r57
+62n5*main_detector1_K{60E8} 28|185r49 29|252r57
+63n5*main_detector2_K{60E8} 28|200r49 29|354r57
+64n5*main_detector3_K{60E8} 28|215r49 29|456r57
+65n5*main_rfid_reader_K{60E8} 28|308r49 29|629r57 670r41
+141E8*Port_Type 29|593r41 30|153e29
+142n5*main_alarm_detected_K{141E8} 29|60r41
+143n5*main_alarm_test_K{141E8} 29|63r41 598r40
+144n5*main_detector1_motion_K{141E8} 29|199r41
+145n5*main_detector1_door_K{141E8} 29|202r41
+146n5*main_detector2_motion_K{141E8} 29|301r41
+147n5*main_detector2_door_K{141E8} 29|304r41
+148n5*main_detector3_motion_K{141E8} 29|403r41
+149n5*main_detector3_door_K{141E8} 29|406r41
+150n5*main_rfid_reader_rfid_read_K{141E8} 29|537r41
+151n5*main_rfid_reader_door_K{141E8} 29|540r41
+152n5*main_rfid_reader_motion_K{141E8} 29|543r41
+153n5*main_rfid_reader_test_K{141E8} 29|546r41
+223i3*Max_Port_Image_Size{integer} 29|31r55
+228A11*Port_Sized_String{string}<integer>
+234A8*UT_Deployment_Main_Port_Image_Array(228A11)<141E8>
+238a3*Port_Image{234A8} 29|59r38 62r38 198r38 201r38 300r38 303r38 402r38
+. 405r38 536r38 539r38 542r38 545r38
 X 31 polyorb_hi_generated-marshallers.ads
-13K30*Marshallers 29|11w27 107r40 229r40 331r40 433r40 580r40 31|58e37
-27U13*Marshall 29|107r52
-38U13*Marshall 29|229r52 331r52 433r52
-49U13*Marshall 29|580r52
+13K30*Marshallers 29|11w27 124r40 263r40 365r40 467r40 640r40 31|68e37
+27U13*Marshall 29|124r52
+48U13*Marshall 29|263r52 365r52 467r52
+59U13*Marshall 29|640r52
 X 32 polyorb_hi_generated-subprograms.ads
-10K30*Subprograms 29|15w27 123r26 253r26 355r26 457r26 601r26 32|18e37
-12U13*event_handlers_alarm_activator 29|123s38
-14U13*event_handlers_detection_handler 29|253s38 355s38 457s38
-16U13*event_handlers_rfid_handler 29|601s38
+11K30*Subprograms 29|15w27 157r26 287r26 389r26 491r26 651r52 661r26 663r30
+. 665r28 666r30 673r45 675r34 676r36 32|65e37
+13U13*event_handlers_alarm_activator 29|157s38
+15U13*event_handlers_detection_handler 29|287s38 389s38 491s38
+17E8*event_handlers_rfid_handler_Port_Type 29|665r40 675r46 32|18e17
+18n5*Data_Source{17E8} 29|666r42 676r48
+26i11*Data_Source_DATA{34|20I8} 29|676r62
+34R8*event_handlers_rfid_handler_Status 29|651r64 32|63e15
+41V12*Get_Value{20R8} 29|673s57
+50V12*Get_Count{integer} 29|663s42
+55U13*event_handlers_rfid_handler 29|661s38
+56r5 Status{34R8} 29|662r7
 X 33 polyorb_hi_generated-transport.ads
-14K30*Transport 29|12w27 108r36 230r36 332r36 434r36 581r36 33|26e35
-20V12*Send{11|34E9} 29|108r46 230r46 332r46 434r46 581r46
+14K30*Transport 29|12w27 125r36 264r36 366r36 468r36 641r36 33|26e35
+20V12*Send{11|34E9} 29|125r46 264r46 366r46 468r46 641r46
 X 34 polyorb_hi_generated-types.ads
-10K30*Types 28|9w27 18r40 34|20e31
+10K30*Types 28|9w27 18r40 34r44 244r44 29|135r35 150r29 34|28e31
 12I8*state<integer> 28|18r46
+20I8*Integer_Type<integer> 28|34r50 244r50 29|135r41
+25i3*Integer_Type_Default_Value{20I8} 29|150r35
 X 35 system.ads
-37K9*System 29|10w6 43r9 85r6 148r9 205r6 207r6 307r6 309r6 409r6 411r6 482r9
-. 554r6 556r6 558r6 35|156e11
-67M9*Address 29|43r16 148r16 482r16
-69m4*Null_Address{67M9} 29|85r13 205r13 207r13 307r13 309r13 409r13 411r13
-. 554r13 556r13 558r13
+37K9*System 29|10w6 43r9 100r6 102r6 182r9 239r6 241r6 341r6 343r6 443r6
+. 445r6 516r9 612r6 614r6 616r6 35|156e11
+67M9*Address 29|43r16 182r16 516r16
+69m4*Null_Address{67M9} 29|100r13 102r13 239r13 241r13 341r13 343r13 443r13
+. 445r13 612r13 614r13 616r13
 108I12*Any_Priority{integer}
 X 49 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22

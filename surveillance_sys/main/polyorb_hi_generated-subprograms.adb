@@ -6,6 +6,7 @@
 pragma Style_Checks
  ("NM32766");
 
+with surveillance;
 
 package body PolyORB_HI_Generated.Subprograms is
 
@@ -29,14 +30,83 @@ package body PolyORB_HI_Generated.Subprograms is
     raise Nyi;
   end event_handlers_detection_handler;
 
-  ---------------------------------
-  -- event_handlers_rfid_handler -- 
-  ---------------------------------
+  procedure event_handlers_rfid_handler
+   (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Status)
+   renames surveillance.rfid;
 
-  procedure event_handlers_rfid_handler is
-    Nyi : exception;
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_rfid_handler_Status;
+    Spg_Interface : event_handlers_rfid_handler_Interface)
+  is
   begin
-    raise Nyi;
-  end event_handlers_rfid_handler;
+    case Spg_Interface.Port is
+      when Data_Source =>
+        Status.Data_Source :=
+         True;
+        Status.Data_Source_DATA :=
+         Spg_Interface.Data_Source_DATA;
+
+    end case;
+  end Put_Value;
+
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_rfid_handler_Status;
+    Port : event_handlers_rfid_handler_Port_Type)
+   return event_handlers_rfid_handler_Interface
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        return (Port => Data_Source,
+        Data_Source_DATA => Status.Data_Source_DATA);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_rfid_handler_Status;
+    Port : event_handlers_rfid_handler_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_rfid_handler_Status;
+    Port : event_handlers_rfid_handler_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        if Status.Data_Source
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
 
 end PolyORB_HI_Generated.Subprograms;

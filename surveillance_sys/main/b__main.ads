@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#d2272cb7#;
+   u00001 : constant Version_32 := 16#6d8ff856#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#b6df930e#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -45,7 +45,7 @@ package ada_main is
    pragma Export (C, u00004, "polyorb_hiS");
    u00005 : constant Version_32 := 16#76f3c1a4#;
    pragma Export (C, u00005, "polyorb_hi__suspendersB");
-   u00006 : constant Version_32 := 16#c0ecd103#;
+   u00006 : constant Version_32 := 16#2a7b675d#;
    pragma Export (C, u00006, "polyorb_hi__suspendersS");
    u00007 : constant Version_32 := 16#76789da1#;
    pragma Export (C, u00007, "adaS");
@@ -319,21 +319,21 @@ package ada_main is
    pragma Export (C, u00141, "system__storage_poolsS");
    u00142 : constant Version_32 := 16#32a22d97#;
    pragma Export (C, u00142, "polyorb_hi_generatedS");
-   u00143 : constant Version_32 := 16#4665837b#;
+   u00143 : constant Version_32 := 16#acf23525#;
    pragma Export (C, u00143, "polyorb_hi_generated__deploymentS");
-   u00144 : constant Version_32 := 16#dfa51b66#;
+   u00144 : constant Version_32 := 16#1f6dd371#;
    pragma Export (C, u00144, "polyorb_hi_generated__activityB");
-   u00145 : constant Version_32 := 16#b20eb823#;
+   u00145 : constant Version_32 := 16#d08440d1#;
    pragma Export (C, u00145, "polyorb_hi_generated__activityS");
    u00146 : constant Version_32 := 16#9a911172#;
    pragma Export (C, u00146, "polyorb_hi__errorsS");
    u00147 : constant Version_32 := 16#5b3511e5#;
    pragma Export (C, u00147, "polyorb_hi__messagesB");
-   u00148 : constant Version_32 := 16#1a75c1a6#;
+   u00148 : constant Version_32 := 16#f0e277f8#;
    pragma Export (C, u00148, "polyorb_hi__messagesS");
    u00149 : constant Version_32 := 16#72aaafa3#;
    pragma Export (C, u00149, "polyorb_hi__utilsB");
-   u00150 : constant Version_32 := 16#e4531719#;
+   u00150 : constant Version_32 := 16#0ec4a147#;
    pragma Export (C, u00150, "polyorb_hi__utilsS");
    u00151 : constant Version_32 := 16#52f1910f#;
    pragma Export (C, u00151, "system__assertionsB");
@@ -371,7 +371,7 @@ package ada_main is
    pragma Export (C, u00167, "polyorb_hi__marshallers_gS");
    u00168 : constant Version_32 := 16#3906fcdd#;
    pragma Export (C, u00168, "polyorb_hi__thread_interrogatorsB");
-   u00169 : constant Version_32 := 16#24585a19#;
+   u00169 : constant Version_32 := 16#cecfec47#;
    pragma Export (C, u00169, "polyorb_hi__thread_interrogatorsS");
    u00170 : constant Version_32 := 16#5d51f498#;
    pragma Export (C, u00170, "polyorb_hi__time_marshallersB");
@@ -379,46 +379,50 @@ package ada_main is
    pragma Export (C, u00171, "polyorb_hi__time_marshallersS");
    u00172 : constant Version_32 := 16#87e11ef2#;
    pragma Export (C, u00172, "polyorb_hi__unprotected_queueB");
-   u00173 : constant Version_32 := 16#f0cd00d9#;
+   u00173 : constant Version_32 := 16#1a5ab687#;
    pragma Export (C, u00173, "polyorb_hi__unprotected_queueS");
-   u00174 : constant Version_32 := 16#c2e54380#;
+   u00174 : constant Version_32 := 16#9d2ece54#;
    pragma Export (C, u00174, "polyorb_hi_generated__marshallersB");
-   u00175 : constant Version_32 := 16#6939ee8d#;
+   u00175 : constant Version_32 := 16#748f7266#;
    pragma Export (C, u00175, "polyorb_hi_generated__marshallersS");
-   u00176 : constant Version_32 := 16#bd486473#;
+   u00176 : constant Version_32 := 16#8afdfe3e#;
    pragma Export (C, u00176, "polyorb_hi_generated__typesS");
-   u00177 : constant Version_32 := 16#99cab7bc#;
+   u00177 : constant Version_32 := 16#a98a84bf#;
    pragma Export (C, u00177, "polyorb_hi_generated__subprogramsB");
-   u00178 : constant Version_32 := 16#eebb5680#;
+   u00178 : constant Version_32 := 16#f26b0293#;
    pragma Export (C, u00178, "polyorb_hi_generated__subprogramsS");
-   u00179 : constant Version_32 := 16#3b2bb8c0#;
-   pragma Export (C, u00179, "polyorb_hi_generated__transportB");
-   u00180 : constant Version_32 := 16#7e12ee8d#;
-   pragma Export (C, u00180, "polyorb_hi_generated__transportS");
-   u00181 : constant Version_32 := 16#5e1f99be#;
-   pragma Export (C, u00181, "system__tasking__protected_objects__operationsB");
-   u00182 : constant Version_32 := 16#ba36ad85#;
-   pragma Export (C, u00182, "system__tasking__protected_objects__operationsS");
-   u00183 : constant Version_32 := 16#d8038a64#;
-   pragma Export (C, u00183, "system__tasking__entry_callsB");
-   u00184 : constant Version_32 := 16#df420580#;
-   pragma Export (C, u00184, "system__tasking__entry_callsS");
-   u00185 : constant Version_32 := 16#40fbb80f#;
-   pragma Export (C, u00185, "system__tasking__rendezvousB");
-   u00186 : constant Version_32 := 16#ea18a31e#;
-   pragma Export (C, u00186, "system__tasking__rendezvousS");
-   u00187 : constant Version_32 := 16#2032c5c8#;
-   pragma Export (C, u00187, "polyorb_hi__periodic_taskB");
-   u00188 : constant Version_32 := 16#99b077e4#;
-   pragma Export (C, u00188, "polyorb_hi__periodic_taskS");
-   u00189 : constant Version_32 := 16#149dbb7c#;
-   pragma Export (C, u00189, "system__tasking__stagesB");
-   u00190 : constant Version_32 := 16#a2ee1060#;
-   pragma Export (C, u00190, "system__tasking__stagesS");
-   u00191 : constant Version_32 := 16#a6359005#;
-   pragma Export (C, u00191, "system__memoryB");
-   u00192 : constant Version_32 := 16#1f488a30#;
-   pragma Export (C, u00192, "system__memoryS");
+   u00179 : constant Version_32 := 16#b01a2cc5#;
+   pragma Export (C, u00179, "surveillanceB");
+   u00180 : constant Version_32 := 16#c0cbbd1b#;
+   pragma Export (C, u00180, "surveillanceS");
+   u00181 : constant Version_32 := 16#24faf108#;
+   pragma Export (C, u00181, "polyorb_hi_generated__transportB");
+   u00182 : constant Version_32 := 16#948558d3#;
+   pragma Export (C, u00182, "polyorb_hi_generated__transportS");
+   u00183 : constant Version_32 := 16#5e1f99be#;
+   pragma Export (C, u00183, "system__tasking__protected_objects__operationsB");
+   u00184 : constant Version_32 := 16#ba36ad85#;
+   pragma Export (C, u00184, "system__tasking__protected_objects__operationsS");
+   u00185 : constant Version_32 := 16#d8038a64#;
+   pragma Export (C, u00185, "system__tasking__entry_callsB");
+   u00186 : constant Version_32 := 16#df420580#;
+   pragma Export (C, u00186, "system__tasking__entry_callsS");
+   u00187 : constant Version_32 := 16#40fbb80f#;
+   pragma Export (C, u00187, "system__tasking__rendezvousB");
+   u00188 : constant Version_32 := 16#ea18a31e#;
+   pragma Export (C, u00188, "system__tasking__rendezvousS");
+   u00189 : constant Version_32 := 16#2032c5c8#;
+   pragma Export (C, u00189, "polyorb_hi__periodic_taskB");
+   u00190 : constant Version_32 := 16#7327c1ba#;
+   pragma Export (C, u00190, "polyorb_hi__periodic_taskS");
+   u00191 : constant Version_32 := 16#149dbb7c#;
+   pragma Export (C, u00191, "system__tasking__stagesB");
+   u00192 : constant Version_32 := 16#a2ee1060#;
+   pragma Export (C, u00192, "system__tasking__stagesS");
+   u00193 : constant Version_32 := 16#a6359005#;
+   pragma Export (C, u00193, "system__memoryB");
+   u00194 : constant Version_32 := 16#1f488a30#;
+   pragma Export (C, u00194, "system__memoryS");
    --  BEGIN ELABORATION ORDER
    --  ada%s
    --  interfaces%s
@@ -602,9 +606,11 @@ package ada_main is
    --  polyorb_hi.unprotected_queue%b
    --  polyorb_hi.thread_interrogators%s
    --  polyorb_hi.thread_interrogators%b
-   --  polyorb_hi_generated.subprograms%s
-   --  polyorb_hi_generated.subprograms%b
    --  polyorb_hi_generated.types%s
+   --  polyorb_hi_generated.subprograms%s
+   --  surveillance%s
+   --  surveillance%b
+   --  polyorb_hi_generated.subprograms%b
    --  polyorb_hi_generated.activity%s
    --  polyorb_hi_generated.transport%s
    --  polyorb_hi_generated.marshallers%s

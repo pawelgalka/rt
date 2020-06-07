@@ -15,7 +15,8 @@ with "/opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/po
 project main is
   for Source_Dirs use
    (".",
-    "/opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada") & external_as_list("ADA_INCLUDE_PATH", ":");
+    "/opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada",
+    "/home/p/rt/") & external_as_list("ADA_INCLUDE_PATH", ":");
 
   for Main use ("main.adb");
 
