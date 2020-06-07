@@ -1,0 +1,168 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P LC SS ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RV NO_FIXED_POINT
+RR NO_IO
+RV NO_PROTECTED_TYPES
+RR NO_RECURSION
+RV NO_SECONDARY_STACK
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U polyorb_hi.output%b	polyorb_hi-output.adb	2e8ae3fc OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W interfaces%s		interfac.ads		interfac.ali
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.output_low_level%s  polyorb_hi-output_low_level_native.adb  polyorb_hi-output_low_level_native.ali
+W polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali  EA
+W system%s		system.ads		system.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U polyorb_hi.output%s	polyorb_hi-output.ads	65693053 BN EB EE NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-reatim.ads		20160420090448 a87e2da7 ada.real_time%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
+D polyorb_hi-output.adb	20170204221544 4b296a11 polyorb_hi.output%b
+D polyorb_hi-output_low_level.ads  20170204221544 a6d5ae25 polyorb_hi.output_low_level%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200607153059 74c7aeec polyorb_hi_generated.deployment%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-imglld.ads		20090409150019 f3220969 system.img_lld%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20191204142541 7b5577db system.os_constants%s
+D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
+D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20170112134946 05d6152c system.tasking%s
+D s-taprob.ads		20170106114239 acd6094d system.tasking.protected_objects%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 ada.ads
+16K9*Ada 20e8 9|38r6 43r8
+X 3 a-reatim.ads
+39K13*Real_Time 187e18 9|38w10 43r12
+51O9*Time<duration> 9|170r20
+52o4*Time_First{51O9} 9|173r23
+56O9*Time_Span<duration> 9|171r20
+63V13*Clock{51O9} 9|176s21
+73V14*"-"{56O9} 9|176s27
+91V14*"*"{56O9} 9|181s47
+112V13*To_Duration{duration} 9|181s26
+114V13*To_Time_Span{56O9} 9|174s21
+X 7 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 8|36r6 38r9 41r8 82r5 9|34r6 35r6 41r14 162r7 170r33
+. 179r7 180r7 182r7 183r7 233r5
+X 8 polyorb_hi-output.ads
+38K20*Output 7|35k9 8|82l16 82e22 9|41b25 233l16 233t22
+43E9*Verbosity 54e8 56r28 59r34 66r29 73r58 9|115r34 137r29 199r16
+44n7*Verbose{43E9} 73r71 9|199r40
+48n7*Normal{43E9} 56r41 59r47 66r42 9|115r47 137r42
+52n7*Error{43E9}
+56e4*Current_Mode{43E9} 9|121r18 143r18
+59U14*Put_Line 59>24 59>55 9|115b14 126l8 126t16 211s13 217s7
+59e24 Mode{43E9} 9|115b24 121r10
+59a55 Text{string} 9|115b55 123r20
+63U14*Put_Line 63>24 9|123s10 128b14 131l8 131t16
+63a24 Text{string} 9|128b24 130r29
+66U14*Put 66>19 66>50 9|137b14 148l8 148t11
+66e19 Mode{43E9} 9|137b19 143r10
+66a50 Text{string} 9|137b50 145r15
+70U14*Put 70>19 9|145s10 150b14 153l8 153t11
+70a19 Text{string} 9|150b19 152r24
+73U14*Dump 73>20 73>51 9|197b14 218l8 218t12
+73a20 Stream{11|53A9} 9|198b7 204r16 207r49 208r49
+73e51 Mode{43E9} 9|199b7 211r23 217r17
+76V14*"+"{string} 76>18 76>31 9|224b14 231l9 231t11
+76a18 S1{string} 9|224b18 225r24 227r15 227r29 227r33 227r45 228r10
+76a31 S2{string} 9|224b31 225r36 228r38 228r42 228r54
+X 9 polyorb_hi-output.adb
+45U14 Unprotected_Put_Line 45>36 86s13 159b14 163l8 163t28
+45a36 Text{string} 159b36 161r24
+48U14 Unprotected_Put 48>31 95s13 161s7 169b14 184l8 184t23
+48a31 Text{string} 169b31 183r40
+55K12 Output_Lock 62l8 62e19 64b17 109l8 109t19 130r7 152r7
+57U17*Put_Line 57>27 99b17 102l11 102t19 130s19
+57a27 Text{string} 99b27 101r25
+60U17*Put 60>22 104b17 107l11 107t14 152s19
+60a22 Text{string} 104b22 106r20
+66w17 Lock 78b22 97l11 97t15 101r10 106r10
+70U17 Put 70>22 93b20 96l14 96t17 106s15
+70a22 Text{string} 93b25 95r30
+72U17 Put_Line 72>27 84b20 87l14 87t22 101s15
+72a27 Text{string} 84b30 86r35
+170o7 Start_Time=170:55{3|51O9} 173r10 176r29
+171o7 Elapsed{3|56O9} 174m10 176m10 181r39
+190I12 Output_Position{positive} 192r35 201r17 201r36
+192A12 Output_Line{string}<integer> 195r19 195r35 202r17
+194a4 Hex(character) 207r35 208r35
+195a4 Nil{192A12} 202r32 213r23
+201i7 Index{190I12} 205r13 206r21 207r21 208r21 209m13 209r22 212m13
+202a7 Output{192A12} 205r26 206m13 207m13 208m13 211r29 213m13 217r24
+204i11 J<long_integer> 207r57 208r57
+225a7 S{string} 227m7 228m7 228r27 230r14
+X 10 polyorb_hi-output_low_level.ads
+34K20*Output_Low_Level 9|34w17 162r18 179r18 180r18 182r18 183r18 10|40e32
+36U14*New_Line 9|162s35
+38U14*Put 9|179s35 180s35 182s35 183s35
+X 11 polyorb_hi-streams.ads
+35K20*Streams 8|36w17 41r19 11|58e23
+44M9*Stream_Element
+53A9*Stream_Element_Array(44M9)<46I9> 8|73r29 9|198r16
+X 12 polyorb_hi-suspenders.ads
+40K20*Suspenders 9|35w17 36r34 170r44 12|57e26
+47o4*System_Startup_Time{3|51O9} 9|170r55
+X 15 system.ads
+37K9*System 9|39w6 75r27 15|156e11
+108I12*Any_Priority{integer}
+109I12*Priority{108I12} 9|75r34
+X 27 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

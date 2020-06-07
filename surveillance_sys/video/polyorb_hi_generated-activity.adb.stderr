@@ -1,0 +1,4 @@
+polyorb_hi_generated-activity.adb:177:05: warning: variable "camera1_capture_V" is assigned but never read
+polyorb_hi_generated-activity.adb:178:05: warning: variable "camera2_capture_V" is assigned but never read
+polyorb_hi_generated-activity.adb:179:05: warning: variable "camera3_capture_V" is assigned but never read
+polyorb_hi_generated-activity.adb:329:05: warning: variable "message_V" is assigned but never read

@@ -1,0 +1,63 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RR NO_IO
+RR NO_RECURSION
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U polyorb_hi.port_kinds%b  polyorb_hi-port_kinds.adb  69f8553b NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+
+U polyorb_hi.port_kinds%s  polyorb_hi-port_kinds.ads  2eff63f0 BN EE NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-port_kinds.ads  20170204221544 d9856456 polyorb_hi.port_kinds%s
+D polyorb_hi-port_kinds.adb  20170204221544 b07d316d polyorb_hi.port_kinds%b
+D system.ads		20170510173650 4635ec04 system%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 2|35r9 66r5 3|32r14 74r5
+X 2 polyorb_hi-port_kinds.ads
+35K20*Port_Kinds 1|35k9 2|37E9 66l16 66e26 3|32b25 74l16 74t26
+37E9*Port_Kind 46e21 53r24 54r25 56r27 57r26 3|38r24 47r25 56r27 67r26
+38n7*In_Event_Port{37E9} 3|40r19 58r19
+39n7*In_Event_Data_Port{37E9} 3|58r36 69r19
+40n7*In_Data_Port{37E9} 3|69r41
+41n7*In_Out_Event_Port{37E9} 3|49r19 59r22
+42n7*In_Out_Event_Data_Port{37E9} 3|59r43 70r22
+43n7*In_Out_Data_Port{37E9} 3|40r36 70r48
+44n7*Out_Event_Port{37E9} 3|60r22
+45n7*Out_Event_Data_Port{37E9} 3|60r40 71r22
+46n7*Out_Data_Port{37E9} 3|49r40 71r45
+48E9*Overflow_Handling_Protocol 51e13
+49n7*DropOldest{48E9}
+50n7*DropNewest{48E9}
+51n7*Error{48E9}
+53V13*Is_In{boolean} 53>20 61r19 3|38b13 41l8 41t13
+53e20 K{37E9} 3|38b20 40r14
+54V13*Is_Out{boolean} 54>21 62r19 3|47b13 50l8 50t14
+54e21 K{37E9} 3|47b21 49r14
+56V13*Is_Event{boolean} 56>23 63r19 3|56b13 61l8 61t16
+56e23 K{37E9} 3|56b23 58r14 59r17 60r17
+57V13*Is_Data{boolean} 57>22 64r19 3|67b13 72l8 72t15
+57e22 K{37E9} 3|67b22 69r14 70r17 71r17
+

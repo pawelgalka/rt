@@ -1,0 +1,91 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RR NO_IO
+RR NO_RECURSION
+RR NO_UNCHECKED_ACCESS
+RV NO_UNCHECKED_CONVERSION
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U polyorb_hi.marshallers_g%b  polyorb_hi-marshallers_g.adb  0435e699 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
+
+U polyorb_hi.marshallers_g%s  polyorb_hi-marshallers_g.ads  4d67080d BN EE NE OO PK GE
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.messages%s	polyorb_hi-messages.adb	polyorb_hi-messages.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-marshallers_g.ads  20170204221544 77d4e337 polyorb_hi.marshallers_g%s
+D polyorb_hi-marshallers_g.adb  20170204221544 16a8c749 polyorb_hi.marshallers_g%b
+D polyorb_hi-messages.ads  20170204221544 cdc9ec9c polyorb_hi.messages%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200607153059 7a4ef688 polyorb_hi_generated.deployment%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 ada.ads
+16K9*Ada 20e8 5|32r6 45r11 47r11
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 5|32w10 45r15 47r15
+X 3 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 4|34r6 39r9 51r5 5|33r6 35r14 36r13 38r25 42r6 71r14
+. 72r14 81r5
+X 4 polyorb_hi-marshallers_g.ads
+37+9 Data_Type 42r18 47r18 5|39r9 45r37 47r55 54r18 68r18
+39k20*Marshallers_G 3|35k9 4|37z9 51l16 51e29 5|35b25 81l16 81t29
+41U14*Marshall 42>7 43=7 5|53b14 61l8 61t16
+42*7 R{37+9} 5|54b7 57r64
+43r7 M{6|44R9} 5|55b7 60m23
+46U14*Unmarshall 47<7 48=7 5|67b14 79l8 79t18
+47*7 R{37+9} 5|68b7 77m10
+48r7 M{6|44R9} 5|69b7 74m22
+X 5 polyorb_hi-marshallers_g.adb
+38i4 Data_Size{7|46I9} 42r52 71r60 76r17
+41A12 Data_Type_Stream{7|53A9}<7|46I9> 45r48 47r37 57r23 77r36
+44V13 Data_Type_To_Stream[2|20]{7|53A9} 57s43
+46V13 Stream_To_Data_Type[2|20]{4|37+9} 77s15
+57a7 Data{41A12} 60r26
+71a7 Data{7|53A9} 74m25 77r54
+72i7 Last{7|46I9} 74m31 76r10
+X 6 polyorb_hi-messages.ads
+37K20*Messages 4|34w17 43r18 48r18 5|55r18 60r7 69r18 74r7 6|134e24
+44R9*Message_Type 4|43r27 48r27 5|55r27 69r27 6|116e14
+66U14*Read 5|74s16
+76U14*Write 5|60s16
+X 7 polyorb_hi-streams.ads
+35K20*Streams 5|33w17 36r24 38r36 42r17 71r25 72r25 7|58e23
+44M9*Stream_Element
+46I9*Stream_Element_Offset<long_integer> 5|36r32 38r44 72r33
+53A9*Stream_Element_Array(44M9)<46I9> 5|42r25 71r33
+

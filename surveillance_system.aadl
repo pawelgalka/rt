@@ -1,6 +1,6 @@
 package surveillance_system
 public
-	with data_types, event_handlers;
+	with data_types, event_handlers, Deployment;
 	
 	
 	-- DEVICES --
@@ -55,10 +55,10 @@ public
 	
 	thread video_captor
 		features
-			camera1_capture : in data port data_types::camera_image;
-			camera2_capture : in data port data_types::camera_image;
-			camera3_capture : in data port data_types::camera_image;			
-			output_converted : out data port data_types::captor_data;
+			camera1_capture : in event data port data_types::camera_image;
+			camera2_capture : in event data port data_types::camera_image;
+			camera3_capture : in event data port data_types::camera_image;			
+			output_converted : out event data port data_types::captor_data;
 	end video_captor;
 	
 	thread implementation video_captor.impl
@@ -67,7 +67,7 @@ public
 		};
 		-- add features to pass data to handler
 		properties
-			Dispatch_Protocol => Aperiodic;
+			Dispatch_Protocol => Periodic;
 		  	Priority => 13;
   			Compute_Execution_Time => 1500ms..1600ms;
   			Period => 3000ms;
@@ -77,7 +77,7 @@ public
 	
 	thread video_sender
 		features
-			message : in data port data_types::captor_data;
+			message : in event data port data_types::captor_data;
 	end video_sender;
 	
 	thread implementation video_sender.impl
@@ -86,7 +86,7 @@ public
 		};
 		-- add features to pass data to handler
 		properties
-			Dispatch_Protocol => Aperiodic;
+			Dispatch_Protocol => Periodic;
 		  	Priority => 10;
   			Compute_Execution_Time => 100ms..200ms;
   			Deadline => 2000ms;
@@ -105,7 +105,7 @@ public
 		};
 		properties
   			Dispatch_Protocol => Periodic;
-  			Priority => 100;
+  			Priority => 10;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end alarm_activator.impl;
@@ -137,8 +137,11 @@ public
 	end rfid_thread;
 	
 	thread implementation rfid_thread.impl
+	calls default: {
+			detector_handler : subprogram event_handlers::rfid_handler;
+		};
 			properties
-  			Dispatch_Protocol => Aperiodic;
+  			Dispatch_Protocol => Periodic;
   			Priority => 80;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
@@ -151,6 +154,8 @@ public
 			vme : requires bus access VME;
 		properties   
    			Scheduling_Protocol=>(Posix_1003_Highest_Priority_First_Protocol);
+   			Deployment::Execution_Platform => Native;
+   			Priority_Range => 0 .. 255;
 	end cpu;
 
 
@@ -172,7 +177,7 @@ public
 	
 	process implementation surveillance_process.impl
 		subcomponents
-			current_state: data data_types::state { Concurrency_Control_Protocol => Semaphore;};
+			current_state: data data_types::state;
 			alarm : thread alarm_activator.impl;
 			detector1 : thread detector.impl;
 			detector2 : thread detector.impl;
@@ -180,9 +185,9 @@ public
 			rfid_reader : thread rfid_thread.impl;		
 		connections
 			da1 : data access current_state -> alarm.state_access;
-			da2 : data access detector1.state_access -> current_state;
-			da3 : data access detector2.state_access -> current_state;
-			da4 : data access detector3.state_access -> current_state;
+			da2 : data access current_state <-> detector1.state_access;
+			da3 : data access current_state <-> detector2.state_access;
+			da4 : data access current_state <-> detector3.state_access;
 			da5 : data access current_state <-> rfid_reader.state;
 			m1 : port motion_detect1 -> detector1.motion;
 			m2 : port motion_detect2 -> detector2.motion;
@@ -226,24 +231,12 @@ public
 			vme : requires bus access VME;
 	end RAM;
 	
-	system hardware
-	end hardware;
-	
-	system implementation hardware.impl
-		subcomponents
-			cpu_surveillance : processor cpu;
-  			cpu_video : processor cpu;
-		properties
-			Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
-	end hardware.impl;
-	
 	
 	system surveillance	
 	end surveillance;
 
-	system implementation surveillance.impl
+	system implementation surveillance.sys
 		subcomponents
-			hardware : system hardware.impl;
 			camera1 : device camera;
 			camera2 : device camera;
 			camera3 : device camera;
@@ -258,6 +251,7 @@ public
 			video : process video.impl;
 	    	ram : memory RAM;
 	    	bus_access : bus VME;
+	    	cpu : processor CPU;
 		connections
 			bus2 : bus access bus_access -> ram.vme;
 			bus3 : bus access bus_access -> camera1.mem_bus;
@@ -292,9 +286,9 @@ public
 		properties
 			Actual_Memory_Binding => (reference (ram)) applies to main;
 			Actual_Memory_Binding => (reference (ram)) applies to video;
-	    	Actual_Processor_Binding => (reference(hardware.cpu_surveillance)) applies to main;
-	    	Actual_Processor_Binding => (reference(hardware.cpu_video)) applies to video;
-	end surveillance.impl;
+	    	Actual_Processor_Binding => (reference(cpu)) applies to main;
+	    	Actual_Processor_Binding => (reference(cpu)) applies to video;
+	end surveillance.sys;
 	
 
 end surveillance_system;

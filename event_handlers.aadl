@@ -15,4 +15,6 @@ public
 	subprogram detection_handler
 	end detection_handler;
 	
+	subprogram rfid_handler
+	end rfid_handler;
 end event_handlers;

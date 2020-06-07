@@ -1,0 +1,452 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P LC SS ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RR NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_PROTECTED_TYPES
+RR NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=1
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U polyorb_hi_generated.activity%b  polyorb_hi_generated-activity.adb  0bf91395 OO PK
+Z ada%s			ada.ads			ada.ali
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+Z polyorb_hi.errors%s	polyorb_hi-errors.ads	polyorb_hi-errors.ali
+Z polyorb_hi.messages%s	polyorb_hi-messages.adb	polyorb_hi-messages.ali
+Z polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
+W polyorb_hi.port_kinds%s  polyorb_hi-port_kinds.adb  polyorb_hi-port_kinds.ali
+Z polyorb_hi.port_type_marshallers%s  polyorb_hi-port_type_marshallers.ads  polyorb_hi-port_type_marshallers.ali
+Z polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
+W polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.adb  polyorb_hi-thread_interrogators.ali  EA
+Z polyorb_hi.time_marshallers%s  polyorb_hi-time_marshallers.ads  polyorb_hi-time_marshallers.ali
+Z polyorb_hi.unprotected_queue%s  polyorb_hi-unprotected_queue.adb  polyorb_hi-unprotected_queue.ali
+Z polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+Z polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W polyorb_hi_generated.marshallers%s  polyorb_hi_generated-marshallers.adb  polyorb_hi_generated-marshallers.ali
+W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
+W polyorb_hi_generated.transport%s  polyorb_hi_generated-transport.adb  polyorb_hi_generated-transport.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U polyorb_hi_generated.activity%s  polyorb_hi_generated-activity.ads  7b895335 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.errors%s	polyorb_hi-errors.ads	polyorb_hi-errors.ali
+Z polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
+W polyorb_hi.periodic_task%s  polyorb_hi-periodic_task.adb  polyorb_hi-periodic_task.ali  EA
+Z polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali  EA
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-finali.ads		20151020095656 bf4f806b ada.finalization%s
+D a-reatim.ads		20160420090448 a87e2da7 ada.real_time%s
+D a-retide.ads		20090409150019 081cdaa4 ada.real_time.delays%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-errors.ads	20170204221544 6deb16d4 polyorb_hi.errors%s
+D polyorb_hi-marshallers_g.ads  20170204221544 77d4e337 polyorb_hi.marshallers_g%s
+D polyorb_hi-messages.ads  20170204221544 cdc9ec9c polyorb_hi.messages%s
+D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
+D polyorb_hi-periodic_task.ads  20170204221544 99ad09d9 polyorb_hi.periodic_task%s
+D polyorb_hi-periodic_task.adb  20170204221544 94a22a7a polyorb_hi.periodic_task%b
+D polyorb_hi-port_kinds.ads  20170204221544 d9856456 polyorb_hi.port_kinds%s
+D polyorb_hi-port_type_marshallers.ads  20170204221544 82fe6eb4 polyorb_hi.port_type_marshallers%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
+D polyorb_hi-thread_interrogators.ads  20170204221544 3009acee polyorb_hi.thread_interrogators%s
+D polyorb_hi-thread_interrogators.adb  20170204221544 1e2a3354 polyorb_hi.thread_interrogators%b
+D polyorb_hi-time_marshallers.ads  20170204221544 5d51f498 polyorb_hi.time_marshallers%s
+D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotected_queue%s
+D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
+D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-activity.ads  20200607153059 c20089d9 polyorb_hi_generated.activity%s
+D polyorb_hi_generated-activity.adb  20200607153059 dc7f4d4b polyorb_hi_generated.activity%b
+D polyorb_hi_generated-deployment.ads  20200607153059 7a4ef688 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-marshallers.ads  20200607153059 f71b74b7 polyorb_hi_generated.marshallers%s
+D polyorb_hi_generated-subprograms.ads  20200607153059 817094c2 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-transport.ads  20200607153059 cc5413ce polyorb_hi_generated.transport%s
+D polyorb_hi_generated-types.ads  20200607153059 ad5d3359 polyorb_hi_generated.types%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20191204142541 7b5577db system.os_constants%s
+D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
+D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20170112134946 05d6152c system.tasking%s
+D s-taprob.ads		20170106114239 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20170106115015 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20090409150019 5f548bb3 system.tasking.protected_objects.operations%s
+D s-tassta.ads		20170112134946 5a53a7c6 system.tasking.stages%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 ada.ads
+16K9*Ada 20e8 28|12r6 77r11 87r18 88r7 103r22 105r24 161r11 171r18 172r7
+. 187r22 189r24 29|481r11 521r18 522r7 675r11 715r18 716r7
+X 4 a-reatim.ads
+39K13*Real_Time 187e18 28|12w10 77r15 87r22 88r11 103r26 105r28 161r15 171r22
+. 172r11 187r26 189r28 29|481r15 521r22 522r11 675r15 715r22 716r11
+51O9*Time<duration> 28|77r25 87r32 161r25 171r32 29|481r25 521r32 675r25
+. 715r32
+56O9*Time_Span<duration>
+63V13*Clock{51O9} 28|88s21 172s21 29|522s21 716s21
+121V13*Milliseconds{56O9} 28|103s36 105s38 187s36 189s38
+X 10 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 28|10r6 13r6 49r11 98r58 101r8 133r11 182r58 185r8
+. 29|9r6 13r6 27r9 46r9 52r6 54r6 56r6 58r6 96r6 98r6 100r6 102r6 147r8 176r58
+. 180r24 181r6 182r14 242r9 258r9 264r6 281r6 299r8 328r58 330r24 331r6 332r14
+. 363r11 557r11
+X 11 polyorb_hi-errors.ads
+32K20*Errors 39e22 28|10w17 49r22 98r69 133r22 182r69 29|176r69 180r35 181r17
+. 182r25 328r69 330r35 331r17 332r25 363r22 557r22
+34E9*Error_Kind 37e7 28|49r29 98r76 133r29 182r76 29|176r76 180r42 182r32
+. 328r76 330r42 332r32 363r29 557r29
+35n7*Error_None{34E9} 29|181r24 331r24
+X 15 polyorb_hi-periodic_task.ads
+40e4 Entity{30|60E8} 28|102r7 186r7
+47o4 Task_Period{4|56O9} 28|103r7 187r7
+50o4 Task_Deadline{4|56O9} 28|105r7 189r7
+53i4 Task_Priority{35|108I12} 28|107r7 191r7
+56i4 Task_Stack_Size{natural} 28|108r7 192r7
+59V18 Job{11|34E9} 28|109r7 193r7
+70k20*Periodic_Task 80e29 28|13w17 14r34 101r19 185r19
+77V13*Next_Deadline{4|51O9} 29|168r64[28|100] 320r64[28|184]
+X 17 polyorb_hi-port_kinds.ads
+35K20*Port_Kinds 66e26 29|9w17 27r20 46r20 52r17 54r17 56r17 58r17 96r17
+. 98r17 100r17 102r17 242r20 258r20 264r17 281r17
+37E9*Port_Kind 46e21 29|27r31 242r31
+39n7*In_Event_Data_Port{37E9} 29|52r28 54r28 56r28 264r28
+45n7*Out_Event_Data_Port{37E9} 29|58r28
+48E9*Overflow_Handling_Protocol 51e13 29|46r31 258r31
+49n7*DropOldest{48E9} 29|96r28 98r28 100r28 102r28 281r28
+X 21 polyorb_hi-thread_interrogators.ads
+47E9 Port_Type 29|148r7 300r7
+51A9 Integer_Array(integer)<47E9> 29|149r7 301r7
+54A9 Port_Kind_Array(17|37E9)<47E9> 29|150r7 302r7
+57A9 Port_Image_Array(30|172A11)<47E9> 29|151r7 303r7
+61A9 Address_Array(35|67M9)<47E9> 29|152r7 304r7
+64A9 Overflow_Protocol_Array(17|48E9)<47E9> 29|153r7 305r7
+68+9 Thread_Interface_Type 29|154r7 306r7
+73e4 Current_Entity{30|60E8} 29|155r7 307r7
+77*4 Thread_Port_Kinds{54A9} 29|156r7 308r7
+81b4 Has_Event_Ports{boolean} 29|157r7 309r7
+84*4 Thread_Port_Images{57A9} 29|158r7 310r7
+87*4 Thread_Fifo_Sizes{51A9} 29|159r7 311r7
+96*4 Thread_Fifo_Offsets{51A9} 29|160r7 312r7
+105*4 Thread_Overflow_Protocols{64A9} 29|161r7 313r7
+109*4 Urgencies{51A9} 29|162r7 314r7
+113i4 Global_Data_Queue_Size{integer} 29|163r7 315r7
+119*4 N_Destinations{51A9} 29|164r7 316r7
+124*4 Destinations{61A9} 29|165r7 317r7
+129U19 Marshall 29|166r7 318r7
+134V18 Send{11|34E9} 29|167r7 319r7
+141V18 Next_Deadline{4|51O9} 29|168r7 320r7
+145k20*Thread_Interrogators 205e36 29|13w17 14r34 147r19 299r19
+147V13*Send_Output{11|34E9} 29|369s61[146] 563s61[298]
+151U14*Put_Value 29|385s54[146] 579s54[298]
+156U14*Receive_Input 29|401s54[146] 595s54[298]
+162V13*Get_Value{28|26R8} 29|190s57[146] 201s57[146] 212s57[146] 340s57[298]
+. 421s61[146] 615s61[298]
+168V13*Get_Sender{30|60E8} 29|444s61[146] 638s61[298]
+176V13*Get_Count{integer} 29|185s58[146] 196s58[146] 207s58[146] 335s58[298]
+. 467s61[146] 661s61[298]
+181U14*Next_Value 29|219s54[146] 222s54[146] 225s54[146] 347s54[298] 509s54[146]
+. 703s54[298]
+184U14*Wait_For_Incoming_Events 29|546s54[146] 740s54[298]
+192U14*Store_Received_Message 29|528s54[146] 722s54[298]
+202V13*Get_Time_Stamp{4|51O9} 29|490s61[146] 684s61[298]
+X 27 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 28|9r6 11r6 16r9 32r34 34r34 36r34 38r35
+. 47r14 52r14 56r14 60r14 65r14 67r11 70r14 75r14 80r14 84r14 86r12 91r14
+. 102r17 122r26 131r14 136r14 140r14 144r14 149r14 151r11 154r14 159r14 164r14
+. 168r14 170r12 175r14 186r17 195r5 29|11r6 12r6 15r6 17r14 30r23 62r6 63r9
+. 65r6 66r9 68r6 69r9 71r6 72r9 119r9 124r8 155r25 166r19 167r15 177r25 178r25
+. 179r25 194r8 205r8 216r8 229r5 268r6 269r9 307r25 318r19 319r15 329r17
+. 344r8 351r5 361r14 365r9 378r14 381r9 394r14 397r9 410r14 414r9 433r14
+. 435r11 437r9 456r14 460r9 479r14 483r9 502r14 505r9 518r14 520r12 524r9
+. 539r14 542r9 555r14 559r9 572r14 575r9 588r14 591r9 604r14 608r9 627r14
+. 629r11 631r9 650r14 654r9 673r14 677r9 696r14 699r9 712r14 714r12 718r9
+. 733r14 736r9 744r5
+X 28 polyorb_hi_generated-activity.ads
+16K30*Activity 27|34k9 28|195l26 195e34 29|17b35 744l26 744t34
+20E8*surveillance_system_video_captor_impl_Port_Type 24e22 27r12 27r63 48r12
+. 57r12 61r12 66r12 71r12 76r12 81r12 92r16 29|22r11 26r11 37r11 41r11 45r11
+. 148r20 220r7 223r7 226r7 362r12 395r12 411r12 434r12 457r12 480r12 503r12
+. 540r16
+21n5*camera1_capture{20E8} 31r14 29|51r5 61r5 75r5 85r5 95r5 105r5 127r5
+. 137r5 186r7 191r11 221r9
+22n5*camera2_capture{20E8} 33r14 29|53r5 64r5 77r5 87r5 97r5 107r5 129r5
+. 139r5 197r7 202r11 224r9
+23n5*camera3_capture{20E8} 35r14 29|55r5 67r5 79r5 89r5 99r5 109r5 131r5
+. 141r5 208r7 213r11 227r9
+24n5*output_converted{20E8} 37r14 29|57r5 70r5 81r5 91r5 101r5 111r5 133r5
+. 143r5
+26R8*surveillance_system_video_captor_impl_Interface 27d5 44e15 53r24 62r11
+. 85r24 29|154r32 379r24 412r11 519r24
+27e5*Port{20E8} 30r12
+32i11*camera1_capture_DATA{34|12I8} 29|191r28
+34i11*camera2_capture_DATA{34|12I8} 29|202r28
+36i11*camera3_capture_DATA{34|12I8} 29|213r28
+38i11*output_converted_DATA{34|20I8}
+46V12*Send_Output{11|34E9} 47>5 48>5 29|360b12 371l7 371t18
+47e5 Entity{30|60E8} 29|361b5 367r7
+48e5 Port{20E8} 29|362b5 370r7
+51U13*Put_Value 52>5 53>5 29|377b13 387l7 387t16
+52e5 Entity{30|60E8} 29|378b5 383r7
+53r5 Thread_Interface{26R8} 29|379b5 386r7
+55U13*Receive_Input 56>5 57>5 29|393b13 403l7 403t20
+56e5 Entity{30|60E8} 29|394b5 399r7
+57e5 Port{20E8} 29|395b5 402r7
+59V12*Get_Value{26R8} 60>5 61>5 29|409b12 426l7 426t16
+60e5 Entity{30|60E8} 29|410b5 416r7
+61e5 Port{20E8} 29|411b5 422r7
+64V12*Get_Sender{30|60E8} 65>5 66>5 29|432b12 449l7 449t17
+65e5 Entity{30|60E8} 29|433b5 439r7
+66e5 Port{20E8} 29|434b5 445r7
+69V12*Get_Count{integer} 70>5 71>5 29|455b12 472l7 472t16
+70e5 Entity{30|60E8} 29|456b5 462r7
+71e5 Port{20E8} 29|457b5 468r7
+74V12*Get_Time_Stamp{4|51O9} 75>5 76>5 29|478b12 495l7 495t21
+75e5 Entity{30|60E8} 29|479b5 485r7
+76e5 Port{20E8} 29|480b5 491r7
+79U13*Next_Value 80>5 81>5 29|501b13 511l7 511t17
+80e5 Entity{30|60E8} 29|502b5 507r7
+81e5 Port{20E8} 29|503b5 510r7
+83U13*Store_Received_Message 84>5 85>5 86>5 87>5 29|517b13 532l7 532t29
+84e5 Entity{30|60E8} 29|518b5 526r7
+85r5 Thread_Interface{26R8} 29|519b5 529r7
+86e5 From{30|60E8} 29|520b5 530r7
+87o5 Time_Stamp{4|51O9} 29|521b5 531r7
+90U13*Wait_For_Incoming_Events 91>5 92<5 29|538b13 548l7 548t31
+91e5 Entity{30|60E8} 29|539b5 544r7
+92e5 Port{20E8} 29|540b5 547m7
+98V12*surveillance_system_video_captor_t_Job{11|34E9} 109r14 29|176b12 232l7
+. 232t45
+100K11*surveillance_system_video_captor_t_Task[15|70] 29|168r24
+113E8*surveillance_system_video_sender_impl_Port_Type 114e13 117r12 117r63
+. 132r12 141r12 145r12 150r12 155r12 160r12 165r12 176r16 29|237r11 241r11
+. 249r11 253r11 257r11 300r20 348r7 556r12 589r12 605r12 628r12 651r12 674r12
+. 697r12 734r16
+114n5*message{113E8} 121r14 29|263r5 267r5 272r5 276r5 280r5 284r5 291r5
+. 295r5 336r7 341r11 349r9
+116R8*surveillance_system_video_sender_impl_Interface 117d5 128e15 137r24
+. 146r11 169r24 29|306r32 573r24 606r11 713r24
+117e5*Port{113E8} 120r12
+122i11*message_DATA{34|20I8} 29|341r20
+130V12*Send_Output{11|34E9} 131>5 132>5 29|554b12 565l7 565t18
+131e5 Entity{30|60E8} 29|555b5 561r7
+132e5 Port{113E8} 29|556b5 564r7
+135U13*Put_Value 136>5 137>5 29|571b13 581l7 581t16
+136e5 Entity{30|60E8} 29|572b5 577r7
+137r5 Thread_Interface{116R8} 29|573b5 580r7
+139U13*Receive_Input 140>5 141>5 29|587b13 597l7 597t20
+140e5 Entity{30|60E8} 29|588b5 593r7
+141e5 Port{113E8} 29|589b5 596r7
+143V12*Get_Value{116R8} 144>5 145>5 29|603b12 620l7 620t16
+144e5 Entity{30|60E8} 29|604b5 610r7
+145e5 Port{113E8} 29|605b5 616r7
+148V12*Get_Sender{30|60E8} 149>5 150>5 29|626b12 643l7 643t17
+149e5 Entity{30|60E8} 29|627b5 633r7
+150e5 Port{113E8} 29|628b5 639r7
+153V12*Get_Count{integer} 154>5 155>5 29|649b12 666l7 666t16
+154e5 Entity{30|60E8} 29|650b5 656r7
+155e5 Port{113E8} 29|651b5 662r7
+158V12*Get_Time_Stamp{4|51O9} 159>5 160>5 29|672b12 689l7 689t21
+159e5 Entity{30|60E8} 29|673b5 679r7
+160e5 Port{113E8} 29|674b5 685r7
+163U13*Next_Value 164>5 165>5 29|695b13 705l7 705t17
+164e5 Entity{30|60E8} 29|696b5 701r7
+165e5 Port{113E8} 29|697b5 704r7
+167U13*Store_Received_Message 168>5 169>5 170>5 171>5 29|711b13 726l7 726t29
+168e5 Entity{30|60E8} 29|712b5 720r7
+169r5 Thread_Interface{116R8} 29|713b5 723r7
+170e5 From{30|60E8} 29|714b5 724r7
+171o5 Time_Stamp{4|51O9} 29|715b5 725r7
+174U13*Wait_For_Incoming_Events 175>5 176<5 29|732b13 742l7 742t31
+175e5 Entity{30|60E8} 29|733b5 738r7
+176e5 Port{113E8} 29|734b5 741m7
+182V12*surveillance_system_video_sender_t_Job{11|34E9} 193r14 29|328b12 354l7
+. 354t45
+184K11*surveillance_system_video_sender_t_Task[15|70] 29|320r24
+X 29 polyorb_hi_generated-activity.adb
+21A8 surveillance_system_video_captor_impl_Integer_Array(integer)<28|20E8>
+. 74r60 84r57 104r59 126r64 149r24
+25A8 surveillance_system_video_captor_impl_Port_Kind_Array(17|37E9)<28|20E8>
+. 50r60 150r26
+29I11 UT_Activity_Video_1_Max_Port_Image_Size{integer} 34r7 246r7
+32A11 UT_Activity_Video_surveillance_system_video_captor_impl_Port_Image_Array_Component{string}<integer>
+. 38r9
+36A8 surveillance_system_video_captor_impl_Port_Image_Array(32A11)<28|20E8>
+. 60r61 151r27
+40A8 surveillance_system_video_captor_impl_Address_Array(35|67M9)<28|20E8>
+. 136r42 152r24
+44A8 surveillance_system_video_captor_impl_Overflow_Protocol_Array(17|48E9)<28|20E8>
+. 94r68 153r34
+50a3 surveillance_system_video_captor_t_Port_Kinds{25A8} 156r28
+60a3 surveillance_system_video_captor_t_Port_Images{36A8} 158r29
+74a3 surveillance_system_video_captor_t_FIFO_Sizes{21A8} 159r28
+84a3 surveillance_system_video_captor_t_Offsets{21A8} 160r30
+94a3 surveillance_system_video_captor_t_Overflow_Protocols{44A8} 161r36
+104a3 surveillance_system_video_captor_t_Urgencies{21A8} 162r20
+114i3 surveillance_system_video_captor_t_Total_FIFO_Size{integer} 163r33
+117A8 UT_Activity_Video_video_captor_t_output_converted_Destinations_Array(30|120E8)<integer>
+. 121r59 122r4
+121a3 video_captor_t_output_converted_Destinations{117A8} 144r6
+126a3 surveillance_system_video_captor_t_N_Destinations{21A8} 164r25
+136a3 video_captor_t_Destinations{40A8} 165r23
+146K11 surveillance_system_video_captor_t_Interrogators[21|145] 185r9 190r8
+. 196r9 201r8 207r9 212r8 219r5 222r5 225r5 369r12 385r5 401r5 421r12 444r12
+. 467r12 490r12 509r5 528r5 546r5
+177i5 camera1_capture_V{34|12I8} 189m7 193m7
+178i5 camera2_capture_V{34|12I8} 200m7 204m7
+179i5 camera3_capture_V{34|12I8} 211m7 215m7
+180e5 Error_Ü{11|34E9} 231r12
+236A8 surveillance_system_video_sender_impl_Integer_Array(integer)<28|113E8>
+. 271r60 275r57 283r59 290r64 301r24
+240A8 surveillance_system_video_sender_impl_Port_Kind_Array(17|37E9)<28|113E8>
+. 262r60 302r26
+244A11 UT_Activity_Video_surveillance_system_video_sender_impl_Port_Image_Array_Component{string}<integer>
+. 250r9
+248A8 surveillance_system_video_sender_impl_Port_Image_Array(244A11)<28|113E8>
+. 266r61 303r27
+252A8 surveillance_system_video_sender_impl_Address_Array(35|67M9)<28|113E8>
+. 294r42 304r24
+256A8 surveillance_system_video_sender_impl_Overflow_Protocol_Array(17|48E9)<28|113E8>
+. 279r68 305r34
+262a3 surveillance_system_video_sender_t_Port_Kinds{240A8} 308r28
+266a3 surveillance_system_video_sender_t_Port_Images{248A8} 310r29
+271a3 surveillance_system_video_sender_t_FIFO_Sizes{236A8} 311r28
+275a3 surveillance_system_video_sender_t_Offsets{236A8} 312r30
+279a3 surveillance_system_video_sender_t_Overflow_Protocols{256A8} 313r36
+283a3 surveillance_system_video_sender_t_Urgencies{236A8} 314r20
+287i3 surveillance_system_video_sender_t_Total_FIFO_Size{integer} 315r33
+290a3 surveillance_system_video_sender_t_N_Destinations{236A8} 316r25
+294a3 video_sender_t_Destinations{252A8} 317r23
+298K11 surveillance_system_video_sender_t_Interrogators[21|145] 335r9 340r8
+. 347r5 563r12 579r5 595r5 615r12 638r12 661r12 684r12 703r5 722r5 740r5
+329i5 message_V{34|20I8} 339m7 343m7
+330e5 Error_Ü{11|34E9} 353r12
+X 30 polyorb_hi_generated-deployment.ads
+10K30*Deployment 28|11w27 47r35 52r35 56r35 60r35 65r35 67r32 70r35 75r35
+. 80r35 84r35 86r33 91r35 102r38 131r35 136r35 140r35 144r35 149r35 151r32
+. 154r35 159r35 164r35 168r35 170r33 175r35 186r38 29|30r44 62r27 63r30 65r27
+. 66r30 68r27 69r30 71r27 72r30 119r30 124r29 155r46 268r27 269r30 307r46
+. 361r35 365r30 378r35 381r30 394r35 397r30 410r35 414r30 433r35 435r32 437r30
+. 456r35 460r30 479r35 483r30 502r35 505r30 518r35 520r33 524r30 539r35 542r30
+. 555r35 559r30 572r35 575r30 588r35 591r30 604r35 608r30 627r35 629r32 631r30
+. 650r35 654r30 673r35 677r30 696r35 699r30 712r35 714r33 718r30 733r35 736r30
+. 30|202e36
+60E8*Entity_Type 28|47r46 52r46 56r46 60r46 65r46 67r43 70r46 75r46 80r46
+. 84r46 86r44 91r46 131r46 136r46 140r46 144r46 149r46 151r43 154r46 159r46
+. 164r46 168r46 170r44 175r46 29|361r46 378r46 394r46 410r46 433r46 435r43
+. 456r46 479r46 502r46 518r46 520r44 539r46 555r46 572r46 588r46 604r46 627r46
+. 629r43 650r46 673r46 696r46 712r46 714r44 733r46 30|62e28
+61n5*video_video_captor_t_K{60E8} 28|102r49 29|155r57
+62n5*video_video_sender_t_K{60E8} 28|186r49 29|307r57
+120E8*Port_Type 29|119r41 30|125e36
+121n5*video_video_captor_t_camera1_capture_K{120E8} 29|63r41
+122n5*video_video_captor_t_camera2_capture_K{120E8} 29|66r41
+123n5*video_video_captor_t_camera3_capture_K{120E8} 29|69r41
+124n5*video_video_captor_t_output_converted_K{120E8} 29|72r41
+125n5*video_video_sender_t_message_K{120E8} 29|124r40 269r41
+167i3*Max_Port_Image_Size{integer} 29|30r55
+172A11*Port_Sized_String{string}<integer>
+178A8*UT_Deployment_Video_Port_Image_Array(172A11)<120E8>
+182a3*Port_Image{178A8} 29|62r38 65r38 68r38 71r38 268r38
+X 31 polyorb_hi_generated-marshallers.ads
+13K30*Marshallers 29|11w27 166r40 318r40 31|57e37
+17U13*Marshall 29|166r52
+48U13*Marshall 29|318r52
+X 32 polyorb_hi_generated-subprograms.ads
+10K30*Subprograms 29|15w27 229r26 351r26 32|16e37
+12U13*event_handlers_video_captor_handler 29|229s38
+14U13*event_handlers_video_sender_handler 29|351s38
+X 33 polyorb_hi_generated-transport.ads
+14K30*Transport 29|12w27 167r36 319r36 33|26e35
+20V12*Send{11|34E9} 29|167r46 319r46
+X 34 polyorb_hi_generated-types.ads
+10K30*Types 28|9w27 32r55 34r55 36r55 38r56 122r47 29|177r46 178r46 179r46
+. 194r29 205r29 216r29 329r38 344r29 34|28e31
+12I8*camera_image<integer> 28|32r61 34r61 36r61 29|177r52 178r52 179r52
+17i3*camera_image_Default_Value{12I8} 29|194r35 205r35 216r35
+20I8*captor_data<integer> 28|38r62 122r53 29|329r44
+25i3*captor_data_Default_Value{20I8} 29|344r35
+X 35 system.ads
+37K9*System 29|10w6 42r9 138r6 140r6 142r6 254r9 296r6 35|156e11
+67M9*Address 29|42r16 254r16
+69m4*Null_Address{67M9} 29|138r13 140r13 142r13 296r13
+108I12*Any_Priority{integer}
+X 49 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

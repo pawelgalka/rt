@@ -1,0 +1,63 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RV NO_EXCEPTIONS
+RR NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RR NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  99cab7bc NE OO PK IL
+W ada.exceptions%s	a-except.adb		a-except.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  eebb5680 EE NE OO PK IL
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-subprograms.ads  20200607153059 dc197b17 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200607153059 45d3ccab polyorb_hi_generated.subprograms%b
+D system.ads		20170510173650 4635ec04 system%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 4 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 5|10r9 18r5 6|10r14 42r5
+X 5 polyorb_hi_generated-subprograms.ads
+10K30*Subprograms 4|34k9 5|18l26 18e37 6|10b35 42l26 42t37
+12U13*event_handlers_alarm_activator 6|16b13 20l7 20t37
+14U13*event_handlers_detection_handler 6|26b13 30l7 30t39
+16U13*event_handlers_rfid_handler 6|36b13 40l7 40t34
+X 6 polyorb_hi_generated-subprograms.adb
+17X5 Nyi 19r11
+27X5 Nyi 29r11
+37X5 Nyi 39r11
+

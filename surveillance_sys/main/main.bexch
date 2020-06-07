@@ -1,0 +1,49 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/p/rt/surveillance_sys/main/main.gpr
+20200607153357
+/opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/polyorb_hi.gpr
+20170204221544
+[BOUND OBJECT FILES]
+/home/p/rt/surveillance_sys/main/polyorb_hi.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-streams.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-deployment.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-utils.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-messages.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-errors.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-marshallers_g.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-output_low_level_native.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-port_kinds.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-port_type_marshallers.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-suspenders.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-output.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-periodic_task.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-time_marshallers.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-unprotected_queue.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-thread_interrogators.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-subprograms.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-types.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-marshallers.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-transport.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-activity.o
+/home/p/rt/surveillance_sys/main/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/p/rt/surveillance_sys/main/
+-L/home/p/rt/surveillance_sys/main/
+-L/opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/
+-L/usr/lib/gcc/x86_64-linux-gnu/7/adalib/
+-shared
+-shared-libgcc
+-lgnarl-7
+-lgnat-7
+-lpthread
+-lrt
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/7/adalib/
+/usr/lib

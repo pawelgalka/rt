@@ -1,0 +1,127 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RR NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RR NO_DISPATCH
+RR NO_IO
+RR NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RR NO_UNCHECKED_ACCESS
+RV NO_UNCHECKED_CONVERSION
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U polyorb_hi.utils%b	polyorb_hi-utils.adb	72aaafa3 NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+
+U polyorb_hi.utils%s	polyorb_hi-utils.ads	e4531719 NE OO PR PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
+D polyorb_hi-utils.adb	20170204221544 388ce90b polyorb_hi.utils%b
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200607153059 74c7aeec polyorb_hi_generated.deployment%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+X 1 ada.ads
+16K9*Ada 20e8 5|34r6 62r34 64r41 67r34 69r39 6|98r40 109r45
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 5|34w10 62r38 64r45 67r38 69r43 6|98r44 109r49
+X 3 interfac.ads
+38K9*Interfaces 184e15 5|35w6 44r8 75r29 76r31 6|71r29 72r31
+63M9*Unsigned_8 5|63r20 65r7 68r18 70r7
+66M9*Unsigned_16 5|72r50 73r37 75r40 76r42 6|71r40 72r42 97r50 99r21 108r37
+. 110r10
+X 4 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 5|40r9 114r18 120r9 140r5 6|32r14 134r5
+X 5 polyorb_hi-utils.ads
+40K20*Utils 4|35k9 5|114r29 120r20 124E9 140l16 140e21 6|32b25 134l16 134t21
+62V13*Internal_Code[2|20]{3|63M9}
+64V13*Corresponding_Entity[2|20]{8|60E8}
+67V13*Internal_Code[2|20]{3|63M9}
+69V13*Corresponding_Node[2|20]{8|16E8}
+72V13*Internal_Code{3|66M9} 72>28 6|97b13 102l8 102t21
+72e28 P{8|141E8} 6|97b28 101r44
+73V13*Corresponding_Port{8|141E8} 73>33 6|108b13 113l8 113t26
+73m33 I{3|66M9} 6|108b33 112r49
+75V13*Swap_Bytes{3|66M9} 75>25 6|71b13 91l8 91t18 101s14 112s37
+75m25 B{3|66M9} 6|71b25 82r17 89r18 89r30
+84N4*HI_String_Size 125r23 135r15 6|39r24 45r25 59r18 59r61 61r33
+86R9*HI_String 88r46 91r28 94r25 97r24 114r35 124c9 129e14 131r25 134r24
+. 137r28 6|38r46 42r17 55r17 60r17
+88V13*To_Hi_String{86R9} 88>27 89r27 6|38b13 64l8 64t20
+88a27 S{string} 6|38b27 41r10 45r13 46r24 47r22 47r25 56r33 59r37 59r40 59r51
+91V13*To_String{string} 91>24 137b13
+91r24 H{86R9} 92r26 138r8 138r18
+94V13*Length{natural} 94>21 131b13
+94r21 H{86R9} 95r26 132r8
+97V13*Valid{boolean} 89s20 92s19 95s19 97>20 134b13
+97r20 H{86R9} 135r8
+99V13*Parse_String{integer} 99>27 99>39 99>56 6|119b13 132l8 132t20
+99a27 S{string} 101r28 101r49 6|119b27 122r25 124r25 125r13
+99i39 First{integer} 101r19 101r40 6|119b39 124r16
+99e56 Delimiter{character} 6|119b56 125r21
+113R9*Naming_Entry 117e14 120r26
+114r7*Location{86R9}
+115i7*Port{natural}
+116m7*Variable{9|67M9}
+119A9*Naming_Table_Type(113R9)<8|16E8>
+125a7*S{string} 138r10 6|42m28 55m28 60m28
+126i7*L{natural} 132r10 135r10 138r20 6|43m28 56m28 61m28
+X 6 polyorb_hi-utils.adb
+39a7 R{string} 42r33 47m13 55r33 59m10 60r33
+46i14 J{integer} 47r16 47r36
+98V16 To_Internal_Code[2|20]{3|66M9} 101s26
+109V16 To_Corresponding_Port[2|20]{8|141E8} 112s14
+122i7 Last{integer} 126m13 131r14
+124i11 J{integer} 125r16 126r21
+X 7 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 5|38r6 45r8 7|38e25
+X 8 polyorb_hi_generated-deployment.ads
+10K30*Deployment 5|38w27 45r29 8|258e36
+16E8*Node_Type 5|68r7 70r19 119r37 8|17e12
+60E8*Entity_Type 5|63r7 65r19 8|65e24
+141E8*Port_Type 5|72r32 73r57 6|97r32 99r10 108r57 110r23 8|151e31
+X 9 system.ads
+37K9*System 5|36w6 116r18 6|74r11 9|156e11
+67M9*Address 5|116r25
+91n23*High_Order_First{91E9} 6|81r30
+92e4*Default_Bit_Order{91E9} 6|81r10
+
