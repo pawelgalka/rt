@@ -27,76 +27,171 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  a98a84bf NE OO PK IL
-W ada.exceptions%s	a-except.adb		a-except.ali
+U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  8c714807 NE OO PK IL
 W interfaces%s		interfac.ads		interfac.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W surveillance%s	surveillance.adb	surveillance.ali
-W system%s		system.ads		system.ali
-W system.exception_table%s  s-exctab.adb	s-exctab.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  f26b0293 EE NE OO PK IL
+U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  73803f3f EE NE OO PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
 
-D ada.ads		20170106103348 76789da1 ada%s
-D a-except.ads		20151016123252 291912d5 ada.exceptions%s
-D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D interfac.ads		20160502101001 5ab55268 interfaces%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-subprograms.ads  20200607163446 7896fcad polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-subprograms.adb  20200607163446 4f4ef2bf polyorb_hi_generated.subprograms%b
-D polyorb_hi_generated-types.ads  20200607163446 b85fd3a9 polyorb_hi_generated.types%s
-D surveillance.ads	20200607163718 9e528aad surveillance%s
+D polyorb_hi_generated-deployment.ads  20200607200446 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200607200446 f97dc101 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200607200446 bea94114 polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-types.ads  20200607200446 b85fd3a9 polyorb_hi_generated.types%s
+D surveillance.ads	20200607200044 cba5c812 surveillance%s
 D system.ads		20170510173650 4635ec04 system%s
-D s-exctab.ads		20140225151139 54135002 system.exception_table%s
-D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
-D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
-D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
-X 5 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 7|9r6 11r9 26r30 56r21 62r26 65r5 8|11r14
-. 34r21 112r5
-X 7 polyorb_hi_generated-subprograms.ads
-11K30*Subprograms 5|34k9 7|56r42 59E8 65l26 65e37 8|11b35 34r42 112l26 112t37
-13U13*event_handlers_alarm_activator 8|17b13 21l7 21t37
-15U13*event_handlers_detection_handler 8|27b13 31l7 31t39
-17E8*event_handlers_rfid_handler_Port_Type 18e17 21r12 21r53 43r12 48r12
-. 52r12 8|62r12 80r12 96r12
-18n5*Data_Source{17E8} 25r14 8|47r12 67r12 68r25 101r12
-20R8*event_handlers_rfid_handler_Interface 21d5 32e15 39r21 44r11 8|43r21
-. 63r11
-21e5*Port{17E8} 24r12 8|46r24 68m17
-26i11*Data_Source_DATA{9|20I8} 8|51r24 69m9
-34R8*event_handlers_rfid_handler_Status 38r21 42r14 47r21 51r14 56r54 59c8
-. 63e15 8|34r54 42r21 61r14 79r21 95r14
-37U13*Put_Value 38=5 39>5 8|41b13 54l7 54t16
-38r5 Status{34R8} 8|42b5 48m9 50m9
-39r5 Spg_Interface{20R8} 8|43b5 46r10 51r10
-41V12*Get_Value{20R8} 42>5 43>5 8|60b12 72l7 72t16
-42r5 Status{34R8} 8|61b5 69r29
-43e5 Port{17E8} 8|62b5 66r10
-46U13*Next_Value 47=5 48>5 8|78b13 88l7 88t17
-47r5 Status{34R8} 8|79b5 83r7
-48e5 Port{17E8} 8|80b5 84r7
-50V12*Get_Count{integer} 51>5 52>5 8|94b12 110l7 110t16
-51r5 Status{34R8} 8|95b5 102r12
-52e5 Port{17E8} 8|96b5 100r10
-55U13*event_handlers_rfid_handler 56=5 8|33b13
-56r5 Status{34R8} 8|34b5
-61b7*Data_Source{boolean} 8|48m16 102r19
-62i7*Data_Source_DATA{9|20I8} 8|50m16 69r36
-X 8 polyorb_hi_generated-subprograms.adb
-18X5 Nyi 20r11
-28X5 Nyi 30r11
-X 9 polyorb_hi_generated-types.ads
-10K30*Types 7|9w27 26r51 62r47 9|28e31
-20I8*Integer_Type<integer> 7|26r57 62r53
-X 10 surveillance.ads
-4K9*Surveillance 8|9w6 35r12 10|11e17
-9U19*Rfid 8|35r25
+X 2 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 4|9r6 11r9 52r12 53r12 54r12 55r12 56r21
+. 67r30 97r21 108r30 138r21 149r30 179r21 190r30 220r21 231r26 237r26 243r26
+. 249r26 252r5 5|11r14 14r12 15r12 16r12 17r12 18r21 94r21 173r21 252r21
+. 331r21 409r5
+X 4 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 2|34k9 4|56r42 97r42 138r42 179r42 220r42 223E8 252l26
+. 252e37 5|11b35 18r42 94r42 173r42 252r42 331r42 409l26 409t37
+13E8*event_handlers_alarm_activator_Port_Type 14e12 17r12 17r56 39r12 44r12
+. 48r12 5|44r12 61r12 77r12
+14n5*result{13E8} 21r14 5|31r12 49r12 50r25 82r12
+16R8*event_handlers_alarm_activator_Interface 17d5 28e15 35r21 40r11 5|27r21
+. 45r11
+17e5*Port{13E8} 20r12 5|30r24 50m17
+30R8*event_handlers_alarm_activator_Status 34r21 38r14 43r21 47r14 56r54
+. 223c8 226e15 5|18r54 26r21 43r14 60r21 76r14
+33U13*Put_Value 34=5 35>5 5|25b13 36l7 36t16
+34r5 Status{30R8} 5|26b5 32m9
+35r5 Spg_Interface{16R8} 5|27b5 30r10
+37V12*Get_Value{16R8} 38>5 39>5 5|42b12 53l7 53t16
+38r5 Status{30R8} 5|43b5
+39e5 Port{13E8} 5|44b5 48r10
+42U13*Next_Value 43=5 44>5 5|59b13 69l7 69t17
+43r5 Status{30R8} 5|60b5 64r7
+44e5 Port{13E8} 5|61b5 65r7
+46V12*Get_Count{integer} 47>5 48>5 5|75b12 91l7 91t16
+47r5 Status{30R8} 5|76b5 83r12
+48e5 Port{13E8} 5|77b5 81r10
+51U13*event_handlers_alarm_activator 52>5 53>5 54>5 55>5 56=5 5|13b13
+52i5 det1{6|20I8} 5|14b5
+53i5 det2{6|20I8} 5|15b5
+54i5 det3{6|20I8} 5|16b5
+55i5 rfid{6|20I8} 5|17b5
+56r5 Status{30R8} 5|18b5
+58E8*event_handlers_detection_handler_Port_Type 59e17 62r12 62r58 84r12 89r12
+. 93r12 5|122r12 140r12 156r12
+59n5*Data_Source{58E8} 66r14 5|107r12 127r12 128r25 161r12
+61R8*event_handlers_detection_handler_Interface 62d5 73e15 80r21 85r11 5|103r21
+. 123r11
+62e5*Port{58E8} 65r12 5|106r24 128m17
+67i11*Data_Source_DATA{6|20I8} 5|111r24 129m9
+75R8*event_handlers_detection_handler_Status 79r21 83r14 88r21 92r14 97r54
+. 228c8 232e15 5|94r54 102r21 121r14 139r21 155r14
+78U13*Put_Value 79=5 80>5 5|101b13 114l7 114t16
+79r5 Status{75R8} 5|102b5 108m9 110m9
+80r5 Spg_Interface{61R8} 5|103b5 106r10 111r10
+82V12*Get_Value{61R8} 83>5 84>5 5|120b12 132l7 132t16
+83r5 Status{75R8} 5|121b5 129r29
+84e5 Port{58E8} 5|122b5 126r10
+87U13*Next_Value 88=5 89>5 5|138b13 148l7 148t17
+88r5 Status{75R8} 5|139b5 143r7
+89e5 Port{58E8} 5|140b5 144r7
+91V12*Get_Count{integer} 92>5 93>5 5|154b12 170l7 170t16
+92r5 Status{75R8} 5|155b5 162r12
+93e5 Port{58E8} 5|156b5 160r10
+96U13*event_handlers_detection_handler 97=5 5|93b13
+97r5 Status{75R8} 5|94b5
+99E8*event_handlers_detection_handler1_Port_Type 100e17 103r12 103r59 125r12
+. 130r12 134r12 5|201r12 219r12 235r12
+100n5*Data_Source{99E8} 107r14 5|186r12 206r12 207r25 240r12
+102R8*event_handlers_detection_handler1_Interface 103d5 114e15 121r21 126r11
+. 5|182r21 202r11
+103e5*Port{99E8} 106r12 5|185r24 207m17
+108i11*Data_Source_DATA{6|20I8} 5|190r24 208m9
+116R8*event_handlers_detection_handler1_Status 120r21 124r14 129r21 133r14
+. 138r54 234c8 238e15 5|173r54 181r21 200r14 218r21 234r14
+119U13*Put_Value 120=5 121>5 5|180b13 193l7 193t16
+120r5 Status{116R8} 5|181b5 187m9 189m9
+121r5 Spg_Interface{102R8} 5|182b5 185r10 190r10
+123V12*Get_Value{102R8} 124>5 125>5 5|199b12 211l7 211t16
+124r5 Status{116R8} 5|200b5 208r29
+125e5 Port{99E8} 5|201b5 205r10
+128U13*Next_Value 129=5 130>5 5|217b13 227l7 227t17
+129r5 Status{116R8} 5|218b5 222r7
+130e5 Port{99E8} 5|219b5 223r7
+132V12*Get_Count{integer} 133>5 134>5 5|233b12 249l7 249t16
+133r5 Status{116R8} 5|234b5 241r12
+134e5 Port{99E8} 5|235b5 239r10
+137U13*event_handlers_detection_handler1 138=5 5|172b13
+138r5 Status{116R8} 5|173b5
+140E8*event_handlers_detection_handler2_Port_Type 141e17 144r12 144r59 166r12
+. 171r12 175r12 5|280r12 298r12 314r12
+141n5*Data_Source{140E8} 148r14 5|265r12 285r12 286r25 319r12
+143R8*event_handlers_detection_handler2_Interface 144d5 155e15 162r21 167r11
+. 5|261r21 281r11
+144e5*Port{140E8} 147r12 5|264r24 286m17
+149i11*Data_Source_DATA{6|20I8} 5|269r24 287m9
+157R8*event_handlers_detection_handler2_Status 161r21 165r14 170r21 174r14
+. 179r54 240c8 244e15 5|252r54 260r21 279r14 297r21 313r14
+160U13*Put_Value 161=5 162>5 5|259b13 272l7 272t16
+161r5 Status{157R8} 5|260b5 266m9 268m9
+162r5 Spg_Interface{143R8} 5|261b5 264r10 269r10
+164V12*Get_Value{143R8} 165>5 166>5 5|278b12 290l7 290t16
+165r5 Status{157R8} 5|279b5 287r29
+166e5 Port{140E8} 5|280b5 284r10
+169U13*Next_Value 170=5 171>5 5|296b13 306l7 306t17
+170r5 Status{157R8} 5|297b5 301r7
+171e5 Port{140E8} 5|298b5 302r7
+173V12*Get_Count{integer} 174>5 175>5 5|312b12 328l7 328t16
+174r5 Status{157R8} 5|313b5 320r12
+175e5 Port{140E8} 5|314b5 318r10
+178U13*event_handlers_detection_handler2 179=5 5|251b13
+179r5 Status{157R8} 5|252b5
+181E8*event_handlers_rfid_handler_Port_Type 182e17 185r12 185r53 207r12 212r12
+. 216r12 5|359r12 377r12 393r12
+182n5*Data_Source{181E8} 189r14 5|344r12 364r12 365r25 398r12
+184R8*event_handlers_rfid_handler_Interface 185d5 196e15 203r21 208r11 5|340r21
+. 360r11
+185e5*Port{181E8} 188r12 5|343r24 365m17
+190i11*Data_Source_DATA{6|20I8} 5|348r24 366m9
+198R8*event_handlers_rfid_handler_Status 202r21 206r14 211r21 215r14 220r54
+. 246c8 250e15 5|331r54 339r21 358r14 376r21 392r14
+201U13*Put_Value 202=5 203>5 5|338b13 351l7 351t16
+202r5 Status{198R8} 5|339b5 345m9 347m9
+203r5 Spg_Interface{184R8} 5|340b5 343r10 348r10
+205V12*Get_Value{184R8} 206>5 207>5 5|357b12 369l7 369t16
+206r5 Status{198R8} 5|358b5 366r29
+207e5 Port{181E8} 5|359b5 363r10
+210U13*Next_Value 211=5 212>5 5|375b13 385l7 385t17
+211r5 Status{198R8} 5|376b5 380r7
+212e5 Port{181E8} 5|377b5 381r7
+214V12*Get_Count{integer} 215>5 216>5 5|391b12 407l7 407t16
+215r5 Status{198R8} 5|392b5 399r12
+216e5 Port{181E8} 5|393b5 397r10
+219U13*event_handlers_rfid_handler 220=5 5|330b13
+220r5 Status{198R8} 5|331b5
+225b7*result{boolean} 5|32m16 83r19
+230b7*Data_Source{boolean} 5|108m16 162r19
+231i7*Data_Source_DATA{6|20I8} 5|110m16 129r36
+236b7*Data_Source{boolean} 5|187m16 241r19
+237i7*Data_Source_DATA{6|20I8} 5|189m16 208r36
+242b7*Data_Source{boolean} 5|266m16 320r19
+243i7*Data_Source_DATA{6|20I8} 5|268m16 287r36
+248b7*Data_Source{boolean} 5|345m16 399r19
+249i7*Data_Source_DATA{6|20I8} 5|347m16 366r36
+X 6 polyorb_hi_generated-types.ads
+10K30*Types 4|9w27 52r33 53r33 54r33 55r33 67r51 108r51 149r51 190r51 231r47
+. 237r47 243r47 249r47 5|14r33 15r33 16r33 17r33 6|28e31
+20I8*Integer_Type<integer> 4|52r39 53r39 54r39 55r39 67r57 108r57 149r57
+. 190r57 231r53 237r53 243r53 249r53 5|14r39 15r39 16r39 17r39
+X 7 surveillance.ads
+4K9*Surveillance 5|9w6 19r12 95r12 174r12 253r12 332r12 7|23e17
+9U19*Rfid 5|332r25
+11U19*Detector1 5|95r25
+13U19*Detector2 5|174r25
+15U19*Detector3 5|253r25
+17U13*Alarm 5|19r25
 

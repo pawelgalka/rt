@@ -14,6 +14,7 @@ package body ada_main is
    E028 : Short_Integer; pragma Import (Ada, E028, "system__exceptions_E");
    E020 : Short_Integer; pragma Import (Ada, E020, "system__secondary_stack_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "ada__io_exceptions_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "ada__numerics_E");
    E061 : Short_Integer; pragma Import (Ada, E061, "interfaces__c_E");
    E076 : Short_Integer; pragma Import (Ada, E076, "system__task_info_E");
    E095 : Short_Integer; pragma Import (Ada, E095, "ada__tags_E");
@@ -22,26 +23,28 @@ package body ada_main is
    E106 : Short_Integer; pragma Import (Ada, E106, "ada__finalization_E");
    E141 : Short_Integer; pragma Import (Ada, E141, "system__storage_pools_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "system__finalization_masters_E");
+   E189 : Short_Integer; pragma Import (Ada, E189, "ada__calendar_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "system__assertions_E");
    E054 : Short_Integer; pragma Import (Ada, E054, "ada__real_time_E");
+   E187 : Short_Integer; pragma Import (Ada, E187, "system__random_seed_E");
    E117 : Short_Integer; pragma Import (Ada, E117, "system__tasking__initialization_E");
    E127 : Short_Integer; pragma Import (Ada, E127, "system__tasking__protected_objects_E");
    E131 : Short_Integer; pragma Import (Ada, E131, "system__tasking__protected_objects__entries_E");
    E125 : Short_Integer; pragma Import (Ada, E125, "system__tasking__queuing_E");
    E093 : Short_Integer; pragma Import (Ada, E093, "ada__synchronous_task_control_E");
-   E192 : Short_Integer; pragma Import (Ada, E192, "system__tasking__stages_E");
+   E205 : Short_Integer; pragma Import (Ada, E205, "system__tasking__stages_E");
    E167 : Short_Integer; pragma Import (Ada, E167, "polyorb_hi__marshallers_g_E");
    E157 : Short_Integer; pragma Import (Ada, E157, "polyorb_hi__output_low_level_E");
    E163 : Short_Integer; pragma Import (Ada, E163, "polyorb_hi__port_kinds_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "polyorb_hi__suspenders_E");
    E155 : Short_Integer; pragma Import (Ada, E155, "polyorb_hi__output_E");
-   E190 : Short_Integer; pragma Import (Ada, E190, "polyorb_hi__periodic_task_E");
+   E203 : Short_Integer; pragma Import (Ada, E203, "polyorb_hi__periodic_task_E");
    E173 : Short_Integer; pragma Import (Ada, E173, "polyorb_hi__unprotected_queue_E");
    E169 : Short_Integer; pragma Import (Ada, E169, "polyorb_hi__thread_interrogators_E");
    E178 : Short_Integer; pragma Import (Ada, E178, "polyorb_hi_generated__subprograms_E");
    E180 : Short_Integer; pragma Import (Ada, E180, "surveillance_E");
    E145 : Short_Integer; pragma Import (Ada, E145, "polyorb_hi_generated__activity_E");
-   E182 : Short_Integer; pragma Import (Ada, E182, "polyorb_hi_generated__transport_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "polyorb_hi_generated__transport_E");
    E175 : Short_Integer; pragma Import (Ada, E175, "polyorb_hi_generated__marshallers_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
@@ -171,7 +174,7 @@ package body ada_main is
            False, False, False),
          Value => (0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
          Violated =>
-          (False, False, False, True, True, False, False, False, 
+          (False, False, False, True, True, False, False, True, 
            False, False, True, True, True, True, False, False, 
            True, False, False, True, True, False, True, True, 
            False, True, True, False, True, False, False, False, 
@@ -211,6 +214,8 @@ package body ada_main is
       E020 := E020 + 1;
       Ada.Io_Exceptions'Elab_Spec;
       E109 := E109 + 1;
+      Ada.Numerics'Elab_Spec;
+      E181 := E181 + 1;
       Interfaces.C'Elab_Spec;
       E061 := E061 + 1;
       System.Task_Info'Elab_Spec;
@@ -229,11 +234,16 @@ package body ada_main is
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
       E137 := E137 + 1;
+      Ada.Calendar'Elab_Spec;
+      Ada.Calendar'Elab_Body;
+      E189 := E189 + 1;
       System.Assertions'Elab_Spec;
       E152 := E152 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
       E054 := E054 + 1;
+      System.Random_Seed'Elab_Body;
+      E187 := E187 + 1;
       System.Tasking.Initialization'Elab_Body;
       E117 := E117 + 1;
       System.Tasking.Protected_Objects'Elab_Body;
@@ -245,7 +255,7 @@ package body ada_main is
       Ada.Synchronous_Task_Control'Elab_Spec;
       E093 := E093 + 1;
       System.Tasking.Stages'Elab_Body;
-      E192 := E192 + 1;
+      E205 := E205 + 1;
       E167 := E167 + 1;
       E157 := E157 + 1;
       E163 := E163 + 1;
@@ -253,14 +263,15 @@ package body ada_main is
       E006 := E006 + 1;
       Polyorb_Hi.Output'Elab_Body;
       E155 := E155 + 1;
-      E190 := E190 + 1;
+      E203 := E203 + 1;
       E173 := E173 + 1;
       E169 := E169 + 1;
-      E180 := E180 + 1;
       E178 := E178 + 1;
+      Surveillance'Elab_Body;
+      E180 := E180 + 1;
       Polyorb_Hi_Generated.Activity'Elab_Spec;
       E175 := E175 + 1;
-      E182 := E182 + 1;
+      E195 := E195 + 1;
       Polyorb_Hi_Generated.Activity'Elab_Body;
       E145 := E145 + 1;
    end adainit;
@@ -316,8 +327,8 @@ package body ada_main is
    --   /home/p/rt/surveillance_sys/main/polyorb_hi-unprotected_queue.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi-thread_interrogators.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi_generated-types.o
-   --   /home/p/rt/surveillance_sys/main/surveillance.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi_generated-subprograms.o
+   --   /home/p/rt/surveillance_sys/main/surveillance.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi_generated-marshallers.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi_generated-transport.o
    --   /home/p/rt/surveillance_sys/main/polyorb_hi_generated-activity.o

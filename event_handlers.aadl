@@ -1,13 +1,21 @@
 package event_handlers
 public
-	with Data_Model;
+	with Data_Model, data_types;
+	
 	data Integer_Type
-properties
-  Data_Model::Data_Representation => integer;
-end Integer_Type;
+		properties
+  			Data_Model::Data_Representation => integer;
+	end Integer_Type;
 
 	subprogram video_captor_handler
-		-- fill in second stage with C code implementation -> pack 2 arrays into struct with C timespec of timestamp --
+		features
+			result : out event data port data_types::captor_data;
+			det1 : in parameter data_types::camera_image;
+			det2 : in parameter data_types::camera_image;
+			det3 : in parameter data_types::camera_image;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.captor";
 	end video_captor_handler;
 	
 	subprogram video_sender_handler
@@ -15,10 +23,43 @@ end Integer_Type;
 	end video_sender_handler;
 	
 	subprogram alarm_activator
+		features
+			result : out event port;
+			det1 : in parameter integer_type;
+			det2 : in parameter integer_type;
+			det3 : in parameter integer_type;
+			rfid : in parameter integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.alarm";		
 	end alarm_activator;
 	
 	subprogram detection_handler
+		features
+			Data_Source : out event data port integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.detector1";
 	end detection_handler;
+	
+		
+	subprogram detection_handler1
+		features
+			Data_Source : out event data port integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.detector2";
+	end detection_handler1;
+	
+	
+		
+	subprogram detection_handler2
+		features
+			Data_Source : out event data port integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "surveillance.detector3";
+	end detection_handler2;
 	
 	subprogram rfid_handler
 		features

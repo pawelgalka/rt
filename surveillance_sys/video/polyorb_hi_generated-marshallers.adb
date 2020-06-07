@@ -77,6 +77,12 @@ package body PolyORB_HI_Generated.Marshallers is
        PolyORB_HI_Generated.Activity.surveillance_system_video_captor_impl_Interface'
          (Port => PolyORB_HI_Generated.Activity.camera3_capture,
           camera3_capture_DATA => camera3_capture_DATA);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.start)
+    then
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_video_captor_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.start);
     end if;
   end Unmarshall;
 

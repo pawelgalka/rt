@@ -121,6 +121,7 @@ package PolyORB_HI_Generated.Deployment is
    (video_video_captor_t_camera1_capture_K,
     video_video_captor_t_camera2_capture_K,
     video_video_captor_t_camera3_capture_K,
+    video_video_captor_t_start_K,
     video_video_captor_t_output_converted_K,
     video_video_sender_t_message_K);
 
@@ -128,15 +129,17 @@ package PolyORB_HI_Generated.Deployment is
 
   for Port_Type use
    (video_video_captor_t_camera1_capture_K =>
-     13,
+     19,
     video_video_captor_t_camera2_capture_K =>
-     14,
+     20,
     video_video_captor_t_camera3_capture_K =>
-     15,
+     21,
+    video_video_captor_t_start_K =>
+     22,
     video_video_captor_t_output_converted_K =>
-     16,
+     23,
     video_video_sender_t_message_K =>
-     17);
+     24);
 
   --  Size of Port_Type fixed to 16 bits
 
@@ -158,6 +161,8 @@ package PolyORB_HI_Generated.Deployment is
       video_video_captor_t_camera2_capture_K =>
        video_video_captor_t_K,
       video_video_captor_t_camera3_capture_K =>
+       video_video_captor_t_K,
+      video_video_captor_t_start_K =>
        video_video_captor_t_K,
       video_video_captor_t_output_converted_K =>
        video_video_captor_t_K,
@@ -187,6 +192,8 @@ package PolyORB_HI_Generated.Deployment is
        "video_video_captor_t_camera2_capture_K ",
       video_video_captor_t_camera3_capture_K =>
        "video_video_captor_t_camera3_capture_K ",
+      video_video_captor_t_start_K =>
+       "video_video_captor_t_start_K           ",
       video_video_captor_t_output_converted_K =>
        "video_video_captor_t_output_converted_K",
       video_video_sender_t_message_K =>

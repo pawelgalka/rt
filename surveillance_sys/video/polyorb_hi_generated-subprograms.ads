@@ -6,11 +6,61 @@
 pragma Style_Checks
  ("NM32766");
 
+with PolyORB_HI_Generated.Types;
 
 package PolyORB_HI_Generated.Subprograms is
 
-  procedure event_handlers_video_captor_handler;
+  type event_handlers_video_captor_handler_Port_Type is
+   (result);
+
+  type event_handlers_video_captor_handler_Interface 
+   (Port : event_handlers_video_captor_handler_Port_Type := event_handlers_video_captor_handler_Port_Type'First)
+  is
+    record
+      case Port is
+        when result =>
+          result_DATA : PolyORB_HI_Generated.Types.captor_data;
+        pragma Warnings (Off);
+        when others =>
+          null;
+        pragma Warnings (On);
+      end case;
+    end record;
+
+  type event_handlers_video_captor_handler_Status is
+   private;
+
+  procedure Put_Value
+   (Status : in out event_handlers_video_captor_handler_Status;
+    Spg_Interface : event_handlers_video_captor_handler_Interface);
+
+  function Get_Value
+   (Status : event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type)
+   return event_handlers_video_captor_handler_Interface;
+
+  procedure Next_Value
+   (Status : in out event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type);
+
+  function Get_Count
+   (Status : event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type)
+   return Standard.Integer;
+
+  procedure event_handlers_video_captor_handler
+   (det1 : PolyORB_HI_Generated.Types.camera_image;
+    det2 : PolyORB_HI_Generated.Types.camera_image;
+    det3 : PolyORB_HI_Generated.Types.camera_image;
+    Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status);
 
   procedure event_handlers_video_sender_handler;
+
+private
+  type event_handlers_video_captor_handler_Status is
+    record
+      result : Standard.Boolean := False;
+      result_DATA : PolyORB_HI_Generated.Types.captor_data;
+    end record;
 
 end PolyORB_HI_Generated.Subprograms;

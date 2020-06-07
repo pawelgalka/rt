@@ -6,18 +6,91 @@
 pragma Style_Checks
  ("NM32766");
 
+with surveillance;
 
 package body PolyORB_HI_Generated.Subprograms is
 
-  -----------------------------------------
-  -- event_handlers_video_captor_handler -- 
-  -----------------------------------------
+  procedure event_handlers_video_captor_handler
+   (det1 : PolyORB_HI_Generated.Types.camera_image;
+    det2 : PolyORB_HI_Generated.Types.camera_image;
+    det3 : PolyORB_HI_Generated.Types.camera_image;
+    Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status)
+   renames surveillance.captor;
 
-  procedure event_handlers_video_captor_handler is
-    Nyi : exception;
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_video_captor_handler_Status;
+    Spg_Interface : event_handlers_video_captor_handler_Interface)
+  is
   begin
-    raise Nyi;
-  end event_handlers_video_captor_handler;
+    case Spg_Interface.Port is
+      when result =>
+        Status.result :=
+         True;
+        Status.result_DATA :=
+         Spg_Interface.result_DATA;
+
+    end case;
+  end Put_Value;
+
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type)
+   return event_handlers_video_captor_handler_Interface
+  is
+  begin
+    case Port is
+      when result =>
+        return (Port => result,
+        result_DATA => Status.result_DATA);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_video_captor_handler_Status;
+    Port : event_handlers_video_captor_handler_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when result =>
+        if Status.result
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
 
   -----------------------------------------
   -- event_handlers_video_sender_handler -- 

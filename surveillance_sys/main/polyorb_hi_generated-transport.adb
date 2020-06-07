@@ -113,6 +113,21 @@ package body PolyORB_HI_Generated.Transport is
     Message : PolyORB_HI.Streams.Stream_Element_Array)
    return PolyORB_HI.Errors.Error_Kind;
 
+  function surveillance_system_detector1_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind;
+
+  function surveillance_system_detector2_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind;
+
+  function surveillance_system_detector3_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind;
+
   function surveillance_system_rfid_reader_Send
    (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
     Message : PolyORB_HI.Streams.Stream_Element_Array)
@@ -139,6 +154,24 @@ package body PolyORB_HI_Generated.Transport is
       = PolyORB_HI_Generated.Deployment.main_alarm_K)
     then
       return surveillance_system_alarm_Send
+       (Entity,
+        Msg);
+    elsif (From
+      = PolyORB_HI_Generated.Deployment.main_detector1_K)
+    then
+      return surveillance_system_detector1_Send
+       (Entity,
+        Msg);
+    elsif (From
+      = PolyORB_HI_Generated.Deployment.main_detector2_K)
+    then
+      return surveillance_system_detector2_Send
+       (Entity,
+        Msg);
+    elsif (From
+      = PolyORB_HI_Generated.Deployment.main_detector3_K)
+    then
+      return surveillance_system_detector3_Send
        (Entity,
         Msg);
     elsif (From
@@ -170,6 +203,39 @@ package body PolyORB_HI_Generated.Transport is
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
        (test,
+        Thread_Interface_Ü,
+        Msg);
+      PolyORB_HI_Generated.Activity.Store_Received_Message
+       (PolyORB_HI_Generated.Deployment.main_alarm_K,
+        Thread_Interface_Ü,
+        From);
+    elsif (Port
+      = PolyORB_HI_Generated.Deployment.main_alarm_test1_K)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test1,
+        Thread_Interface_Ü,
+        Msg);
+      PolyORB_HI_Generated.Activity.Store_Received_Message
+       (PolyORB_HI_Generated.Deployment.main_alarm_K,
+        Thread_Interface_Ü,
+        From);
+    elsif (Port
+      = PolyORB_HI_Generated.Deployment.main_alarm_test2_K)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test2,
+        Thread_Interface_Ü,
+        Msg);
+      PolyORB_HI_Generated.Activity.Store_Received_Message
+       (PolyORB_HI_Generated.Deployment.main_alarm_K,
+        Thread_Interface_Ü,
+        From);
+    elsif (Port
+      = PolyORB_HI_Generated.Deployment.main_alarm_test3_K)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test3,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message
@@ -239,6 +305,37 @@ package body PolyORB_HI_Generated.Transport is
     end if;
   end surveillance_system_detector1_Deliver;
 
+  ----------------------------------------
+  -- surveillance_system_detector1_Send -- 
+  ----------------------------------------
+
+  function surveillance_system_detector1_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind
+  is
+    pragma Warnings
+     (Off,
+      Message);
+    pragma Warnings
+     (Off,
+      Entity);
+    use PolyORB_HI_Generated.Deployment;
+  begin
+    if (Entity
+      = PolyORB_HI_Generated.Deployment.main_alarm_K)
+    then
+      Deliver
+       (Entity,
+        Message);
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_None);
+    else
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_Transport);
+    end if;
+  end surveillance_system_detector1_Send;
+
   -------------------------------------------
   -- surveillance_system_detector2_Deliver -- 
   -------------------------------------------
@@ -249,7 +346,7 @@ package body PolyORB_HI_Generated.Transport is
     Msg : in out PolyORB_HI.Messages.Message_Type)
   is
     use PolyORB_HI_Generated.Deployment;
-    Thread_Interface_Ü : surveillance_system_detector_impl_Interface;
+    Thread_Interface_Ü : surveillance_system_detector_impl1_Interface;
   begin
     if (Port
       = PolyORB_HI_Generated.Deployment.main_detector2_motion_K)
@@ -276,6 +373,37 @@ package body PolyORB_HI_Generated.Transport is
     end if;
   end surveillance_system_detector2_Deliver;
 
+  ----------------------------------------
+  -- surveillance_system_detector2_Send -- 
+  ----------------------------------------
+
+  function surveillance_system_detector2_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind
+  is
+    pragma Warnings
+     (Off,
+      Message);
+    pragma Warnings
+     (Off,
+      Entity);
+    use PolyORB_HI_Generated.Deployment;
+  begin
+    if (Entity
+      = PolyORB_HI_Generated.Deployment.main_alarm_K)
+    then
+      Deliver
+       (Entity,
+        Message);
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_None);
+    else
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_Transport);
+    end if;
+  end surveillance_system_detector2_Send;
+
   -------------------------------------------
   -- surveillance_system_detector3_Deliver -- 
   -------------------------------------------
@@ -286,7 +414,7 @@ package body PolyORB_HI_Generated.Transport is
     Msg : in out PolyORB_HI.Messages.Message_Type)
   is
     use PolyORB_HI_Generated.Deployment;
-    Thread_Interface_Ü : surveillance_system_detector_impl_Interface;
+    Thread_Interface_Ü : surveillance_system_detector_impl2_Interface;
   begin
     if (Port
       = PolyORB_HI_Generated.Deployment.main_detector3_motion_K)
@@ -312,6 +440,37 @@ package body PolyORB_HI_Generated.Transport is
         From);
     end if;
   end surveillance_system_detector3_Deliver;
+
+  ----------------------------------------
+  -- surveillance_system_detector3_Send -- 
+  ----------------------------------------
+
+  function surveillance_system_detector3_Send
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Message : PolyORB_HI.Streams.Stream_Element_Array)
+   return PolyORB_HI.Errors.Error_Kind
+  is
+    pragma Warnings
+     (Off,
+      Message);
+    pragma Warnings
+     (Off,
+      Entity);
+    use PolyORB_HI_Generated.Deployment;
+  begin
+    if (Entity
+      = PolyORB_HI_Generated.Deployment.main_alarm_K)
+    then
+      Deliver
+       (Entity,
+        Message);
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_None);
+    else
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_Transport);
+    end if;
+  end surveillance_system_detector3_Send;
 
   ---------------------------------------------
   -- surveillance_system_rfid_reader_Deliver -- 

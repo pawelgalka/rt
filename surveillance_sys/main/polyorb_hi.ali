@@ -1,6 +1,5 @@
 V "GNAT Lib v7"
 A -O1
-A -gnatA
 A -g
 A -gnatwa
 A -gnatwG
@@ -8,8 +7,7 @@ A -gnat12
 A -g
 A -gnata
 A -gnato
-A -mtune=generic
-A -march=x86-64
+A -gnatA
 P ZX
 
 RN

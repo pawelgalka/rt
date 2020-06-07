@@ -141,12 +141,18 @@ package PolyORB_HI_Generated.Deployment is
   type Port_Type is
    (main_alarm_detected_K,
     main_alarm_test_K,
+    main_alarm_test1_K,
+    main_alarm_test2_K,
+    main_alarm_test3_K,
     main_detector1_motion_K,
     main_detector1_door_K,
+    main_detector1_test_K,
     main_detector2_motion_K,
     main_detector2_door_K,
+    main_detector2_test_K,
     main_detector3_motion_K,
     main_detector3_door_K,
+    main_detector3_test_K,
     main_rfid_reader_rfid_read_K,
     main_rfid_reader_door_K,
     main_rfid_reader_motion_K,
@@ -159,26 +165,38 @@ package PolyORB_HI_Generated.Deployment is
      1,
     main_alarm_test_K =>
      2,
-    main_detector1_motion_K =>
+    main_alarm_test1_K =>
      3,
-    main_detector1_door_K =>
+    main_alarm_test2_K =>
      4,
-    main_detector2_motion_K =>
+    main_alarm_test3_K =>
      5,
-    main_detector2_door_K =>
+    main_detector1_motion_K =>
      6,
-    main_detector3_motion_K =>
+    main_detector1_door_K =>
      7,
-    main_detector3_door_K =>
+    main_detector1_test_K =>
      8,
-    main_rfid_reader_rfid_read_K =>
+    main_detector2_motion_K =>
      9,
-    main_rfid_reader_door_K =>
+    main_detector2_door_K =>
      10,
-    main_rfid_reader_motion_K =>
+    main_detector2_test_K =>
      11,
+    main_detector3_motion_K =>
+     12,
+    main_detector3_door_K =>
+     13,
+    main_detector3_test_K =>
+     14,
+    main_rfid_reader_rfid_read_K =>
+     15,
+    main_rfid_reader_door_K =>
+     16,
+    main_rfid_reader_motion_K =>
+     17,
     main_rfid_reader_test_K =>
-     12);
+     18);
 
   --  Size of Port_Type fixed to 16 bits
 
@@ -199,17 +217,29 @@ package PolyORB_HI_Generated.Deployment is
        main_alarm_K,
       main_alarm_test_K =>
        main_alarm_K,
+      main_alarm_test1_K =>
+       main_alarm_K,
+      main_alarm_test2_K =>
+       main_alarm_K,
+      main_alarm_test3_K =>
+       main_alarm_K,
       main_detector1_motion_K =>
        main_detector1_K,
       main_detector1_door_K =>
+       main_detector1_K,
+      main_detector1_test_K =>
        main_detector1_K,
       main_detector2_motion_K =>
        main_detector2_K,
       main_detector2_door_K =>
        main_detector2_K,
+      main_detector2_test_K =>
+       main_detector2_K,
       main_detector3_motion_K =>
        main_detector3_K,
       main_detector3_door_K =>
+       main_detector3_K,
+      main_detector3_test_K =>
        main_detector3_K,
       main_rfid_reader_rfid_read_K =>
        main_rfid_reader_K,
@@ -241,18 +271,30 @@ package PolyORB_HI_Generated.Deployment is
        "main_alarm_detected_K       ",
       main_alarm_test_K =>
        "main_alarm_test_K           ",
+      main_alarm_test1_K =>
+       "main_alarm_test1_K          ",
+      main_alarm_test2_K =>
+       "main_alarm_test2_K          ",
+      main_alarm_test3_K =>
+       "main_alarm_test3_K          ",
       main_detector1_motion_K =>
        "main_detector1_motion_K     ",
       main_detector1_door_K =>
        "main_detector1_door_K       ",
+      main_detector1_test_K =>
+       "main_detector1_test_K       ",
       main_detector2_motion_K =>
        "main_detector2_motion_K     ",
       main_detector2_door_K =>
        "main_detector2_door_K       ",
+      main_detector2_test_K =>
+       "main_detector2_test_K       ",
       main_detector3_motion_K =>
        "main_detector3_motion_K     ",
       main_detector3_door_K =>
        "main_detector3_door_K       ",
+      main_detector3_test_K =>
+       "main_detector3_test_K       ",
       main_rfid_reader_rfid_read_K =>
        "main_rfid_reader_rfid_read_K",
       main_rfid_reader_door_K =>

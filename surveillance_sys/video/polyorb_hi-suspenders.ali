@@ -44,7 +44,7 @@ W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  eff86ca3 EE NE OO PK
+U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  1e6dc3a7 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -66,7 +66,7 @@ D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi-suspenders.adb  20170204221544 84137d58 polyorb_hi.suspenders%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607162003 5bd3134c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607195513 aa46bc48 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s

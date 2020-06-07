@@ -21,6 +21,7 @@ package PolyORB_HI_Generated.Activity is
    (camera1_capture,
     camera2_capture,
     camera3_capture,
+    start,
     output_converted);
 
   type surveillance_system_video_captor_impl_Interface 
@@ -34,6 +35,8 @@ package PolyORB_HI_Generated.Activity is
           camera2_capture_DATA : PolyORB_HI_Generated.Types.camera_image;
         when camera3_capture =>
           camera3_capture_DATA : PolyORB_HI_Generated.Types.camera_image;
+        when start =>
+          null;
         when output_converted =>
           output_converted_DATA : PolyORB_HI_Generated.Types.captor_data;
         pragma Warnings (Off);
@@ -101,9 +104,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (3000),
+       (5000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (3000),
+       (5000),
       Task_Priority => 13,
       Task_Stack_Size => 100000,
       Job => surveillance_system_video_captor_t_Job);
@@ -185,9 +188,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.video_video_sender_t_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (2000),
+       (5000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (2000),
+       (5000),
       Task_Priority => 10,
       Task_Stack_Size => 100000,
       Job => surveillance_system_video_sender_t_Job);

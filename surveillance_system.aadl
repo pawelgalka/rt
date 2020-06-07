@@ -55,9 +55,10 @@ public
 	
 	thread video_captor
 		features
-			camera1_capture : in event data port data_types::camera_image;
-			camera2_capture : in event data port data_types::camera_image;
-			camera3_capture : in event data port data_types::camera_image;			
+			camera1_capture : in data port data_types::camera_image;
+			camera2_capture : in data port data_types::camera_image;
+			camera3_capture : in data port data_types::camera_image;	
+			start : in event port;		
 			output_converted : out event data port data_types::captor_data;
 	end video_captor;
 	
@@ -65,13 +66,17 @@ public
 		calls default: {
   			handler : subprogram event_handlers::video_captor_handler;
 		};
-		-- add features to pass data to handler
+		connections
+			c0 : parameter camera1_capture -> handler.det1;
+			c1 : parameter camera2_capture -> handler.det2;
+			c2 : parameter camera3_capture -> handler.det3;
+			c3 : port handler.result -> output_converted;
 		properties
 			Dispatch_Protocol => Periodic;
 		  	Priority => 13;
   			Compute_Execution_Time => 1500ms..1600ms;
-  			Period => 3000ms;
-  			Deadline => 3000ms;
+  			Period => 5000ms;
+  			Deadline => 5000ms;
 	end video_captor.impl;
 	
 	
@@ -89,25 +94,33 @@ public
 			Dispatch_Protocol => Periodic;
 		  	Priority => 10;
   			Compute_Execution_Time => 100ms..200ms;
-  			Deadline => 2000ms;
-  			Period => 2000ms;
+  			Deadline => 5000ms;
+  			Period => 5000ms;
 	end video_sender.impl;
 	
 	thread alarm_activator
 		features
 			state_access : requires data access data_types::state {Access_Right => Read_Only;};
 			detected : out event port;
-						test : in event data port event_handlers::Integer_Type;
-			
+			test : in event data port event_handlers::Integer_Type;
+			test1 : in event data port event_handlers::Integer_Type;
+			test2 : in event data port event_handlers::Integer_Type;			
+			test3 : in event data port event_handlers::Integer_Type;
 	end alarm_activator;
 	
 	thread implementation alarm_activator.impl
 		calls default: {
 			activator : subprogram event_handlers::alarm_activator;
 		};
+		connections
+			c0 : port activator.result -> detected;
+			c1 : parameter test -> activator.rfid;
+			c2 : parameter test1 -> activator.det1;
+			c3 : parameter test2 -> activator.det2;
+			c4 : parameter test3 -> activator.det3;
 		properties
   			Dispatch_Protocol => Periodic;
-  			Priority => 10;
+  			Priority => 70;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end alarm_activator.impl;
@@ -117,18 +130,49 @@ public
 			state_access : requires data access data_types::state {Access_Right => Write_Only;};
 			motion : in event port;
 			door : in event port;
+			test : out event data port event_handlers::Integer_Type;
 	end detector;
 
 	thread implementation detector.impl
 		calls default: {
 			detector_handler : subprogram event_handlers::detection_handler;
 		};
+		connections
+			c1 : port detector_handler.Data_Source -> test;
 		properties
   			Dispatch_Protocol => Periodic;
   			Priority => 90;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end detector.impl;
+	
+	
+	thread implementation detector.impl1
+		calls default: {
+			detector_handler : subprogram event_handlers::detection_handler1;
+		};
+		connections
+			c1 : port detector_handler.Data_Source -> test;
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 90;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
+	end detector.impl1;
+	
+	
+	thread implementation detector.impl2
+		calls default: {
+			detector_handler : subprogram event_handlers::detection_handler2;
+		};
+		connections
+			c1 : port detector_handler.Data_Source -> test;
+		properties
+  			Dispatch_Protocol => Periodic;
+  			Priority => 90;
+  			Compute_Execution_Time => 10ms..20ms;
+  			Period => 1500ms;
+	end detector.impl2;
 	
 	thread rfid_thread
 		features 
@@ -147,7 +191,7 @@ public
 			c1 : port detector_handler.Data_Source -> test;
 			properties
   			Dispatch_Protocol => Periodic;
-  			Priority => 80;
+  			Priority => 91;
   			Compute_Execution_Time => 10ms..20ms;
   			Period => 1500ms;
 	end rfid_thread.impl;
@@ -185,8 +229,8 @@ public
 			current_state: data data_types::state;
 			alarm : thread alarm_activator.impl;
 			detector1 : thread detector.impl;
-			detector2 : thread detector.impl;
-			detector3 : thread detector.impl;	
+			detector2 : thread detector.impl1;
+			detector3 : thread detector.impl2;	
 			rfid_reader : thread rfid_thread.impl;		
 		connections
 			da1 : data access current_state -> alarm.state_access;
@@ -204,7 +248,11 @@ public
 			rfid : port rfid_read -> rfid_reader.rfid_read;
 			motion : port rfid_reader.motion -> disable_motion;
 			door : port rfid_reader.door -> disable_door;
-			t : port rfid_reader.test -> alarm.test;
+			t : port rfid_reader.test -> alarm.test;			
+			t1 : port detector1.test -> alarm.test1;
+			t2 : port detector2.test -> alarm.test2;
+			t3 : port detector3.test -> alarm.test3;
+			
 	end surveillance_process.impl;
 		
 	process video
@@ -212,6 +260,7 @@ public
 			cam1_in : in data port data_types::camera_image;
 			cam2_in : in data port data_types::camera_image;
 			cam3_in : in data port data_types::camera_image;
+			start : in event port;
 	end video;
 	
 	process implementation video.impl
@@ -220,6 +269,7 @@ public
 			video_sender_t : thread video_sender.impl;
 			
 		connections
+			cn0 : port start -> video_captor_t.start;
 			cn1 : port cam1_in -> video_captor_t.camera1_capture;
 			cn2 : port cam2_in -> video_captor_t.camera2_capture;
 			cn3 : port cam3_in -> video_captor_t.camera3_capture;
@@ -280,6 +330,7 @@ public
 			cn8 : port main.disable_motion-> motion_sensor1.disable;
 			cn9 : port main.disable_motion -> motion_sensor2.disable;
 			cn10 : port main.disable_motion -> motion_sensor3.disable;
+--			cn11 : port main.start_recording -> video.start; 
 			cam1 : port camera1.image_capture -> video.cam1_in;
 			cam2 : port camera2.image_capture -> video.cam2_in;
 			cam3 : port camera3.image_capture -> video.cam3_in;

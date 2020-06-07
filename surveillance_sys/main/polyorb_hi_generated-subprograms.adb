@@ -10,25 +10,322 @@ with surveillance;
 
 package body PolyORB_HI_Generated.Subprograms is
 
-  ------------------------------------
-  -- event_handlers_alarm_activator -- 
-  ------------------------------------
+  procedure event_handlers_alarm_activator
+   (det1 : PolyORB_HI_Generated.Types.Integer_Type;
+    det2 : PolyORB_HI_Generated.Types.Integer_Type;
+    det3 : PolyORB_HI_Generated.Types.Integer_Type;
+    rfid : PolyORB_HI_Generated.Types.Integer_Type;
+    Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Status)
+   renames surveillance.alarm;
 
-  procedure event_handlers_alarm_activator is
-    Nyi : exception;
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_alarm_activator_Status;
+    Spg_Interface : event_handlers_alarm_activator_Interface)
+  is
   begin
-    raise Nyi;
-  end event_handlers_alarm_activator;
+    case Spg_Interface.Port is
+      when result =>
+        Status.result :=
+         True;
 
-  --------------------------------------
-  -- event_handlers_detection_handler -- 
-  --------------------------------------
+    end case;
+  end Put_Value;
 
-  procedure event_handlers_detection_handler is
-    Nyi : exception;
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_alarm_activator_Status;
+    Port : event_handlers_alarm_activator_Port_Type)
+   return event_handlers_alarm_activator_Interface
+  is
   begin
-    raise Nyi;
-  end event_handlers_detection_handler;
+    case Port is
+      when result =>
+        return (Port => result);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_alarm_activator_Status;
+    Port : event_handlers_alarm_activator_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_alarm_activator_Status;
+    Port : event_handlers_alarm_activator_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when result =>
+        if Status.result
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
+
+  procedure event_handlers_detection_handler
+   (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler_Status)
+   renames surveillance.detector1;
+
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_detection_handler_Status;
+    Spg_Interface : event_handlers_detection_handler_Interface)
+  is
+  begin
+    case Spg_Interface.Port is
+      when Data_Source =>
+        Status.Data_Source :=
+         True;
+        Status.Data_Source_DATA :=
+         Spg_Interface.Data_Source_DATA;
+
+    end case;
+  end Put_Value;
+
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_detection_handler_Status;
+    Port : event_handlers_detection_handler_Port_Type)
+   return event_handlers_detection_handler_Interface
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        return (Port => Data_Source,
+        Data_Source_DATA => Status.Data_Source_DATA);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_detection_handler_Status;
+    Port : event_handlers_detection_handler_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_detection_handler_Status;
+    Port : event_handlers_detection_handler_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        if Status.Data_Source
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
+
+  procedure event_handlers_detection_handler1
+   (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler1_Status)
+   renames surveillance.detector2;
+
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_detection_handler1_Status;
+    Spg_Interface : event_handlers_detection_handler1_Interface)
+  is
+  begin
+    case Spg_Interface.Port is
+      when Data_Source =>
+        Status.Data_Source :=
+         True;
+        Status.Data_Source_DATA :=
+         Spg_Interface.Data_Source_DATA;
+
+    end case;
+  end Put_Value;
+
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_detection_handler1_Status;
+    Port : event_handlers_detection_handler1_Port_Type)
+   return event_handlers_detection_handler1_Interface
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        return (Port => Data_Source,
+        Data_Source_DATA => Status.Data_Source_DATA);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_detection_handler1_Status;
+    Port : event_handlers_detection_handler1_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_detection_handler1_Status;
+    Port : event_handlers_detection_handler1_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        if Status.Data_Source
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
+
+  procedure event_handlers_detection_handler2
+   (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler2_Status)
+   renames surveillance.detector3;
+
+  ---------------
+  -- Put_Value -- 
+  ---------------
+
+  procedure Put_Value
+   (Status : in out event_handlers_detection_handler2_Status;
+    Spg_Interface : event_handlers_detection_handler2_Interface)
+  is
+  begin
+    case Spg_Interface.Port is
+      when Data_Source =>
+        Status.Data_Source :=
+         True;
+        Status.Data_Source_DATA :=
+         Spg_Interface.Data_Source_DATA;
+
+    end case;
+  end Put_Value;
+
+  ---------------
+  -- Get_Value -- 
+  ---------------
+
+  function Get_Value
+   (Status : event_handlers_detection_handler2_Status;
+    Port : event_handlers_detection_handler2_Port_Type)
+   return event_handlers_detection_handler2_Interface
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        return (Port => Data_Source,
+        Data_Source_DATA => Status.Data_Source_DATA);
+
+    end case;
+  end Get_Value;
+
+  ----------------
+  -- Next_Value -- 
+  ----------------
+
+  procedure Next_Value
+   (Status : in out event_handlers_detection_handler2_Status;
+    Port : event_handlers_detection_handler2_Port_Type)
+  is
+    pragma Unreferenced
+     (Status,
+      Port);
+  begin
+    --  Not implemented yet!
+    raise Program_Error;
+  end Next_Value;
+
+  ---------------
+  -- Get_Count -- 
+  ---------------
+
+  function Get_Count
+   (Status : event_handlers_detection_handler2_Status;
+    Port : event_handlers_detection_handler2_Port_Type)
+   return Standard.Integer
+  is
+  begin
+    case Port is
+      when Data_Source =>
+        if Status.Data_Source
+        then
+          return 1;
+        else
+          return 0;
+        end if;
+
+    end case;
+  end Get_Count;
 
   procedure event_handlers_rfid_handler
    (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Status)

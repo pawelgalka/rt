@@ -37,7 +37,7 @@ W polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U polyorb_hi.messages%s	polyorb_hi-messages.ads	35617c06 BN NE OO PR PK
+U polyorb_hi.messages%s	polyorb_hi-messages.ads	c4f4d302 BN NE OO PR PK
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
@@ -54,7 +54,7 @@ D polyorb_hi-messages.adb  20170204221544 b727af2e polyorb_hi.messages%b
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607162003 5bd3134c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607195513 aa46bc48 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s

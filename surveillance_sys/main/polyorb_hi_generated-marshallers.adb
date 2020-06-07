@@ -56,6 +56,9 @@ package body PolyORB_HI_Generated.Marshallers is
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
     test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    test1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    test2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    test3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
     use PolyORB_HI_Generated.Activity;
   begin
     if (Port
@@ -68,6 +71,36 @@ package body PolyORB_HI_Generated.Marshallers is
        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
          (Port => PolyORB_HI_Generated.Activity.test,
           test_DATA => test_DATA);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.test1)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test1_DATA,
+        Message);
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.test1,
+          test1_DATA => test1_DATA);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.test2)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test2_DATA,
+        Message);
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.test2,
+          test2_DATA => test2_DATA);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.test3)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (test3_DATA,
+        Message);
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.test3,
+          test3_DATA => test3_DATA);
     end if;
   end Unmarshall;
 
@@ -97,12 +130,15 @@ package body PolyORB_HI_Generated.Marshallers is
    (Data : PolyORB_HI_Generated.Activity.surveillance_system_detector_impl_Interface;
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
-    pragma Unreferenced
-     (Message);
-    pragma Unreferenced
-     (Data);
+    use PolyORB_HI_Generated.Activity;
   begin
-    null;
+    if (Data.Port
+      = PolyORB_HI_Generated.Activity.test)
+    then
+      PolyORB_HI_Generated.Marshallers.Marshall
+       (Data.test_DATA,
+        Message);
+    end if;
   end Marshall;
 
   ----------------
@@ -129,6 +165,104 @@ package body PolyORB_HI_Generated.Marshallers is
     then
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_detector_impl_Interface'
+         (Port => PolyORB_HI_Generated.Activity.door);
+    end if;
+  end Unmarshall;
+
+  --  Marshallers for interface type of thread detector.impl1
+
+  --------------
+  -- Marshall -- 
+  --------------
+
+  procedure Marshall
+   (Data : PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Interface;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+  is
+    use PolyORB_HI_Generated.Activity;
+  begin
+    if (Data.Port
+      = PolyORB_HI_Generated.Activity.test)
+    then
+      PolyORB_HI_Generated.Marshallers.Marshall
+       (Data.test_DATA,
+        Message);
+    end if;
+  end Marshall;
+
+  ----------------
+  -- Unmarshall -- 
+  ----------------
+
+  procedure Unmarshall
+   (Port : PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Port_Type;
+    Data : out PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Interface;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+  is
+    pragma Unreferenced
+     (Message);
+    use PolyORB_HI_Generated.Activity;
+  begin
+    if (Port
+      = PolyORB_HI_Generated.Activity.motion)
+    then
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Interface'
+         (Port => PolyORB_HI_Generated.Activity.motion);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.door)
+    then
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Interface'
+         (Port => PolyORB_HI_Generated.Activity.door);
+    end if;
+  end Unmarshall;
+
+  --  Marshallers for interface type of thread detector.impl2
+
+  --------------
+  -- Marshall -- 
+  --------------
+
+  procedure Marshall
+   (Data : PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Interface;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+  is
+    use PolyORB_HI_Generated.Activity;
+  begin
+    if (Data.Port
+      = PolyORB_HI_Generated.Activity.test)
+    then
+      PolyORB_HI_Generated.Marshallers.Marshall
+       (Data.test_DATA,
+        Message);
+    end if;
+  end Marshall;
+
+  ----------------
+  -- Unmarshall -- 
+  ----------------
+
+  procedure Unmarshall
+   (Port : PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Port_Type;
+    Data : out PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Interface;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+  is
+    pragma Unreferenced
+     (Message);
+    use PolyORB_HI_Generated.Activity;
+  begin
+    if (Port
+      = PolyORB_HI_Generated.Activity.motion)
+    then
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Interface'
+         (Port => PolyORB_HI_Generated.Activity.motion);
+    elsif (Port
+      = PolyORB_HI_Generated.Activity.door)
+    then
+      Data :=
+       PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Interface'
          (Port => PolyORB_HI_Generated.Activity.door);
     end if;
   end Unmarshall;

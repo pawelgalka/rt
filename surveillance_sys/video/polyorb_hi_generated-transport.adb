@@ -11,6 +11,8 @@ with PolyORB_HI.Port_Type_Marshallers;
 with PolyORB_HI.Utils;
 with PolyORB_HI_Generated.Activity;
 use PolyORB_HI_Generated.Activity;
+with Ada.Real_Time;
+with PolyORB_HI.Time_Marshallers;
 with PolyORB_HI_Generated.Marshallers;
 
 package body PolyORB_HI_Generated.Transport is
@@ -114,10 +116,14 @@ package body PolyORB_HI_Generated.Transport is
   is
     use PolyORB_HI_Generated.Deployment;
     Thread_Interface_Ü : surveillance_system_video_captor_impl_Interface;
+    Time_Stamp_Ü : Ada.Real_Time.Time;
   begin
     if (Port
       = PolyORB_HI_Generated.Deployment.video_video_captor_t_camera1_capture_K)
     then
+      PolyORB_HI.Time_Marshallers.Unmarshall
+       (Time_Stamp_Ü,
+        Msg);
       PolyORB_HI_Generated.Marshallers.Unmarshall
        (camera1_capture,
         Thread_Interface_Ü,
@@ -125,10 +131,14 @@ package body PolyORB_HI_Generated.Transport is
       PolyORB_HI_Generated.Activity.Store_Received_Message
        (PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
         Thread_Interface_Ü,
-        From);
+        From,
+        Time_Stamp_Ü);
     elsif (Port
       = PolyORB_HI_Generated.Deployment.video_video_captor_t_camera2_capture_K)
     then
+      PolyORB_HI.Time_Marshallers.Unmarshall
+       (Time_Stamp_Ü,
+        Msg);
       PolyORB_HI_Generated.Marshallers.Unmarshall
        (camera2_capture,
         Thread_Interface_Ü,
@@ -136,12 +146,28 @@ package body PolyORB_HI_Generated.Transport is
       PolyORB_HI_Generated.Activity.Store_Received_Message
        (PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
         Thread_Interface_Ü,
-        From);
+        From,
+        Time_Stamp_Ü);
     elsif (Port
       = PolyORB_HI_Generated.Deployment.video_video_captor_t_camera3_capture_K)
     then
+      PolyORB_HI.Time_Marshallers.Unmarshall
+       (Time_Stamp_Ü,
+        Msg);
       PolyORB_HI_Generated.Marshallers.Unmarshall
        (camera3_capture,
+        Thread_Interface_Ü,
+        Msg);
+      PolyORB_HI_Generated.Activity.Store_Received_Message
+       (PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
+        Thread_Interface_Ü,
+        From,
+        Time_Stamp_Ü);
+    elsif (Port
+      = PolyORB_HI_Generated.Deployment.video_video_captor_t_start_K)
+    then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (start,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message

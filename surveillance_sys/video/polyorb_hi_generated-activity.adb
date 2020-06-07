@@ -49,11 +49,13 @@ package body PolyORB_HI_Generated.Activity is
 
   surveillance_system_video_captor_t_Port_Kinds : constant surveillance_system_video_captor_impl_Port_Kind_Array :=
    (camera1_capture =>
-     PolyORB_HI.Port_Kinds.In_Event_Data_Port,
+     PolyORB_HI.Port_Kinds.In_Data_Port,
     camera2_capture =>
-     PolyORB_HI.Port_Kinds.In_Event_Data_Port,
+     PolyORB_HI.Port_Kinds.In_Data_Port,
     camera3_capture =>
-     PolyORB_HI.Port_Kinds.In_Event_Data_Port,
+     PolyORB_HI.Port_Kinds.In_Data_Port,
+    start =>
+     PolyORB_HI.Port_Kinds.In_Event_Port,
     output_converted =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
@@ -67,16 +69,21 @@ package body PolyORB_HI_Generated.Activity is
     camera3_capture =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.video_video_captor_t_camera3_capture_K),
+    start =>
+     PolyORB_HI_Generated.Deployment.Port_Image
+       (PolyORB_HI_Generated.Deployment.video_video_captor_t_start_K),
     output_converted =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.video_video_captor_t_output_converted_K));
 
   surveillance_system_video_captor_t_FIFO_Sizes : constant surveillance_system_video_captor_impl_Integer_Array :=
    (camera1_capture =>
-     16,
+     1,
     camera2_capture =>
-     16,
+     1,
     camera3_capture =>
+     1,
+    start =>
      16,
     output_converted =>
      -1);
@@ -85,9 +92,11 @@ package body PolyORB_HI_Generated.Activity is
    (camera1_capture =>
      1,
     camera2_capture =>
-     17,
+     2,
     camera3_capture =>
-     33,
+     3,
+    start =>
+     4,
     output_converted =>
      0);
 
@@ -97,6 +106,8 @@ package body PolyORB_HI_Generated.Activity is
     camera2_capture =>
      PolyORB_HI.Port_Kinds.Dropoldest,
     camera3_capture =>
+     PolyORB_HI.Port_Kinds.Dropoldest,
+    start =>
      PolyORB_HI.Port_Kinds.Dropoldest,
     output_converted =>
      PolyORB_HI.Port_Kinds.Dropoldest);
@@ -108,11 +119,13 @@ package body PolyORB_HI_Generated.Activity is
      0,
     camera3_capture =>
      0,
+    start =>
+     0,
     output_converted =>
      0);
 
   surveillance_system_video_captor_t_Total_FIFO_Size : constant Standard.Integer :=
-   48;
+   19;
 
   type UT_Activity_Video_video_captor_t_output_converted_Destinations_Array is
    array (Standard.Positive range <>)
@@ -130,6 +143,8 @@ package body PolyORB_HI_Generated.Activity is
      0,
     camera3_capture =>
      0,
+    start =>
+     0,
     output_converted =>
      1);
 
@@ -139,6 +154,8 @@ package body PolyORB_HI_Generated.Activity is
     camera2_capture =>
      System.null_Address,
     camera3_capture =>
+     System.null_Address,
+    start =>
      System.null_Address,
     output_converted =>
      video_captor_t_output_converted_Destinations'Address);
@@ -177,8 +194,8 @@ package body PolyORB_HI_Generated.Activity is
     camera1_capture_V : PolyORB_HI_Generated.Types.camera_image;
     camera2_capture_V : PolyORB_HI_Generated.Types.camera_image;
     camera3_capture_V : PolyORB_HI_Generated.Types.camera_image;
-    Error_Ü : constant PolyORB_HI.Errors.Error_Kind :=
-     PolyORB_HI.Errors.Error_None;
+    handler_Status : PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status;
+    Error_Ü : PolyORB_HI.Errors.Error_Kind;
     use type PolyORB_HI.Errors.Error_Kind;
   begin
     --  Get the IN port values
@@ -218,15 +235,37 @@ package body PolyORB_HI_Generated.Activity is
     --  Dequeue the IN port values
     surveillance_system_video_captor_t_Interrogators.Next_Value
      (surveillance_system_video_captor_impl_Port_Type'
-       (camera1_capture));
-    surveillance_system_video_captor_t_Interrogators.Next_Value
-     (surveillance_system_video_captor_impl_Port_Type'
-       (camera2_capture));
-    surveillance_system_video_captor_t_Interrogators.Next_Value
-     (surveillance_system_video_captor_impl_Port_Type'
-       (camera3_capture));
+       (start));
     --  Call implementation
-    PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler;
+    PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler
+     (det1 => camera1_capture_V,
+      det2 => camera2_capture_V,
+      det3 => camera3_capture_V,
+      Status => handler_Status);
+    if (PolyORB_HI_Generated.Subprograms.Get_Count
+     (handler_Status,
+      PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Port_Type'
+       (PolyORB_HI_Generated.Subprograms.result))
+      >= 1)
+    then
+      PolyORB_HI_Generated.Activity.Put_Value
+       (PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
+        PolyORB_HI_Generated.Activity.surveillance_system_video_captor_impl_Interface'
+         (Port => output_converted,
+          output_converted_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+           (handler_Status,
+            PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Port_Type'
+             (PolyORB_HI_Generated.Subprograms.result)).result_DATA));
+    end if;
+    --  Send the call sequence OUT port values
+    Error_Ü :=
+     surveillance_system_video_captor_t_Interrogators.Send_Output
+       (output_converted);
+    if (Error_Ü
+      /= PolyORB_HI.Errors.Error_None)
+    then
+      return Error_Ü;
+    end if;
     --  Return error code
     return Error_Ü;
   end surveillance_system_video_captor_t_Job;

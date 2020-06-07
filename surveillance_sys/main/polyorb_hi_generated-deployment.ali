@@ -23,20 +23,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  acf23525 NE OO PR PK
+U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  88457e9b NE OO PR PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607163446 9e5018b2 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200607195513 bae7530c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
 X 1 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 2|10r9 230r12 272r5
+34K9*PolyORB_HI_Generated 38e25 2|10r9 260r12 314r5
 X 2 polyorb_hi_generated-deployment.ads
-10K30*Deployment 1|34k9 2|230r33 272l26 272e36
+10K30*Deployment 1|34k9 2|260r33 314l26 314e36
 16E8*Node_Type 17e12 21r7 27r7 37r4 37r20 37r39 55r22 92r9
 17n5*main_K{16E8} 22r5 52r7 56r4 97r8 99r8 101r8 103r8 105r8
 29i3*Max_Node_Image_Size{integer} 40r23
@@ -46,12 +46,12 @@ X 2 polyorb_hi_generated-deployment.ads
 46A8*UT_Deployment_Main_Node_Image_Array(42A11)<16E8> 50r25 51r4
 50a3*Node_Image{46A8}
 55e3*My_Node{16E8}
-60E8*Entity_Type 65e24 69r7 83r7 88r4 88r22 88r43 194r9
-61n5*main_alarm_K{60E8} 70r5 96r7 127r7 199r8 201r8
-62n5*main_detector1_K{60E8} 72r5 98r7 129r7 203r8 205r8
-63n5*main_detector2_K{60E8} 74r5 100r7 131r7 207r8 209r8
-64n5*main_detector3_K{60E8} 76r5 102r7 133r7 211r8 213r8
-65n5*main_rfid_reader_K{60E8} 78r5 104r7 135r7 215r8 217r8 219r8 221r8
+60E8*Entity_Type 65e24 69r7 83r7 88r4 88r22 88r43 212r9
+61n5*main_alarm_K{60E8} 70r5 96r7 127r7 217r8 219r8 221r8 223r8 225r8
+62n5*main_detector1_K{60E8} 72r5 98r7 129r7 227r8 229r8 231r8
+63n5*main_detector2_K{60E8} 74r5 100r7 131r7 233r8 235r8 237r8
+64n5*main_detector3_K{60E8} 76r5 102r7 133r7 239r8 241r8 243r8
+65n5*main_rfid_reader_K{60E8} 78r5 104r7 135r7 245r8 247r8 249r8 251r8
 87E11*UT_Deployment_Main_Entity_Type_Range{60E8} 91r11 122r11
 90A8*UT_Deployment_Main_Entity_Table_Array(16E8)<60E8> 94r27 95r4
 94a3*Entity_Table{90A8}
@@ -60,25 +60,31 @@ X 2 polyorb_hi_generated-deployment.ads
 117A11*UT_Deployment_Main_Entity_Image_Component{string}<integer> 123r9
 121A8*UT_Deployment_Main_Entity_Image_Array(117A11)<60E8> 125r27 126r4
 125a3*Entity_Image{121A8}
-141E8*Port_Type 153e29 157r7 185r7 190r4 190r20 190r39
-142n5*main_alarm_detected_K{141E8} 158r5 198r7 240r7
-143n5*main_alarm_test_K{141E8} 160r5 200r7 242r7
-144n5*main_detector1_motion_K{141E8} 162r5 202r7 244r7
-145n5*main_detector1_door_K{141E8} 164r5 204r7 246r7
-146n5*main_detector2_motion_K{141E8} 166r5 206r7 248r7
-147n5*main_detector2_door_K{141E8} 168r5 208r7 250r7
-148n5*main_detector3_motion_K{141E8} 170r5 210r7 252r7
-149n5*main_detector3_door_K{141E8} 172r5 212r7 254r7
-150n5*main_rfid_reader_rfid_read_K{141E8} 174r5 214r7 256r7
-151n5*main_rfid_reader_door_K{141E8} 176r5 216r7 258r7
-152n5*main_rfid_reader_motion_K{141E8} 178r5 218r7 260r7
-153n5*main_rfid_reader_test_K{141E8} 180r5 220r7 262r7
-189E11*UT_Deployment_Main_Port_Type_Range{141E8} 193r11 235r11
-192A8*UT_Deployment_Main_Port_Table_Array(60E8)<141E8> 196r25 197r4
-196a3*Port_Table{192A8}
-223i3*Max_Port_Image_Size{integer} 230r44
-228A11*Port_Sized_String{string}<integer> 236r9
-234A8*UT_Deployment_Main_Port_Image_Array(228A11)<141E8> 238r25 239r4
-238a3*Port_Image{234A8}
-267i3*Max_Payload_Size{integer}
+141E8*Port_Type 159e29 163r7 203r7 208r4 208r20 208r39
+142n5*main_alarm_detected_K{141E8} 164r5 216r7 270r7
+143n5*main_alarm_test_K{141E8} 166r5 218r7 272r7
+144n5*main_alarm_test1_K{141E8} 168r5 220r7 274r7
+145n5*main_alarm_test2_K{141E8} 170r5 222r7 276r7
+146n5*main_alarm_test3_K{141E8} 172r5 224r7 278r7
+147n5*main_detector1_motion_K{141E8} 174r5 226r7 280r7
+148n5*main_detector1_door_K{141E8} 176r5 228r7 282r7
+149n5*main_detector1_test_K{141E8} 178r5 230r7 284r7
+150n5*main_detector2_motion_K{141E8} 180r5 232r7 286r7
+151n5*main_detector2_door_K{141E8} 182r5 234r7 288r7
+152n5*main_detector2_test_K{141E8} 184r5 236r7 290r7
+153n5*main_detector3_motion_K{141E8} 186r5 238r7 292r7
+154n5*main_detector3_door_K{141E8} 188r5 240r7 294r7
+155n5*main_detector3_test_K{141E8} 190r5 242r7 296r7
+156n5*main_rfid_reader_rfid_read_K{141E8} 192r5 244r7 298r7
+157n5*main_rfid_reader_door_K{141E8} 194r5 246r7 300r7
+158n5*main_rfid_reader_motion_K{141E8} 196r5 248r7 302r7
+159n5*main_rfid_reader_test_K{141E8} 198r5 250r7 304r7
+207E11*UT_Deployment_Main_Port_Type_Range{141E8} 211r11 265r11
+210A8*UT_Deployment_Main_Port_Table_Array(60E8)<141E8> 214r25 215r4
+214a3*Port_Table{210A8}
+253i3*Max_Port_Image_Size{integer} 260r44
+258A11*Port_Sized_String{string}<integer> 266r9
+264A8*UT_Deployment_Main_Port_Image_Array(258A11)<141E8> 268r25 269r4
+268a3*Port_Image{264A8}
+309i3*Max_Payload_Size{integer}
 

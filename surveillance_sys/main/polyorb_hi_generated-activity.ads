@@ -21,7 +21,10 @@ package PolyORB_HI_Generated.Activity is
 
   type surveillance_system_alarm_activator_impl_Port_Type is
    (detected,
-    test);
+    test,
+    test1,
+    test2,
+    test3);
 
   type surveillance_system_alarm_activator_impl_Interface 
    (Port : surveillance_system_alarm_activator_impl_Port_Type := surveillance_system_alarm_activator_impl_Port_Type'First)
@@ -32,6 +35,12 @@ package PolyORB_HI_Generated.Activity is
           null;
         when test =>
           test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when test1 =>
+          test1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when test2 =>
+          test2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when test3 =>
+          test3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -100,7 +109,7 @@ package PolyORB_HI_Generated.Activity is
        (1500),
       Task_Deadline => Ada.Real_Time.Milliseconds
        (1500),
-      Task_Priority => 10,
+      Task_Priority => 70,
       Task_Stack_Size => 100000,
       Job => surveillance_system_alarm_Job);
 
@@ -108,7 +117,8 @@ package PolyORB_HI_Generated.Activity is
 
   type surveillance_system_detector_impl_Port_Type is
    (motion,
-    door);
+    door,
+    test);
 
   type surveillance_system_detector_impl_Interface 
    (Port : surveillance_system_detector_impl_Port_Type := surveillance_system_detector_impl_Port_Type'First)
@@ -119,6 +129,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when door =>
           null;
+        when test =>
+          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -191,6 +203,81 @@ package PolyORB_HI_Generated.Activity is
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector1_Job);
 
+  --  BEGIN: Entities used by all instances of component detector.impl1
+
+  type surveillance_system_detector_impl1_Port_Type is
+   (motion,
+    door,
+    test);
+
+  type surveillance_system_detector_impl1_Interface 
+   (Port : surveillance_system_detector_impl1_Port_Type := surveillance_system_detector_impl1_Port_Type'First)
+  is
+    record
+      case Port is
+        when motion =>
+          null;
+        when door =>
+          null;
+        when test =>
+          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        pragma Warnings (Off);
+        when others =>
+          null;
+        pragma Warnings (On);
+      end case;
+    end record;
+
+  function Send_Output
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type)
+   return PolyORB_HI.Errors.Error_Kind;
+
+  procedure Put_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Thread_Interface : surveillance_system_detector_impl1_Interface);
+
+  procedure Receive_Input
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type);
+
+  function Get_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type)
+   return surveillance_system_detector_impl1_Interface;
+
+  function Get_Sender
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type)
+   return PolyORB_HI_Generated.Deployment.Entity_Type;
+
+  function Get_Count
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type)
+   return Standard.Integer;
+
+  function Get_Time_Stamp
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type)
+   return Ada.Real_Time.Time;
+
+  procedure Next_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl1_Port_Type);
+
+  procedure Store_Received_Message
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Thread_Interface : surveillance_system_detector_impl1_Interface;
+    From : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Time_Stamp : Ada.Real_Time.Time :=
+      Ada.Real_Time.Clock);
+
+  procedure Wait_For_Incoming_Events
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : out surveillance_system_detector_impl1_Port_Type);
+
+  --  END: Entities used by all instances of component detector.impl1
+
   --  Periodic task : detector2
 
   function surveillance_system_detector2_Job return PolyORB_HI.Errors.Error_Kind;
@@ -205,6 +292,81 @@ package PolyORB_HI_Generated.Activity is
       Task_Priority => 90,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector2_Job);
+
+  --  BEGIN: Entities used by all instances of component detector.impl2
+
+  type surveillance_system_detector_impl2_Port_Type is
+   (motion,
+    door,
+    test);
+
+  type surveillance_system_detector_impl2_Interface 
+   (Port : surveillance_system_detector_impl2_Port_Type := surveillance_system_detector_impl2_Port_Type'First)
+  is
+    record
+      case Port is
+        when motion =>
+          null;
+        when door =>
+          null;
+        when test =>
+          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        pragma Warnings (Off);
+        when others =>
+          null;
+        pragma Warnings (On);
+      end case;
+    end record;
+
+  function Send_Output
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type)
+   return PolyORB_HI.Errors.Error_Kind;
+
+  procedure Put_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Thread_Interface : surveillance_system_detector_impl2_Interface);
+
+  procedure Receive_Input
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type);
+
+  function Get_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type)
+   return surveillance_system_detector_impl2_Interface;
+
+  function Get_Sender
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type)
+   return PolyORB_HI_Generated.Deployment.Entity_Type;
+
+  function Get_Count
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type)
+   return Standard.Integer;
+
+  function Get_Time_Stamp
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type)
+   return Ada.Real_Time.Time;
+
+  procedure Next_Value
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : surveillance_system_detector_impl2_Port_Type);
+
+  procedure Store_Received_Message
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Thread_Interface : surveillance_system_detector_impl2_Interface;
+    From : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Time_Stamp : Ada.Real_Time.Time :=
+      Ada.Real_Time.Clock);
+
+  procedure Wait_For_Incoming_Events
+   (Entity : PolyORB_HI_Generated.Deployment.Entity_Type;
+    Port : out surveillance_system_detector_impl2_Port_Type);
+
+  --  END: Entities used by all instances of component detector.impl2
 
   --  Periodic task : detector3
 
@@ -310,7 +472,7 @@ package PolyORB_HI_Generated.Activity is
        (1500),
       Task_Deadline => Ada.Real_Time.Milliseconds
        (1500),
-      Task_Priority => 80,
+      Task_Priority => 91,
       Task_Stack_Size => 100000,
       Job => surveillance_system_rfid_reader_Job);
 
