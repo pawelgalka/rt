@@ -632,7 +632,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1500">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -650,7 +650,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="91"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="70"/>
         </ownedValue>
         <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
@@ -754,7 +754,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="91"/>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="70"/>
           </ownedValue>
           <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
@@ -796,10 +796,10 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="100">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="20">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="200">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -809,7 +809,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1500">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -913,10 +913,10 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="100">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="20">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="200">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -926,7 +926,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1500">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -944,7 +944,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="90"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="89"/>
         </ownedValue>
         <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
@@ -988,7 +988,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="90"/>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="89"/>
           </ownedValue>
           <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
@@ -1030,10 +1030,10 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="100">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="20">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="200">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -1043,7 +1043,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1500">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1061,7 +1061,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="90"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="88"/>
         </ownedValue>
         <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
@@ -1105,7 +1105,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="90"/>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="88"/>
           </ownedValue>
           <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
@@ -1147,10 +1147,10 @@
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="1000">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="20">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="1000">
               <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -1160,7 +1160,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1500">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1178,7 +1178,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="80"/>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="91"/>
         </ownedValue>
         <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
@@ -1225,7 +1225,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Priority"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="80"/>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="91"/>
           </ownedValue>
           <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
@@ -1395,6 +1395,9 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.2"/>
     </featureInstance>
+    <featureInstance name="start" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.0"/>
+    </featureInstance>
     <componentInstance name="video_captor_t" category="thread">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
@@ -1431,7 +1434,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3000">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1440,7 +1443,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3000">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1462,7 +1465,7 @@
         </ownedValue>
         <propertyAssociation href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
-      <featureInstance name="camera1_capture" category="eventDataPort">
+      <featureInstance name="camera1_capture">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
           <ownedValue>
@@ -1481,9 +1484,9 @@
           </ownedValue>
           <propertyAssociation href="../data_types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.0"/>
+        <feature xsi:type="aadl2:DataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
       </featureInstance>
-      <featureInstance name="camera2_capture" category="eventDataPort">
+      <featureInstance name="camera2_capture">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
           <ownedValue>
@@ -1502,9 +1505,9 @@
           </ownedValue>
           <propertyAssociation href="../data_types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.1"/>
+        <feature xsi:type="aadl2:DataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
       </featureInstance>
-      <featureInstance name="camera3_capture" category="eventDataPort">
+      <featureInstance name="camera3_capture">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
           <ownedValue>
@@ -1523,7 +1526,7 @@
           </ownedValue>
           <propertyAssociation href="../data_types.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.2"/>
+        <feature xsi:type="aadl2:DataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.2"/>
       </featureInstance>
       <featureInstance name="output_converted" category="eventDataPort" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1544,7 +1547,10 @@
           </ownedValue>
           <propertyAssociation href="../data_types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.3"/>
+        <feature xsi:type="aadl2:EventDataPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="start" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedThreadSubcomponent.0"/>
       <index>0</index>
@@ -1586,7 +1592,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1595,7 +1601,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2000">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20000">
             <unit href="platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
@@ -1644,7 +1650,7 @@
     </componentInstance>
     <connectionInstance name="video_captor_t.output_converted -> video_sender_t.message" complete="true" kind="portConnection" destination="//@componentInstance.13/@componentInstance.1/@featureInstance.0" source="//@componentInstance.13/@componentInstance.0/@featureInstance.3">
       <connectionReference context="//@componentInstance.13" source="//@componentInstance.13/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.13/@componentInstance.1/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.3"/>
+        <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.4"/>
       </connectionReference>
     </connectionInstance>
     <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedProcessSubcomponent.1"/>
@@ -1749,7 +1755,7 @@
       <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.10"/>
     </connectionReference>
     <connectionReference context="//@componentInstance.13" source="//@componentInstance.13/@featureInstance.0" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.0">
-      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.0"/>
+      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.1"/>
     </connectionReference>
   </connectionInstance>
   <connectionInstance name="camera2.image_capture -> video.video_captor_t.camera2_capture" complete="true" kind="portConnection" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.1" source="//@componentInstance.2/@featureInstance.0">
@@ -1757,7 +1763,7 @@
       <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.11"/>
     </connectionReference>
     <connectionReference context="//@componentInstance.13" source="//@componentInstance.13/@featureInstance.1" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.1">
-      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.1"/>
+      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.2"/>
     </connectionReference>
   </connectionInstance>
   <connectionInstance name="camera3.image_capture -> video.video_captor_t.camera3_capture" complete="true" kind="portConnection" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.2" source="//@componentInstance.3/@featureInstance.0">
@@ -1765,7 +1771,7 @@
       <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.12"/>
     </connectionReference>
     <connectionReference context="//@componentInstance.13" source="//@componentInstance.13/@featureInstance.2" destination="//@componentInstance.13/@componentInstance.0/@featureInstance.2">
-      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.2"/>
+      <connection xsi:type="aadl2:PortConnection" href="../surveillance_system.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPortConnection.3"/>
     </connectionReference>
   </connectionInstance>
   <connectionInstance name="rfid_reader.authorized_access -> main.rfid_reader.rfid_read" complete="true" kind="portConnection" destination="//@componentInstance.12/@componentInstance.5/@featureInstance.1" source="//@componentInstance.4/@featureInstance.0">

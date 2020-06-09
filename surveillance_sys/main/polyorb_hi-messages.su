@@ -1,0 +1,12 @@
+polyorb_hi-messages.ads:112:9:Message_Typeip	8	static
+polyorb_hi-messages.ads:118:4:Size	8	static
+polyorb_hi-messages.ads:121:4:Valid	8	static
+polyorb_hi-messages.adb:71:4:Encapsulate	80	static
+polyorb_hi-messages.adb:92:4:Sender	16	static
+polyorb_hi-messages.adb:97:4:Sender	16	static
+polyorb_hi-messages.adb:106:4:Read	48	static
+polyorb_hi-messages.adb:140:4:Reallocate	8	static
+polyorb_hi-messages.adb:150:4:Write	32	static
+polyorb_hi-messages.adb:171:4:To_Length	16	static
+polyorb_hi-messages.adb:182:4:To_Buffer	16	static
+polyorb_hi-messages.adb:62:4:Length	16	static

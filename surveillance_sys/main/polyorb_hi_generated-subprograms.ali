@@ -16,7 +16,6 @@ RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
 RV NO_EXCEPTIONS
-RR NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RR NO_RECURSION
 RV NO_STANDARD_STORAGE_POOLS
@@ -38,15 +37,15 @@ W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_gener
 
 D interfac.ads		20160502101001 5ab55268 interfaces%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607200446 bae7530c polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-subprograms.ads  20200607200446 f97dc101 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-subprograms.adb  20200607200446 bea94114 polyorb_hi_generated.subprograms%b
-D polyorb_hi_generated-types.ads  20200607200446 b85fd3a9 polyorb_hi_generated.types%s
-D surveillance.ads	20200607200044 cba5c812 surveillance%s
+D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200609233958 f97dc101 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200609233958 bea94114 polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-types.ads  20200609233958 b85fd3a9 polyorb_hi_generated.types%s
+D surveillance.ads	20200609220600 cba5c812 surveillance%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 2 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 38e25 4|9r6 11r9 52r12 53r12 54r12 55r12 56r21
 . 67r30 97r21 108r30 138r21 149r30 179r21 190r30 220r21 231r26 237r26 243r26

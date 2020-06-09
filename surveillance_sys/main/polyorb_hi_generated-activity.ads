@@ -106,9 +106,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.main_alarm_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Priority => 70,
       Task_Stack_Size => 100000,
       Job => surveillance_system_alarm_Job);
@@ -196,9 +196,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.main_detector1_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Priority => 90,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector1_Job);
@@ -286,9 +286,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.main_detector2_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Priority => 89,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector2_Job);
@@ -376,9 +376,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.main_detector3_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Priority => 88,
       Task_Stack_Size => 100000,
       Job => surveillance_system_detector3_Job);
@@ -469,9 +469,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.main_rfid_reader_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (1500),
+       (2000),
       Task_Priority => 91,
       Task_Stack_Size => 100000,
       Job => surveillance_system_rfid_reader_Job);

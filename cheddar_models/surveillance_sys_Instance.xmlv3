@@ -94,7 +94,127 @@
       <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
       <address_space_name>surveillance_sys_Instance.main</address_space_name>
       <capacity>20</capacity>
-      <deadline>1500</deadline>
+      <deadline>2000</deadline>
+      <start_time>0</start_time>
+      <priority>70</priority>
+      <blocking_time>0</blocking_time>
+      <policy>Sched_Fifo</policy>
+      <offsets/>
+      <text_memory_size>0</text_memory_size>
+      <text_memory_start_address>0</text_memory_start_address>
+      <stack_memory_size>0</stack_memory_size>
+      <criticality>0</criticality>
+      <context_switch_overhead>0</context_switch_overhead>
+      <cfg_relocatable>false</cfg_relocatable>
+      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
+      <mils_integrity_level>Low</mils_integrity_level>
+      <mils_component>SLS</mils_component>
+      <mils_task>Application</mils_task>
+      <mils_compliant>false</mils_compliant>
+      <access_memory_number>0</access_memory_number>
+      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+      <period>2000</period>
+      <jitter>0</jitter>
+      <every>0</every>
+    </periodic_task>
+    <periodic_task id="8">
+      <object_type>Task_Object_Type</object_type>
+      <name>surveillance_sys_Instance.main.detector1</name>
+      <task_type>Periodic_Type</task_type>
+      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
+      <address_space_name>surveillance_sys_Instance.main</address_space_name>
+      <capacity>200</capacity>
+      <deadline>2000</deadline>
+      <start_time>0</start_time>
+      <priority>90</priority>
+      <blocking_time>0</blocking_time>
+      <policy>Sched_Fifo</policy>
+      <offsets/>
+      <text_memory_size>0</text_memory_size>
+      <text_memory_start_address>0</text_memory_start_address>
+      <stack_memory_size>0</stack_memory_size>
+      <criticality>0</criticality>
+      <context_switch_overhead>0</context_switch_overhead>
+      <cfg_relocatable>false</cfg_relocatable>
+      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
+      <mils_integrity_level>Low</mils_integrity_level>
+      <mils_component>SLS</mils_component>
+      <mils_task>Application</mils_task>
+      <mils_compliant>false</mils_compliant>
+      <access_memory_number>0</access_memory_number>
+      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+      <period>2000</period>
+      <jitter>0</jitter>
+      <every>0</every>
+    </periodic_task>
+    <periodic_task id="9">
+      <object_type>Task_Object_Type</object_type>
+      <name>surveillance_sys_Instance.main.detector2</name>
+      <task_type>Periodic_Type</task_type>
+      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
+      <address_space_name>surveillance_sys_Instance.main</address_space_name>
+      <capacity>200</capacity>
+      <deadline>2000</deadline>
+      <start_time>0</start_time>
+      <priority>89</priority>
+      <blocking_time>0</blocking_time>
+      <policy>Sched_Fifo</policy>
+      <offsets/>
+      <text_memory_size>0</text_memory_size>
+      <text_memory_start_address>0</text_memory_start_address>
+      <stack_memory_size>0</stack_memory_size>
+      <criticality>0</criticality>
+      <context_switch_overhead>0</context_switch_overhead>
+      <cfg_relocatable>false</cfg_relocatable>
+      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
+      <mils_integrity_level>Low</mils_integrity_level>
+      <mils_component>SLS</mils_component>
+      <mils_task>Application</mils_task>
+      <mils_compliant>false</mils_compliant>
+      <access_memory_number>0</access_memory_number>
+      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+      <period>2000</period>
+      <jitter>0</jitter>
+      <every>0</every>
+    </periodic_task>
+    <periodic_task id="10">
+      <object_type>Task_Object_Type</object_type>
+      <name>surveillance_sys_Instance.main.detector3</name>
+      <task_type>Periodic_Type</task_type>
+      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
+      <address_space_name>surveillance_sys_Instance.main</address_space_name>
+      <capacity>200</capacity>
+      <deadline>2000</deadline>
+      <start_time>0</start_time>
+      <priority>88</priority>
+      <blocking_time>0</blocking_time>
+      <policy>Sched_Fifo</policy>
+      <offsets/>
+      <text_memory_size>0</text_memory_size>
+      <text_memory_start_address>0</text_memory_start_address>
+      <stack_memory_size>0</stack_memory_size>
+      <criticality>0</criticality>
+      <context_switch_overhead>0</context_switch_overhead>
+      <cfg_relocatable>false</cfg_relocatable>
+      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
+      <mils_integrity_level>Low</mils_integrity_level>
+      <mils_component>SLS</mils_component>
+      <mils_task>Application</mils_task>
+      <mils_compliant>false</mils_compliant>
+      <access_memory_number>0</access_memory_number>
+      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+      <period>2000</period>
+      <jitter>0</jitter>
+      <every>0</every>
+    </periodic_task>
+    <periodic_task id="11">
+      <object_type>Task_Object_Type</object_type>
+      <name>surveillance_sys_Instance.main.rfid_reader</name>
+      <task_type>Periodic_Type</task_type>
+      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
+      <address_space_name>surveillance_sys_Instance.main</address_space_name>
+      <capacity>1000</capacity>
+      <deadline>2000</deadline>
       <start_time>0</start_time>
       <priority>91</priority>
       <blocking_time>0</blocking_time>
@@ -113,127 +233,7 @@
       <mils_compliant>false</mils_compliant>
       <access_memory_number>0</access_memory_number>
       <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>1500</period>
-      <jitter>0</jitter>
-      <every>0</every>
-    </periodic_task>
-    <periodic_task id="8">
-      <object_type>Task_Object_Type</object_type>
-      <name>surveillance_sys_Instance.main.detector1</name>
-      <task_type>Periodic_Type</task_type>
-      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
-      <address_space_name>surveillance_sys_Instance.main</address_space_name>
-      <capacity>20</capacity>
-      <deadline>1500</deadline>
-      <start_time>0</start_time>
-      <priority>90</priority>
-      <blocking_time>0</blocking_time>
-      <policy>Sched_Fifo</policy>
-      <offsets/>
-      <text_memory_size>0</text_memory_size>
-      <text_memory_start_address>0</text_memory_start_address>
-      <stack_memory_size>0</stack_memory_size>
-      <criticality>0</criticality>
-      <context_switch_overhead>0</context_switch_overhead>
-      <cfg_relocatable>false</cfg_relocatable>
-      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
-      <mils_integrity_level>Low</mils_integrity_level>
-      <mils_component>SLS</mils_component>
-      <mils_task>Application</mils_task>
-      <mils_compliant>false</mils_compliant>
-      <access_memory_number>0</access_memory_number>
-      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>1500</period>
-      <jitter>0</jitter>
-      <every>0</every>
-    </periodic_task>
-    <periodic_task id="9">
-      <object_type>Task_Object_Type</object_type>
-      <name>surveillance_sys_Instance.main.detector2</name>
-      <task_type>Periodic_Type</task_type>
-      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
-      <address_space_name>surveillance_sys_Instance.main</address_space_name>
-      <capacity>20</capacity>
-      <deadline>1500</deadline>
-      <start_time>0</start_time>
-      <priority>90</priority>
-      <blocking_time>0</blocking_time>
-      <policy>Sched_Fifo</policy>
-      <offsets/>
-      <text_memory_size>0</text_memory_size>
-      <text_memory_start_address>0</text_memory_start_address>
-      <stack_memory_size>0</stack_memory_size>
-      <criticality>0</criticality>
-      <context_switch_overhead>0</context_switch_overhead>
-      <cfg_relocatable>false</cfg_relocatable>
-      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
-      <mils_integrity_level>Low</mils_integrity_level>
-      <mils_component>SLS</mils_component>
-      <mils_task>Application</mils_task>
-      <mils_compliant>false</mils_compliant>
-      <access_memory_number>0</access_memory_number>
-      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>1500</period>
-      <jitter>0</jitter>
-      <every>0</every>
-    </periodic_task>
-    <periodic_task id="10">
-      <object_type>Task_Object_Type</object_type>
-      <name>surveillance_sys_Instance.main.detector3</name>
-      <task_type>Periodic_Type</task_type>
-      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
-      <address_space_name>surveillance_sys_Instance.main</address_space_name>
-      <capacity>20</capacity>
-      <deadline>1500</deadline>
-      <start_time>0</start_time>
-      <priority>90</priority>
-      <blocking_time>0</blocking_time>
-      <policy>Sched_Fifo</policy>
-      <offsets/>
-      <text_memory_size>0</text_memory_size>
-      <text_memory_start_address>0</text_memory_start_address>
-      <stack_memory_size>0</stack_memory_size>
-      <criticality>0</criticality>
-      <context_switch_overhead>0</context_switch_overhead>
-      <cfg_relocatable>false</cfg_relocatable>
-      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
-      <mils_integrity_level>Low</mils_integrity_level>
-      <mils_component>SLS</mils_component>
-      <mils_task>Application</mils_task>
-      <mils_compliant>false</mils_compliant>
-      <access_memory_number>0</access_memory_number>
-      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>1500</period>
-      <jitter>0</jitter>
-      <every>0</every>
-    </periodic_task>
-    <periodic_task id="11">
-      <object_type>Task_Object_Type</object_type>
-      <name>surveillance_sys_Instance.main.rfid_reader</name>
-      <task_type>Periodic_Type</task_type>
-      <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
-      <address_space_name>surveillance_sys_Instance.main</address_space_name>
-      <capacity>20</capacity>
-      <deadline>1500</deadline>
-      <start_time>0</start_time>
-      <priority>80</priority>
-      <blocking_time>0</blocking_time>
-      <policy>Sched_Fifo</policy>
-      <offsets/>
-      <text_memory_size>0</text_memory_size>
-      <text_memory_start_address>0</text_memory_start_address>
-      <stack_memory_size>0</stack_memory_size>
-      <criticality>0</criticality>
-      <context_switch_overhead>0</context_switch_overhead>
-      <cfg_relocatable>false</cfg_relocatable>
-      <mils_confidentiality_level>UnClassified</mils_confidentiality_level>
-      <mils_integrity_level>Low</mils_integrity_level>
-      <mils_component>SLS</mils_component>
-      <mils_task>Application</mils_task>
-      <mils_compliant>false</mils_compliant>
-      <access_memory_number>0</access_memory_number>
-      <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>1500</period>
+      <period>2000</period>
       <jitter>0</jitter>
       <every>0</every>
     </periodic_task>
@@ -244,7 +244,7 @@
       <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
       <address_space_name>surveillance_sys_Instance.video</address_space_name>
       <capacity>1600</capacity>
-      <deadline>3000</deadline>
+      <deadline>20000</deadline>
       <start_time>0</start_time>
       <priority>13</priority>
       <blocking_time>0</blocking_time>
@@ -263,7 +263,7 @@
       <mils_compliant>false</mils_compliant>
       <access_memory_number>0</access_memory_number>
       <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>3000</period>
+      <period>20000</period>
       <jitter>0</jitter>
       <every>0</every>
     </periodic_task>
@@ -274,7 +274,7 @@
       <cpu_name>surveillance_sys_Instance.cpu</cpu_name>
       <address_space_name>surveillance_sys_Instance.video</address_space_name>
       <capacity>200</capacity>
-      <deadline>2000</deadline>
+      <deadline>20000</deadline>
       <start_time>0</start_time>
       <priority>10</priority>
       <blocking_time>0</blocking_time>
@@ -293,7 +293,7 @@
       <mils_compliant>false</mils_compliant>
       <access_memory_number>0</access_memory_number>
       <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-      <period>2000</period>
+      <period>20000</period>
       <jitter>0</jitter>
       <every>0</every>
     </periodic_task>
@@ -315,22 +315,22 @@
         <task_name>surveillance_sys_Instance.main.rfid_reader</task_name>
         <critical_section>
           <task_begin>1</task_begin>
-          <task_end>20</task_end>
+          <task_end>1000</task_end>
         </critical_section>
         <task_name>surveillance_sys_Instance.main.detector3</task_name>
         <critical_section>
           <task_begin>1</task_begin>
-          <task_end>20</task_end>
+          <task_end>200</task_end>
         </critical_section>
         <task_name>surveillance_sys_Instance.main.detector2</task_name>
         <critical_section>
           <task_begin>1</task_begin>
-          <task_end>20</task_end>
+          <task_end>200</task_end>
         </critical_section>
         <task_name>surveillance_sys_Instance.main.detector1</task_name>
         <critical_section>
           <task_begin>1</task_begin>
-          <task_end>20</task_end>
+          <task_end>200</task_end>
         </critical_section>
       </critical_sections>
       <cpu_name>surveillance_sys_Instance.cpu</cpu_name>

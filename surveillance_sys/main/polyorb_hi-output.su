@@ -1,0 +1,12 @@
+polyorb_hi-output.adb:67:7:Locktvip	16	static
+polyorb_hi-output.adb:160:4:Unprotected_Put	80	static
+polyorb_hi-output.adb:89:10:Put_Linen	64	static
+polyorb_hi-output.adb:89:10:Put_Linep	96	dynamic,bounded
+polyorb_hi-output.adb:118:7:Put_Line	48	dynamic,bounded
+polyorb_hi-output.adb:138:4:Put_Line	32	dynamic,bounded
+polyorb_hi-output.adb:112:10:Putn	16	static
+polyorb_hi-output.adb:112:10:Putp	32	static
+polyorb_hi-output.adb:127:7:Put	16	static
+polyorb_hi-output.adb:151:4:Put	16	static
+polyorb_hi-output.adb:190:4:Dump	160	dynamic,bounded
+polyorb_hi-output.adb:41:1:Output	16	static

@@ -4,13 +4,11 @@ public
 	
 	data camera_image
 		properties
-			-- store image as array of pixels --
 			Data_Model::Data_Representation => integer;
 	end camera_image;
 		
 	data captor_data
 		properties
-			-- send video as struct containing arrays and capture timestamp --
 			Data_Model::Data_Representation => integer;
 	end captor_data;
 	

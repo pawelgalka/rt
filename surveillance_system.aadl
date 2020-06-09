@@ -4,7 +4,6 @@ public
 	
 	
 	-- DEVICES --
-	 -- TODO: move devices to another package for code cleanup --
 	 
 	device camera
 		features
@@ -75,8 +74,8 @@ public
 			Dispatch_Protocol => Periodic;
 		  	Priority => 13;
   			Compute_Execution_Time => 1500ms..1600ms;
-  			Period => 5000ms;
-  			Deadline => 5000ms;
+  			Period => 20000ms;
+  			Deadline => 20000ms;
 	end video_captor.impl;
 	
 	
@@ -89,13 +88,12 @@ public
 		calls default: {
 			sender : subprogram event_handlers::video_sender_handler;
 		};
-		-- add features to pass data to handler
 		properties
 			Dispatch_Protocol => Periodic;
 		  	Priority => 10;
   			Compute_Execution_Time => 100ms..200ms;
-  			Deadline => 5000ms;
-  			Period => 5000ms;
+  			Deadline => 20000ms;
+  			Period => 20000ms;
 	end video_sender.impl;
 	
 	thread alarm_activator
@@ -122,7 +120,7 @@ public
   			Dispatch_Protocol => Periodic;
   			Priority => 70;
   			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+  			Period => 2000ms;
 	end alarm_activator.impl;
 	
 	thread detector
@@ -142,8 +140,8 @@ public
 		properties
   			Dispatch_Protocol => Periodic;
   			Priority => 90;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+  			Compute_Execution_Time => 100ms..200ms;
+  			Period => 2000ms;
 	end detector.impl;
 	
 	
@@ -156,8 +154,8 @@ public
 		properties
   			Dispatch_Protocol => Periodic;
   			Priority => 89;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+  			Compute_Execution_Time => 100ms..200ms;
+  			Period => 2000ms;
 	end detector.impl1;
 	
 	
@@ -170,8 +168,8 @@ public
 		properties
   			Dispatch_Protocol => Periodic;
   			Priority => 88;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+  			Compute_Execution_Time => 100ms..200ms;
+  			Period => 2000ms;
 	end detector.impl2;
 	
 	thread rfid_thread
@@ -192,8 +190,8 @@ public
 			properties
   			Dispatch_Protocol => Periodic;
   			Priority => 91;
-  			Compute_Execution_Time => 10ms..20ms;
-  			Period => 1500ms;
+  			Compute_Execution_Time => 1000ms..1000ms;
+  			Period => 2000ms;
 	end rfid_thread.impl;
 	
 	-- PROCESSORS --

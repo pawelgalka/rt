@@ -10,37 +10,45 @@ A -gnata
 A -gnato
 A -mtune=generic
 A -march=x86-64
-P SS ZX
+P LC ZX
 
 RN
 RR NO_ALLOCATORS
+RV NO_CALENDAR
+RV NO_DELAY
 RV NO_DIRECT_BOOLEAN_OPERATORS
 RR NO_DISPATCH
+RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
-RR NO_IO
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
 RR NO_RECURSION
-RV NO_STANDARD_STORAGE_POOLS
+RV NO_SELECT_STATEMENTS
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
-RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
+RV MAX_ASYNCHRONOUS_SELECT_NESTING=1+
 
-U surveillance%b	surveillance.adb	5b282cfd OO PK
+U surveillance%b	surveillance.adb	990c329b NE OO PK
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
-Z system%s		system.ads		system.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
-Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
-W system.val_int%s	s-valint.adb		s-valint.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.async_delays%s  s-taasde.adb	s-taasde.ali
+W system.tasking.async_delays.enqueue_calendar%s  s-tadeca.adb  s-tadeca.ali
 
 U surveillance%s	surveillance.ads	306089b6 EE NE OO PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
@@ -49,110 +57,137 @@ W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  poly
 W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
 
 D ada.ads		20170106103348 76789da1 ada%s
+D a-calend.ads		20160420090448 2d5f01d4 ada.calendar%s
+D a-caldel.ads		20140120152337 9f20b83d ada.calendar.delays%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
 D a-numeri.ads		20080324174807 bb51c45a ada.numerics%s
 D a-nudira.ads		20160418104118 71e55def ada.numerics.discrete_random%s
 D a-nudira.adb		20160418104118 72908cdb ada.numerics.discrete_random%b
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
 D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
 D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607200446 bae7530c polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-subprograms.ads  20200607200446 f97dc101 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-types.ads  20200607200446 b85fd3a9 polyorb_hi_generated.types%s
-D surveillance.ads	20200607200044 cba5c812 surveillance%s
-D surveillance.adb	20200607203029 de07cb84 surveillance%b
+D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200609233958 f97dc101 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-types.ads  20200609233958 b85fd3a9 polyorb_hi_generated.types%s
+D surveillance.ads	20200609220600 cba5c812 surveillance%s
+D surveillance.adb	20200609235045 091121e2 surveillance%b
 D system.ads		20170510173650 4635ec04 system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
 D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
-D s-imguns.ads		20140717070019 9ff43cf7 system.img_uns%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20191204142541 7b5577db system.os_constants%s
+D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
 D s-rannum.ads		20150205111725 99ade2f2 system.random_numbers%s
-D s-rannum.adb		20160418125822 20ba1217 system.random_numbers%b
-D s-ransee.ads		20120130115052 01a57b33 system.random_seed%s
-D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
 D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
 D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
+D s-taskin.ads		20170112134946 05d6152c system.tasking%s
+D s-taasde.ads		20151023122422 422600df system.tasking.async_delays%s
+D s-tadeca.ads		20140120152544 297b7d7e system.tasking.async_delays.enqueue_calendar%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D s-valint.ads		20090409150019 48a52a3f system.val_int%s
-D s-valuns.ads		20150220142606 10a8ed3b system.val_uns%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 ada.ads
-16K9*Ada 20e8 15|3r6 12r27
-X 2 a-numeri.ads
-16K13*Numerics 32e17 15|3r10 12r31
-X 3 a-nudira.ads
-44k22*Discrete_Random 75e33 15|3w19 12r40
-50R9*Generator<20|63R9> 15|14r9[12]
-52V13*Random{15|5I8} 15|20s13[12] 37s12[12] 54s12[12] 72s12[12]
-55U14*Reset<20|100p14> 15|19s6[12] 36s5[12] 53s5[12] 71s5[12]
-X 4 a-nudira.adb
-53V16 Random[20|83]{15|5I8} 21|392b13[15|12]
-X 6 interfac.ads
-74M9*Unsigned_32
-77M9*Unsigned_64
-X 7 polyorb_hi.ads
-35K9*PolyORB_HI 39e15 15|1r6 6r7
-X 8 polyorb_hi-output.ads
-38K20*Output 82e22 15|1w17 6r18
-63U14*Put_Line 15|24s10 27s10 41s7 44s7 58s7 61s7 76s7 79s7 92s9 95s9
-X 10 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 14|1r6 2r6 3r6 6r8 7r8 9r40 11r45 13r45 15r45
-. 17r26 18r12 19r12 20r12 21r21 15|2r6 7r13 16r35 33r45 50r45 68r45 84r26
-. 85r12 86r12 87r12 88r21
-X 11 polyorb_hi_generated-deployment.ads
-10K30*Deployment 314e36 14|1w27 6r29
-X 12 polyorb_hi_generated-subprograms.ads
-11K30*Subprograms 252e37 14|3w27 9r61 11r66 13r66 15r66 21r42 15|2w27 7r34
-. 16r56 33r66 50r66 68r66 88r42
-14n5*result{13E8} 15|93r36
-17e5*Port{13E8} 15|93m28
-30R8*event_handlers_alarm_activator_Status 226e15 14|21r54 15|88r54
-33U13*Put_Value 15|93s9
-59n5*Data_Source{58E8} 15|42r32 45r26
-75R8*event_handlers_detection_handler_Status 232e15 14|11r78 15|33r78
-78U13*Put_Value 15|42s13 45s7
-100n5*Data_Source{99E8} 15|59r32 62r26
-116R8*event_handlers_detection_handler1_Status 238e15 14|13r78 15|50r78
-119U13*Put_Value 15|59s13 62s7
-141n5*Data_Source{140E8} 15|77r32 80r26
-157R8*event_handlers_detection_handler2_Status 244e15 14|15r78 15|68r78
-160U13*Put_Value 15|77s13 80s7
-182n5*Data_Source{181E8} 15|25r29 28r29
-198R8*event_handlers_rfid_handler_Status 250e15 14|9r73 15|16r68
-201U13*Put_Value 15|25s10 28s10
-X 13 polyorb_hi_generated-types.ads
-10K30*Types 28e31 14|2w27 7r29 17r47 18r33 19r33 20r33 15|84r47 85r33 86r33
-. 87r33
-20I8*Integer_Type<integer> 14|17r53 18r39 19r39 20r39 15|8r10 9r10 10r12
-. 21r23 38r13 39r15 55r13 56r15 73r13 74r15 84r53 85r39 86r39 87r39
-X 14 surveillance.ads
-4K9*Surveillance 23l5 23e17 15|4b14 99l5 99t17
-9U19*Rfid 9=24 15|16b14 31l5 31t9
-9r24 Status{12|198R8} 15|16b19 25m20 28m20
-11U19*Detector1 11=29 15|33b19 47l5 47t14
-11r29 Status{12|75R8} 15|33b29 42m23 45m17
-13U19*Detector2 13=29 15|50b19 64l7 64t16
-13r29 Status{12|116R8} 15|50b29 59m23 62m17
-15U19*Detector3 15=29 15|68b19 82l7 82t16
-15r29 Status{12|157R8} 15|68b29 77m23 80m17
-17U13*Alarm 17>19 18>5 19>5 20>5 21=5 15|84b13 97t6
-17i19 det1{13|20I8} 15|84b19 91r22
-18i5 det2{13|20I8} 15|85b5 91r34
-19i5 det3{13|20I8} 15|86b5 91r46
-20i5 rfid{13|20I8} 15|87b5 91r8
-21r5 Status{12|30R8} 15|88b5 93m19
-X 15 surveillance.adb
-5I8 randRange<short_short_integer> 12r56 15r9 21r42 38r32 39r34 55r32 56r34
-. 73r32 74r34
-8i3 Seed{13|20I8} 21m7 21r15 23r10
-9i3 Door{13|20I8} 38m5 40r24 55m5 57r24 73m5 75r24
-10i3 Motion{13|20I8} 39m5 40r8 56m5 57r8 74m5 75r8
-12K11 Rand_Int[3|44] 13r7
-14r3 Gen{3|50R9[12]} 19r12 20r20 36r11 37r19 53r11 54r19 71r11 72r19
-15i3 num{5I8} 20m6 21r58 37m5 38r48 39r50 54m5 55r48 56r50 72m5 73r48 74r50
-X 20 s-rannum.ads
-75V13*Random{6|74M9} 21|221i21
-76V13*Random{6|77M9} 21|221i21
+16K9*Ada 20e8 24|3r6 4r6 5r6 5r24 25r5 91r3
+X 2 a-calend.ads
+36K13*Calendar 395e17 24|5w10 5r28
+44I9*Time<213I9> 24|20r10 53r10 71r10 89r10
+58V13*Clock{44I9} 24|20s18 53s18 71s18 89s18
+102V14*"+"{44I9} 24|22s16
+213I9 Time_Rep<long_long_integer>
+X 6 a-numeri.ads
+16K13*Numerics 32e17 24|3r10
+X 7 a-nudira.ads
+44k22*Discrete_Random 75e33 24|3w19
+X 11 a-textio.ads
+49K13*Text_IO 471e16 24|4w10 25r9 91r7
+249U14*Get_Line 24|25s17 91s15
+X 16 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 24|1r6 7r7
+X 17 polyorb_hi-output.ads
+38K20*Output 82e22 24|1w17 7r18
+63U14*Put_Line 24|27s7 31s7 37s7 41s7 56s5 60s5 74s5 78s5 93s5 97s5 112s3
+. 113s3 114s3 115s3 117s5 120s5
+X 19 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 23|1r6 2r6 3r6 6r8 7r8 9r40 11r45 13r45 15r45
+. 17r26 18r12 19r12 20r12 21r21 24|2r6 8r13 18r32 51r37 69r37 87r37 105r24
+. 106r10 107r10 108r10 109r19
+X 20 polyorb_hi_generated-deployment.ads
+10K30*Deployment 314e36 23|1w27 6r29
+X 21 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 252e37 23|3w27 9r61 11r66 13r66 15r66 21r42 24|2w27 8r34
+. 18r53 51r58 69r58 87r58 109r40
+14n5*result{13E8} 24|118r32
+17e5*Port{13E8} 24|118m24
+30R8*event_handlers_alarm_activator_Status 226e15 23|21r54 24|109r52
+33U13*Put_Value 24|118s5
+59n5*Data_Source{58E8} 24|58r24 62r24 64r24
+75R8*event_handlers_detection_handler_Status 232e15 23|11r78 24|51r70
+78U13*Put_Value 24|58s5 62s5 64s5
+100n5*Data_Source{99E8} 24|76r24 80r24 82r24
+116R8*event_handlers_detection_handler1_Status 238e15 23|13r78 24|69r70
+119U13*Put_Value 24|76s5 80s5 82s5
+141n5*Data_Source{140E8} 24|95r24 99r24 101r24
+157R8*event_handlers_detection_handler2_Status 244e15 23|15r78 24|87r70
+160U13*Put_Value 24|95s5 99s5 101s5
+182n5*Data_Source{181E8} 24|29r26 33r26 39r26 43r26 45r26
+198R8*event_handlers_rfid_handler_Status 250e15 23|9r73 24|18r65
+201U13*Put_Value 24|29s7 33s7 39s7 43s7 45s7
+X 22 polyorb_hi_generated-types.ads
+10K30*Types 28e31 23|2w27 7r29 17r47 18r33 19r33 20r33 24|105r45 106r31 107r31
+. 108r31
+20I8*Integer_Type<integer> 23|17r53 18r39 19r39 20r39 24|10r16 11r10 12r10
+. 13r10 14r17 105r51 106r37 107r37 108r37
+X 23 surveillance.ads
+4K9*Surveillance 23l5 23e17 24|6b14 124l5 124t17
+9U19*Rfid 9=24 24|18b11 49l5 49t9
+9r24 Status{21|198R8} 24|18b16 29m17 33m17 39m17 43m17 45m17
+11U19*Detector1 11=29 24|51b11 66l5 66t14
+11r29 Status{21|75R8} 24|51b21 58m15 62m15 64m15
+13U19*Detector2 13=29 24|69b11 84l5 84t14
+13r29 Status{21|116R8} 24|69b21 76m15 80m15 82m15
+15U19*Detector3 15=29 24|87b11 103l5 103t14
+15r29 Status{21|157R8} 24|87b21 95m15 99m15 101m15
+17U13*Alarm 17>19 18>5 19>5 20>5 21=5 24|105b11 122l5 122t10
+17i19 det1{22|20I8} 24|105b17 113r27 116r20
+18i5 det2{22|20I8} 24|106b3 114r27 116r32
+19i5 det3{22|20I8} 24|107b3 115r27 116r44
+20i5 rfid{22|20I8} 24|108b3 112r27 116r6
+21r5 Status{21|30R8} 24|109b3 118m15
+X 24 surveillance.adb
+10i3 Rfid_State{22|20I8} 28m7 32m7 38m7 42m7 45r38
+11i3 Det1{22|20I8} 57m5 61m5 64r36
+12i3 Det2{22|20I8} 75m5 79m5 82r36
+13i3 Det3{22|20I8} 94m5 98m5 101r36
+14i3 Alarm_State{22|20I8}
+15i3 Last{integer} 25m28 91m26
+16a3 S{string} 25m26 26r8 30r11 36r8 40r11 55r6 59r9 73r6 77r9 91m24 92r6
+. 96r9
+20i3 Next{2|44I9} 22m3 22r11 24r15
+53i3 Next{2|44I9}
+71i3 Next{2|44I9}
+89i3 Next{2|44I9}
+X 39 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

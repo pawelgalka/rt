@@ -16,7 +16,6 @@ RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
 RV NO_FIXED_POINT
-RR NO_IO
 RV NO_PROTECTED_TYPES
 RR NO_RECURSION
 RV NO_SECONDARY_STACK
@@ -40,6 +39,7 @@ W polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali 
 W system%s		system.ads		system.ali
 W system.img_lld%s	s-imglld.adb		s-imglld.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
 U polyorb_hi.output%s	polyorb_hi-output.ads	65693053 BN EB EE NE OO PK
@@ -59,7 +59,7 @@ D polyorb_hi-output_low_level.ads  20170204221544 a6d5ae25 polyorb_hi.output_low
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607195513 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -82,8 +82,8 @@ D s-taskin.ads		20170112134946 05d6152c system.tasking%s
 D s-taprob.ads		20170106114239 acd6094d system.tasking.protected_objects%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 ada.ads
 16K9*Ada 20e8 9|38r6 43r8
 X 3 a-reatim.ads

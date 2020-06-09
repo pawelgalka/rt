@@ -1,0 +1,9 @@
+polyorb_hi-suspenders.adb:40:4:Ttask_Suspension_Objectsbip	32	static
+polyorb_hi-suspenders.adb:40:4:Ttask_Suspension_Objectsbdi	96	static
+polyorb_hi-suspenders.adb:40:4:Ttask_Suspension_Objectsbdf	80	static
+polyorb_hi-suspenders.adb:40:4:Ttask_Suspension_Objectsbfd	16	static
+polyorb_hi-suspenders.adb:54:4:Block_Task	16	static
+polyorb_hi-suspenders.adb:63:4:Suspend_Forever	16	static
+polyorb_hi-suspenders.adb:79:4:Unblock_All_Tasks	16	static
+polyorb_hi-suspenders.adb:35:1:Finalize_Body	32	static
+polyorb_hi-suspenders.adb:35:1:Suspenders	32	static

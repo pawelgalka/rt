@@ -104,9 +104,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.video_video_captor_t_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (5000),
+       (20000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (5000),
+       (20000),
       Task_Priority => 13,
       Task_Stack_Size => 100000,
       Job => surveillance_system_video_captor_t_Job);
@@ -188,9 +188,9 @@ package PolyORB_HI_Generated.Activity is
    new PolyORB_HI.Periodic_Task
      (Entity => PolyORB_HI_Generated.Deployment.video_video_sender_t_K,
       Task_Period => Ada.Real_Time.Milliseconds
-       (5000),
+       (20000),
       Task_Deadline => Ada.Real_Time.Milliseconds
-       (5000),
+       (20000),
       Task_Priority => 10,
       Task_Stack_Size => 100000,
       Job => surveillance_system_video_sender_t_Job);

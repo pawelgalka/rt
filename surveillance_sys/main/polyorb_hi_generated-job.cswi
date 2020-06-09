@@ -1,0 +1,14 @@
+20200609223151
+-c
+-x
+ada
+-gnatA
+-g
+-gnatwa
+-gnatwG
+-gnat12
+-fstack-usage
+-g
+-O1
+-gnata
+-gnato

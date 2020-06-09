@@ -15,7 +15,6 @@ P ZX
 RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
-RR NO_IO
 RR NO_RECURSION
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
@@ -28,11 +27,11 @@ W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607195513 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 38e25 2|10r9 260r12 314r5
 X 2 polyorb_hi_generated-deployment.ads

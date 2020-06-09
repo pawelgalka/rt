@@ -1,0 +1,8 @@
+polyorb_hi_generated-deployment.ads:16:8:Node_Typerp	16	static
+polyorb_hi_generated-deployment.ads:46:3:Tut_Deployment_Main_Node_Image_Arraybip	8	static
+polyorb_hi_generated-deployment.ads:60:8:Entity_Typerp	16	static
+polyorb_hi_generated-deployment.ads:90:3:Tut_Deployment_Main_Entity_Table_Arraybip	8	static
+polyorb_hi_generated-deployment.ads:121:3:Tut_Deployment_Main_Entity_Image_Arraybip	8	static
+polyorb_hi_generated-deployment.ads:141:8:Port_Typerp	16	static
+polyorb_hi_generated-deployment.ads:210:3:Tut_Deployment_Main_Port_Table_Arraybip	8	static
+polyorb_hi_generated-deployment.ads:264:3:Tut_Deployment_Main_Port_Image_Arraybip	8	static

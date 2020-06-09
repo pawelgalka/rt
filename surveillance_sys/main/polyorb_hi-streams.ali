@@ -15,7 +15,6 @@ P ZX
 RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
-RR NO_IO
 RR NO_RECURSION
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
@@ -30,8 +29,8 @@ W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D system.ads		20170510173650 4635ec04 system%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 polyorb_hi.ads
 35K9*PolyORB_HI 39e15 2|35r9 58r5
 X 2 polyorb_hi-streams.ads
