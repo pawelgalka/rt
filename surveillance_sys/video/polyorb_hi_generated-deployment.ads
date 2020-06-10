@@ -14,12 +14,15 @@ package PolyORB_HI_Generated.Deployment is
   --  For each node in the distributed application add an enumerator
 
   type Node_Type is
-   (video_K);
+   (main_K,
+    video_K);
 
   --  Representation clause to have consistent positions for enumerators
 
   for Node_Type use
-   (video_K =>
+   (main_K =>
+     1,
+    video_K =>
      2);
 
   --  Size of Node_Type fixed to 8 bits
@@ -49,7 +52,9 @@ package PolyORB_HI_Generated.Deployment is
 
   Node_Image : constant UT_Deployment_Video_Node_Image_Array :=
    UT_Deployment_Video_Node_Image_Array'
-     (video_K =>
+     (main_K =>
+       "main_K ",
+      video_K =>
        "video_K");
 
   My_Node : constant Node_Type :=
@@ -58,13 +63,28 @@ package PolyORB_HI_Generated.Deployment is
   --  For each thread in the distributed application nodes, add an enumerator
 
   type Entity_Type is
-   (video_video_captor_t_K,
+   (main_alarm_K,
+    main_detector1_K,
+    main_detector2_K,
+    main_detector3_K,
+    main_rfid_reader_K,
+    video_video_captor_t_K,
     video_video_sender_t_K);
 
   --  Representation clause to have consistent positions for enumerators
 
   for Entity_Type use
-   (video_video_captor_t_K =>
+   (main_alarm_K =>
+     1,
+    main_detector1_K =>
+     2,
+    main_detector2_K =>
+     3,
+    main_detector3_K =>
+     4,
+    main_rfid_reader_K =>
+     5,
+    video_video_captor_t_K =>
      6,
     video_video_sender_t_K =>
      7);
@@ -84,7 +104,17 @@ package PolyORB_HI_Generated.Deployment is
 
   Entity_Table : constant UT_Deployment_Video_Entity_Table_Array :=
    UT_Deployment_Video_Entity_Table_Array'
-     (video_video_captor_t_K =>
+     (main_alarm_K =>
+       main_K,
+      main_detector1_K =>
+       main_K,
+      main_detector2_K =>
+       main_K,
+      main_detector3_K =>
+       main_K,
+      main_rfid_reader_K =>
+       main_K,
+      video_video_captor_t_K =>
        video_K,
       video_video_sender_t_K =>
        video_K);
@@ -109,7 +139,17 @@ package PolyORB_HI_Generated.Deployment is
 
   Entity_Image : constant UT_Deployment_Video_Entity_Image_Array :=
    UT_Deployment_Video_Entity_Image_Array'
-     (video_video_captor_t_K =>
+     (main_alarm_K =>
+       "main_alarm_K          ",
+      main_detector1_K =>
+       "main_detector1_K      ",
+      main_detector2_K =>
+       "main_detector2_K      ",
+      main_detector3_K =>
+       "main_detector3_K      ",
+      main_rfid_reader_K =>
+       "main_rfid_reader_K    ",
+      video_video_captor_t_K =>
        "video_video_captor_t_K",
       video_video_sender_t_K =>
        "video_video_sender_t_K");
@@ -118,7 +158,25 @@ package PolyORB_HI_Generated.Deployment is
   --  enumerator
 
   type Port_Type is
-   (video_video_captor_t_camera1_capture_K,
+   (main_alarm_detected_K,
+    main_alarm_decision_K,
+    main_alarm_decision1_K,
+    main_alarm_decision2_K,
+    main_alarm_decision3_K,
+    main_detector1_motion_K,
+    main_detector1_door_K,
+    main_detector1_decision_K,
+    main_detector2_motion_K,
+    main_detector2_door_K,
+    main_detector2_decision_K,
+    main_detector3_motion_K,
+    main_detector3_door_K,
+    main_detector3_decision_K,
+    main_rfid_reader_rfid_read_K,
+    main_rfid_reader_door_K,
+    main_rfid_reader_motion_K,
+    main_rfid_reader_decision_K,
+    video_video_captor_t_camera1_capture_K,
     video_video_captor_t_camera2_capture_K,
     video_video_captor_t_camera3_capture_K,
     video_video_captor_t_start_K,
@@ -128,7 +186,43 @@ package PolyORB_HI_Generated.Deployment is
   --  Representation clause to have consistent positions for enumerators
 
   for Port_Type use
-   (video_video_captor_t_camera1_capture_K =>
+   (main_alarm_detected_K =>
+     1,
+    main_alarm_decision_K =>
+     2,
+    main_alarm_decision1_K =>
+     3,
+    main_alarm_decision2_K =>
+     4,
+    main_alarm_decision3_K =>
+     5,
+    main_detector1_motion_K =>
+     6,
+    main_detector1_door_K =>
+     7,
+    main_detector1_decision_K =>
+     8,
+    main_detector2_motion_K =>
+     9,
+    main_detector2_door_K =>
+     10,
+    main_detector2_decision_K =>
+     11,
+    main_detector3_motion_K =>
+     12,
+    main_detector3_door_K =>
+     13,
+    main_detector3_decision_K =>
+     14,
+    main_rfid_reader_rfid_read_K =>
+     15,
+    main_rfid_reader_door_K =>
+     16,
+    main_rfid_reader_motion_K =>
+     17,
+    main_rfid_reader_decision_K =>
+     18,
+    video_video_captor_t_camera1_capture_K =>
      19,
     video_video_captor_t_camera2_capture_K =>
      20,
@@ -156,7 +250,43 @@ package PolyORB_HI_Generated.Deployment is
 
   Port_Table : constant UT_Deployment_Video_Port_Table_Array :=
    UT_Deployment_Video_Port_Table_Array'
-     (video_video_captor_t_camera1_capture_K =>
+     (main_alarm_detected_K =>
+       main_alarm_K,
+      main_alarm_decision_K =>
+       main_alarm_K,
+      main_alarm_decision1_K =>
+       main_alarm_K,
+      main_alarm_decision2_K =>
+       main_alarm_K,
+      main_alarm_decision3_K =>
+       main_alarm_K,
+      main_detector1_motion_K =>
+       main_detector1_K,
+      main_detector1_door_K =>
+       main_detector1_K,
+      main_detector1_decision_K =>
+       main_detector1_K,
+      main_detector2_motion_K =>
+       main_detector2_K,
+      main_detector2_door_K =>
+       main_detector2_K,
+      main_detector2_decision_K =>
+       main_detector2_K,
+      main_detector3_motion_K =>
+       main_detector3_K,
+      main_detector3_door_K =>
+       main_detector3_K,
+      main_detector3_decision_K =>
+       main_detector3_K,
+      main_rfid_reader_rfid_read_K =>
+       main_rfid_reader_K,
+      main_rfid_reader_door_K =>
+       main_rfid_reader_K,
+      main_rfid_reader_motion_K =>
+       main_rfid_reader_K,
+      main_rfid_reader_decision_K =>
+       main_rfid_reader_K,
+      video_video_captor_t_camera1_capture_K =>
        video_video_captor_t_K,
       video_video_captor_t_camera2_capture_K =>
        video_video_captor_t_K,
@@ -186,7 +316,43 @@ package PolyORB_HI_Generated.Deployment is
 
   Port_Image : constant UT_Deployment_Video_Port_Image_Array :=
    UT_Deployment_Video_Port_Image_Array'
-     (video_video_captor_t_camera1_capture_K =>
+     (main_alarm_detected_K =>
+       "main_alarm_detected_K                  ",
+      main_alarm_decision_K =>
+       "main_alarm_decision_K                  ",
+      main_alarm_decision1_K =>
+       "main_alarm_decision1_K                 ",
+      main_alarm_decision2_K =>
+       "main_alarm_decision2_K                 ",
+      main_alarm_decision3_K =>
+       "main_alarm_decision3_K                 ",
+      main_detector1_motion_K =>
+       "main_detector1_motion_K                ",
+      main_detector1_door_K =>
+       "main_detector1_door_K                  ",
+      main_detector1_decision_K =>
+       "main_detector1_decision_K              ",
+      main_detector2_motion_K =>
+       "main_detector2_motion_K                ",
+      main_detector2_door_K =>
+       "main_detector2_door_K                  ",
+      main_detector2_decision_K =>
+       "main_detector2_decision_K              ",
+      main_detector3_motion_K =>
+       "main_detector3_motion_K                ",
+      main_detector3_door_K =>
+       "main_detector3_door_K                  ",
+      main_detector3_decision_K =>
+       "main_detector3_decision_K              ",
+      main_rfid_reader_rfid_read_K =>
+       "main_rfid_reader_rfid_read_K           ",
+      main_rfid_reader_door_K =>
+       "main_rfid_reader_door_K                ",
+      main_rfid_reader_motion_K =>
+       "main_rfid_reader_motion_K              ",
+      main_rfid_reader_decision_K =>
+       "main_rfid_reader_decision_K            ",
+      video_video_captor_t_camera1_capture_K =>
        "video_video_captor_t_camera1_capture_K ",
       video_video_captor_t_camera2_capture_K =>
        "video_video_captor_t_camera2_capture_K ",

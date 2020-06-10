@@ -6,21 +6,11 @@
 pragma Style_Checks
  ("NM32766");
 
-with PolyORB_HI_Generated.Types;
-with PolyORB_HI.Messages;
 with PolyORB_HI_Generated.Activity;
+with PolyORB_HI.Messages;
+with PolyORB_HI_Generated.Types;
 
 package PolyORB_HI_Generated.Marshallers is
-
-  --  Marshallers for DATA type state
-
-  procedure Marshall
-   (Data : PolyORB_HI_Generated.Types.state;
-    Message : in out PolyORB_HI.Messages.Message_Type);
-
-  procedure Unmarshall
-   (Data : out PolyORB_HI_Generated.Types.state;
-    Message : in out PolyORB_HI.Messages.Message_Type);
 
   --  Marshallers for interface type of thread alarm_activator.impl
 

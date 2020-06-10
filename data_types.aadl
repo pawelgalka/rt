@@ -17,4 +17,8 @@ public
 			Data_Model::Data_Representation => integer;
 	end state;
 	
+	data Integer_Type
+		properties
+  			Data_Model::Data_Representation => integer;
+	end Integer_Type;	
 end data_types;

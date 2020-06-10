@@ -27,17 +27,18 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.transport%b  polyorb_hi_generated-transport.adb  2fc3bc50 NE OO PK
+U polyorb_hi_generated.transport%b  polyorb_hi_generated-transport.adb  5017e45a NE OO PK
 W interfaces%s		interfac.ads		interfac.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.port_type_marshallers%s  polyorb_hi-port_type_marshallers.ads  polyorb_hi-port_type_marshallers.ali
+W polyorb_hi.transport_low_level%s  polyorb_hi-transport_low_level_sockets.adb  polyorb_hi-transport_low_level_sockets.ali
 W polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W polyorb_hi_generated.activity%s  polyorb_hi_generated-activity.adb  polyorb_hi_generated-activity.ali
 W polyorb_hi_generated.marshallers%s  polyorb_hi_generated-marshallers.adb  polyorb_hi_generated-marshallers.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U polyorb_hi_generated.transport%s  polyorb_hi_generated-transport.ads  b032136d EE NE OO PK
+U polyorb_hi_generated.transport%s  polyorb_hi_generated-transport.ads  95fb3abe EE NE OO PK
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.errors%s	polyorb_hi-errors.ads	polyorb_hi-errors.ali
 W polyorb_hi.messages%s	polyorb_hi-messages.adb	polyorb_hi-messages.ali
@@ -58,14 +59,15 @@ D polyorb_hi-messages.ads  20170204221544 cdc9ec9c polyorb_hi.messages%s
 D polyorb_hi-periodic_task.ads  20170204221544 99ad09d9 polyorb_hi.periodic_task%s
 D polyorb_hi-port_type_marshallers.ads  20170204221544 82fe6eb4 polyorb_hi.port_type_marshallers%s
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi-transport_low_level.ads  20170204221544 77d4ea27 polyorb_hi.transport_low_level%s
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-activity.ads  20200609233958 09951d29 polyorb_hi_generated.activity%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
-D polyorb_hi_generated-marshallers.ads  20200609233958 b0210931 polyorb_hi_generated.marshallers%s
-D polyorb_hi_generated-transport.ads  20200609233958 cc5413ce polyorb_hi_generated.transport%s
-D polyorb_hi_generated-transport.adb  20200609233958 c84ec1f2 polyorb_hi_generated.transport%b
-D polyorb_hi_generated-types.ads  20200609233958 b85fd3a9 polyorb_hi_generated.types%s
+D polyorb_hi_generated-activity.ads  20200610194432 316f34fd polyorb_hi_generated.activity%s
+D polyorb_hi_generated-deployment.ads  20200610194432 9f2e7adf polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-marshallers.ads  20200610194432 c4f31821 polyorb_hi_generated.marshallers%s
+D polyorb_hi_generated-transport.ads  20200610194432 cc5413ce polyorb_hi_generated.transport%s
+D polyorb_hi_generated-transport.adb  20200610194432 8c664b1b polyorb_hi_generated.transport%b
+D polyorb_hi_generated-types.ads  20200610194432 0865cd21 polyorb_hi_generated.types%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
@@ -91,191 +93,199 @@ D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
 D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 5 interfac.ads
-38K9*Interfaces 184e15 20|9w6 53r13
-66M9*Unsigned_16 20|53r24
+38K9*Interfaces 184e15 21|9w6 54r13
+66M9*Unsigned_16 21|54r24
 X 7 polyorb_hi.ads
-35K9*PolyORB_HI 39e15 19|10r6 11r6 12r6 18r15 23r15 24r11 20|10r6 11r6 21r18
-. 26r18 31r18 36r18 41r18 49r15 52r11 55r14 57r5 61r13 62r5 66r6 73r9 81r9
-. 89r9 97r9 105r9 113r15 114r11 118r15 119r11 123r15 124r11 128r15 129r11
-. 133r15 134r11 143r15 144r11 147r20 148r6 184r14 185r9 196r18 254r15 255r11
-. 267r12 268r7 278r18 314r15 315r11 331r14 332r9 334r14 335r9 346r18 382r15
-. 383r11 399r14 400r9 402r14 403r9 414r18 450r15 451r11 467r14 468r9 470r14
-. 471r9 482r18 507r15 508r11 530r14 531r9 533r14 534r9
+35K9*PolyORB_HI 39e15 20|10r6 11r6 12r6 18r15 23r15 24r11 21|10r6 11r6 15r6
+. 22r18 27r18 32r18 37r18 42r18 50r15 53r11 56r14 58r5 62r13 63r5 67r6 74r9
+. 82r9 90r9 98r9 106r9 114r15 115r11 119r15 120r11 124r15 125r11 129r15 130r11
+. 134r15 135r11 144r15 145r11 148r20 149r6 185r14 186r9 197r18 255r15 256r11
+. 270r14 275r14 276r9 287r18 323r15 324r11 340r14 341r9 343r14 344r9 355r18
+. 391r15 392r11 408r14 409r9 411r14 412r9 423r18 459r15 460r11 476r14 477r9
+. 479r14 480r9 491r18 516r15 517r11 539r14 540r9 542r14 543r9
 X 8 polyorb_hi-errors.ads
-32K20*Errors 39e22 19|12w17 24r22 20|114r22 119r22 124r22 129r22 134r22 144r22
-. 184r25 185r20 255r22 267r23 268r18 315r22 331r25 332r20 334r25 335r20 383r22
-. 399r25 400r20 402r25 403r20 451r22 467r25 468r20 470r25 471r20 508r22 530r25
-. 531r20 533r25 534r20
-34E9*Error_Kind 37e7 19|24r29 20|114r29 119r29 124r29 129r29 134r29 144r29
-. 184r32 255r29 267r30 315r29 331r32 334r32 383r29 399r32 402r32 451r29 467r32
-. 470r32 508r29 530r32 533r32
-35n7*Error_None{34E9} 20|332r27 400r27 468r27 531r27
-36n7*Error_Transport{34E9} 20|185r27 268r25 335r27 403r27 471r27 534r27
+32K20*Errors 39e22 20|12w17 24r22 21|115r22 120r22 125r22 130r22 135r22 145r22
+. 185r25 186r20 256r22 275r25 276r20 324r22 340r25 341r20 343r25 344r20 392r22
+. 408r25 409r20 411r25 412r20 460r22 476r25 477r20 479r25 480r20 517r22 539r25
+. 540r20 542r25 543r20
+34E9*Error_Kind 37e7 20|24r29 21|115r29 120r29 125r29 130r29 135r29 145r29
+. 185r32 256r29 275r32 324r29 340r32 343r32 392r29 408r32 411r32 460r29 476r32
+. 479r32 517r29 539r32 542r32
+35n7*Error_None{34E9} 21|341r27 409r27 477r27 540r27
+36n7*Error_Transport{34E9} 21|186r27 276r27 344r27 412r27 480r27 543r27
 X 9 polyorb_hi-marshallers_g.ads
-46U14*Unmarshall 20|62s38[12|36]
+46U14*Unmarshall 21|63s38[12|36]
 X 10 polyorb_hi-messages.ads
-37K20*Messages 134e24 19|11w17 23r26 20|21r29 26r29 31r29 36r29 41r29 52r22
-. 57r16 61r24 73r20 81r20 89r20 97r20 105r20 143r26 148r17 196r29 278r29
-. 346r29 414r29 482r29
-44R9*Message_Type 116e14 19|23r35 20|21r38 26r38 31r38 36r38 41r38 52r31
-. 143r35 196r38 278r38 346r38 414r38 482r38
-50N4*Header_Size 20|61r33
-76U14*Write 20|57s25
-91V13*Sender{17|60E8} 20|73s29 81s29 89s29 97s29 105s29
-94V13*Encapsulate{13|53A9} 20|148s26
+37K20*Messages 134e24 20|11w17 23r26 21|22r29 27r29 32r29 37r29 42r29 53r22
+. 58r16 62r24 74r20 82r20 90r20 98r20 106r20 144r26 149r17 197r29 287r29
+. 355r29 423r29 491r29
+44R9*Message_Type 116e14 20|23r35 21|22r38 27r38 32r38 37r38 42r38 53r31
+. 144r35 197r38 287r38 355r38 423r38 491r38
+50N4*Header_Size 21|62r33
+76U14*Write 21|58s25
+91V13*Sender{18|65E8} 21|74s29 82s29 90s29 98s29 106s29
+94V13*Encapsulate{13|53A9} 21|149s26
 X 12 polyorb_hi-port_type_marshallers.ads
-36K20*Port_Type_Marshallers[9|39] 20|10w17 62r16
+36K20*Port_Type_Marshallers[9|39] 21|10w17 63r16
 X 13 polyorb_hi-streams.ads
-35K20*Streams 58e23 19|10w17 18r26 20|49r26 55r25 113r26 118r26 123r26 128r26
-. 133r26 147r31 254r26 314r26 382r26 450r26 507r26
+35K20*Streams 58e23 20|10w17 18r26 21|50r26 56r25 114r26 119r26 124r26 129r26
+. 134r26 148r31 255r26 323r26 391r26 459r26 516r26
 44M9*Stream_Element
-46I9*Stream_Element_Offset<long_integer> 20|55r33
-53A9*Stream_Element_Array(44M9)<46I9> 19|18r34 20|49r34 113r34 118r34 123r34
-. 128r34 133r34 147r39 254r34 314r34 382r34 450r34 507r34
-X 14 polyorb_hi-utils.ads
-40K20*Utils 140e21 20|11w17 66r17
-73V13*Corresponding_Port{17|141E8} 20|66s23
-X 15 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 19|9r6 14r9 17r14 21r12 22r14 26r5 20|12r6
-. 13r5 14r6 16r14 19r12 20r12 24r12 25r12 29r12 30r12 34r12 35r12 39r12 40r12
-. 48r14 51r9 54r12 69r9 77r9 85r9 93r9 101r9 112r14 117r14 122r14 127r14
-. 132r14 141r12 142r14 146r9 154r9 160r9 166r9 172r9 178r9 194r12 195r12
-. 198r9 202r9 204r7 208r7 209r9 213r9 215r7 219r7 220r9 224r9 226r7 230r7
-. 231r9 235r9 237r7 241r7 242r9 253r14 276r12 277r12 280r9 284r9 286r7 290r7
-. 291r9 295r9 297r7 301r7 302r9 313r14 323r9 326r9 344r12 345r12 348r9 352r9
-. 354r7 358r7 359r9 363r9 365r7 369r7 370r9 381r14 391r9 394r9 412r12 413r12
-. 416r9 420r9 422r7 426r7 427r9 431r9 433r7 437r7 438r9 449r14 459r9 462r9
-. 480r12 481r12 484r9 488r9 490r7 494r7 495r9 506r14 516r9 525r9 538r5
-X 16 polyorb_hi_generated-activity.ads
-16K30*Activity 479e34 20|12w27 13r26 208r28 219r28 230r28 241r28 290r28 301r28
-. 358r28 369r28 426r28 437r28 494r28
-24n5*test{22E8} 20|205r9
-25n5*test1{22E8} 20|216r9
-26n5*test2{22E8} 20|227r9
-27n5*test3{22E8} 20|238r9
-29R8*surveillance_system_alarm_activator_impl_Interface 49e15 20|199r26
-88U13*Store_Received_Message 20|208s37 219s37 230s37 241s37
-119n5*motion{118E8} 20|287r9
-120n5*door{118E8} 20|298r9
-123R8*surveillance_system_detector_impl_Interface 139e15 20|281r26
-178U13*Store_Received_Message 20|290s37 301s37
-209n5*motion{208E8} 20|355r9
-210n5*door{208E8} 20|366r9
-213R8*surveillance_system_detector_impl1_Interface 229e15 20|349r26
-268U13*Store_Received_Message 20|358s37 369s37
-299n5*motion{298E8} 20|423r9
-300n5*door{298E8} 20|434r9
-303R8*surveillance_system_detector_impl2_Interface 319e15 20|417r26
-358U13*Store_Received_Message 20|426s37 437s37
-389n5*rfid_read{388E8} 20|491r9
-394R8*surveillance_system_rfid_thread_impl_Interface 412e15 20|485r26
-451U13*Store_Received_Message 20|494s37
-X 17 polyorb_hi_generated-deployment.ads
-10K30*Deployment 314e36 19|9w27 17r35 21r33 22r35 20|19r33 20r33 24r33 25r33
-. 29r33 30r33 34r33 35r33 39r33 40r33 48r35 51r30 54r33 69r30 77r30 85r30
-. 93r30 101r30 112r35 117r35 122r35 127r35 132r35 141r33 142r35 146r30 154r30
-. 160r30 166r30 172r30 178r30 194r33 195r33 198r30 202r30 209r30 213r30 220r30
-. 224r30 231r30 235r30 242r30 253r35 276r33 277r33 280r30 284r30 291r30 295r30
-. 302r30 313r35 323r30 326r30 344r33 345r33 348r30 352r30 359r30 363r30 370r30
-. 381r35 391r30 394r30 412r33 413r33 416r30 420r30 427r30 431r30 438r30 449r35
-. 459r30 462r30 480r33 481r33 484r30 488r30 495r30 506r35 516r30 525r30
-60E8*Entity_Type 65e24 19|17r46 21r44 22r46 20|20r44 25r44 30r44 35r44 40r44
-. 48r46 112r46 117r46 122r46 127r46 132r46 141r44 142r46 195r44 253r46 277r44
-. 313r46 345r44 381r46 413r44 449r46 481r44 506r46
-61n5*main_alarm_K{60E8} 20|69r41 154r41 209r41 220r41 231r41 242r41 326r41
-. 394r41 462r41 525r41
-62n5*main_detector1_K{60E8} 20|77r41 160r41 291r41 302r41
-63n5*main_detector2_K{60E8} 20|85r41 166r41 359r41 370r41
-64n5*main_detector3_K{60E8} 20|93r41 172r41 427r41 438r41
-65n5*main_rfid_reader_K{60E8} 20|101r41 178r41 495r41
-141E8*Port_Type 159e29 20|19r44 24r44 29r44 34r44 39r44 54r44 194r44 276r44
-. 344r44 412r44 480r44
-143n5*main_alarm_test_K{141E8} 20|202r41
-144n5*main_alarm_test1_K{141E8} 20|213r41
-145n5*main_alarm_test2_K{141E8} 20|224r41
-146n5*main_alarm_test3_K{141E8} 20|235r41
-147n5*main_detector1_motion_K{141E8} 20|284r41
-148n5*main_detector1_door_K{141E8} 20|295r41
-150n5*main_detector2_motion_K{141E8} 20|352r41
-151n5*main_detector2_door_K{141E8} 20|363r41
-153n5*main_detector3_motion_K{141E8} 20|420r41
-154n5*main_detector3_door_K{141E8} 20|431r41
-156n5*main_rfid_reader_rfid_read_K{141E8} 20|488r41
-X 18 polyorb_hi_generated-marshallers.ads
-13K30*Marshallers 90e37 20|14w27 204r28 215r28 226r28 237r28 286r28 297r28
-. 354r28 365r28 422r28 433r28 490r28
-31U13*Unmarshall 20|204s40 215s40 226s40 237s40
-52U13*Unmarshall 20|286s40 297s40
-63U13*Unmarshall 20|354s40 365s40
-74U13*Unmarshall 20|422s40 433s40
-85U13*Unmarshall 20|490s40
-X 19 polyorb_hi_generated-transport.ads
-14K30*Transport 15|34k9 19|26l26 26e35 20|16b35 538l26 538t35
-16U13*Deliver 17>5 18>5 20|47b13 109l7 109t14 328s7 396s7 464s7 527s7
-17e5 Entity{17|60E8} 20|48b5 68r9 76r12 84r12 92r12 100r12
-18a5 Message{13|53A9} 20|49b5 59r7 60r10 61r49 74r11 82r11 90r11 98r11 106r11
-20V12*Send{8|34E9} 21>5 22>5 23>5 20|140b12 187l7 187t11
-21e5 From{17|60E8} 20|141b5 150r9 153r9 159r12 165r12 171r12 177r12
-22e5 Entity{17|60E8} 20|142b5 151r9 157r9 163r9 169r9 175r9 181r9
-23r5 Message{10|44R9} 20|143b5 149r9
-X 20 polyorb_hi_generated-transport.adb
-18U13 surveillance_system_alarm_Deliver 19>5 20>5 21=5 71s7 193b13 246l7
-. 246t40
-19e5 Port{17|141E8} 194b5 201r9 212r12 223r12 234r12
-20e5 From{17|60E8} 195b5 211r9 222r9 233r9 244r9
-21r5 Msg{10|44R9} 196b5 207m9 218m9 229m9 240m9
-23U13 surveillance_system_detector1_Deliver 24>5 25>5 26=5 79s7 275b13 306l7
-. 306t44
-24e5 Port{17|141E8} 276b5 283r9 294r12
-25e5 From{17|60E8} 277b5 293r9 304r9
-26r5 Msg{10|44R9} 278b5 289m9 300m9
-28U13 surveillance_system_detector2_Deliver 29>5 30>5 31=5 87s7 343b13 374l7
-. 374t44
-29e5 Port{17|141E8} 344b5 351r9 362r12
-30e5 From{17|60E8} 345b5 361r9 372r9
-31r5 Msg{10|44R9} 346b5 357m9 368m9
-33U13 surveillance_system_detector3_Deliver 34>5 35>5 36=5 95s7 411b13 442l7
-. 442t44
-34e5 Port{17|141E8} 412b5 419r9 430r12
-35e5 From{17|60E8} 413b5 429r9 440r9
-36r5 Msg{10|44R9} 414b5 425m9 436m9
-38U13 surveillance_system_rfid_reader_Deliver 39>5 40>5 41=5 103s7 479b13
-. 499l7 499t46
-39e5 Port{17|141E8} 480b5 487r9
-40e5 From{17|60E8} 481b5 497r9
-41r5 Msg{10|44R9} 482b5 493m9
-52r5 Msg{10|44R9} 58m7 58r7 64m7 64r7 75m9 75r9 83m9 83r9 91m9 91r9 99m9
-. 99r9 107m9 107r9
-53m5 Value{5|66M9} 63m7 67r9
-54e5 Port{17|141E8} 65m5 72r9 80r9 88r9 96r9 104r9
-111V12 surveillance_system_alarm_Send{8|34E9} 112>5 113>5 156s14 252b12 269l7
-. 269t37
-112e5 Entity{17|60E8} 253b5 262r7
-113a5 Message{13|53A9} 254b5 259r7
-116V12 surveillance_system_detector1_Send{8|34E9} 117>5 118>5 162s14 312b12
-. 337l7 337t41
-117e5 Entity{17|60E8} 313b5 322r7 325r9 329r9
-118a5 Message{13|53A9} 314b5 319r7 330r9
-121V12 surveillance_system_detector2_Send{8|34E9} 122>5 123>5 168s14 380b12
-. 405l7 405t41
-122e5 Entity{17|60E8} 381b5 390r7 393r9 397r9
-123a5 Message{13|53A9} 382b5 387r7 398r9
-126V12 surveillance_system_detector3_Send{8|34E9} 127>5 128>5 174s14 448b12
-. 473l7 473t41
-127e5 Entity{17|60E8} 449b5 458r7 461r9 465r9
-128a5 Message{13|53A9} 450b5 455r7 466r9
-131V12 surveillance_system_rfid_reader_Send{8|34E9} 132>5 133>5 180s14 505b12
-. 536l7 536t43
-132e5 Entity{17|60E8} 506b5 515r7 524r9 528r9
-133a5 Message{13|53A9} 507b5 512r7 529r9
-147a5 Msg{13|53A9} 158r9 164r9 170r9 176r9 182r9
-199r5 Thread_Interface_Ü{16|29R8} 206m9 210r9 217m9 221r9 228m9 232r9 239m9
-. 243r9
-281r5 Thread_Interface_Ü{16|123R8} 288m9 292r9 299m9 303r9
-349r5 Thread_Interface_Ü{16|213R8} 356m9 360r9 367m9 371r9
-417r5 Thread_Interface_Ü{16|303R8} 424m9 428r9 435m9 439r9
-485r5 Thread_Interface_Ü{16|394R8} 492m9 496r9
-X 34 s-stausa.ads
+46I9*Stream_Element_Offset<long_integer> 21|56r33
+53A9*Stream_Element_Array(44M9)<46I9> 20|18r34 21|50r34 114r34 119r34 124r34
+. 129r34 134r34 148r39 255r34 323r34 391r34 459r34 516r34
+X 14 polyorb_hi-transport_low_level.ads
+39K20*Transport_Low_Level 57e35 21|15w17 270r25
+53V13*Send{8|34E9} 21|270s45
+X 15 polyorb_hi-utils.ads
+40K20*Utils 140e21 21|11w17 67r17
+73V13*Corresponding_Port{18|160E8} 21|67s23
+X 16 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 20|9r6 14r9 17r14 21r12 22r14 26r5 21|12r6
+. 13r5 14r6 17r14 20r12 21r12 25r12 26r12 30r12 31r12 35r12 36r12 40r12 41r12
+. 49r14 52r9 55r12 70r9 78r9 86r9 94r9 102r9 113r14 118r14 123r14 128r14
+. 133r14 142r12 143r14 147r9 155r9 161r9 167r9 173r9 179r9 195r12 196r12
+. 199r9 203r9 205r7 209r7 210r9 214r9 216r7 220r7 221r9 225r9 227r7 231r7
+. 232r9 236r9 238r7 242r7 243r9 254r14 264r9 267r9 271r9 285r12 286r12 289r9
+. 293r9 295r7 299r7 300r9 304r9 306r7 310r7 311r9 322r14 332r9 335r9 353r12
+. 354r12 357r9 361r9 363r7 367r7 368r9 372r9 374r7 378r7 379r9 390r14 400r9
+. 403r9 421r12 422r12 425r9 429r9 431r7 435r7 436r9 440r9 442r7 446r7 447r9
+. 458r14 468r9 471r9 489r12 490r12 493r9 497r9 499r7 503r7 504r9 515r14 525r9
+. 534r9 547r5
+X 17 polyorb_hi_generated-activity.ads
+16K30*Activity 477e34 21|12w27 13r26 209r28 220r28 231r28 242r28 299r28 310r28
+. 367r28 378r28 435r28 446r28 503r28
+22n5*decision{20E8} 21|206r9
+23n5*decision1{20E8} 21|217r9
+24n5*decision2{20E8} 21|228r9
+25n5*decision3{20E8} 21|239r9
+27R8*surveillance_system_alarm_activator_impl_Interface 47e15 21|200r26
+86U13*Store_Received_Message 21|209s37 220s37 231s37 242s37
+117n5*motion{116E8} 21|296r9
+118n5*door{116E8} 21|307r9
+121R8*surveillance_system_detector_impl_Interface 137e15 21|290r26
+176U13*Store_Received_Message 21|299s37 310s37
+207n5*motion{206E8} 21|364r9
+208n5*door{206E8} 21|375r9
+211R8*surveillance_system_detector_impl1_Interface 227e15 21|358r26
+266U13*Store_Received_Message 21|367s37 378s37
+297n5*motion{296E8} 21|432r9
+298n5*door{296E8} 21|443r9
+301R8*surveillance_system_detector_impl2_Interface 317e15 21|426r26
+356U13*Store_Received_Message 21|435s37 446s37
+387n5*rfid_read{386E8} 21|500r9
+392R8*surveillance_system_rfid_thread_impl_Interface 410e15 21|494r26
+449U13*Store_Received_Message 21|503s37
+X 18 polyorb_hi_generated-deployment.ads
+10K30*Deployment 375e36 20|9w27 17r35 21r33 22r35 21|20r33 21r33 25r33 26r33
+. 30r33 31r33 35r33 36r33 40r33 41r33 49r35 52r30 55r33 70r30 78r30 86r30
+. 94r30 102r30 113r35 118r35 123r35 128r35 133r35 142r33 143r35 147r30 155r30
+. 161r30 167r30 173r30 179r30 195r33 196r33 199r30 203r30 210r30 214r30 221r30
+. 225r30 232r30 236r30 243r30 254r35 264r30 267r30 271r30 285r33 286r33 289r30
+. 293r30 300r30 304r30 311r30 322r35 332r30 335r30 353r33 354r33 357r30 361r30
+. 368r30 372r30 379r30 390r35 400r30 403r30 421r33 422r33 425r30 429r30 436r30
+. 440r30 447r30 458r35 468r30 471r30 489r33 490r33 493r30 497r30 504r30 515r35
+. 525r30 534r30
+65E8*Entity_Type 72e28 20|17r46 21r44 22r46 21|21r44 26r44 31r44 36r44 41r44
+. 49r46 113r46 118r46 123r46 128r46 133r46 142r44 143r46 196r44 254r46 286r44
+. 322r46 354r44 390r46 422r44 458r46 490r44 515r46
+66n5*main_alarm_K{65E8} 21|70r41 155r41 210r41 221r41 232r41 243r41 335r41
+. 403r41 471r41 534r41
+67n5*main_detector1_K{65E8} 21|78r41 161r41 300r41 311r41
+68n5*main_detector2_K{65E8} 21|86r41 167r41 368r41 379r41
+69n5*main_detector3_K{65E8} 21|94r41 173r41 436r41 447r41
+70n5*main_rfid_reader_K{65E8} 21|102r41 179r41 504r41
+71n5*video_video_captor_t_K{65E8} 21|267r41
+101A8*UT_Deployment_Main_Entity_Table_Array(16E8)<65E8>
+105a3*Entity_Table{101A8} 21|271r41
+160E8*Port_Type 184e36 21|20r44 25r44 30r44 35r44 40r44 55r44 195r44 285r44
+. 353r44 421r44 489r44
+162n5*main_alarm_decision_K{160E8} 21|203r41
+163n5*main_alarm_decision1_K{160E8} 21|214r41
+164n5*main_alarm_decision2_K{160E8} 21|225r41
+165n5*main_alarm_decision3_K{160E8} 21|236r41
+166n5*main_detector1_motion_K{160E8} 21|293r41
+167n5*main_detector1_door_K{160E8} 21|304r41
+169n5*main_detector2_motion_K{160E8} 21|361r41
+170n5*main_detector2_door_K{160E8} 21|372r41
+172n5*main_detector3_motion_K{160E8} 21|429r41
+173n5*main_detector3_door_K{160E8} 21|440r41
+175n5*main_rfid_reader_rfid_read_K{160E8} 21|497r41
+X 19 polyorb_hi_generated-marshallers.ads
+13K30*Marshallers 80e37 21|14w27 205r28 216r28 227r28 238r28 295r28 306r28
+. 363r28 374r28 431r28 442r28 499r28
+21U13*Unmarshall 21|205s40 216s40 227s40 238s40
+42U13*Unmarshall 21|295s40 306s40
+53U13*Unmarshall 21|363s40 374s40
+64U13*Unmarshall 21|431s40 442s40
+75U13*Unmarshall 21|499s40
+X 20 polyorb_hi_generated-transport.ads
+14K30*Transport 16|34k9 20|26l26 26e35 21|17b35 547l26 547t35
+16U13*Deliver 17>5 18>5 21|48b13 110l7 110t14 337s7 405s7 473s7 536s7
+17e5 Entity{18|65E8} 21|49b5 69r9 77r12 85r12 93r12 101r12
+18a5 Message{13|53A9} 21|50b5 60r7 61r10 62r49 75r11 83r11 91r11 99r11 107r11
+20V12*Send{8|34E9} 21>5 22>5 23>5 21|141b12 188l7 188t11
+21e5 From{18|65E8} 21|142b5 151r9 154r9 160r12 166r12 172r12 178r12
+22e5 Entity{18|65E8} 21|143b5 152r9 158r9 164r9 170r9 176r9 182r9
+23r5 Message{10|44R9} 21|144b5 150r9
+X 21 polyorb_hi_generated-transport.adb
+19U13 surveillance_system_alarm_Deliver 20>5 21>5 22=5 72s7 194b13 247l7
+. 247t40
+20e5 Port{18|160E8} 195b5 202r9 213r12 224r12 235r12
+21e5 From{18|65E8} 196b5 212r9 223r9 234r9 245r9
+22r5 Msg{10|44R9} 197b5 208m9 219m9 230m9 241m9
+24U13 surveillance_system_detector1_Deliver 25>5 26>5 27=5 80s7 284b13 315l7
+. 315t44
+25e5 Port{18|160E8} 285b5 292r9 303r12
+26e5 From{18|65E8} 286b5 302r9 313r9
+27r5 Msg{10|44R9} 287b5 298m9 309m9
+29U13 surveillance_system_detector2_Deliver 30>5 31>5 32=5 88s7 352b13 383l7
+. 383t44
+30e5 Port{18|160E8} 353b5 360r9 371r12
+31e5 From{18|65E8} 354b5 370r9 381r9
+32r5 Msg{10|44R9} 355b5 366m9 377m9
+34U13 surveillance_system_detector3_Deliver 35>5 36>5 37=5 96s7 420b13 451l7
+. 451t44
+35e5 Port{18|160E8} 421b5 428r9 439r12
+36e5 From{18|65E8} 422b5 438r9 449r9
+37r5 Msg{10|44R9} 423b5 434m9 445m9
+39U13 surveillance_system_rfid_reader_Deliver 40>5 41>5 42=5 104s7 488b13
+. 508l7 508t46
+40e5 Port{18|160E8} 489b5 496r9
+41e5 From{18|65E8} 490b5 506r9
+42r5 Msg{10|44R9} 491b5 502m9
+53r5 Msg{10|44R9} 59m7 59r7 65m7 65r7 76m9 76r9 84m9 84r9 92m9 92r9 100m9
+. 100r9 108m9 108r9
+54m5 Value{5|66M9} 64m7 68r9
+55e5 Port{18|160E8} 66m5 73r9 81r9 89r9 97r9 105r9
+112V12 surveillance_system_alarm_Send{8|34E9} 113>5 114>5 157s14 253b12 278l7
+. 278t37
+113e5 Entity{18|65E8} 254b5 263r7 266r9 272r11
+114a5 Message{13|53A9} 255b5 260r7 273r9
+117V12 surveillance_system_detector1_Send{8|34E9} 118>5 119>5 163s14 321b12
+. 346l7 346t41
+118e5 Entity{18|65E8} 322b5 331r7 334r9 338r9
+119a5 Message{13|53A9} 323b5 328r7 339r9
+122V12 surveillance_system_detector2_Send{8|34E9} 123>5 124>5 169s14 389b12
+. 414l7 414t41
+123e5 Entity{18|65E8} 390b5 399r7 402r9 406r9
+124a5 Message{13|53A9} 391b5 396r7 407r9
+127V12 surveillance_system_detector3_Send{8|34E9} 128>5 129>5 175s14 457b12
+. 482l7 482t41
+128e5 Entity{18|65E8} 458b5 467r7 470r9 474r9
+129a5 Message{13|53A9} 459b5 464r7 475r9
+132V12 surveillance_system_rfid_reader_Send{8|34E9} 133>5 134>5 181s14 514b12
+. 545l7 545t43
+133e5 Entity{18|65E8} 515b5 524r7 533r9 537r9
+134a5 Message{13|53A9} 516b5 521r7 538r9
+148a5 Msg{13|53A9} 159r9 165r9 171r9 177r9 183r9
+200r5 Thread_Interface_Ü{17|27R8} 207m9 211r9 218m9 222r9 229m9 233r9 240m9
+. 244r9
+290r5 Thread_Interface_Ü{17|121R8} 297m9 301r9 308m9 312r9
+358r5 Thread_Interface_Ü{17|211R8} 365m9 369r9 376m9 380r9
+426r5 Thread_Interface_Ü{17|301R8} 433m9 437r9 444m9 448r9
+494r5 Thread_Interface_Ü{17|392R8} 501m9 505r9
+X 35 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

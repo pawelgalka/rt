@@ -52,6 +52,7 @@ package PolyORB_HI_Generated.Subprograms is
    (det1 : PolyORB_HI_Generated.Types.camera_image;
     det2 : PolyORB_HI_Generated.Types.camera_image;
     det3 : PolyORB_HI_Generated.Types.camera_image;
+    data_sink : PolyORB_HI_Generated.Types.Integer_Type;
     Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status);
 
   procedure event_handlers_video_sender_handler;

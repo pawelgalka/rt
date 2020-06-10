@@ -9,14 +9,6 @@ pragma Style_Checks
 
 package PolyORB_HI_Generated.Types is
 
-  type state is
-   new Standard.Integer;
-
-  --  state'Object_Size ~= 32 bits
-
-  state_Default_Value : constant state :=
-   0;
-
   type Integer_Type is
    new Standard.Integer;
 

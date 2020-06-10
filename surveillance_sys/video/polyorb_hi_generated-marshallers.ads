@@ -33,6 +33,16 @@ package PolyORB_HI_Generated.Marshallers is
    (Data : out PolyORB_HI_Generated.Types.camera_image;
     Message : in out PolyORB_HI.Messages.Message_Type);
 
+  --  Marshallers for DATA type integer_type
+
+  procedure Marshall
+   (Data : PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type);
+
+  procedure Unmarshall
+   (Data : out PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type);
+
   --  Marshallers for DATA type captor_data
 
   procedure Marshall

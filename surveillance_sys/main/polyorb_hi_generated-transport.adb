@@ -12,6 +12,7 @@ with PolyORB_HI.Utils;
 with PolyORB_HI_Generated.Activity;
 use PolyORB_HI_Generated.Activity;
 with PolyORB_HI_Generated.Marshallers;
+with PolyORB_HI.Transport_Low_Level;
 
 package body PolyORB_HI_Generated.Transport is
 
@@ -199,10 +200,10 @@ package body PolyORB_HI_Generated.Transport is
     Thread_Interface_Ü : surveillance_system_alarm_activator_impl_Interface;
   begin
     if (Port
-      = PolyORB_HI_Generated.Deployment.main_alarm_test_K)
+      = PolyORB_HI_Generated.Deployment.main_alarm_decision_K)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test,
+       (decision,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message
@@ -210,10 +211,10 @@ package body PolyORB_HI_Generated.Transport is
         Thread_Interface_Ü,
         From);
     elsif (Port
-      = PolyORB_HI_Generated.Deployment.main_alarm_test1_K)
+      = PolyORB_HI_Generated.Deployment.main_alarm_decision1_K)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test1,
+       (decision1,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message
@@ -221,10 +222,10 @@ package body PolyORB_HI_Generated.Transport is
         Thread_Interface_Ü,
         From);
     elsif (Port
-      = PolyORB_HI_Generated.Deployment.main_alarm_test2_K)
+      = PolyORB_HI_Generated.Deployment.main_alarm_decision2_K)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test2,
+       (decision2,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message
@@ -232,10 +233,10 @@ package body PolyORB_HI_Generated.Transport is
         Thread_Interface_Ü,
         From);
     elsif (Port
-      = PolyORB_HI_Generated.Deployment.main_alarm_test3_K)
+      = PolyORB_HI_Generated.Deployment.main_alarm_decision3_K)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test3,
+       (decision3,
         Thread_Interface_Ü,
         Msg);
       PolyORB_HI_Generated.Activity.Store_Received_Message
@@ -260,12 +261,20 @@ package body PolyORB_HI_Generated.Transport is
     pragma Warnings
      (Off,
       Entity);
+    use PolyORB_HI_Generated.Deployment;
   begin
-    --  Device
-    --  Device
-    --  Device
-    return PolyORB_HI.Errors.Error_Kind'
-     (PolyORB_HI.Errors.Error_Transport);
+    if (Entity
+      = PolyORB_HI_Generated.Deployment.video_video_captor_t_K)
+    then
+      --  Default transport mechanism
+      return PolyORB_HI.Transport_Low_Level.Send
+       (PolyORB_HI_Generated.Deployment.Entity_Table
+         (Entity),
+        Message);
+    else
+      return PolyORB_HI.Errors.Error_Kind'
+       (PolyORB_HI.Errors.Error_Transport);
+    end if;
   end surveillance_system_alarm_Send;
 
   -------------------------------------------

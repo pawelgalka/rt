@@ -55,7 +55,7 @@ package body PolyORB_HI_Generated.Activity is
     camera3_capture =>
      PolyORB_HI.Port_Kinds.In_Data_Port,
     start =>
-     PolyORB_HI.Port_Kinds.In_Event_Port,
+     PolyORB_HI.Port_Kinds.In_Event_Data_Port,
     output_converted =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
@@ -194,6 +194,7 @@ package body PolyORB_HI_Generated.Activity is
     camera1_capture_V : PolyORB_HI_Generated.Types.camera_image;
     camera2_capture_V : PolyORB_HI_Generated.Types.camera_image;
     camera3_capture_V : PolyORB_HI_Generated.Types.camera_image;
+    start_V : PolyORB_HI_Generated.Types.Integer_Type;
     handler_Status : PolyORB_HI_Generated.Subprograms.event_handlers_video_captor_handler_Status;
     Error_Ü : PolyORB_HI.Errors.Error_Kind;
     use type PolyORB_HI.Errors.Error_Kind;
@@ -232,6 +233,17 @@ package body PolyORB_HI_Generated.Activity is
       camera3_capture_V :=
        PolyORB_HI_Generated.Types.camera_image_Default_Value;
     end if;
+    if (surveillance_system_video_captor_t_Interrogators.Get_Count
+     (start)
+      /= -1)
+    then
+      start_V :=
+       surveillance_system_video_captor_t_Interrogators.Get_Value
+         (start).start_DATA;
+    else
+      start_V :=
+       PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
+    end if;
     --  Dequeue the IN port values
     surveillance_system_video_captor_t_Interrogators.Next_Value
      (surveillance_system_video_captor_impl_Port_Type'
@@ -241,6 +253,7 @@ package body PolyORB_HI_Generated.Activity is
      (det1 => camera1_capture_V,
       det2 => camera2_capture_V,
       det3 => camera3_capture_V,
+      data_sink => start_V,
       Status => handler_Status);
     if (PolyORB_HI_Generated.Subprograms.Get_Count
      (handler_Status,

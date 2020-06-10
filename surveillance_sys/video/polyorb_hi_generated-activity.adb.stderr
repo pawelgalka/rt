@@ -1,1 +1,1 @@
-polyorb_hi_generated-activity.adb:368:05: warning: variable "message_V" is assigned but never read
+polyorb_hi_generated-activity.adb:381:05: warning: variable "message_V" is assigned but never read

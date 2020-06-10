@@ -1,0 +1,6 @@
+capture.adb:2:06: warning: redundant with clause in body
+capture.adb:8:18: warning: formal parameter "det1" is not referenced
+capture.adb:9:02: warning: formal parameter "det2" is not referenced
+capture.adb:10:02: warning: formal parameter "det3" is not referenced
+capture.adb:12:02: warning: formal parameter "Status" is not referenced
+capture.ads:1:26: warning: no entities of "PolyORB_HI_Generated.Deployment" are referenced

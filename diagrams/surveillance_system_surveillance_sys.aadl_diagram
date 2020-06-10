@@ -264,6 +264,18 @@
         <point x="2367.0" y="246.0"/>
       </bendpoints>
     </element>
+    <element uuid="c8ef9a2e-0461-41dc-b13c-30c96e6a3757" manual="true">
+      <element uuid="48571587-1a94-498e-b49d-a6505f265bc8" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cn11</seg>
+      </bo>
+    </element>
     <element uuid="a5d24718-374e-4d84-ba46-c20248bf9082" manual="true">
       <element uuid="5d5b613b-4687-4745-a3e0-5bd84f31689a" manual="true">
         <bo>
@@ -598,6 +610,21 @@
       </bo>
       <position x="12.0" y="59.0"/>
       <size width="171.0" height="60.0"/>
+    </element>
+    <element uuid="d7058f39-7ead-4da4-82bf-bbcf19fe8a56" manual="true">
+      <element uuid="3f77c9ce-8325-435c-9001-e274f7e48fd2" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>vme</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>cpu1</seg>
+      </bo>
+      <position/>
+      <size width="178.0" height="60.0"/>
     </element>
     <element uuid="b436ab84-a889-4c72-ab8a-8214083cd46f" manual="true">
       <element uuid="a3adbe45-2bf2-49c3-b188-8a2062e5c893" manual="true" dockArea="right">

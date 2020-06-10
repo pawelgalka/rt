@@ -50,106 +50,115 @@ package body PolyORB_HI_Generated.Activity is
 
   surveillance_system_alarm_Port_Kinds : constant surveillance_system_alarm_activator_impl_Port_Kind_Array :=
    (detected =>
-     PolyORB_HI.Port_Kinds.Out_Event_Port,
-    test =>
+     PolyORB_HI.Port_Kinds.Out_Event_Data_Port,
+    decision =>
      PolyORB_HI.Port_Kinds.In_Event_Data_Port,
-    test1 =>
+    decision1 =>
      PolyORB_HI.Port_Kinds.In_Event_Data_Port,
-    test2 =>
+    decision2 =>
      PolyORB_HI.Port_Kinds.In_Event_Data_Port,
-    test3 =>
+    decision3 =>
      PolyORB_HI.Port_Kinds.In_Event_Data_Port);
 
   surveillance_system_alarm_Port_Images : constant surveillance_system_alarm_activator_impl_Port_Image_Array :=
    (detected =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.main_alarm_detected_K),
-    test =>
+    decision =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_alarm_test_K),
-    test1 =>
+       (PolyORB_HI_Generated.Deployment.main_alarm_decision_K),
+    decision1 =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_alarm_test1_K),
-    test2 =>
+       (PolyORB_HI_Generated.Deployment.main_alarm_decision1_K),
+    decision2 =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_alarm_test2_K),
-    test3 =>
+       (PolyORB_HI_Generated.Deployment.main_alarm_decision2_K),
+    decision3 =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_alarm_test3_K));
+       (PolyORB_HI_Generated.Deployment.main_alarm_decision3_K));
 
   surveillance_system_alarm_FIFO_Sizes : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
      -1,
-    test =>
+    decision =>
      16,
-    test1 =>
+    decision1 =>
      16,
-    test2 =>
+    decision2 =>
      16,
-    test3 =>
+    decision3 =>
      16);
 
   surveillance_system_alarm_Offsets : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
      0,
-    test =>
+    decision =>
      1,
-    test1 =>
+    decision1 =>
      17,
-    test2 =>
+    decision2 =>
      33,
-    test3 =>
+    decision3 =>
      49);
 
   surveillance_system_alarm_Overflow_Protocols : constant surveillance_system_alarm_activator_impl_Overflow_Protocol_Array :=
    (detected =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test1 =>
+    decision1 =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test2 =>
+    decision2 =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test3 =>
+    decision3 =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_alarm_Urgencies : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
      0,
-    test =>
+    decision =>
      0,
-    test1 =>
+    decision1 =>
      0,
-    test2 =>
+    decision2 =>
      0,
-    test3 =>
+    decision3 =>
      0);
 
   surveillance_system_alarm_Total_FIFO_Size : constant Standard.Integer :=
    64;
 
+  type UT_Activity_Main_alarm_detected_Destinations_Array is
+   array (Standard.Positive range <>)
+     of PolyORB_HI_Generated.Deployment.Port_Type;
+
+  alarm_detected_Destinations : constant UT_Activity_Main_alarm_detected_Destinations_Array :=
+   UT_Activity_Main_alarm_detected_Destinations_Array'
+     (1 =>
+       PolyORB_HI_Generated.Deployment.video_video_captor_t_start_K);
+
   surveillance_system_alarm_N_Destinations : constant surveillance_system_alarm_activator_impl_Integer_Array :=
    (detected =>
+     1,
+    decision =>
      0,
-    test =>
+    decision1 =>
      0,
-    test1 =>
+    decision2 =>
      0,
-    test2 =>
-     0,
-    test3 =>
+    decision3 =>
      0);
 
   alarm_Destinations : constant surveillance_system_alarm_activator_impl_Address_Array :=
    (detected =>
+     alarm_detected_Destinations'Address,
+    decision =>
      System.null_Address,
-    test =>
+    decision1 =>
      System.null_Address,
-    test1 =>
+    decision2 =>
      System.null_Address,
-    test2 =>
-     System.null_Address,
-    test3 =>
+    decision3 =>
      System.null_Address);
 
   package surveillance_system_alarm_Interrogators is
@@ -183,90 +192,84 @@ package body PolyORB_HI_Generated.Activity is
   -----------------------------------
 
   function surveillance_system_alarm_Job return PolyORB_HI.Errors.Error_Kind is
-    test_V : PolyORB_HI_Generated.Types.Integer_Type;
-    test1_V : PolyORB_HI_Generated.Types.Integer_Type;
-    test2_V : PolyORB_HI_Generated.Types.Integer_Type;
-    test3_V : PolyORB_HI_Generated.Types.Integer_Type;
-    activator_Status : PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Status;
+    decision_V : PolyORB_HI_Generated.Types.Integer_Type;
+    decision1_V : PolyORB_HI_Generated.Types.Integer_Type;
+    decision2_V : PolyORB_HI_Generated.Types.Integer_Type;
+    decision3_V : PolyORB_HI_Generated.Types.Integer_Type;
+    detected_V : PolyORB_HI_Generated.Types.Integer_Type;
     Error_Ü : PolyORB_HI.Errors.Error_Kind;
     use type PolyORB_HI.Errors.Error_Kind;
   begin
     --  Get the IN port values
     if (surveillance_system_alarm_Interrogators.Get_Count
-     (test)
+     (decision)
       /= -1)
     then
-      test_V :=
+      decision_V :=
        surveillance_system_alarm_Interrogators.Get_Value
-         (test).test_DATA;
+         (decision).decision_DATA;
     else
-      test_V :=
+      decision_V :=
        PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
     end if;
     if (surveillance_system_alarm_Interrogators.Get_Count
-     (test1)
+     (decision1)
       /= -1)
     then
-      test1_V :=
+      decision1_V :=
        surveillance_system_alarm_Interrogators.Get_Value
-         (test1).test1_DATA;
+         (decision1).decision1_DATA;
     else
-      test1_V :=
+      decision1_V :=
        PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
     end if;
     if (surveillance_system_alarm_Interrogators.Get_Count
-     (test2)
+     (decision2)
       /= -1)
     then
-      test2_V :=
+      decision2_V :=
        surveillance_system_alarm_Interrogators.Get_Value
-         (test2).test2_DATA;
+         (decision2).decision2_DATA;
     else
-      test2_V :=
+      decision2_V :=
        PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
     end if;
     if (surveillance_system_alarm_Interrogators.Get_Count
-     (test3)
+     (decision3)
       /= -1)
     then
-      test3_V :=
+      decision3_V :=
        surveillance_system_alarm_Interrogators.Get_Value
-         (test3).test3_DATA;
+         (decision3).decision3_DATA;
     else
-      test3_V :=
+      decision3_V :=
        PolyORB_HI_Generated.Types.Integer_Type_Default_Value;
     end if;
     --  Dequeue the IN port values
     surveillance_system_alarm_Interrogators.Next_Value
      (surveillance_system_alarm_activator_impl_Port_Type'
-       (test));
+       (decision));
     surveillance_system_alarm_Interrogators.Next_Value
      (surveillance_system_alarm_activator_impl_Port_Type'
-       (test1));
+       (decision1));
     surveillance_system_alarm_Interrogators.Next_Value
      (surveillance_system_alarm_activator_impl_Port_Type'
-       (test2));
+       (decision2));
     surveillance_system_alarm_Interrogators.Next_Value
      (surveillance_system_alarm_activator_impl_Port_Type'
-       (test3));
+       (decision3));
     --  Call implementation
     PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator
-     (det1 => test1_V,
-      det2 => test2_V,
-      det3 => test3_V,
-      rfid => test_V,
-      Status => activator_Status);
-    if (PolyORB_HI_Generated.Subprograms.Get_Count
-     (activator_Status,
-      PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Port_Type'
-       (PolyORB_HI_Generated.Subprograms.result))
-      >= 1)
-    then
-      PolyORB_HI_Generated.Activity.Put_Value
-       (PolyORB_HI_Generated.Deployment.main_alarm_K,
-        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
-         (Port => detected));
-    end if;
+     (result => detected_V,
+      det1 => decision1_V,
+      det2 => decision2_V,
+      det3 => decision3_V,
+      rfid => decision_V);
+    --  Set the call sequence OUT port values
+    surveillance_system_alarm_Interrogators.Put_Value
+     (surveillance_system_alarm_activator_impl_Interface'
+       (Port => detected,
+        detected_DATA => detected_V));
     --  Send the call sequence OUT port values
     Error_Ü :=
      surveillance_system_alarm_Interrogators.Send_Output
@@ -313,7 +316,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.In_Event_Port,
     door =>
      PolyORB_HI.Port_Kinds.In_Event_Port,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
   surveillance_system_detector1_Port_Images : constant surveillance_system_detector_impl_Port_Image_Array :=
@@ -323,16 +326,16 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.main_detector1_door_K),
-    test =>
+    decision =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_detector1_test_K));
+       (PolyORB_HI_Generated.Deployment.main_detector1_decision_K));
 
   surveillance_system_detector1_FIFO_Sizes : constant surveillance_system_detector_impl_Integer_Array :=
    (motion =>
      16,
     door =>
      16,
-    test =>
+    decision =>
      -1);
 
   surveillance_system_detector1_Offsets : constant surveillance_system_detector_impl_Integer_Array :=
@@ -340,7 +343,7 @@ package body PolyORB_HI_Generated.Activity is
      1,
     door =>
      17,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector1_Overflow_Protocols : constant surveillance_system_detector_impl_Overflow_Protocol_Array :=
@@ -348,7 +351,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.Dropoldest,
     door =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_detector1_Urgencies : constant surveillance_system_detector_impl_Integer_Array :=
@@ -356,27 +359,27 @@ package body PolyORB_HI_Generated.Activity is
      0,
     door =>
      0,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector1_Total_FIFO_Size : constant Standard.Integer :=
    32;
 
-  type UT_Activity_Main_detector1_test_Destinations_Array is
+  type UT_Activity_Main_detector1_decision_Destinations_Array is
    array (Standard.Positive range <>)
      of PolyORB_HI_Generated.Deployment.Port_Type;
 
-  detector1_test_Destinations : constant UT_Activity_Main_detector1_test_Destinations_Array :=
-   UT_Activity_Main_detector1_test_Destinations_Array'
+  detector1_decision_Destinations : constant UT_Activity_Main_detector1_decision_Destinations_Array :=
+   UT_Activity_Main_detector1_decision_Destinations_Array'
      (1 =>
-       PolyORB_HI_Generated.Deployment.main_alarm_test1_K);
+       PolyORB_HI_Generated.Deployment.main_alarm_decision1_K);
 
   surveillance_system_detector1_N_Destinations : constant surveillance_system_detector_impl_Integer_Array :=
    (motion =>
      0,
     door =>
      0,
-    test =>
+    decision =>
      1);
 
   detector1_Destinations : constant surveillance_system_detector_impl_Address_Array :=
@@ -384,8 +387,8 @@ package body PolyORB_HI_Generated.Activity is
      System.null_Address,
     door =>
      System.null_Address,
-    test =>
-     detector1_test_Destinations'Address);
+    decision =>
+     detector1_decision_Destinations'Address);
 
   package surveillance_system_detector1_Interrogators is
    new PolyORB_HI.Thread_Interrogators
@@ -442,8 +445,8 @@ package body PolyORB_HI_Generated.Activity is
       PolyORB_HI_Generated.Activity.Put_Value
        (PolyORB_HI_Generated.Deployment.main_detector1_K,
         PolyORB_HI_Generated.Activity.surveillance_system_detector_impl_Interface'
-         (Port => test,
-          test_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+         (Port => decision,
+          decision_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
            (detector_handler_Status,
             PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler_Port_Type'
              (PolyORB_HI_Generated.Subprograms.Data_Source)).Data_Source_DATA));
@@ -451,7 +454,7 @@ package body PolyORB_HI_Generated.Activity is
     --  Send the call sequence OUT port values
     Error_Ü :=
      surveillance_system_detector1_Interrogators.Send_Output
-       (test);
+       (decision);
     if (Error_Ü
       /= PolyORB_HI.Errors.Error_None)
     then
@@ -494,7 +497,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.In_Event_Port,
     door =>
      PolyORB_HI.Port_Kinds.In_Event_Port,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
   surveillance_system_detector2_Port_Images : constant surveillance_system_detector_impl1_Port_Image_Array :=
@@ -504,16 +507,16 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.main_detector2_door_K),
-    test =>
+    decision =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_detector2_test_K));
+       (PolyORB_HI_Generated.Deployment.main_detector2_decision_K));
 
   surveillance_system_detector2_FIFO_Sizes : constant surveillance_system_detector_impl1_Integer_Array :=
    (motion =>
      16,
     door =>
      16,
-    test =>
+    decision =>
      -1);
 
   surveillance_system_detector2_Offsets : constant surveillance_system_detector_impl1_Integer_Array :=
@@ -521,7 +524,7 @@ package body PolyORB_HI_Generated.Activity is
      1,
     door =>
      17,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector2_Overflow_Protocols : constant surveillance_system_detector_impl1_Overflow_Protocol_Array :=
@@ -529,7 +532,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.Dropoldest,
     door =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_detector2_Urgencies : constant surveillance_system_detector_impl1_Integer_Array :=
@@ -537,27 +540,27 @@ package body PolyORB_HI_Generated.Activity is
      0,
     door =>
      0,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector2_Total_FIFO_Size : constant Standard.Integer :=
    32;
 
-  type UT_Activity_Main_detector2_test_Destinations_Array is
+  type UT_Activity_Main_detector2_decision_Destinations_Array is
    array (Standard.Positive range <>)
      of PolyORB_HI_Generated.Deployment.Port_Type;
 
-  detector2_test_Destinations : constant UT_Activity_Main_detector2_test_Destinations_Array :=
-   UT_Activity_Main_detector2_test_Destinations_Array'
+  detector2_decision_Destinations : constant UT_Activity_Main_detector2_decision_Destinations_Array :=
+   UT_Activity_Main_detector2_decision_Destinations_Array'
      (1 =>
-       PolyORB_HI_Generated.Deployment.main_alarm_test2_K);
+       PolyORB_HI_Generated.Deployment.main_alarm_decision2_K);
 
   surveillance_system_detector2_N_Destinations : constant surveillance_system_detector_impl1_Integer_Array :=
    (motion =>
      0,
     door =>
      0,
-    test =>
+    decision =>
      1);
 
   detector2_Destinations : constant surveillance_system_detector_impl1_Address_Array :=
@@ -565,8 +568,8 @@ package body PolyORB_HI_Generated.Activity is
      System.null_Address,
     door =>
      System.null_Address,
-    test =>
-     detector2_test_Destinations'Address);
+    decision =>
+     detector2_decision_Destinations'Address);
 
   package surveillance_system_detector2_Interrogators is
    new PolyORB_HI.Thread_Interrogators
@@ -623,8 +626,8 @@ package body PolyORB_HI_Generated.Activity is
       PolyORB_HI_Generated.Activity.Put_Value
        (PolyORB_HI_Generated.Deployment.main_detector2_K,
         PolyORB_HI_Generated.Activity.surveillance_system_detector_impl1_Interface'
-         (Port => test,
-          test_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+         (Port => decision,
+          decision_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
            (detector_handler_Status,
             PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler1_Port_Type'
              (PolyORB_HI_Generated.Subprograms.Data_Source)).Data_Source_DATA));
@@ -632,7 +635,7 @@ package body PolyORB_HI_Generated.Activity is
     --  Send the call sequence OUT port values
     Error_Ü :=
      surveillance_system_detector2_Interrogators.Send_Output
-       (test);
+       (decision);
     if (Error_Ü
       /= PolyORB_HI.Errors.Error_None)
     then
@@ -675,7 +678,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.In_Event_Port,
     door =>
      PolyORB_HI.Port_Kinds.In_Event_Port,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
   surveillance_system_detector3_Port_Images : constant surveillance_system_detector_impl2_Port_Image_Array :=
@@ -685,16 +688,16 @@ package body PolyORB_HI_Generated.Activity is
     door =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.main_detector3_door_K),
-    test =>
+    decision =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_detector3_test_K));
+       (PolyORB_HI_Generated.Deployment.main_detector3_decision_K));
 
   surveillance_system_detector3_FIFO_Sizes : constant surveillance_system_detector_impl2_Integer_Array :=
    (motion =>
      16,
     door =>
      16,
-    test =>
+    decision =>
      -1);
 
   surveillance_system_detector3_Offsets : constant surveillance_system_detector_impl2_Integer_Array :=
@@ -702,7 +705,7 @@ package body PolyORB_HI_Generated.Activity is
      1,
     door =>
      17,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector3_Overflow_Protocols : constant surveillance_system_detector_impl2_Overflow_Protocol_Array :=
@@ -710,7 +713,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.Dropoldest,
     door =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_detector3_Urgencies : constant surveillance_system_detector_impl2_Integer_Array :=
@@ -718,27 +721,27 @@ package body PolyORB_HI_Generated.Activity is
      0,
     door =>
      0,
-    test =>
+    decision =>
      0);
 
   surveillance_system_detector3_Total_FIFO_Size : constant Standard.Integer :=
    32;
 
-  type UT_Activity_Main_detector3_test_Destinations_Array is
+  type UT_Activity_Main_detector3_decision_Destinations_Array is
    array (Standard.Positive range <>)
      of PolyORB_HI_Generated.Deployment.Port_Type;
 
-  detector3_test_Destinations : constant UT_Activity_Main_detector3_test_Destinations_Array :=
-   UT_Activity_Main_detector3_test_Destinations_Array'
+  detector3_decision_Destinations : constant UT_Activity_Main_detector3_decision_Destinations_Array :=
+   UT_Activity_Main_detector3_decision_Destinations_Array'
      (1 =>
-       PolyORB_HI_Generated.Deployment.main_alarm_test3_K);
+       PolyORB_HI_Generated.Deployment.main_alarm_decision3_K);
 
   surveillance_system_detector3_N_Destinations : constant surveillance_system_detector_impl2_Integer_Array :=
    (motion =>
      0,
     door =>
      0,
-    test =>
+    decision =>
      1);
 
   detector3_Destinations : constant surveillance_system_detector_impl2_Address_Array :=
@@ -746,8 +749,8 @@ package body PolyORB_HI_Generated.Activity is
      System.null_Address,
     door =>
      System.null_Address,
-    test =>
-     detector3_test_Destinations'Address);
+    decision =>
+     detector3_decision_Destinations'Address);
 
   package surveillance_system_detector3_Interrogators is
    new PolyORB_HI.Thread_Interrogators
@@ -804,8 +807,8 @@ package body PolyORB_HI_Generated.Activity is
       PolyORB_HI_Generated.Activity.Put_Value
        (PolyORB_HI_Generated.Deployment.main_detector3_K,
         PolyORB_HI_Generated.Activity.surveillance_system_detector_impl2_Interface'
-         (Port => test,
-          test_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+         (Port => decision,
+          decision_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
            (detector_handler_Status,
             PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler2_Port_Type'
              (PolyORB_HI_Generated.Subprograms.Data_Source)).Data_Source_DATA));
@@ -813,7 +816,7 @@ package body PolyORB_HI_Generated.Activity is
     --  Send the call sequence OUT port values
     Error_Ü :=
      surveillance_system_detector3_Interrogators.Send_Output
-       (test);
+       (decision);
     if (Error_Ü
       /= PolyORB_HI.Errors.Error_None)
     then
@@ -858,7 +861,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.Out_Event_Port,
     motion =>
      PolyORB_HI.Port_Kinds.Out_Event_Port,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Out_Event_Data_Port);
 
   surveillance_system_rfid_reader_Port_Images : constant surveillance_system_rfid_thread_impl_Port_Image_Array :=
@@ -871,9 +874,9 @@ package body PolyORB_HI_Generated.Activity is
     motion =>
      PolyORB_HI_Generated.Deployment.Port_Image
        (PolyORB_HI_Generated.Deployment.main_rfid_reader_motion_K),
-    test =>
+    decision =>
      PolyORB_HI_Generated.Deployment.Port_Image
-       (PolyORB_HI_Generated.Deployment.main_rfid_reader_test_K));
+       (PolyORB_HI_Generated.Deployment.main_rfid_reader_decision_K));
 
   surveillance_system_rfid_reader_FIFO_Sizes : constant surveillance_system_rfid_thread_impl_Integer_Array :=
    (rfid_read =>
@@ -882,7 +885,7 @@ package body PolyORB_HI_Generated.Activity is
      -1,
     motion =>
      -1,
-    test =>
+    decision =>
      -1);
 
   surveillance_system_rfid_reader_Offsets : constant surveillance_system_rfid_thread_impl_Integer_Array :=
@@ -892,7 +895,7 @@ package body PolyORB_HI_Generated.Activity is
      0,
     motion =>
      0,
-    test =>
+    decision =>
      0);
 
   surveillance_system_rfid_reader_Overflow_Protocols : constant surveillance_system_rfid_thread_impl_Overflow_Protocol_Array :=
@@ -902,7 +905,7 @@ package body PolyORB_HI_Generated.Activity is
      PolyORB_HI.Port_Kinds.Dropoldest,
     motion =>
      PolyORB_HI.Port_Kinds.Dropoldest,
-    test =>
+    decision =>
      PolyORB_HI.Port_Kinds.Dropoldest);
 
   surveillance_system_rfid_reader_Urgencies : constant surveillance_system_rfid_thread_impl_Integer_Array :=
@@ -912,20 +915,20 @@ package body PolyORB_HI_Generated.Activity is
      0,
     motion =>
      0,
-    test =>
+    decision =>
      0);
 
   surveillance_system_rfid_reader_Total_FIFO_Size : constant Standard.Integer :=
    16;
 
-  type UT_Activity_Main_rfid_reader_test_Destinations_Array is
+  type UT_Activity_Main_rfid_reader_decision_Destinations_Array is
    array (Standard.Positive range <>)
      of PolyORB_HI_Generated.Deployment.Port_Type;
 
-  rfid_reader_test_Destinations : constant UT_Activity_Main_rfid_reader_test_Destinations_Array :=
-   UT_Activity_Main_rfid_reader_test_Destinations_Array'
+  rfid_reader_decision_Destinations : constant UT_Activity_Main_rfid_reader_decision_Destinations_Array :=
+   UT_Activity_Main_rfid_reader_decision_Destinations_Array'
      (1 =>
-       PolyORB_HI_Generated.Deployment.main_alarm_test_K);
+       PolyORB_HI_Generated.Deployment.main_alarm_decision_K);
 
   surveillance_system_rfid_reader_N_Destinations : constant surveillance_system_rfid_thread_impl_Integer_Array :=
    (rfid_read =>
@@ -934,7 +937,7 @@ package body PolyORB_HI_Generated.Activity is
      0,
     motion =>
      0,
-    test =>
+    decision =>
      1);
 
   rfid_reader_Destinations : constant surveillance_system_rfid_thread_impl_Address_Array :=
@@ -944,8 +947,8 @@ package body PolyORB_HI_Generated.Activity is
      System.null_Address,
     motion =>
      System.null_Address,
-    test =>
-     rfid_reader_test_Destinations'Address);
+    decision =>
+     rfid_reader_decision_Destinations'Address);
 
   package surveillance_system_rfid_reader_Interrogators is
    new PolyORB_HI.Thread_Interrogators
@@ -999,8 +1002,8 @@ package body PolyORB_HI_Generated.Activity is
       PolyORB_HI_Generated.Activity.Put_Value
        (PolyORB_HI_Generated.Deployment.main_rfid_reader_K,
         PolyORB_HI_Generated.Activity.surveillance_system_rfid_thread_impl_Interface'
-         (Port => test,
-          test_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
+         (Port => decision,
+          decision_DATA => PolyORB_HI_Generated.Subprograms.Get_Value
            (detector_handler_Status,
             PolyORB_HI_Generated.Subprograms.event_handlers_rfid_handler_Port_Type'
              (PolyORB_HI_Generated.Subprograms.Data_Source)).Data_Source_DATA));
@@ -1008,7 +1011,7 @@ package body PolyORB_HI_Generated.Activity is
     --  Send the call sequence OUT port values
     Error_Ü :=
      surveillance_system_rfid_reader_Interrogators.Send_Output
-       (test);
+       (decision);
     if (Error_Ü
       /= PolyORB_HI.Errors.Error_None)
     then

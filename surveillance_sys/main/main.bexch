@@ -2,7 +2,7 @@
 b__main.o
 [PROJECT FILES]
 /home/p/rt/surveillance_sys/main/main.gpr
-20200609233958
+20200610194754
 /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/polyorb_hi.gpr
 20170204221544
 [BOUND OBJECT FILES]
@@ -23,10 +23,12 @@ b__main.o
 /home/p/rt/surveillance_sys/main/polyorb_hi-time_marshallers.o
 /home/p/rt/surveillance_sys/main/polyorb_hi-unprotected_queue.o
 /home/p/rt/surveillance_sys/main/polyorb_hi-thread_interrogators.o
+/home/p/rt/surveillance_sys/main/polyorb_hi_generated-naming.o
 /home/p/rt/surveillance_sys/main/polyorb_hi_generated-types.o
 /home/p/rt/surveillance_sys/main/polyorb_hi_generated-subprograms.o
 /home/p/rt/surveillance_sys/main/surveillance.o
 /home/p/rt/surveillance_sys/main/polyorb_hi_generated-marshallers.o
+/home/p/rt/surveillance_sys/main/polyorb_hi-transport_low_level_sockets.o
 /home/p/rt/surveillance_sys/main/polyorb_hi_generated-activity.o
 /home/p/rt/surveillance_sys/main/polyorb_hi_generated-transport.o
 /home/p/rt/surveillance_sys/main/main.o

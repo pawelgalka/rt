@@ -46,7 +46,7 @@ Z polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 Z polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
 Z system%s		system.ads		system.ali
 
-U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  ea78a7f9 BN EE NE OO PK GE
+U polyorb_hi.thread_interrogators%s  polyorb_hi-thread_interrogators.ads  cfb18e2a BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -78,7 +78,7 @@ D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotect
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
@@ -158,13 +158,13 @@ X 15 polyorb_hi-thread_interrogators.ads
 . 242r27 251r36 262r33 364r36 374r31 391r32 408r31 425r33 440r51 458r41 502r33
 51A9 Integer_Array(integer)<47E9> 87r27 96r29 109r19 119r24 16|57r7
 54A9 Port_Kind_Array(12|37E9)<47E9> 77r27 16|58r7
-57A9 Port_Image_Array(22|258A11)<47E9> 84r28 16|59r7
+57A9 Port_Image_Array(22|307A11)<47E9> 84r28 16|59r7
 61A9 Address_Array(23|67M9)<47E9> 124r22
 64A9 Overflow_Protocol_Array(12|48E9)<47E9> 105r35 16|60r7
 68+9 Thread_Interface_Type 68d32 130r18 151r44 162r49 193r26 16|61r7 277r30
 . 351r44 374r49 376r25 487r26
 68*32 Port{47E9}
-73e4 Current_Entity{22|60E8} 16|62r7 329r28 356r11
+73e4 Current_Entity{22|65E8} 16|62r7 329r28 356r11
 77*4 Thread_Port_Kinds{54A9} 16|63r7 274r39
 81b4 Has_Event_Ports{boolean} 16|64r7
 84*4 Thread_Port_Images{57A9} 16|65r7 163r27 285r35 293r38 340r38 382r24
@@ -180,8 +180,8 @@ X 15 polyorb_hi-thread_interrogators.ads
 130*7 R{68+9}
 131r7 M{10|44R9}
 134V18 Send{8|34E9} 135>7 136>7 137>7 16|329s22
-135e7 From{22|60E8}
-136e7 Entity{22|60E8}
+135e7 From{22|65E8}
+136e7 Entity{22|65E8}
 137r7 Message{10|44R9}
 141V18 Next_Deadline{3|51O9} 16|357s10
 145k20*Thread_Interrogators 7|35k9 15|47z9 51z9 54z9 57z9 61z9 64z9 68z9
@@ -196,7 +196,7 @@ X 15 polyorb_hi-thread_interrogators.ads
 156*29 Port{47E9} 16|364b29 365r28
 162V13*Get_Value{68+9} 162>24 16|374b13 385l8 385t17
 162*24 Port{47E9} 16|374b24 375r62 382r44
-168V13*Get_Sender{22|60E8} 169>7 16|391b13 402l8 402t18
+168V13*Get_Sender{22|65E8} 169>7 16|391b13 402l8 402t18
 169*7 Port{47E9} 16|391b25 392r62 398r44
 176V13*Get_Count{integer} 176>24 16|408b13 419l8 419t17
 176*24 Port{47E9} 16|408b24 409r55 414r53
@@ -209,7 +209,7 @@ X 15 polyorb_hi-thread_interrogators.ads
 188b52 Valid{boolean} 16|458b52 463m38 465r10
 192U14*Store_Received_Message 193>7 194>7 195>7 16|486b14 496l8 496t30
 193*7 Thread_Interface{68+9} 16|487b7 495r38
-194e7 From{22|60E8} 16|488b7 495r11
+194e7 From{22|65E8} 16|488b7 495r11
 195o7 Time_Stamp{3|51O9} 16|489b7 495r58
 202V13*Get_Time_Stamp{3|51O9} 202>29 16|502b13 505l8 505t22
 202*29 P{47E9} 16|502b29 504r43
@@ -247,7 +247,7 @@ X 16 polyorb_hi-thread_interrogators.adb
 141b7 Not_Empty{boolean} 153r49 157r35 172r35 181m28 226m29
 153*25 P{15|47E9}
 154b10 Valid{boolean} 155r31 157m28
-264A13 Port_Type_Array(22|141E8)<integer> 266r47
+264A13 Port_Type_Array(22|160E8)<integer> 266r47
 266P14 Port_Type_Array_Access(264A13) 269r28 271r30
 268V18 To_Pointer[4|20]{266P14} 272s11
 271p9 Dst{266P14} 306r31 325r65 327r47 329r56
@@ -260,7 +260,7 @@ X 16 polyorb_hi-thread_interrogators.adb
 302i14 To{integer} 306r36 325r70 327r52 329r61
 375a7 Stream{18|121A9[55]} 376r71
 376*7 T_Port{15|68+9} 384r14
-392e7 Sender{22|60E8} 400r38 401r14
+392e7 Sender{22|65E8} 400r38 401r14
 409i7 Count{integer} 416r48 418r14
 426r7 P{18|125R9[55]} 433m35
 459b7 Not_Empty{boolean} 460r29
@@ -271,7 +271,7 @@ X 18 polyorb_hi-unprotected_queue.ads
 121A9 Port_Stream<14|53A9>(14|44M9)<14|46I9> 16|375r25[55]
 125R9 Port_Stream_Entry 16|95r49[55] 99r47[55] 104r48[55] 119r31[55] 129r32[55]
 . 179r49[55] 188r47[55] 197r48[55] 224r31[55] 233r32[55] 426r11[55]
-126e7 From{22|60E8} 16|392r68[55]
+126e7 From{22|65E8} 16|392r68[55]
 127a7 Payload{121A9[16|55]} 16|278r41[55] 375r68[55]
 135V13 Interface_To_Stream[4|20]{121A9[16|55]} 16|356s27[55] 495s17[55]
 137V13 Stream_To_Interface[4|20]{15|68+9} 16|277s55[55] 376s50[55]
@@ -296,18 +296,18 @@ X 21 polyorb_hi_generated.ads
 . 325r21 21|38e25
 X 22 polyorb_hi_generated-deployment.ads
 10K30*Deployment 15|40w27 40r64 58r26 73r45 170r34 194r47 16|265r34 325r42
-. 22|314e36
-60E8*Entity_Type 15|73r56 135r17 136r17 170r45 194r58 16|391r50 392r25 488r26
-. 22|65e24
-117A11*UT_Deployment_Main_Entity_Image_Component{string}<integer>
-121A8*UT_Deployment_Main_Entity_Image_Array(117A11)<60E8>
-125a3*Entity_Image{121A8} 16|327r21 400r24
-141E8*Port_Type 16|265r45 22|159e29
-210A8*UT_Deployment_Main_Port_Table_Array(60E8)<141E8>
-214a3*Port_Table{210A8} 16|327r35 329r44
-258A11*Port_Sized_String{string}<integer> 15|58r37
-264A8*UT_Deployment_Main_Port_Image_Array(258A11)<141E8>
-268a3*Port_Image{264A8} 16|325r53
+. 22|375e36
+65E8*Entity_Type 15|73r56 135r17 136r17 170r45 194r58 16|391r50 392r25 488r26
+. 22|72e28
+132A11*UT_Deployment_Main_Entity_Image_Component{string}<integer>
+136A8*UT_Deployment_Main_Entity_Image_Array(132A11)<65E8>
+140a3*Entity_Image{136A8} 16|327r21 400r24
+160E8*Port_Type 16|265r45 22|184e36
+247A8*UT_Deployment_Main_Port_Table_Array(65E8)<160E8>
+251a3*Port_Table{247A8} 16|327r35 329r44
+307A11*Port_Sized_String{string}<integer> 15|58r37
+313A8*UT_Deployment_Main_Port_Image_Array(307A11)<160E8>
+317a3*Port_Image{313A8} 16|325r53
 X 23 system.ads
 37K9*System 15|38w6 61r47 16|85r24 269r12 23|156e11
 67M9*Address 15|61r54 16|269r19

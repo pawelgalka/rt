@@ -10,6 +10,7 @@ with PolyORB_HI_Generated.Activity;
 pragma Warnings (Off, PolyORB_HI_Generated.Activity);
 pragma Elaborate_All (PolyORB_HI_Generated.Activity);
 with System;
+with PolyORB_HI.Transport_Low_Level;
 with PolyORB_HI.Suspenders;
 
 ----------
@@ -20,6 +21,8 @@ procedure main is
   pragma Priority
    (System.Priority'Last);
 begin
+  --  Initialize default communication subsystem
+  PolyORB_HI.Transport_Low_Level.Initialize;
   --  Unblock all user tasks
   PolyORB_HI.Suspenders.Unblock_All_Tasks;
   --  Suspend forever instead of putting an endless loop. This saves the CPU 

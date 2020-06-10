@@ -15,7 +15,6 @@ P ZX
 RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
-RR NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RR NO_RECURSION
 RR NO_UNCHECKED_ACCESS
@@ -30,7 +29,7 @@ U polyorb_hi.unprotected_queue%b  polyorb_hi-unprotected_queue.adb  87e11ef2 NE 
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
 
-U polyorb_hi.unprotected_queue%s  polyorb_hi-unprotected_queue.ads  5b634d71 BN EE NE OO PK GE
+U polyorb_hi.unprotected_queue%s  polyorb_hi-unprotected_queue.ads  c1085f27 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.unchecked_conversion%s
@@ -54,7 +53,7 @@ D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-unprotected_queue.ads  20170204221544 21f7ce81 polyorb_hi.unprotected_queue%s
 D polyorb_hi-unprotected_queue.adb  20170204221544 600463f6 polyorb_hi.unprotected_queue%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607203642 df69e344 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -74,8 +73,8 @@ D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20170112134946 05d6152c system.tasking%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 ada.ads
 16K9*Ada 20e8 11|32r6 33r6 114r8 136r11 138r11 12|573r27
 X 3 a-reatim.ads
@@ -136,11 +135,11 @@ X 11 polyorb_hi-unprotected_queue.ads
 . 148r26 201r27 219r29 228r31 246r27 549r26 581r24 655r11 794r11 936r33
 47A9 Integer_Array(integer)<43E9> 80r27 89r29 102r19
 50A9 Port_Kind_Array(9|37E9)<43E9> 70r27
-53A9 Port_Image_Array(14|177A11)<43E9> 77r28
+53A9 Port_Image_Array(14|307A11)<43E9> 77r28
 57A9 Overflow_Protocol_Array(9|48E9)<43E9> 98r35
 61+9 Thread_Interface_Type 61d32 123r12 136r37 138r50 12|244r35 547r35
 61*32 Port{43E9} 12|246m62 246r62 549m61 549r61
-66e4 Current_Entity{14|60E8} 12|995r28
+66e4 Current_Entity{14|65E8} 12|995r28
 70*4 Thread_Port_Kinds{50A9} 12|75r37 154r37 250r45 585r37 660r37 800r37
 74b4 Has_Event_Ports{boolean} 12|267r10 666r10 814r10
 77*4 Thread_Port_Images{53A9} 12|58r31 91r31 103r31 112r31 169r31 179r31
@@ -162,7 +161,7 @@ X 11 polyorb_hi-unprotected_queue.ads
 125R9*Port_Stream_Entry 128e14 144r51 152r37 180r30 184r44 189r45 205r11
 . 215r29 227r58 230r11 12|68r15 148r44 149r19 201r45 243r28 546r29 656r13
 . 664r19 795r11
-126e7 From{14|60E8}
+126e7 From{14|65E8}
 127a7 Payload{121A9} 12|245r35 548r35
 131i4*N_Ports{integer} 289r27 12|141r32
 135V13*Interface_To_Stream[4|20]{121A9}
@@ -304,12 +303,12 @@ X 12 polyorb_hi-unprotected_queue.adb
 X 13 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 11|36r6 54r5 66r24 115r8 13|38e25
 X 14 polyorb_hi_generated-deployment.ads
-10K30*Deployment 11|36w27 54r26 66r45 115r29 14|209e36
-60E8*Entity_Type 11|66r56 126r17 14|62e28
-102A11*UT_Deployment_Video_Entity_Image_Component{string}<integer>
-106A8*UT_Deployment_Video_Entity_Image_Array(102A11)<60E8>
-110a3*Entity_Image{106A8} 12|995r14
-177A11*Port_Sized_String{string}<integer> 11|54r37
+10K30*Deployment 11|36w27 54r26 66r45 115r29 14|375e36
+65E8*Entity_Type 11|66r56 126r17 14|72e28
+132A11*UT_Deployment_Video_Entity_Image_Component{string}<integer>
+136A8*UT_Deployment_Video_Entity_Image_Array(132A11)<65E8>
+140a3*Entity_Image{136A8} 12|995r14
+307A11*Port_Sized_String{string}<integer> 11|54r37
 X 15 system.ads
 37K9*System 11|34w6 15|156e11
 X 25 s-stausa.ads

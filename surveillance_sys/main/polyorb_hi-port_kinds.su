@@ -1,4 +1,0 @@
-polyorb_hi-port_kinds.adb:38:4:Is_In	8	static
-polyorb_hi-port_kinds.adb:47:4:Is_Out	8	static
-polyorb_hi-port_kinds.adb:56:4:Is_Event	8	static
-polyorb_hi-port_kinds.adb:67:4:Is_Data	8	static

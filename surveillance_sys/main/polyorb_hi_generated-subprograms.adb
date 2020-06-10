@@ -11,84 +11,12 @@ with surveillance;
 package body PolyORB_HI_Generated.Subprograms is
 
   procedure event_handlers_alarm_activator
-   (det1 : PolyORB_HI_Generated.Types.Integer_Type;
+   (result : out PolyORB_HI_Generated.Types.Integer_Type;
+    det1 : PolyORB_HI_Generated.Types.Integer_Type;
     det2 : PolyORB_HI_Generated.Types.Integer_Type;
     det3 : PolyORB_HI_Generated.Types.Integer_Type;
-    rfid : PolyORB_HI_Generated.Types.Integer_Type;
-    Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Status)
+    rfid : PolyORB_HI_Generated.Types.Integer_Type)
    renames surveillance.alarm;
-
-  ---------------
-  -- Put_Value -- 
-  ---------------
-
-  procedure Put_Value
-   (Status : in out event_handlers_alarm_activator_Status;
-    Spg_Interface : event_handlers_alarm_activator_Interface)
-  is
-  begin
-    case Spg_Interface.Port is
-      when result =>
-        Status.result :=
-         True;
-
-    end case;
-  end Put_Value;
-
-  ---------------
-  -- Get_Value -- 
-  ---------------
-
-  function Get_Value
-   (Status : event_handlers_alarm_activator_Status;
-    Port : event_handlers_alarm_activator_Port_Type)
-   return event_handlers_alarm_activator_Interface
-  is
-  begin
-    case Port is
-      when result =>
-        return (Port => result);
-
-    end case;
-  end Get_Value;
-
-  ----------------
-  -- Next_Value -- 
-  ----------------
-
-  procedure Next_Value
-   (Status : in out event_handlers_alarm_activator_Status;
-    Port : event_handlers_alarm_activator_Port_Type)
-  is
-    pragma Unreferenced
-     (Status,
-      Port);
-  begin
-    --  Not implemented yet!
-    raise Program_Error;
-  end Next_Value;
-
-  ---------------
-  -- Get_Count -- 
-  ---------------
-
-  function Get_Count
-   (Status : event_handlers_alarm_activator_Status;
-    Port : event_handlers_alarm_activator_Port_Type)
-   return Standard.Integer
-  is
-  begin
-    case Port is
-      when result =>
-        if Status.result
-        then
-          return 1;
-        else
-          return 0;
-        end if;
-
-    end case;
-  end Get_Count;
 
   procedure event_handlers_detection_handler
    (Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler_Status)

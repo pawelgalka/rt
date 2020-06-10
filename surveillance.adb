@@ -102,23 +102,46 @@ begin
   end if;
 end Detector3;
 
-procedure Alarm(det1 : PolyORB_HI_Generated.Types.Integer_Type;
-  det2 : PolyORB_HI_Generated.Types.Integer_Type;
-  det3 : PolyORB_HI_Generated.Types.Integer_Type;
-  rfid : PolyORB_HI_Generated.Types.Integer_Type;
-  Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Status)
+procedure Alarm(result : out PolyORB_HI_Generated.Types.Integer_Type;
+ det1 : PolyORB_HI_Generated.Types.Integer_Type;
+ det2 : PolyORB_HI_Generated.Types.Integer_Type;
+ det3 : PolyORB_HI_Generated.Types.Integer_Type;
+ rfid : PolyORB_HI_Generated.Types.Integer_Type)
 is
+  Next : Time := Clock;
 begin
+  Next := Next + 1.0;
+  -- select
+  -- delay until Next;
   Put_Line("Rfid_State" & rfid'Image);
   Put_Line("Det1_State" & det1'Image);
   Put_Line("Det2_State" & det2'Image);
   Put_Line("Det3_State" & det3'Image);
   if rfid = 0 and (det1 = 1 or det2 = 1 or det3 = 1) then
     Put_Line("Alarm raising - start record");
-    Put_Value(Status, (Port => result));
+    result :=1;
+    -- select
+    -- delay until Next;
+    -- Put_Value(Status, (Port => result, result_DATA => 1));
+    -- then abort
+    --   Put_Line("");
+    -- end select;
   else
     Put_Line("Alarm not starting");
+    result := 0;
   end if;
+  -- then abort
+  --   Put_Line("Rfid_State" & rfid'Image);
+  --   Put_Line("Det1_State" & det1'Image);
+  --   Put_Line("Det2_State" & det2'Image);
+  --   Put_Line("Det3_State" & det3'Image);
+  --   if rfid = 0 and (det1 = 1 or det2 = 1 or det3 = 1) then
+  --     Put_Line("Alarm raising - start record");
+  --     Put_Value(Status, (Port => result, result_DATA => 1));
+  --   else
+  --     Put_Line("Alarm not starting");
+  --   end if;
+  -- end select;
 end Alarm;
 
 end Surveillance;

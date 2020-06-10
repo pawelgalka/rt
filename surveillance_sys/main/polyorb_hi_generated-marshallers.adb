@@ -6,27 +6,11 @@
 pragma Style_Checks
  ("NM32766");
 
+with PolyORB_HI_Generated;
 with PolyORB_HI.Marshallers_G;
 pragma Elaborate_All (PolyORB_HI.Marshallers_G);
-with PolyORB_HI_Generated;
 
 package body PolyORB_HI_Generated.Marshallers is
-
-  --  Marshallers for DATA type state
-
-  package state_Marshallers is
-   new PolyORB_HI.Marshallers_G
-     (PolyORB_HI_Generated.Types.state);
-
-  procedure Marshall
-   (Data : PolyORB_HI_Generated.Types.state;
-    Message : in out PolyORB_HI.Messages.Message_Type)
-   renames state_Marshallers.Marshall;
-
-  procedure Unmarshall
-   (Data : out PolyORB_HI_Generated.Types.state;
-    Message : in out PolyORB_HI.Messages.Message_Type)
-   renames state_Marshallers.Unmarshall;
 
   --  Marshallers for interface type of thread alarm_activator.impl
 
@@ -38,12 +22,15 @@ package body PolyORB_HI_Generated.Marshallers is
    (Data : PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface;
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
-    pragma Unreferenced
-     (Message);
-    pragma Unreferenced
-     (Data);
+    use PolyORB_HI_Generated.Activity;
   begin
-    null;
+    if (Data.Port
+      = PolyORB_HI_Generated.Activity.detected)
+    then
+      PolyORB_HI_Generated.Marshallers.Marshall
+       (Data.detected_DATA,
+        Message);
+    end if;
   end Marshall;
 
   ----------------
@@ -55,52 +42,52 @@ package body PolyORB_HI_Generated.Marshallers is
     Data : out PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface;
     Message : in out PolyORB_HI.Messages.Message_Type)
   is
-    test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-    test1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-    test2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-    test3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    decision1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    decision2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+    decision3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
     use PolyORB_HI_Generated.Activity;
   begin
     if (Port
-      = PolyORB_HI_Generated.Activity.test)
+      = PolyORB_HI_Generated.Activity.decision)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test_DATA,
+       (decision_DATA,
         Message);
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
-         (Port => PolyORB_HI_Generated.Activity.test,
-          test_DATA => test_DATA);
+         (Port => PolyORB_HI_Generated.Activity.decision,
+          decision_DATA => decision_DATA);
     elsif (Port
-      = PolyORB_HI_Generated.Activity.test1)
+      = PolyORB_HI_Generated.Activity.decision1)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test1_DATA,
+       (decision1_DATA,
         Message);
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
-         (Port => PolyORB_HI_Generated.Activity.test1,
-          test1_DATA => test1_DATA);
+         (Port => PolyORB_HI_Generated.Activity.decision1,
+          decision1_DATA => decision1_DATA);
     elsif (Port
-      = PolyORB_HI_Generated.Activity.test2)
+      = PolyORB_HI_Generated.Activity.decision2)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test2_DATA,
+       (decision2_DATA,
         Message);
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
-         (Port => PolyORB_HI_Generated.Activity.test2,
-          test2_DATA => test2_DATA);
+         (Port => PolyORB_HI_Generated.Activity.decision2,
+          decision2_DATA => decision2_DATA);
     elsif (Port
-      = PolyORB_HI_Generated.Activity.test3)
+      = PolyORB_HI_Generated.Activity.decision3)
     then
       PolyORB_HI_Generated.Marshallers.Unmarshall
-       (test3_DATA,
+       (decision3_DATA,
         Message);
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_alarm_activator_impl_Interface'
-         (Port => PolyORB_HI_Generated.Activity.test3,
-          test3_DATA => test3_DATA);
+         (Port => PolyORB_HI_Generated.Activity.decision3,
+          decision3_DATA => decision3_DATA);
     end if;
   end Unmarshall;
 
@@ -133,10 +120,10 @@ package body PolyORB_HI_Generated.Marshallers is
     use PolyORB_HI_Generated.Activity;
   begin
     if (Data.Port
-      = PolyORB_HI_Generated.Activity.test)
+      = PolyORB_HI_Generated.Activity.decision)
     then
       PolyORB_HI_Generated.Marshallers.Marshall
-       (Data.test_DATA,
+       (Data.decision_DATA,
         Message);
     end if;
   end Marshall;
@@ -182,10 +169,10 @@ package body PolyORB_HI_Generated.Marshallers is
     use PolyORB_HI_Generated.Activity;
   begin
     if (Data.Port
-      = PolyORB_HI_Generated.Activity.test)
+      = PolyORB_HI_Generated.Activity.decision)
     then
       PolyORB_HI_Generated.Marshallers.Marshall
-       (Data.test_DATA,
+       (Data.decision_DATA,
         Message);
     end if;
   end Marshall;
@@ -231,10 +218,10 @@ package body PolyORB_HI_Generated.Marshallers is
     use PolyORB_HI_Generated.Activity;
   begin
     if (Data.Port
-      = PolyORB_HI_Generated.Activity.test)
+      = PolyORB_HI_Generated.Activity.decision)
     then
       PolyORB_HI_Generated.Marshallers.Marshall
-       (Data.test_DATA,
+       (Data.decision_DATA,
         Message);
     end if;
   end Marshall;
@@ -288,10 +275,10 @@ package body PolyORB_HI_Generated.Marshallers is
     then
       null;
     elsif (Data.Port
-      = PolyORB_HI_Generated.Activity.test)
+      = PolyORB_HI_Generated.Activity.decision)
     then
       PolyORB_HI_Generated.Marshallers.Marshall
-       (Data.test_DATA,
+       (Data.decision_DATA,
         Message);
     end if;
   end Marshall;

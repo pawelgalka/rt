@@ -15,7 +15,6 @@ P ZX
 RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
-RR NO_IO
 RR NO_RECURSION
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
@@ -44,8 +43,8 @@ D system.ads		20170510173650 4635ec04 system%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
 D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
 D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 3 interfac.ads
 38K9*Interfaces 184e15 7|34r6 47r16 49r16
 X 4 i-c.ads

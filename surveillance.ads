@@ -14,10 +14,10 @@ package Surveillance is
 
 	procedure Detector3(Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_detection_handler2_Status);
 
-  procedure Alarm(det1 : PolyORB_HI_Generated.Types.Integer_Type;
-    det2 : PolyORB_HI_Generated.Types.Integer_Type;
-    det3 : PolyORB_HI_Generated.Types.Integer_Type;
-    rfid : PolyORB_HI_Generated.Types.Integer_Type;
-    Status : in out PolyORB_HI_Generated.Subprograms.event_handlers_alarm_activator_Status);
+  procedure Alarm(result : out PolyORB_HI_Generated.Types.Integer_Type;
+   det1 : PolyORB_HI_Generated.Types.Integer_Type;
+   det2 : PolyORB_HI_Generated.Types.Integer_Type;
+   det3 : PolyORB_HI_Generated.Types.Integer_Type;
+   rfid : PolyORB_HI_Generated.Types.Integer_Type);
 
 end Surveillance;

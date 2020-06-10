@@ -45,6 +45,7 @@ package body PolyORB_HI_Generated.Marshallers is
     camera1_capture_DATA : PolyORB_HI_Generated.Types.camera_image;
     camera2_capture_DATA : PolyORB_HI_Generated.Types.camera_image;
     camera3_capture_DATA : PolyORB_HI_Generated.Types.camera_image;
+    start_DATA : PolyORB_HI_Generated.Types.Integer_Type;
     use PolyORB_HI_Generated.Activity;
   begin
     if (Port
@@ -80,9 +81,13 @@ package body PolyORB_HI_Generated.Marshallers is
     elsif (Port
       = PolyORB_HI_Generated.Activity.start)
     then
+      PolyORB_HI_Generated.Marshallers.Unmarshall
+       (start_DATA,
+        Message);
       Data :=
        PolyORB_HI_Generated.Activity.surveillance_system_video_captor_impl_Interface'
-         (Port => PolyORB_HI_Generated.Activity.start);
+         (Port => PolyORB_HI_Generated.Activity.start,
+          start_DATA => start_DATA);
     end if;
   end Unmarshall;
 
@@ -101,6 +106,22 @@ package body PolyORB_HI_Generated.Marshallers is
    (Data : out PolyORB_HI_Generated.Types.camera_image;
     Message : in out PolyORB_HI.Messages.Message_Type)
    renames camera_image_Marshallers.Unmarshall;
+
+  --  Marshallers for DATA type integer_type
+
+  package Integer_Type_Marshallers is
+   new PolyORB_HI.Marshallers_G
+     (PolyORB_HI_Generated.Types.Integer_Type);
+
+  procedure Marshall
+   (Data : PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+   renames Integer_Type_Marshallers.Marshall;
+
+  procedure Unmarshall
+   (Data : out PolyORB_HI_Generated.Types.Integer_Type;
+    Message : in out PolyORB_HI.Messages.Message_Type)
+   renames Integer_Type_Marshallers.Unmarshall;
 
   --  Marshallers for DATA type captor_data
 

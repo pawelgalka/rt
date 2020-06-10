@@ -16,46 +16,91 @@ RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
 RV NO_EXCEPTIONS
-RR NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RR NO_RECURSION
 RV NO_STANDARD_STORAGE_POOLS
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  d281a075 NE OO PK IL
+U polyorb_hi_generated.subprograms%b  polyorb_hi_generated-subprograms.adb  0c2ea7f9 NE OO PK IL
 W ada.exceptions%s	a-except.adb		a-except.ali
+W capture%s		capture.adb		capture.ali
+W interfaces%s		interfac.ads		interfac.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  b3d2b955 EE NE OO PK IL
+U polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.ads  5b55768d EE NE OO PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
 
 D ada.ads		20170106103348 76789da1 ada%s
 D a-except.ads		20151016123252 291912d5 ada.exceptions%s
 D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D capture.ads		20200610193020 0d2246d2 capture%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-subprograms.ads  20200607191219 817094c2 polyorb_hi_generated.subprograms%s
-D polyorb_hi_generated-subprograms.adb  20200607191219 53f134b7 polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200610193920 74d18342 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-subprograms.adb  20200610193920 75dd6269 polyorb_hi_generated.subprograms%b
+D polyorb_hi_generated-types.ads  20200610193920 1d26d858 polyorb_hi_generated.types%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
 D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
 D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
-X 4 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 5|10r9 16r5 6|10r14 32r5
-X 5 polyorb_hi_generated-subprograms.ads
-10K30*Subprograms 4|34k9 5|16l26 16e37 6|10b35 32l26 32t37
-12U13*event_handlers_video_captor_handler 6|16b13 20l7 20t42
-14U13*event_handlers_video_sender_handler 6|26b13 30l7 30t42
-X 6 polyorb_hi_generated-subprograms.adb
-17X5 Nyi 19r11
-27X5 Nyi 29r11
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
+X 4 capture.ads
+4K9*Capture 14e12 9|9w6 19r12
+9U15*Captor 9|19r20
+X 6 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 8|9r6 11r9 22r25 52r12 53r12 54r12 55r17
+. 56r21 64r21 67r5 9|11r14 14r12 15r12 16r12 17r17 18r21 106r5
+X 8 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 6|34k9 8|56r42 61E8 67l26 67e37 9|11b35 18r42 106l26 106t37
+13E8*event_handlers_video_captor_handler_Port_Type 14e12 17r12 17r61 39r12
+. 44r12 48r12 9|46r12 64r12 80r12
+14n5*result{13E8} 21r14 9|31r12 51r12 52r25 85r12
+16R8*event_handlers_video_captor_handler_Interface 17d5 28e15 35r21 40r11
+. 9|27r21 47r11
+17e5*Port{13E8} 20r12 9|30r24 52m17
+22i11*result_DATA{10|28I8} 9|35r24 53m9
+30R8*event_handlers_video_captor_handler_Status 34r21 38r14 43r21 47r14 56r54
+. 61c8 65e15 9|18r54 26r21 45r14 63r21 79r14
+33U13*Put_Value 34=5 35>5 9|25b13 38l7 38t16
+34r5 Status{30R8} 9|26b5 32m9 34m9
+35r5 Spg_Interface{16R8} 9|27b5 30r10 35r10
+37V12*Get_Value{16R8} 38>5 39>5 9|44b12 56l7 56t16
+38r5 Status{30R8} 9|45b5 53r24
+39e5 Port{13E8} 9|46b5 50r10
+42U13*Next_Value 43=5 44>5 9|62b13 72l7 72t17
+43r5 Status{30R8} 9|63b5 67r7
+44e5 Port{13E8} 9|64b5 68r7
+46V12*Get_Count{integer} 47>5 48>5 9|78b12 94l7 94t16
+47r5 Status{30R8} 9|79b5 86r12
+48e5 Port{13E8} 9|80b5 84r10
+51U13*event_handlers_video_captor_handler 52>5 53>5 54>5 55>5 56=5 9|13b13
+52i5 det1{10|12I8} 9|14b5
+53i5 det2{10|12I8} 9|15b5
+54i5 det3{10|12I8} 9|16b5
+55i5 data_sink{10|20I8} 9|17b5
+56r5 Status{30R8} 9|18b5
+58U13*event_handlers_video_sender_handler 9|100b13 104l7 104t42
+63b7*result{boolean} 9|32m16 86r19
+64i7*result_DATA{10|28I8} 9|34m16 53r31
+X 9 polyorb_hi_generated-subprograms.adb
+101X5 Nyi 103r11
+X 10 polyorb_hi_generated-types.ads
+10K30*Types 8|9w27 22r46 52r33 53r33 54r33 55r38 64r42 9|14r33 15r33 16r33
+. 17r38 10|36e31
+12I8*camera_image<integer> 8|52r39 53r39 54r39 9|14r39 15r39 16r39
+20I8*Integer_Type<integer> 8|55r44 9|17r44
+28I8*captor_data<integer> 8|22r52 64r48
 

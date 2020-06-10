@@ -2,20 +2,16 @@ package event_handlers
 public
 	with Data_Model, data_types;
 	
-	data Integer_Type
-		properties
-  			Data_Model::Data_Representation => integer;
-	end Integer_Type;
-
 	subprogram video_captor_handler
 		features
 			result : out event data port data_types::captor_data;
 			det1 : in parameter data_types::camera_image;
 			det2 : in parameter data_types::camera_image;
 			det3 : in parameter data_types::camera_image;
---		properties
---			Source_Language => (Ada95);
---			Source_Name => "surveillance.captor";
+			data_sink : in parameter data_types::integer_type;
+		properties
+			Source_Language => (Ada95);
+			Source_Name => "capture.captor";
 	end video_captor_handler;
 	
 	subprogram video_sender_handler
@@ -24,11 +20,11 @@ public
 	
 	subprogram alarm_activator
 		features
-			result : out event port;
-			det1 : in parameter integer_type;
-			det2 : in parameter integer_type;
-			det3 : in parameter integer_type;
-			rfid : in parameter integer_type;
+			result : out parameter data_types::integer_type;
+			det1 : in parameter data_types::integer_type;
+			det2 : in parameter data_types::integer_type;
+			det3 : in parameter data_types::integer_type;
+			rfid : in parameter data_types::integer_type;
 		properties
 			Source_Language => (Ada95);
 			Source_Name => "surveillance.alarm";		
@@ -36,7 +32,7 @@ public
 	
 	subprogram detection_handler
 		features
-			Data_Source : out event data port integer_type;
+			Data_Source : out event data port data_types::integer_type;
 		properties
 			Source_Language => (Ada95);
 			Source_Name => "surveillance.detector1";
@@ -45,7 +41,7 @@ public
 		
 	subprogram detection_handler1
 		features
-			Data_Source : out event data port integer_type;
+			Data_Source : out event data port data_types::integer_type;
 		properties
 			Source_Language => (Ada95);
 			Source_Name => "surveillance.detector2";
@@ -55,7 +51,7 @@ public
 		
 	subprogram detection_handler2
 		features
-			Data_Source : out event data port integer_type;
+			Data_Source : out event data port data_types::integer_type;
 		properties
 			Source_Language => (Ada95);
 			Source_Name => "surveillance.detector3";
@@ -63,7 +59,7 @@ public
 	
 	subprogram rfid_handler
 		features
-			Data_Source : out event data port integer_type;
+			Data_Source : out event data port data_types::integer_type;
 		properties
 			Source_Language => (Ada95);
 			Source_Name => "surveillance.rfid";

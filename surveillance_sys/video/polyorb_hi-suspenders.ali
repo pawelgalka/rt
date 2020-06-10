@@ -19,7 +19,6 @@ RR NO_DISPATCH
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
-RR NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RR NO_RECURSION
 RV NO_STANDARD_STORAGE_POOLS
@@ -35,6 +34,7 @@ RV SPARK_05
 
 U polyorb_hi.suspenders%b  polyorb_hi-suspenders.adb  76f3c1a4 OO PF PK
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.synchronous_task_control%s  a-sytaco.adb	a-sytaco.ali  EA
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -42,9 +42,10 @@ W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W system%s		system.ads		system.ali
 W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  6b429cab EE NE OO PK
+U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  f1298efd EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -66,13 +67,14 @@ D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi-suspenders.adb  20170204221544 84137d58 polyorb_hi.suspenders%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607203642 df69e344 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
 D s-finmas.ads		20151016130316 7811a767 system.finalization_masters%s
 D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
 D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-memory.ads		20160622104833 597d6634 system.memory%s
 D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20191204142541 7b5577db system.os_constants%s
 D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
@@ -81,6 +83,7 @@ D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
 D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
 D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
 D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stalib.adb		20140225151139 f2fe2716 system.standard_library%b
 D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
 D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
 D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
@@ -89,8 +92,8 @@ D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20170112134946 05d6152c system.tasking%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 ada.ads
 16K9*Ada 20e8 13|35r6 47r26 47r48 14|32r6 32r43 38r8 82r9 82r31
 X 4 a-reatim.ads
@@ -114,7 +117,7 @@ X 13 polyorb_hi-suspenders.ads
 44U14*Suspend_Forever 14|63b14 73l8 73t23
 47o4*System_Startup_Time{4|51O9} 14|81m7
 50U14*Block_Task 50>26 14|54b14 57l8 57t18
-50e26 Entity{16|60E8} 14|54b26 56r52
+50e26 Entity{16|65E8} 14|54b26 56r52
 53U14*Unblock_All_Tasks 14|79b14 87l8 87t25
 X 14 polyorb_hi-suspenders.adb
 40a4 Task_Suspension_Objects(6|47R9) 56m27 56r27 84m18 84r18
@@ -122,9 +125,17 @@ X 14 polyorb_hi-suspenders.adb
 X 15 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 13|37r6 42r8 15|38e25
 X 16 polyorb_hi_generated-deployment.ads
-10K30*Deployment 13|37w27 38r44 42r29 16|209e36
-60E8*Entity_Type 13|50r35 14|40r37 54r35 16|62e28
-X 29 s-stausa.ads
+10K30*Deployment 13|37w27 38r44 42r29 16|375e36
+65E8*Entity_Type 13|50r35 14|40r37 54r35 16|72e28
+X 17 system.ads
+67M9*Address
+X 23 s-memory.ads
+53V13*Alloc{17|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{17|67M9} 105i<c,__gnat_realloc>22
+X 30 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 32 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
 

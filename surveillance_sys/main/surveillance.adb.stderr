@@ -4,4 +4,5 @@ surveillance.adb:14:03: warning: variable "Alarm_State" is not referenced
 surveillance.adb:53:03: warning: variable "Next" is not referenced
 surveillance.adb:71:03: warning: variable "Next" is not referenced
 surveillance.adb:89:03: warning: variable "Next" is not referenced
+surveillance.adb:113:03: warning: possibly useless assignment to "Next", value might not be referenced
 surveillance.ads:1:26: warning: no entities of "PolyORB_HI_Generated.Deployment" are referenced

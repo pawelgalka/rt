@@ -33,7 +33,7 @@ W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
 W polyorb_hi.suspenders%s  polyorb_hi-suspenders.adb  polyorb_hi-suspenders.ali  EA
 
-U polyorb_hi.periodic_task%s  polyorb_hi-periodic_task.ads  57908a04 BN EE NE OO PK GE
+U polyorb_hi.periodic_task%s  polyorb_hi-periodic_task.ads  7259a3d7 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -56,7 +56,7 @@ D polyorb_hi-periodic_task.adb  20170204221544 94a22a7a polyorb_hi.periodic_task
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -101,7 +101,7 @@ X 9 polyorb_hi-output.ads
 59U14*Put_Line 11|62s10 81s13 101s13
 76V14*"+"{string} 11|65s11 66s11 83s31 83s55 103s31 103s55
 X 10 polyorb_hi-periodic_task.ads
-40e4 Entity{15|60E8} 11|65r27 68r19 83r47 103r47
+40e4 Entity{15|65E8} 11|65r27 68r19 83r47 103r47
 43o4 Dispatch_Offset{3|56O9} 11|69r43 77r11
 47o4 Task_Period{3|56O9} 11|75r41 106r44
 50o4 Task_Deadline{3|56O9} 11|77r29 107r53
@@ -125,11 +125,11 @@ X 13 polyorb_hi-suspenders.ads
 X 14 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 10|37r6 40r25 11|45r8 14|38e25
 X 15 polyorb_hi_generated-deployment.ads
-10K30*Deployment 10|37w27 40r46 11|45r29 15|314e36
-60E8*Entity_Type 10|40r57 15|65e24
-117A11*UT_Deployment_Main_Entity_Image_Component{string}<integer>
-121A8*UT_Deployment_Main_Entity_Image_Array(117A11)<60E8>
-125a3*Entity_Image{121A8} 11|65r13 83r33 103r33
+10K30*Deployment 10|37w27 40r46 11|45r29 15|375e36
+65E8*Entity_Type 10|40r57 15|72e28
+132A11*UT_Deployment_Main_Entity_Image_Component{string}<integer>
+136A8*UT_Deployment_Main_Entity_Image_Array(132A11)<65E8>
+140a3*Entity_Image{136A8} 11|65r13 83r33 103r33
 X 16 system.ads
 37K9*System 10|34w6 53r25 16|156e11
 108I12*Any_Priority{integer} 10|53r32

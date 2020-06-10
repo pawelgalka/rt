@@ -45,7 +45,7 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  0ecc2ce3 EE NE OO PK
+U polyorb_hi.suspenders%s  polyorb_hi-suspenders.ads  2b050530 EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
@@ -67,7 +67,7 @@ D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-suspenders.ads  20170204221544 eb2f55ee polyorb_hi.suspenders%s
 D polyorb_hi-suspenders.adb  20170204221544 84137d58 polyorb_hi.suspenders%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -117,7 +117,7 @@ X 13 polyorb_hi-suspenders.ads
 44U14*Suspend_Forever 14|63b14 73l8 73t23
 47o4*System_Startup_Time{4|51O9} 14|81m7
 50U14*Block_Task 50>26 14|54b14 57l8 57t18
-50e26 Entity{16|60E8} 14|54b26 56r52
+50e26 Entity{16|65E8} 14|54b26 56r52
 53U14*Unblock_All_Tasks 14|79b14 87l8 87t25
 X 14 polyorb_hi-suspenders.adb
 40a4 Task_Suspension_Objects(6|47R9) 56m27 56r27 84m18 84r18
@@ -125,8 +125,8 @@ X 14 polyorb_hi-suspenders.adb
 X 15 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 13|37r6 42r8 15|38e25
 X 16 polyorb_hi_generated-deployment.ads
-10K30*Deployment 13|37w27 38r44 42r29 16|314e36
-60E8*Entity_Type 13|50r35 14|40r37 54r35 16|65e24
+10K30*Deployment 13|37w27 38r44 42r29 16|375e36
+65E8*Entity_Type 13|50r35 14|40r37 54r35 16|72e28
 X 17 system.ads
 67M9*Address
 X 23 s-memory.ads

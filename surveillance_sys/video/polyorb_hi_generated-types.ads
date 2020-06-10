@@ -17,6 +17,14 @@ package PolyORB_HI_Generated.Types is
   camera_image_Default_Value : constant camera_image :=
    0;
 
+  type Integer_Type is
+   new Standard.Integer;
+
+  --  integer_type'Object_Size ~= 32 bits
+
+  Integer_Type_Default_Value : constant Integer_Type :=
+   0;
+
   type captor_data is
    new Standard.Integer;
 

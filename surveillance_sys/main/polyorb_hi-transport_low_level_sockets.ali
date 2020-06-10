@@ -1,0 +1,326 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P LC SS ZX
+
+RN
+RR NO_ALLOCATORS
+RV NO_DELAY
+RR NO_DISPATCH
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RR NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RR NO_UNCHECKED_ACCESS
+RV NO_UNCHECKED_CONVERSION
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+RV MAX_TASKS=1
+
+U polyorb_hi.transport_low_level%b  polyorb_hi-transport_low_level_sockets.adb  89238257 OO PF PK IU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.synchronous_task_control%s  a-sytaco.adb	a-sytaco.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_conversion%s
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
+W interfaces%s		interfac.ads		interfac.ali
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.messages%s	polyorb_hi-messages.adb	polyorb_hi-messages.ali
+W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali  EA
+W polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.naming%s  polyorb_hi_generated-naming.ads  polyorb_hi_generated-naming.ali
+W polyorb_hi_generated.transport%s  polyorb_hi_generated-transport.adb  polyorb_hi_generated-transport.ali
+W system%s		system.ads		system.ali
+W system.img_lli%s	s-imglli.adb		s-imglli.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U polyorb_hi.transport_low_level%s  polyorb_hi-transport_low_level.ads  266a05fa EB EE NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.errors%s	polyorb_hi-errors.ads	polyorb_hi-errors.ali
+W polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-finali.ads		20151020095656 bf4f806b ada.finalization%s
+D a-reatim.ads		20160420090448 a87e2da7 ada.real_time%s
+D a-retide.ads		20090409150019 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-sytaco.ads		20160418092250 19cfe912 ada.synchronous_task_control%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-taside.ads		20160420090448 c6417f71 ada.task_identification%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
+D gnat.ads		20140801083227 fd2ad2f1 gnat%s
+D g-socket.ads		20170106102806 33c8e0fe gnat.sockets%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-errors.ads	20170204221544 6deb16d4 polyorb_hi.errors%s
+D polyorb_hi-messages.ads  20170204221544 cdc9ec9c polyorb_hi.messages%s
+D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi-transport_low_level.ads  20170204221544 77d4ea27 polyorb_hi.transport_low_level%s
+D polyorb_hi-transport_low_level_sockets.adb  20170204221544 1ef905c5 polyorb_hi.transport_low_level%b
+D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
+D polyorb_hi-utils.adb	20170204221544 388ce90b polyorb_hi.utils%b
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-naming.ads  20200610193920 bca1ca18 polyorb_hi_generated.naming%s
+D polyorb_hi_generated-transport.ads  20200610193920 cc5413ce polyorb_hi_generated.transport%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-finmas.ads		20151016130316 7811a767 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-imglli.ads		20090409150019 114f55d1 system.img_lli%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-memory.ads		20160622104833 597d6634 system.memory%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20191204142541 7b5577db system.os_constants%s
+D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20151118103153 ede33ef8 system.pool_global%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stalib.adb		20140225151139 f2fe2716 system.standard_library%b
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
+D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20170112134946 05d6152c system.tasking%s
+D s-tassta.ads		20170112134946 5a53a7c6 system.tasking.stages%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
+X 1 ada.ads
+16K9*Ada 20e8 22|32r6 33r6 34r6 35r6 37r6 61r23 63r8 64r8 102r51 104r41 353r27
+. 356r27 388r29 391r29
+X 2 a-except.ads
+54K13*Exceptions 349e19 22|33w10 353r31 356r31 388r33 391r33
+72V13*Exception_Name{string} 22|353s42 388s44
+94V13*Exception_Message{string} 22|356s42 391s44
+X 4 a-reatim.ads
+39K13*Real_Time 187e18 22|34w10 64r12
+51O9*Time<duration> 22|114r19
+56O9*Time_Span<duration>
+63V13*Clock{51O9} 22|181s29
+67V14*"+"{51O9} 22|181s35
+121V13*Milliseconds{56O9} 22|181s37
+X 6 a-stream.ads
+36K13*Streams 87e16 22|35w10 61r27
+42M9*Stream_Element 22|200r27
+44I9*Stream_Element_Offset<long_long_integer> 22|113r22 228r19 233r22 323r26
+. 328r38 368r14
+54A9*Stream_Element_Array(42M9)<44I9> 22|94r40 95r43 99r33 375r16
+X 7 a-sytaco.ads
+41K13*Synchronous_Task_Control 94e33 22|32w10 63r12
+47R9*Suspension_Object<3|50R9> 85e14 22|80r22 85r23 90r16
+50U14*Set_True 22|170s7 216s7 275s7
+64U14*Suspend_Until_True 22|209s7 242s7 277s7
+X 10 a-unccon.ads
+20v14*Unchecked_Conversion 22|37w10 102r55 104r45
+X 12 gnat.ads
+34K9*GNAT 37e9 22|39r6 66r8 118r7 125r35 126r35 127r35 129r35 130r35 133r35
+X 13 g-socket.ads
+55K14*Sockets 1283e17 22|39w11 66r13 118r12 125r40 126r40 127r40 129r40 130r40
+. 133r40
+379U14*Initialize 22|118s20
+412I9*Socket_Type<integer> 22|74r24 75r24 239r19
+417i4*No_Socket{412I9} 22|256r27
+419R9*Selector_Type 1184e14 22|236r19
+444E9*Selector_Status 444e57 22|237r19
+451X4*Socket_Error 22|193r24
+463n25*Family_Inet{463E9} 22|125r48 129r48
+479I9*Port_Type<integer> 22|133r48
+485i4*No_Port{479I9} 22|127r48
+495r4*No_Inet_Addr{488R9} 22|126r48 140r42 176r47 248r42
+505R9*Sock_Addr_Type 508e14 22|73r24 240r19
+506r7*Addr{488R9} 22|140r34 176r39 248r34
+513r4*No_Sock_Addr{505R9} 22|255r27
+521V13*Image{string} 22|165s27 186s46 205s48 251s27
+524V13*Inet_Addr{488R9} 22|130s48
+672n7*Socket_Level{671E9} 22|144r13
+675n7*IP_Protocol_For_TCP_Level{671E9} 22|154r13
+684n7*Reuse_Address{681E9} 22|145r14
+690n7*No_Delay{681E9} 22|155r14
+816U14*Create_Socket 22|141s10 179s16
+822U14*Accept_Socket 22|257s16
+847U14*Bind_Socket 22|157s10
+853U14*Close_Socket 22|194s22
+856U14*Connect_Socket 22|190s19
+900U14*Listen_Socket 22|160s10
+910U14*Receive_Socket 22|258s16 310s16 335s16
+968U14*Send_Socket 22|201s13 381s7
+1007U14*Set_Socket_Option 22|142s10 152s10
+1046R9*Socket_Set_Type 1209e14 22|234r19 235r19
+1061U14*Empty 22|282s7 289s10
+1071V13*Is_Set{boolean} 22|306s24
+1076U14*Set 22|292s16
+1105U14*Create_Selector 22|281s7
+1115U14*Check_Selector 22|296s10
+X 14 interfac.ads
+38K9*Interfaces 184e15 22|36w6 65r8
+63M9*Unsigned_8 22|266r44 342r20
+X 16 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 21|35r6 36r6 39r9 46r8 47r8 57r5 22|41r6 44r6 45r6
+. 51r14 67r8 68r8 70r8 131r38 395r5
+X 17 polyorb_hi-errors.ads
+32K20*Errors 39e22 21|35w17 46r19
+34E9*Error_Kind 37e7 21|54r13 22|366r13 383r14 392r14
+35n7*Error_None{34E9} 22|383r26
+36n7*Error_Transport{34E9} 22|392r26
+X 18 polyorb_hi-messages.ads
+37K20*Messages 134e24 22|44w17 67r19
+47N4*Message_Length_Size 22|96r12 98r12 312r52 334r26 336r37 342r37
+54N4*PDU_Size 22|99r60 100r54
+61V13*To_Length{20|50I12} 22|324s19
+X 19 polyorb_hi-output.ads
+38K20*Output 82e22 22|41w17 42r34 70r19
+44n7*Verbose{43E9} 22|163r25 185r23 204r30 211r31 250r25 268r40 300r37 311r40
+. 317r36 326r33 380r31
+48n7*Normal{43E9} 22|352r25 355r25 387r25 390r25
+59U14*Put_Line 22|162s24 184s22 203s27 211s21 249s24 268s30 300s27 311s30
+. 316s33 325s30 351s24 354s24 380s21 386s24 389s24
+63U14*Put_Line 22|261s19
+76V14*"+"{string} 22|165s25 186s44 205s46 212s31 251s25 269s40 311s56 312s42
+. 312s50 318s44 319s38 328s33 329s33 329s55 353s25 356s25 380s65 388s27 391s27
+X 20 polyorb_hi-streams.ads
+35K20*Streams 58e23 21|36w17 47r19
+44M9*Stream_Element
+46I9*Stream_Element_Offset<long_integer> 22|344r27
+50I12*Stream_Element_Count{46I9}
+53A9*Stream_Element_Array(44M9)<46I9> 21|53r47 22|97r37 100r27 365r35
+X 21 polyorb_hi-transport_low_level.ads
+39K20*Transport_Low_Level 16|35k9 21|57l16 57e35 22|51b25 395l16 395t35
+50U14*Initialize 22|111b14 217l8 217t18
+53V13*Send{17|34E9} 53>19 53>37 22|364b13 393l8 393t12
+53e19 Node{26|16E8} 22|365b7 381r27
+53a37 Message{20|53A9} 22|365b25 375r43 377r27
+X 22 polyorb_hi-transport_low_level_sockets.adb
+61K12 AS=61:27 94r37 95r40 99r30 113r19 200r24 228r16 233r19 323r23 328r35
+. 368r11 375r13
+72R9 Node_Record 76e14 78r33
+73r7*Address{13|505R9} 125m23 129m23 140r26 159r29 165r50 176r31 186r63 190r68
+. 205r65 248r26 251r50
+74i7*Socket_Send{13|412I9} 179m41 190r45 194r46 201r36 381r33
+75i7*Socket_Receive{13|412I9} 141m41 143r29 153r29 158r29 160r41 257r47 267m29
+. 292r42 306r53 310r42 335r42
+78a4 Nodes(72R9) 125m13 125r13 129m13 129r13 140r10 141m25 141r25 143r13
+. 153r13 158r13 159r13 160r25 165r34 174r16 176r21 179m31 179r31 186r53 190r35
+. 190r58 194r36 201r26 205r55 248r10 251r34 253r19 257r31 267m16 267r16 292r32
+. 306r43 310r32 335r32 381r20
+80r4 Local_Node_Init{7|47R9} 170m17 170r17 242m27 242r27
+85r4 Other_Nodes_Init{7|47R9} 209m27 209r27 275m17 275r17
+90r4 Full_Init{7|47R9} 216m17 216r17 277m27 277r27
+94A12 AS_One_Element_Stream{6|54A9}<6|44I9> 112r19 230r19
+95A12 AS_Message_Length_Stream{6|54A9}<6|44I9> 103r7 231r19
+97A12 Message_Length_Stream{20|53A9}<20|46I9> 103r33
+99A12 AS_Full_Stream{6|54A9}<6|44I9> 105r7 232r19
+100A12 Full_Stream{20|53A9}<20|46I9> 105r23
+102V13 To_PO_HI_Message_Length_Stream[10|20]{20|53A9} 324s30
+104V13 To_PO_HI_Full_Stream[10|20]{20|53A9} 343s19
+112a7 SEC{94A12} 200m13 201r49
+113i7 SEO{6|44I9} 201m54
+114o7 Next_Time{4|51O9} 181m16 188r31
+121e11 J{26|16E8} 122r35 123r34 125r20 129r20 132r55 134r52
+174e11 N{26|16E8} 175r13 176r28 179r38 186r60 190r42 190r65 194r43 201r33
+. 205r62
+219t9 Receiver_Task 227b14 358l8 358t21
+230a7 SEC{94A12} 258m40 260r25 266r56 266r61
+231a7 SEL{95A12} 310m58 311r58 324r62 334r50
+232a7 SEA{99A12} 334m16 336m32 336r32 342r32 343r41
+233i7 SEO{6|44I9} 258m45 260r19 310m63 315r19 323m16 328r67 336r64 336m74
+. 344r50
+234r7 R_Sockets{13|1046R9} 289m17 292m21 292r21 296m36 296r36 306r32
+235r7 W_Sockets{13|1046R9} 282m14 296m47 296r47
+236r7 Selector{13|419R9} 281m24 296r26
+237e7 Status{13|444E9} 296m58
+238e7 Node{26|16E8} 266m16 267r23 269r54
+239i7 Socket{13|412I9} 256m16 257m63 258r32 267r47
+240r7 Address{13|505R9} 255m16 257m71
+253e14 N{26|16E8} 254r16
+284l7 Main_Loop 320r24 347l16 347e25
+290e14 N{26|16E8} 291r16 292r39
+298e14 N{26|16E8} 305r16 306r50 310r39 318r58 329r69 335r39
+350r12 E{2|63R9} 353r58 356r61
+368i7 L{6|44I9} 380r67 381m51
+375a7 Msg{6|54A9} 376m27 376r27 377m11 377r11 381r46
+385r12 E{2|63R9} 388r60 391r63
+X 23 polyorb_hi-utils.ads
+40K20*Utils 22|45w17 68r19 131r49 23|140e21
+64V13*Corresponding_Entity[10|20]{26|65E8} 22|341s19
+67V13*Internal_Code[10|20]{14|63M9} 22|200s43
+69V13*Corresponding_Node[10|20]{26|16E8} 22|266s24
+91V13*To_String{string} 22|131s55
+94V13*Length{natural} 22|122s13
+114r7*Location{86R9} 22|122r38 132r58
+115i7*Port{natural} 22|123r37 134r55
+119A9*Naming_Table_Type(113R9)<26|16E8>
+X 25 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 21|37r6 48r8 22|46r6 47r6 57r40 69r8 340r16 25|38e25
+X 26 polyorb_hi_generated-deployment.ads
+10K30*Deployment 21|37w27 48r29 26|375e36
+16E8*Node_Type 21|53r26 22|78r19 238r19 290r19 298r19 365r14 26|18e13
+45A11*UT_Deployment_Main_Node_Image_Component{string}<integer>
+49A8*UT_Deployment_Main_Node_Image_Array(45A11)<16E8>
+53a3*Node_Image{49A8} 22|269r42 318r46 329r57
+60e3*My_Node{16E8} 22|140r17 141r32 143r20 153r20 158r20 159r20 160r32 165r41
+. 175r18 200r58 248r17 251r41 254r21 257r38 291r21 305r21
+X 27 polyorb_hi_generated-naming.ads
+13K30*Naming 22|46w27 69r29 27|34e32
+17a3*Naming_Table{23|119A9} 22|121r16 122r21 123r20 132r41 134r38
+X 28 polyorb_hi_generated-transport.ads
+14K30*Transport 22|47w27 57r61 340r37 28|26e35
+16U13*Deliver 22|340s47
+X 29 system.ads
+67M9*Address
+X 37 s-memory.ads
+53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
+X 46 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 48 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

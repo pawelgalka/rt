@@ -1,0 +1,75 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RR NO_RECURSION
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U capture%b		capture.adb		56343e97 NE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.output%s	polyorb_hi-output.adb	polyorb_hi-output.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
+
+U capture%s		capture.ads		21d7ecda EE NE OO PK
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W polyorb_hi_generated.subprograms%s  polyorb_hi_generated-subprograms.adb  polyorb_hi_generated-subprograms.ali
+W polyorb_hi_generated.types%s  polyorb_hi_generated-types.ads  polyorb_hi_generated-types.ali
+
+D capture.ads		20200610193020 0d2246d2 capture%s
+D capture.adb		20200610193243 e9d54882 capture%b
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-output.ads	20170204221544 c612b385 polyorb_hi.output%s
+D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-subprograms.ads  20200610193920 74d18342 polyorb_hi_generated.subprograms%s
+D polyorb_hi_generated-types.ads  20200610193920 1d26d858 polyorb_hi_generated.types%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
+X 1 capture.ads
+4K9*Capture 14l5 14e12 2|3b14 19l5 19t12
+9U15*Captor 9>22 10>6 11>6 12>6 13=6 2|8b11 18l5 18t11
+9i22 det1{9|12I8} 2|8b18
+10i6 det2{9|12I8} 2|9b2
+11i6 det3{9|12I8} 2|10b2
+12i6 data_sink{9|20I8} 2|11b2 15r6
+13r6 Status{8|30R8} 2|12b2
+X 3 polyorb_hi.ads
+35K9*PolyORB_HI 2|1r6 4r7 3|39e15
+X 4 polyorb_hi-output.ads
+38K20*Output 2|1w17 4r18 4|82e22
+63U14*Put_Line 2|16s5
+X 6 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 1|1r6 2r6 3r6 6r10 7r10 9r29 10r13 11r13 12r18
+. 13r22 2|2r6 5r13 8r25 9r9 10r9 11r14 12r18 6|38e25
+X 7 polyorb_hi_generated-deployment.ads
+10K30*Deployment 1|1w27 6r31 7|375e36
+X 8 polyorb_hi_generated-subprograms.ads
+11K30*Subprograms 1|3w27 13r43 2|2w27 5r34 12r39 8|67e37
+30R8*event_handlers_video_captor_handler_Status 1|13r55 2|12r51 8|65e15
+X 9 polyorb_hi_generated-types.ads
+10K30*Types 1|2w27 7r31 9r50 10r34 11r34 12r39 2|8r46 9r30 10r30 11r35 9|36e31
+12I8*camera_image<integer> 1|9r56 10r40 11r40 2|8r52 9r36 10r36
+20I8*Integer_Type<integer> 1|12r45 2|11r41
+

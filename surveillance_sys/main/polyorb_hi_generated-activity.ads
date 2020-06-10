@@ -15,16 +15,14 @@ pragma Elaborate_All (PolyORB_HI.Periodic_Task);
 
 package PolyORB_HI_Generated.Activity is
 
-  current_state : PolyORB_HI_Generated.Types.state;
-
   --  BEGIN: Entities used by all instances of component alarm_activator.impl
 
   type surveillance_system_alarm_activator_impl_Port_Type is
    (detected,
-    test,
-    test1,
-    test2,
-    test3);
+    decision,
+    decision1,
+    decision2,
+    decision3);
 
   type surveillance_system_alarm_activator_impl_Interface 
    (Port : surveillance_system_alarm_activator_impl_Port_Type := surveillance_system_alarm_activator_impl_Port_Type'First)
@@ -32,15 +30,15 @@ package PolyORB_HI_Generated.Activity is
     record
       case Port is
         when detected =>
-          null;
-        when test =>
-          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-        when test1 =>
-          test1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-        when test2 =>
-          test2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
-        when test3 =>
-          test3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+          detected_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision =>
+          decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision1 =>
+          decision1_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision2 =>
+          decision2_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision3 =>
+          decision3_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -118,7 +116,7 @@ package PolyORB_HI_Generated.Activity is
   type surveillance_system_detector_impl_Port_Type is
    (motion,
     door,
-    test);
+    decision);
 
   type surveillance_system_detector_impl_Interface 
    (Port : surveillance_system_detector_impl_Port_Type := surveillance_system_detector_impl_Port_Type'First)
@@ -129,8 +127,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when door =>
           null;
-        when test =>
-          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision =>
+          decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -208,7 +206,7 @@ package PolyORB_HI_Generated.Activity is
   type surveillance_system_detector_impl1_Port_Type is
    (motion,
     door,
-    test);
+    decision);
 
   type surveillance_system_detector_impl1_Interface 
    (Port : surveillance_system_detector_impl1_Port_Type := surveillance_system_detector_impl1_Port_Type'First)
@@ -219,8 +217,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when door =>
           null;
-        when test =>
-          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision =>
+          decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -298,7 +296,7 @@ package PolyORB_HI_Generated.Activity is
   type surveillance_system_detector_impl2_Port_Type is
    (motion,
     door,
-    test);
+    decision);
 
   type surveillance_system_detector_impl2_Interface 
    (Port : surveillance_system_detector_impl2_Port_Type := surveillance_system_detector_impl2_Port_Type'First)
@@ -309,8 +307,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when door =>
           null;
-        when test =>
-          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision =>
+          decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;
@@ -389,7 +387,7 @@ package PolyORB_HI_Generated.Activity is
    (rfid_read,
     door,
     motion,
-    test);
+    decision);
 
   type surveillance_system_rfid_thread_impl_Interface 
    (Port : surveillance_system_rfid_thread_impl_Port_Type := surveillance_system_rfid_thread_impl_Port_Type'First)
@@ -402,8 +400,8 @@ package PolyORB_HI_Generated.Activity is
           null;
         when motion =>
           null;
-        when test =>
-          test_DATA : PolyORB_HI_Generated.Types.Integer_Type;
+        when decision =>
+          decision_DATA : PolyORB_HI_Generated.Types.Integer_Type;
         pragma Warnings (Off);
         when others =>
           null;

@@ -31,7 +31,7 @@ U polyorb_hi.utils%b	polyorb_hi-utils.adb	72aaafa3 NE OO PK
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
 
-U polyorb_hi.utils%s	polyorb_hi-utils.ads	2a73eaf9 NE OO PR PK
+U polyorb_hi.utils%s	polyorb_hi-utils.ads	0fbac32a NE OO PR PK
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s
 W interfaces%s		interfac.ads		interfac.ali
@@ -49,7 +49,7 @@ D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi-utils.adb	20170204221544 388ce90b polyorb_hi.utils%b
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -73,12 +73,12 @@ X 4 polyorb_hi.ads
 X 5 polyorb_hi-utils.ads
 40K20*Utils 4|35k9 5|114r29 120r20 124E9 140l16 140e21 6|32b25 134l16 134t21
 62V13*Internal_Code[2|20]{3|63M9}
-64V13*Corresponding_Entity[2|20]{8|60E8}
+64V13*Corresponding_Entity[2|20]{8|65E8}
 67V13*Internal_Code[2|20]{3|63M9}
 69V13*Corresponding_Node[2|20]{8|16E8}
 72V13*Internal_Code{3|66M9} 72>28 6|97b13 102l8 102t21
-72e28 P{8|141E8} 6|97b28 101r44
-73V13*Corresponding_Port{8|141E8} 73>33 6|108b13 113l8 113t26
+72e28 P{8|160E8} 6|97b28 101r44
+73V13*Corresponding_Port{8|160E8} 73>33 6|108b13 113l8 113t26
 73m33 I{3|66M9} 6|108b33 112r49
 75V13*Swap_Bytes{3|66M9} 75>25 6|71b13 91l8 91t18 101s14 112s37
 75m25 B{3|66M9} 6|71b25 82r17 89r18 89r30
@@ -108,16 +108,16 @@ X 6 polyorb_hi-utils.adb
 39a7 R{string} 42r33 47m13 55r33 59m10 60r33
 46i14 J{integer} 47r16 47r36
 98V16 To_Internal_Code[2|20]{3|66M9} 101s26
-109V16 To_Corresponding_Port[2|20]{8|141E8} 112s14
+109V16 To_Corresponding_Port[2|20]{8|160E8} 112s14
 122i7 Last{integer} 126m13 131r14
 124i11 J{integer} 125r16 126r21
 X 7 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 5|38r6 45r8 7|38e25
 X 8 polyorb_hi_generated-deployment.ads
-10K30*Deployment 5|38w27 45r29 8|314e36
-16E8*Node_Type 5|68r7 70r19 119r37 8|17e12
-60E8*Entity_Type 5|63r7 65r19 8|65e24
-141E8*Port_Type 5|72r32 73r57 6|97r32 99r10 108r57 110r23 8|159e29
+10K30*Deployment 5|38w27 45r29 8|375e36
+16E8*Node_Type 5|68r7 70r19 119r37 8|18e13
+65E8*Entity_Type 5|63r7 65r19 8|72e28
+160E8*Port_Type 5|72r32 73r57 6|97r32 99r10 108r57 110r23 8|184e36
 X 9 system.ads
 37K9*System 5|36w6 116r18 6|74r11 9|156e11
 67M9*Address 5|116r25

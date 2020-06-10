@@ -36,7 +36,7 @@ W polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
 W system.assertions%s	s-assert.adb		s-assert.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U polyorb_hi.messages%s	polyorb_hi-messages.ads	d4553c46 BN NE OO PR PK
+U polyorb_hi.messages%s	polyorb_hi-messages.ads	f19c1595 BN NE OO PR PK
 W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
 W polyorb_hi.streams%s	polyorb_hi-streams.ads	polyorb_hi-streams.ali
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
@@ -53,7 +53,7 @@ D polyorb_hi-messages.adb  20170204221544 b727af2e polyorb_hi.messages%b
 D polyorb_hi-streams.ads  20170204221544 54018470 polyorb_hi.streams%s
 D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200609233958 bae7530c polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 9f2e7adf polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -99,14 +99,14 @@ X 5 polyorb_hi-messages.ads
 82r26 M{44R9} 6|138b26 140m7 141m7
 85V13*Payload{7|53A9} 85>22 125b13 129s16 6|81s12
 85r22 M{44R9} 86r27 126r8 126r19 126r30
-89V13*Sender{10|60E8} 89>21 128b13
+89V13*Sender{10|65E8} 89>21 128b13
 89r21 M{44R9} 90r28 129r25
-91V13*Sender{10|60E8} 91>21 129s8 6|95b13 98l8 98t14
+91V13*Sender{10|65E8} 91>21 129s8 6|95b13 98l8 98t14
 91a21 M{7|53A9} 6|95b21 97r48
 94V13*Encapsulate{7|53A9} 95>7 96>7 97>7 6|71b13 89l8 89t19
 95r7 Message{44R9} 99r26 6|72b7 77r44 80r55 81r21 86r52
-96e7 From{10|60E8} 6|73b7 85r61
-97e7 Entity{10|60E8} 6|74b7 84r61
+96e7 From{10|65E8} 6|73b7 85r61
+97e7 Entity{10|65E8} 6|74b7 84r61
 103V13*Valid{boolean} 70s19 79s19 86s20 90s21 99s19 103>20 118b13 6|64s22
 103r20 Message{44R9} 119r8 119r25 120r19 120r35
 107I12 PDU_Index{7|50I12} 108r46 114r17 115r17 6|62r46
@@ -140,12 +140,12 @@ X 7 polyorb_hi-streams.ads
 X 8 polyorb_hi-utils.ads
 40K20*Utils 6|33w17 38r19 8|140e21
 62V13*Internal_Code[2|20]{3|63M9} 6|84s46 85s46
-64V13*Corresponding_Entity[2|20]{10|60E8} 6|97s14
+64V13*Corresponding_Entity[2|20]{10|65E8} 6|97s14
 75V13*Swap_Bytes{3|66M9} 6|172s10 183s19
 X 9 polyorb_hi_generated.ads
 34K9*PolyORB_HI_Generated 5|35r6 42r8 9|38e25
 X 10 polyorb_hi_generated-deployment.ads
-10K30*Deployment 5|35w27 42r29 10|314e36
-60E8*Entity_Type 5|89r46 91r54 96r17 97r17 128r46 6|73r17 74r17 95r54 10|65e24
-309i3*Max_Payload_Size{integer} 5|54r42
+10K30*Deployment 5|35w27 42r29 10|375e36
+65E8*Entity_Type 5|89r46 91r54 96r17 97r17 128r46 6|73r17 74r17 95r54 10|72e28
+370i3*Max_Payload_Size{integer} 5|54r42
 

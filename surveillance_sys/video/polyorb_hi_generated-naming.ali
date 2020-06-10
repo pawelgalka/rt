@@ -1,0 +1,69 @@
+V "GNAT Lib v7"
+A -O1
+A -gnatA
+A -g
+A -gnatwa
+A -gnatwG
+A -gnat12
+A -g
+A -gnata
+A -gnato
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RR NO_ALLOCATORS
+RR NO_DISPATCH
+RR NO_RECURSION
+RR NO_UNCHECKED_ACCESS
+RR NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U polyorb_hi_generated.naming%s  polyorb_hi_generated-naming.ads  c712bc31 EE OO PK
+W polyorb_hi%s		polyorb_hi.ads		polyorb_hi.ali
+W polyorb_hi.utils%s	polyorb_hi-utils.adb	polyorb_hi-utils.ali
+W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
+W polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  polyorb_hi_generated-deployment.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D polyorb_hi.ads	20170204221544 f77a07a6 polyorb_hi%s
+D polyorb_hi-utils.ads	20170204221544 4a2646a8 polyorb_hi.utils%s
+D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-naming.ads  20200610193920 bca1ca18 polyorb_hi_generated.naming%s
+D system.ads		20170510173650 4635ec04 system%s
+D s-assert.ads		20140225151544 cd8d2c94 system.assertions%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-secsta.ads		20170112134946 9751b57e system.secondary_stack%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
+X 4 polyorb_hi.ads
+35K9*PolyORB_HI 39e15 8|9r6 17r27 19r7 24r7
+X 5 polyorb_hi-utils.ads
+40K20*Utils 140e21 8|9w17 17r38 19r18 24r18
+88V13*To_Hi_String{86R9} 8|19s24 24s24
+119A9*Naming_Table_Type(113R9)<7|16E8> 8|17r44
+X 6 polyorb_hi_generated.ads
+34K9*PolyORB_HI_Generated 38e25 8|11r6 13r9 18r5 23r5 34r5
+X 7 polyorb_hi_generated-deployment.ads
+10K30*Deployment 375e36 8|11w27 18r26 23r26
+17n5*main_K{16E8} 8|18r37
+18n5*video_K{16E8} 8|23r37
+X 8 polyorb_hi_generated-naming.ads
+13K30*Naming 6|34k9 8|34l26 34e32
+17a3*Naming_Table{5|119A9}
+X 9 system.ads
+37K9*System 8|10w6 22r7 27r7 9|156e11
+67M9*Address
+69m4*Null_Address{67M9} 8|22r14 27r14
+

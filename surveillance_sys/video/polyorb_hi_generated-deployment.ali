@@ -15,7 +15,6 @@ P ZX
 RN
 RR NO_ALLOCATORS
 RR NO_DISPATCH
-RR NO_IO
 RR NO_RECURSION
 RR NO_UNCHECKED_ACCESS
 RR NO_UNCHECKED_DEALLOCATION
@@ -23,54 +22,78 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  edcbced3 NE OO PR PK
+U polyorb_hi_generated.deployment%s  polyorb_hi_generated-deployment.ads  77a0dc85 NE OO PR PK
 W polyorb_hi_generated%s  polyorb_hi_generated.ads  polyorb_hi_generated.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D polyorb_hi_generated.ads  20170204221544 32a22d97 polyorb_hi_generated%s
-D polyorb_hi_generated-deployment.ads  20200607203642 df69e344 polyorb_hi_generated.deployment%s
+D polyorb_hi_generated-deployment.ads  20200610193920 4502f112 polyorb_hi_generated.deployment%s
 D system.ads		20170510173650 4635ec04 system%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20170204221544 00000000
-D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20170204221544 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/native.adc  20200609225652 00000000
+D /opt/ocarina-2017.1-suite-linux-x86_64-20170204/include/ocarina/runtime/polyorb-hi-ada/gnat.adc  20200607210603 00000000
 X 1 polyorb_hi_generated.ads
-34K9*PolyORB_HI_Generated 38e25 2|10r9 179r12 209r5
+34K9*PolyORB_HI_Generated 38e25 2|10r9 309r12 375r5
 X 2 polyorb_hi_generated-deployment.ads
-10K30*Deployment 1|34k9 2|179r33 209l26 209e36
-16E8*Node_Type 17e13 21r7 27r7 37r4 37r20 37r39 55r22 83r9
-17n5*video_K{16E8} 22r5 52r7 56r4 88r8 90r8
-29i3*Max_Node_Image_Size{integer} 40r23
-36E11*UT_Deployment_Video_Node_Type_Range{16E8} 47r11
-39I11*UT_Deployment_Video_1_Max_Node_Image_Size{integer} 44r7
-42A11*UT_Deployment_Video_Node_Image_Component{string}<integer> 48r9
-46A8*UT_Deployment_Video_Node_Image_Array(42A11)<16E8> 50r25 51r4
-50a3*Node_Image{46A8}
-55e3*My_Node{16E8}
-60E8*Entity_Type 62e28 66r7 74r7 79r4 79r22 79r43 155r9
-61n5*video_video_captor_t_K{60E8} 67r5 87r7 112r7 160r8 162r8 164r8 166r8
-. 168r8
-62n5*video_video_sender_t_K{60E8} 69r5 89r7 114r7 170r8
-78E11*UT_Deployment_Video_Entity_Type_Range{60E8} 82r11 107r11
-81A8*UT_Deployment_Video_Entity_Table_Array(16E8)<60E8> 85r27 86r4
-85a3*Entity_Table{81A8}
-92i3*Max_Entity_Image_Size{integer} 100r23
-99I11*UT_Deployment_Video_1_Max_Entity_Image_Size{integer} 104r7
-102A11*UT_Deployment_Video_Entity_Image_Component{string}<integer> 108r9
-106A8*UT_Deployment_Video_Entity_Image_Array(102A11)<60E8> 110r27 111r4
-110a3*Entity_Image{106A8}
-120E8*Port_Type 126e36 130r7 146r7 151r4 151r20 151r39
-121n5*video_video_captor_t_camera1_capture_K{120E8} 131r5 159r7 189r7
-122n5*video_video_captor_t_camera2_capture_K{120E8} 133r5 161r7 191r7
-123n5*video_video_captor_t_camera3_capture_K{120E8} 135r5 163r7 193r7
-124n5*video_video_captor_t_start_K{120E8} 137r5 165r7 195r7
-125n5*video_video_captor_t_output_converted_K{120E8} 139r5 167r7 197r7
-126n5*video_video_sender_t_message_K{120E8} 141r5 169r7 199r7
-150E11*UT_Deployment_Video_Port_Type_Range{120E8} 154r11 184r11
-153A8*UT_Deployment_Video_Port_Table_Array(60E8)<120E8> 157r25 158r4
-157a3*Port_Table{153A8}
-172i3*Max_Port_Image_Size{integer} 179r44
-177A11*Port_Sized_String{string}<integer> 185r9
-183A8*UT_Deployment_Video_Port_Image_Array(177A11)<120E8> 187r25 188r4
-187a3*Port_Image{183A8}
-204i3*Max_Payload_Size{integer}
+10K30*Deployment 1|34k9 2|309r33 375l26 375e36
+16E8*Node_Type 18e13 22r7 30r7 40r4 40r20 40r39 60r22 103r9
+17n5*main_K{16E8} 23r5 55r7 108r8 110r8 112r8 114r8 116r8
+18n5*video_K{16E8} 25r5 57r7 61r4 118r8 120r8
+32i3*Max_Node_Image_Size{integer} 43r23
+39E11*UT_Deployment_Video_Node_Type_Range{16E8} 50r11
+42I11*UT_Deployment_Video_1_Max_Node_Image_Size{integer} 47r7
+45A11*UT_Deployment_Video_Node_Image_Component{string}<integer> 51r9
+49A8*UT_Deployment_Video_Node_Image_Array(45A11)<16E8> 53r25 54r4
+53a3*Node_Image{49A8}
+60e3*My_Node{16E8}
+65E8*Entity_Type 72e28 76r7 94r7 99r4 99r22 99r43 249r9
+66n5*main_alarm_K{65E8} 77r5 107r7 142r7 254r8 256r8 258r8 260r8 262r8
+67n5*main_detector1_K{65E8} 79r5 109r7 144r7 264r8 266r8 268r8
+68n5*main_detector2_K{65E8} 81r5 111r7 146r7 270r8 272r8 274r8
+69n5*main_detector3_K{65E8} 83r5 113r7 148r7 276r8 278r8 280r8
+70n5*main_rfid_reader_K{65E8} 85r5 115r7 150r7 282r8 284r8 286r8 288r8
+71n5*video_video_captor_t_K{65E8} 87r5 117r7 152r7 290r8 292r8 294r8 296r8
+. 298r8
+72n5*video_video_sender_t_K{65E8} 89r5 119r7 154r7 300r8
+98E11*UT_Deployment_Video_Entity_Type_Range{65E8} 102r11 137r11
+101A8*UT_Deployment_Video_Entity_Table_Array(16E8)<65E8> 105r27 106r4
+105a3*Entity_Table{101A8}
+122i3*Max_Entity_Image_Size{integer} 130r23
+129I11*UT_Deployment_Video_1_Max_Entity_Image_Size{integer} 134r7
+132A11*UT_Deployment_Video_Entity_Image_Component{string}<integer> 138r9
+136A8*UT_Deployment_Video_Entity_Image_Array(132A11)<65E8> 140r27 141r4
+140a3*Entity_Image{136A8}
+160E8*Port_Type 184e36 188r7 240r7 245r4 245r20 245r39
+161n5*main_alarm_detected_K{160E8} 189r5 253r7 319r7
+162n5*main_alarm_decision_K{160E8} 191r5 255r7 321r7
+163n5*main_alarm_decision1_K{160E8} 193r5 257r7 323r7
+164n5*main_alarm_decision2_K{160E8} 195r5 259r7 325r7
+165n5*main_alarm_decision3_K{160E8} 197r5 261r7 327r7
+166n5*main_detector1_motion_K{160E8} 199r5 263r7 329r7
+167n5*main_detector1_door_K{160E8} 201r5 265r7 331r7
+168n5*main_detector1_decision_K{160E8} 203r5 267r7 333r7
+169n5*main_detector2_motion_K{160E8} 205r5 269r7 335r7
+170n5*main_detector2_door_K{160E8} 207r5 271r7 337r7
+171n5*main_detector2_decision_K{160E8} 209r5 273r7 339r7
+172n5*main_detector3_motion_K{160E8} 211r5 275r7 341r7
+173n5*main_detector3_door_K{160E8} 213r5 277r7 343r7
+174n5*main_detector3_decision_K{160E8} 215r5 279r7 345r7
+175n5*main_rfid_reader_rfid_read_K{160E8} 217r5 281r7 347r7
+176n5*main_rfid_reader_door_K{160E8} 219r5 283r7 349r7
+177n5*main_rfid_reader_motion_K{160E8} 221r5 285r7 351r7
+178n5*main_rfid_reader_decision_K{160E8} 223r5 287r7 353r7
+179n5*video_video_captor_t_camera1_capture_K{160E8} 225r5 289r7 355r7
+180n5*video_video_captor_t_camera2_capture_K{160E8} 227r5 291r7 357r7
+181n5*video_video_captor_t_camera3_capture_K{160E8} 229r5 293r7 359r7
+182n5*video_video_captor_t_start_K{160E8} 231r5 295r7 361r7
+183n5*video_video_captor_t_output_converted_K{160E8} 233r5 297r7 363r7
+184n5*video_video_sender_t_message_K{160E8} 235r5 299r7 365r7
+244E11*UT_Deployment_Video_Port_Type_Range{160E8} 248r11 314r11
+247A8*UT_Deployment_Video_Port_Table_Array(65E8)<160E8> 251r25 252r4
+251a3*Port_Table{247A8}
+302i3*Max_Port_Image_Size{integer} 309r44
+307A11*Port_Sized_String{string}<integer> 315r9
+313A8*UT_Deployment_Video_Port_Image_Array(307A11)<160E8> 317r25 318r4
+317a3*Port_Image{313A8}
+370i3*Max_Payload_Size{integer}
 

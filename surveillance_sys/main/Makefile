@@ -8,7 +8,7 @@
 #  Distributed application name : surveillance_sys
 #  Node name                    : main
 #  Execution platform           : native
-#  Transport API                : TRANSPORT_NONE
+#  Transport API                : TRANSPORT_BSD_SOCKETS
 
 C_OBJECTS=
 
